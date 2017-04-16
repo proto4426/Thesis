@@ -1,0 +1,120 @@
+
+\documentclass[11pt,a4paper]{book}
+\makeatletter
+%\documentclass[a4paper,oneside,11pt]{article}
+
+\title{Propoerties et al.}
+
+\makeatletter
+\newcommand{\crossout}[1]{%
+	\begingroup
+	\settowidth{\dimen@}{#1}%
+	\setlength{\unitlength}{0.05\dimen@}%
+	\settoheight{\dimen@}{#1}%
+	\count@=\dimen@
+	\divide\count@ by \unitlength
+	\count0=20 \count4=\count@
+	\loop
+	\count2=\count0 % keep a copy
+	\divide\count2\count4 \multiply\count2\count4
+	\ifnum\count2<\count0
+	\advance\count0 -\count2 % the remainder
+	\count2=\count0
+	\count0=\count4
+	\count4=\count2
+	\repeat
+	\count0=20 \divide\count0\count4
+	\count2=\count@ \divide\count2\count4
+	\begin{picture}(0,0)
+	\put(0,0){\line(\count0,\count2){20}}
+	\put(0,\count@){\line(\count0,-\count2){20}}
+	\end{picture}%
+	#1%
+	\endgroup
+}
+\makeatother
+
+% ------------------------------
+% PACKAGES DE BASE
+% ------------------------------
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern} % Police vectorielle
+\usepackage[english]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx}
+%\usepackage{tikz}
+\usepackage{caption}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage{apacite}
+\usepackage{footnote}
+\makesavenoteenv{array}
+\usepackage[bottom]{footmisc}
+%\usepackage{booktabs}
+\usepackage{tabularx, booktabs}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{listings}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{longtable}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+\titlespacing*{\chapter}{0pt}{-1.5cm}{20pt}
+\usepackage{sidecap}
+\usepackage{pdflscape}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{babel,blindtext}
+\usepackage{lipsum}
+\usepackage{slashbox}
+\usepackage{dashrule}
+\usepackage{hhline}
+\usepackage{color}
+%-------------------------------
+% MATH
+% ------------------------------
+\usepackage{amsmath} % Les math
+\usepackage{amssymb} % Symboles math
+\usepackage{esvect} % Vecteurs
+\usepackage[amssymb]{SIunits}
+\usepackage{eurosym}
+\usepackage{mathrsfs}
+\usepackage{dcolumn}
+\usepackage{pifont}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{datetime} 
+\usepackage{bm}
+\usepackage{scalerel,stackengine}
+\usepackage{pbox}
+\usepackage{vmargin}            
+\setmarginsrb{2,5cm}{2,7cm}{2,5cm}{2,5cm}{0cm}{0cm}{0cm}{1cm}
+\begin{document}
+
+
+[Heavy-tails] The distribution of a random variable X with distribution function F is said to have a \textbf{heavy} right \textbf{tail} if 
+\begin{equation}
+\displaystyle{\lim_{n \to \infty}} \ e^{\lambda x} \ \text{Pr}[X>x]=\displaystyle{\lim_{n \to \infty}} \ e^{\lambda x} \bar{F}(x)=\infty , \ \ \forall \lambda>0
+\end{equation}
+More generally, we can say that a random variable X has heavy tails if Pr$(|X|>x)\to 0$ at a polynomial rate. In this case, some of the moments will be undefined. see stats ana. book 2007 p.30
+
+[ long right tail] 
+The distribution of a random variable X with distribution function F is said to have a long right tail if $\forall t > 0$,
+\begin{equation}
+\displaystyle{\lim_{n \to \infty}} \ \text{Pr}[X>x+t|X>x]=1 \ \Leftrightarrow \ \bar{F}(x+t)\sim\bar{F}(x) \ \text{as} \ x\to\infty
+\end{equation}
+
+
+%Climate time series book p.226
+The term \textbf{risk} can be defined as tail probability p. But, because many application fields of risk analysis exist, such as actuarial science, econometrics or of course what is of interest for this thesis, climatology, many risk definitions are in usage ; Thywissen (2006) lists 22, although
+not completely mutually exclusive, definitions currently employed. The definition via the probability has the advantage that this is a fundamental, real number, from which the other parameters of interest, for example, the expected economic loss, can
+be derived.
+
+
+
+\end{document}

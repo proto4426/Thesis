@@ -1,0 +1,170 @@
+\frametitle{Neural Networks \ $\Rightarrow $ \ Improvements (?)}
+
+\begin{columns}[T]
+
+
+\begin{column}{.6\textwidth}
+\vspace{-.5cm}
+\tikzset{%
+	neuron missing/.style={
+		draw=none,
+		scale=2,
+		text height=0.2cm,
+		execute at begin node=\color{black}$\vdots$
+	},
+}
+\begin{figure}
+	\resizebox{6cm}{3cm}{ \fbox{
+		\begin{tikzpicture}[x=1.5cm, y=1.5cm, >=stealth]
+    \tikzstyle{annot} = [text width=4em, text centered]
+
+\foreach \m [count=\y] in {1}
+\node [circle,fill=green!50,minimum size=.7cm ] (input-\m) at (0,1) {};
+
+\foreach \m [count=\y] in {2}
+\node [circle,fill=green!50,minimum size=.7cm ] (input-\m) at (0,0.35) {};
+
+\foreach \m [count=\y] in {3}
+\node [circle,fill=green!50,minimum size=.7cm ] (input-\m) at (0,-0.75) {};
+
+\node [neuron missing]  at (0,-0.25) {};
+
+\foreach \m [count=\y] in {1}
+\node [circle,fill=red!50,minimum size=.7cm ] (hidden-\m) at (2,0.75) {};
+
+\foreach \m [count=\y] in {2}
+\node [circle,fill=red!50,minimum size=.7cm ] (hidden-\m) at (2,-0.38) {};
+
+\node [neuron missing]  at (2,0.1) {};
+
+\foreach \m [count=\y] in {1}
+\node [circle,fill=blue!50,minimum size=.7cm ] (output-\m) at (4,1.8-\y) {};
+
+\foreach \m [count=\y] in {2}
+\node [circle,fill=blue!50,minimum size=.7cm ] (output-\m) at (4,1.05-\y) {};
+
+\foreach \m [count=\y] in {3}
+\node [circle,fill=blue!50,minimum size=.7cm ] (output-\m) at (4,0.35-\y) {};
+
+		\draw [<-] (input-1) -- ++(-1,0)
+		node [above, midway] {$\boldsymbol{x_1(t)}$};
+		\draw [<-] (input-2) -- ++(-1,0)
+		node [above, midway] {$x_2(t)$};
+		\draw [<-] (input-3) -- ++(-1,0)
+		node [above, midway] {$x_I(t)$};
+
+		\node [below] at (hidden-1.north) {$h_1$};
+		\node [below] at (hidden-2.north) {$h_J$};
+
+			\draw [->] (output-1) -- ++(2.4,0)
+			node [above, midway] {$\boldsymbol{\mu_t=o_1(t)}$};
+			\draw [->] (output-2) -- ++(2.4,0)
+			node [above, midway] {$\sigma_t=\exp(o_2(t))$};
+			\draw [->] (output-3) -- ++(2.4,0)
+			node [above, midway] {$\xi_t=\xi^*\tanh(o_3(t))$};
+
+		\foreach \i in {1,...,3}
+		\foreach \j in {1,...,2}
+		\draw [->] (input-\i) -- (hidden-\j);
+
+		\foreach \i in {1,...,2}
+		\foreach \j in {1,...,3}
+		\draw [->] (hidden-\i) -- (output-\j);
+
+\node[annot,above of=hidden-1, node distance=1cm] (hl) {hidden layer};
+\node[annot,above of=input-1] (il) {input layer};
+\node[annot,above of=output-1] {output layer};
+\node[annot, above =2.2cm, right=0.7cm, node distance=1cm]{\textcolor{red}{\textbf{(1)}}};
+\node[annot, above =1.2cm, right=3.7cm]{\textcolor{blue}{\textbf{(2)}}};
+		\end{tikzpicture}
+	}
+}
+\vspace{-2.5mm}
+\caption{\tiny \textcolor{MidnightBlue}{\emph{\texttt{TikzFig}.}}:\emph{ Neural Network applied to GEV. helped by \textcolor{JungleGreen}{\cite{cannon_flexible_2010}}} }
+\end{figure}
+
+\vspace{-.65cm}
+
+\newenvironment{variableblock}[3]{%
+	\setbeamercolor{block body}{#2}
+	\setbeamercolor{block title}{#3}
+	\begin{block}{#1}}{\end{block}}
+
+\begin{columns}[c]
+
+\begin{column}[]{.68\textwidth}\fontsize{6.5}{7}\selectfont
+\begin{block}{\scriptsize \centering \qquad \ \quad \textcolor{red}{(1)}  $h_j(t)=m\Big(\sum_i^Ix_i(t)\cdot w_{ji}^{(1)}+b_j^{(1)}\Big)$}
+ \centering \quad \quad \
+  \textcolor{blue}{\textbf{(2)}} $o_k(t)=\sum_j^Jh_j(t)\cdot w_{kj}^{(2)}+b^{(2)}_k$,\\ \qquad $ (k=1,2,3)$
+\end{block}
+\end{column}
+
+
+
+\begin{column}[]{.65\textwidth}\fontsize{6.5}{7}\selectfont
+\begin{itemize}
+	\item[$\bullet$] 	need to choose relevant \\ \textcolor{red}{\# hidden}  layers
+	\item[$\bullet$] We rely on (refined?) \\ \texttt{GEVcdn} R package
+\end{itemize}
+\end{column}
+
+\end{columns}
+
+
+\end{column}
+\vspace{-2.8cm}
+\hspace{.5pt}\vrule width 1.4pt \hspace{2pt}
+
+
+ \begin{column}[t]{0.5\textwidth}\fontsize{7}{7}\selectfont
+ 	      \vspace{-.9cm}%
+ 	\begin{center}
+ 		\begin{tabular}{|c||c|c|c|c|}
+ 			\hline
+ 			\textbf{model} & \text{$AIC_c$} & $BIC$ & hidden & df \\
+ 			\hline
+ 			\hline
+ 			stationary & -19.6 & -11.5 & \textcolor{red}{0} & 3 \\
+ 			\hline
+ 			$\boldsymbol{\mu_t}$ & -$\boldsymbol{37.4}$ & -$\boldsymbol{26.7}$ & $\boldsymbol{\textcolor{red}{0}}$ & $\boldsymbol{4}$  \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$ & -35.4 & -22.2 & \textcolor{red}{0} & 5 \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$, $\xi_t$ & -34.2 & -18.4 & \textcolor{red}{0} & 6 \\
+ 			\hline
+ 			$\mu_t$ & -35.4 & -19.6 & \textcolor{red}{1} & 6 \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$ &  -36.2  & -17.9 & \textcolor{red}{1} & 7 \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$, $\xi_t$ & -34 & -13.3 & \textcolor{red}{1} & 8 \\
+ 			\hline
+ 			$\mu_t$ & -37.4 & -14.3 & \textcolor{red}{2} & 9 \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$ & -32.5 & -4.7 & \textcolor{red}{2} & 11 \\
+ 			\hline
+ 			$\mu_t$, $\sigma_t$, $\xi_t$ & -38.4 & 3.9 & \textcolor{red}{2} & 13 \\
+ 		\end{tabular}
+ 		\vspace{-.3cm}
+ 		 	\end{center}
+ 		  \quad\quad \tiny ($\dots$) \hspace{1cm}\qquad	%$\dots$ \qquad  	$\dots$ \qquad\quad $\dots$ %\quad\qquad  	$\dots$
+ 		  \vspace{.2cm}
+ 	\begin{itemize}\fontsize{7}{7}\selectfont
+ 	 	\item[$\vartriangleright$] Same model is chosen (so far?) : \textbf{validation}
+ 	 	\item[$\vartriangleright$] Linear trend in $\mu$ seems acceptable but we did not consider all models (yet?)
+ 	 \end{itemize}
+ 	\quad\qquad $\Rightarrow$ Other covariates than time ?
+\end{column}
+
+\end{columns}
+\vspace{.3cm}
+ \begin{itemize}\fontsize{8}{8}\selectfont
+ 	\item[$\Rightarrow$] NN is a \textbf{powerful} method dealing efficiently  with non-stationarity by considering lots of "models", relying on Generalized Maximum Likelihood of \textcolor{JungleGreen}{\citet{martins_generalized_2000}}
+ \end{itemize}
+\vspace{.2cm}
+ 	\fontsize{8}{8}\selectfont
+ \begin{block}{\small \boxed{\textbf{Bagging}} process of averaging ensemble of models fitted on bootstrapped data}
+ %	\emph{\textbf{\emph{B}}ootstrap \textbf{agg}regat\textbf{ing}} will decrease the variance (and the risk of overfitting )
+ \end{block}
+ \vspace{-.25cm}
+\centering $\Rightarrow$ \ Decrease variance of the estimates
+

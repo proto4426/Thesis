@@ -1,0 +1,102 @@
+\BOOKMARK [0][-]{section*.3}{Acknowledgements}{}% 1
+\BOOKMARK [0][-]{chapter*.4}{List of Abbreviations}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{Introduction and Preliminaries}{}% 3
+\BOOKMARK [1][-]{chapter*.5}{2 Presentation of the Analysis : Temperatures from Uccle}{chapter*.4}% 4
+\BOOKMARK [1][-]{section*.6}{Comparisons with freely available data}{chapter*.4}% 5
+\BOOKMARK [-1][-]{part.1}{I Theoretical Framework}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Extreme Value Theory : Basics}{part.1}% 7
+\BOOKMARK [1][-]{section.1.1}{Preliminaries}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Extremal Types Theorem}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{Characterization of the GEV distributions : 3 Types}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.4}{Concrete applications : examples of convergence to GEV}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.4.1}{Convergence to Gumbel distribution}{section.1.4}% 12
+\BOOKMARK [2][-]{subsection.1.4.2}{Convergence to Fr\351chet distribution}{section.1.4}% 13
+\BOOKMARK [2][-]{subsection.1.4.3}{Convergence to Weibull distribution}{section.1.4}% 14
+\BOOKMARK [2][-]{subsection.1.4.4}{Some Conditions/comments \(?\) \(Continuity condition\)}{section.1.4}% 15
+\BOOKMARK [1][-]{section.1.5}{Maximum domain of attraction}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.5.1}{Domain of attraction for Gumbel distribution \(G1\) }{section.1.5}% 17
+\BOOKMARK [2][-]{subsection.1.5.2}{Domain of attraction for Fr\351chet distribution \(G2, \)}{section.1.5}% 18
+\BOOKMARK [2][-]{subsection.1.5.3}{Domain of attraction for Weibull distribution \(G3,\) }{section.1.5}% 19
+\BOOKMARK [2][-]{subsection.1.5.4}{Closeness under tail equivalence property}{section.1.5}% 20
+\BOOKMARK [2][-]{subsection.1.5.5}{Domain of attraction of the GEV}{section.1.5}% 21
+\BOOKMARK [1][-]{section.1.6}{The Skewed Generalized Extreme Value Distribution}{chapter.1}% 22
+\BOOKMARK [1][-]{section.1.7}{The Concepts of Return Levels and Return Periods}{chapter.1}% 23
+\BOOKMARK [2][-]{subsection.1.7.1}{Return Level Plot}{section.1.7}% 24
+\BOOKMARK [1][-]{section.1.8}{INFERENCE}{chapter.1}% 25
+\BOOKMARK [0][-]{chapter.2}{Peaks-Over-Threshold Methods}{part.1}% 26
+\BOOKMARK [1][-]{section.2.1}{Preliminaries: Intuitions}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.2}{Characterization of the Generalized Pareto Distribution}{chapter.2}% 28
+\BOOKMARK [2][-]{subsection.2.2.1}{Outline proof of the GPD and justification from GEV}{section.2.2}% 29
+\BOOKMARK [2][-]{subsection.2.2.2}{Dependence of the scale parameter }{section.2.2}% 30
+\BOOKMARK [2][-]{subsection.2.2.3}{Three different types of GPD and duality with GEV}{section.2.2}% 31
+\BOOKMARK [2][-]{subsection.2.2.4}{Examples of the GPD as limiting distribution for exceedances }{section.2.2}% 32
+\BOOKMARK [1][-]{section.2.3}{Return Levels}{chapter.2}% 33
+\BOOKMARK [1][-]{section.2.4}{Point Process Approach}{chapter.2}% 34
+\BOOKMARK [2][-]{subsection.2.4.1}{Non-homogeneous Poisson Process}{section.2.4}% 35
+\BOOKMARK [1][-]{section.2.5}{INFERENCE}{chapter.2}% 36
+\BOOKMARK [1][-]{section.2.6}{Standard Threshold Selection \(Methods\) }{chapter.2}% 37
+\BOOKMARK [2][-]{subsection.2.6.1}{Threshold choice for the excess models}{section.2.6}% 38
+\BOOKMARK [1][-]{section.2.7}{"Varying" Threshold : Mixture Models}{chapter.2}% 39
+\BOOKMARK [0][-]{chapter.3}{Relaxing Independence Assumption}{part.1}% 40
+\BOOKMARK [1][-]{section.3.1}{Stationary Extremes}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.1.1}{The extremal index}{section.3.1}% 42
+\BOOKMARK [2][-]{subsection.3.1.2}{Tail dependence}{section.3.1}% 43
+\BOOKMARK [2][-]{subsection.3.1.3}{Modelling : Threshold Models}{section.3.1}% 44
+\BOOKMARK [2][-]{subsection.3.1.4}{Applications}{section.3.1}% 45
+\BOOKMARK [1][-]{section.3.2}{Non-Stationary Extremes}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.2.1}{Block-Maxima}{section.3.2}% 47
+\BOOKMARK [2][-]{subsection.3.2.2}{Diagnostics}{section.3.2}% 48
+\BOOKMARK [1][-]{section.3.3}{Model Comparisons}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.3.1}{Statistical Tools}{section.3.3}% 50
+\BOOKMARK [1][-]{section.3.4}{Return Levels}{chapter.3}% 51
+\BOOKMARK [-1][-]{part.2}{II Inferential Methods}{}% 52
+\BOOKMARK [0][-]{chapter.4}{Methods of Inference}{part.2}% 53
+\BOOKMARK [1][-]{section.4.1}{Likelihood-based Methods}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.1.1}{Profile Likelihood}{section.4.1}% 55
+\BOOKMARK [1][-]{section.4.2}{Other Methods}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.2.1}{Estimators Based on Extreme Order Statistics \(put with POT\)?}{section.4.2}% 57
+\BOOKMARK [2][-]{subsection.4.2.2}{The Probability-Weighted-Moment Estimator}{section.4.2}% 58
+\BOOKMARK [2][-]{subsection.4.2.3}{Estimators based on Generalized Quantile }{section.4.2}% 59
+\BOOKMARK [1][-]{section.4.3}{Improvements For Modelling Non-stationary Sequences}{chapter.4}% 60
+\BOOKMARK [2][-]{subsection.4.3.1}{Generalized Likelihood Methods}{section.4.3}% 61
+\BOOKMARK [2][-]{subsection.4.3.2}{Neural-Network Based Inference}{section.4.3}% 62
+\BOOKMARK [2][-]{subsection.4.3.3}{Bagging}{section.4.3}% 63
+\BOOKMARK [1][-]{section.4.4}{Bootstrap Methods}{chapter.4}% 64
+\BOOKMARK [2][-]{subsection.4.4.1}{Moving Block Bootstrap}{section.4.4}% 65
+\BOOKMARK [1][-]{section.4.5}{Markov models}{chapter.4}% 66
+\BOOKMARK [1][-]{section.4.6}{Model Diagnostics : Goodness-of-Fit}{chapter.4}% 67
+\BOOKMARK [2][-]{subsection.4.6.1}{Diagnostic Plots : Quantile and Probability Plots}{section.4.6}% 68
+\BOOKMARK [0][-]{chapter.5}{Bayesian Methods}{part.2}% 69
+\BOOKMARK [1][-]{section.5.1}{Prior Elicitation}{chapter.5}% 70
+\BOOKMARK [2][-]{subsection.5.1.1}{Non-informative Priors}{section.5.1}% 71
+\BOOKMARK [2][-]{subsection.5.1.2}{Informative Priors}{section.5.1}% 72
+\BOOKMARK [1][-]{section.5.2}{Bayesian Computation : Markov Chains}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.2.1}{Algorithms}{section.5.2}% 74
+\BOOKMARK [2][-]{subsection.5.2.2}{Hamiltonian Monte Carlo}{section.5.2}% 75
+\BOOKMARK [2][-]{subsection.5.2.3}{Computational efficiency comparison}{section.5.2}% 76
+\BOOKMARK [1][-]{section.5.3}{Convergence Diagnostics}{chapter.5}% 77
+\BOOKMARK [2][-]{subsection.5.3.1}{Proposal Distribution}{section.5.3}% 78
+\BOOKMARK [2][-]{subsection.5.3.2}{The problem of auto and cross-correlations in the chains}{section.5.3}% 79
+\BOOKMARK [1][-]{section.5.4}{Posterior Predictive}{chapter.5}% 80
+\BOOKMARK [1][-]{section.5.5}{Bayesian Predictive Accuracy for Model Validation}{chapter.5}% 81
+\BOOKMARK [2][-]{subsection.5.5.1}{Cross-validation for predictive accuracy}{section.5.5}% 82
+\BOOKMARK [1][-]{section.5.6}{Bayesien Inference ?}{chapter.5}% 83
+\BOOKMARK [2][-]{subsection.5.6.1}{Bayesian Credible Intervals}{section.5.6}% 84
+\BOOKMARK [2][-]{subsection.5.6.2}{Distribution of Quantiles : Return Levels}{section.5.6}% 85
+\BOOKMARK [1][-]{section.5.7}{Bayesian Model Averaging}{chapter.5}% 86
+\BOOKMARK [1][-]{section.5.8}{Applications}{chapter.5}% 87
+\BOOKMARK [2][-]{subsection.5.8.1}{Own }{section.5.8}% 88
+\BOOKMARK [2][-]{subsection.5.8.2}{evdbayes R package : MH algorithm}{section.5.8}% 89
+\BOOKMARK [1][-]{section.5.9}{Comparisons}{chapter.5}% 90
+\BOOKMARK [-1][-]{part.3}{III Experimental Framework \(Simulation Study\) : Global....}{}% 91
+\BOOKMARK [0][-]{section.5.10}{R package}{part.3}% 92
+\BOOKMARK [0][-]{chapter.6}{Simulation study: Performance evaluation of different methods}{part.3}% 93
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{part.3}% 94
+\BOOKMARK [0][-]{appendix.A}{Statistical tools for Extreme Value Theory}{part.3}% 95
+\BOOKMARK [1][-]{section.A.1}{Preliminaries}{appendix.A}% 96
+\BOOKMARK [1][-]{section.A.1}{Order statistics}{appendix.A}% 97
+\BOOKMARK [1][-]{section.A.2}{Tails of the distributions}{appendix.A}% 98
+\BOOKMARK [1][-]{section.A.3}{Convergence concepts}{appendix.A}% 99
+\BOOKMARK [1][-]{section.A.4}{Varying functions}{appendix.A}% 100
+\BOOKMARK [1][-]{section.A.5}{Bayesian Inference}{appendix.A}% 101
+\BOOKMARK [2][-]{subsection.A.5.1}{Algorithms}{section.A.5}% 102

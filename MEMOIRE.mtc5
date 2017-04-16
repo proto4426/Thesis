@@ -1,0 +1,17 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Preliminaries: Intuitions}{\reset@font\mtcSfont 25}{section.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Characterization of the Generalized Pareto Distribution}{\reset@font\mtcSfont 26}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Outline proof of the GPD and justification from GEV}{\reset@font\mtcSSfont 26}{subsection.2.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Dependence of the scale parameter $\sigma $}{\reset@font\mtcSSfont 28}{subsection.2.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Three different types of GPD and duality with GEV}{\reset@font\mtcSSfont 28}{subsection.2.2.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Density functions of the GPD }{\reset@font\mtcPfont 29}{section*.23}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}Examples of the GPD as limiting distribution for exceedances }{\reset@font\mtcSSfont 29}{subsection.2.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Return Levels}{\reset@font\mtcSfont 29}{section.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Point Process Approach}{\reset@font\mtcSfont 30}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Non-homogeneous Poisson Process}{\reset@font\mtcSSfont 30}{subsection.2.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}INFERENCE}{\reset@font\mtcSfont 30}{section.2.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Standard Threshold Selection (Methods) }{\reset@font\mtcSfont 31}{section.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.1}Threshold choice for the excess models}{\reset@font\mtcSSfont 31}{subsection.2.6.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Mean residual life plot}{\reset@font\mtcPfont 32}{section*.26}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}"Varying" Threshold : Mixture Models}{\reset@font\mtcSfont 34}{section.2.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Nonstationary extremes}{\reset@font\mtcSSSfont 34}{section*.30}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Cross-validation}{\reset@font\mtcPfont 34}{section*.31}}

@@ -1,0 +1,112 @@
+\begin{thebibliography}{}
+
+\bibitem[AghaKouchak et~al., 2012]{aghakouchak_extremes_2012}
+AghaKouchak, A., Easterling, D., Hsu, K., Schubert, S., and Sorooshian, S.
+  (2012).
+\newblock {\em Extremes in a {Changing} {Climate}: {Detection}, {Analysis} and
+  {Uncertainty}}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Beirlant et~al., 2006]{beirlant_statistics_2006}
+Beirlant, J., Goegebeur, Y., Segers, J., and Teugels, J. (2006).
+\newblock {\em Statistics of {Extremes}: {Theory} and {Applications}}.
+\newblock John Wiley \& Sons.
+\newblock Google-Books-ID: jqmRwfG6aloC.
+
+\bibitem[Cannon, 2010]{cannon_flexible_2010}
+Cannon, A.~J. (2010).
+\newblock A flexible nonlinear modelling framework for nonstationary
+  generalized extreme value analysis in hydroclimatology.
+\newblock {\em Hydrological Processes}, 24(6):673--685.
+
+\bibitem[Cheng et~al., 2014]{cheng_non-stationary_2014}
+Cheng, L., AghaKouchak, A., Gilleland, E., and Katz, R.~W. (2014).
+\newblock Non-stationary extreme value analysis in a changing climate.
+\newblock {\em Climatic Change}, 127(2):353--369.
+
+\bibitem[Coles, 2001]{coles_introduction_2001}
+Coles, S. (2001).
+\newblock {\em An {Introduction} to {Statistical} {Modeling} of {Extreme}
+  {Values}}.
+\newblock Springer {Series} in {Statistics}. Springer London, London.
+
+\bibitem[Dey and Yan, 2016]{dey_extreme_2016}
+Dey, D.~K. and Yan, J. (2016).
+\newblock {\em Extreme {Value} {Modeling} and {Risk} {Analysis}: {Methods} and
+  {Applications}}.
+\newblock CRC Press.
+\newblock Google-Books-ID: PYhUCwAAQBAJ.
+
+\bibitem[Embrechts et~al., 2011]{embrechts_modelling_2011}
+Embrechts, P., Klüppelberg, C., and Mikosch, T. (2011).
+\newblock {\em Modelling {Extremal} {Events}: for {Insurance} and {Finance}}.
+\newblock Springer Berlin Heidelberg.
+\newblock Google-Books-ID: dfZecgAACAAJ.
+
+\bibitem[Falk et~al., 2011]{falk_laws_2011}
+Falk, M., Hüsler, J., and Reiss, R.-D. (2011).
+\newblock {\em Laws of {Small} {Numbers}: {Extremes} and {Rare} {Events}}.
+\newblock Springer Basel, Basel.
+
+\bibitem[Ferro and Segers, 2003]{ferro_inference_2003}
+Ferro, C. A.~T. and Segers, J. (2003).
+\newblock Inference for {Clusters} of {Extreme} {Values}.
+\newblock {\em Journal of the Royal Statistical Society. Series B (Statistical
+  Methodology)}, 65(2):545--556.
+
+\bibitem[Galiatsatou et~al., 2016]{Galiatsatou_modeling_2016}
+Galiatsatou, P., Anagnostopoulou, C., and Prinos, P. (2016).
+\newblock Modeling nonstationary extreme wave heights in present and future
+  climates of {Greek} {Seas}.
+\newblock {\em Water Science and Engineering}, 9(1):21--32.
+
+\bibitem[Haan and Ferreira, 2006]{haan_extreme_2006}
+Haan, L.~d. and Ferreira, A. (2006).
+\newblock {\em Extreme value theory: an introduction}.
+\newblock Springer series in operations research. Springer, New York ; London.
+\newblock OCLC: ocm70173287.
+
+\bibitem[Hu, 2013]{hu_extreme_2013}
+Hu, Y. (2013).
+\newblock Extreme {Value} {Mixture} {Modelling} with {Simulation} {Study} and
+  {Applications} in {Finance} and {Insurance}.
+
+\bibitem[Martins and Stedinger, 2000]{martins_generalized_2000}
+Martins, E.~S. and Stedinger, J.~R. (2000).
+\newblock Generalized maximum-likelihood generalized extreme-value quantile
+  estimators for hydrologic data.
+\newblock {\em Water Resources Research}, 36(3):737--744.
+
+\bibitem[Mudelsee, 2014]{mudelsee_climate_2014}
+Mudelsee, M. (2014).
+\newblock {\em Climate {Time} {Series} {Analysis}}, volume~51 of {\em
+  Atmospheric and {Oceanographic} {Sciences} {Library}}.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Northrop et~al., 2017]{northrop_cross-validatory_2017}
+Northrop, P., Attalides, N., and Jonathan, P. (2017).
+\newblock Cross-validatory extreme value threshold selection and uncertainty
+  with application to ocean storm severity.
+\newblock {\em Journal of the Royal Statistical Society: Series C (Applied
+  Statistics)}, 66(1):93--120.
+\newblock arXiv: 1504.06653.
+
+\bibitem[Reiss and Thomas, 2007]{reiss_statistical_2007}
+Reiss, R.-D. and Thomas, M. (2007).
+\newblock {\em Statistical analysis of extreme values: with applications to
+  insurance, finance, hydrology and other fields ; [includes {CD}-{ROM}]}.
+\newblock Birkhäuser, Basel, 3. ed edition.
+\newblock OCLC: 180885018.
+
+\bibitem[Scarrott and MacDonald, 2012]{scarrott_review_2012}
+Scarrott, C. and MacDonald, A. (2012).
+\newblock A review of extreme value threshold es-timation and uncertainty
+  quantification.
+\newblock {\em REVSTAT–Statistical Journal}, 10(1):33--60.
+
+\bibitem[Stephenson and Ribatet, 2006]{stephenson_users_2006}
+Stephenson, A. and Ribatet, M. (2006).
+\newblock A {User}’s {Guide} to the evdbayes {Package} ({Version} 1.1).
+\newblock {\em month}.
+
+\end{thebibliography}
