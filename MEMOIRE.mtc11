@@ -1,8 +1,5 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.1}Preliminaries}{\reset@font\mtcSfont 68}{section.A.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Order statistics}{\reset@font\mtcSfont 68}{section.A.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.2}Tails of the distributions}{\reset@font\mtcSfont 69}{section.A.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.3}Convergence concepts}{\reset@font\mtcSfont 69}{section.A.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.4}Varying functions}{\reset@font\mtcSfont 70}{section.A.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.5}Bayesian Inference}{\reset@font\mtcSfont 70}{section.A.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.5.1}Algorithms}{\reset@font\mtcSSfont 70}{subsection.A.5.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Hamiltonian Monte Carlo}{\reset@font\mtcSSSfont 72}{section*.78}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.1}Preliminaries}{\reset@font\mtcSfont 67}{section.A.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Order statistics}{\reset@font\mtcSfont 67}{section.A.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.2}Tails of the distributions}{\reset@font\mtcSfont 68}{section.A.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.3}Convergence concepts}{\reset@font\mtcSfont 68}{section.A.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.4}Varying functions}{\reset@font\mtcSfont 68}{section.A.4}}

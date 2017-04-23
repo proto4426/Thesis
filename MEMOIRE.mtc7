@@ -1,17 +1,17 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Likelihood-based Methods}{\reset@font\mtcSfont 43}{section.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.1}Profile Likelihood}{\reset@font\mtcSSfont 45}{subsection.4.1.1}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Return levels}{\reset@font\mtcPfont 45}{section*.43}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Other Methods}{\reset@font\mtcSfont 46}{section.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.1}Estimators Based on Extreme Order Statistics (put with POT)?}{\reset@font\mtcSSfont 46}{subsection.4.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.2}The Probability-Weighted-Moment Estimator}{\reset@font\mtcSSfont 47}{subsection.4.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.3}Estimators based on Generalized Quantile }{\reset@font\mtcSSfont 48}{subsection.4.2.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Improvements For Modelling Non-stationary Sequences}{\reset@font\mtcSfont 48}{section.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Generalized Likelihood Methods}{\reset@font\mtcSSfont 48}{subsection.4.3.1}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Properties of the GML estimator}{\reset@font\mtcPfont 48}{section*.51}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Neural-Network Based Inference}{\reset@font\mtcSSfont 48}{subsection.4.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Bagging}{\reset@font\mtcSSfont 49}{subsection.4.3.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Bootstrap Methods}{\reset@font\mtcSfont 50}{section.4.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.1}Moving Block Bootstrap}{\reset@font\mtcSSfont 50}{subsection.4.4.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Markov models}{\reset@font\mtcSfont 50}{section.4.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Model Diagnostics : Goodness-of-Fit}{\reset@font\mtcSfont 51}{section.4.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.1}Diagnostic Plots : Quantile and Probability Plots}{\reset@font\mtcSSfont 51}{subsection.4.6.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Likelihood-based Methods}{\reset@font\mtcSfont 42}{section.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.1}Profile Likelihood}{\reset@font\mtcSSfont 44}{subsection.4.1.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Return levels}{\reset@font\mtcPfont 44}{section*.44}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Other Methods}{\reset@font\mtcSfont 45}{section.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.1}Estimators Based on Extreme Order Statistics (put with POT)?}{\reset@font\mtcSSfont 45}{subsection.4.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.2}The Probability-Weighted-Moment Estimator}{\reset@font\mtcSSfont 46}{subsection.4.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.2.3}Estimators based on Generalized Quantile }{\reset@font\mtcSSfont 47}{subsection.4.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Improvements For Modelling Non-stationary Sequences}{\reset@font\mtcSfont 47}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Generalized Likelihood Methods}{\reset@font\mtcSSfont 47}{subsection.4.3.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Properties of the GML estimator}{\reset@font\mtcPfont 47}{section*.52}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Neural-Network Based Inference}{\reset@font\mtcSSfont 47}{subsection.4.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Bagging}{\reset@font\mtcSSfont 48}{subsection.4.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Bootstrap Methods}{\reset@font\mtcSfont 49}{section.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.1}Moving Block Bootstrap}{\reset@font\mtcSSfont 49}{subsection.4.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Markov models}{\reset@font\mtcSfont 49}{section.4.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Model Diagnostics : Goodness-of-Fit}{\reset@font\mtcSfont 50}{section.4.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.1}Diagnostic Plots : Quantile and Probability Plots}{\reset@font\mtcSSfont 50}{subsection.4.6.1}}

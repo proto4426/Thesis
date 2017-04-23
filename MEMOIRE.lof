@@ -1,24 +1,28 @@
 \select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces First plot representing the \textbf {yearly} maxima (\textbf {above}) and minima (\textbf {below}), shaded grey line representing the standard error of the linear trend (regression), red line representing the polynomial nonparametric fit by LOESS.\relax }}{3}{figure.caption.9}
-\contentsline {figure}{\numberline {2}{\ignorespaces First plot representing the \textbf {yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie\relax }}{4}{figure.caption.10}
-\contentsline {xpart}{Theoretical Framework}{7}{part.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces First plot representing the \textbf {yearly} maxima (\textbf {above}) and minima (\textbf {below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.\relax }}{3}{figure.caption.7}
+\contentsline {xpart}{Theoretical Framework : \hskip 2em\relax Extreme Value Theory}{6}{part.1}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Extreme Value Theory : Basics}{7}{chapter.1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{13}{figure.caption.14}
+\contentsline {xchapter}{Method of Block-Maxima}{6}{chapter.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{12}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Peaks-Over-Threshold Methods}{24}{chapter.2}
+\contentsline {xchapter}{Peaks-Over-Threshold Methods}{23}{chapter.2}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Relaxing Independence Assumption}{35}{chapter.3}
-\contentsline {xpart}{Inferential Methods}{43}{part.2}
+\contentsline {xchapter}{Relaxing Independence Assumption}{34}{chapter.3}
+\contentsline {xpart}{Inferential Methods}{42}{part.2}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Methods of Inference}{43}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax \fontsize {6}{7}\selectfont \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{48}{figure.caption.52}
+\contentsline {xchapter}{Methods of Inference}{42}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax \fontsize {6}{7}\selectfont \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{47}{figure.caption.53}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Bayesian Methods}{53}{chapter.5}
-\contentsline {xpart}{Experimental Framework (Simulation Study) : Global....}{64}{part.3}
+\contentsline {xchapter}{Bayesian Methods}{52}{chapter.5}
+\contentsline {xpart}{Experimental Framework (Simulation Study) : Global....}{63}{part.3}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Simulation study: Performance evaluation of different methods}{65}{chapter.6}
+\contentsline {xchapter}{Simulation study: Performance evaluation of different methods}{64}{chapter.6}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{66}{chapter.7}
+\contentsline {xchapter}{Conclusion}{65}{chapter.7}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistical tools for Extreme Value Theory}{68}{appendix.A}
+\contentsline {xchapter}{Statistical tools for Extreme Value Theory}{67}{appendix.A}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Bayesian Methods}{69}{appendix.B}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Other Figures}{73}{appendix.C}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces First plot representing the \textbf {yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie\relax }}{74}{figure.caption.78}

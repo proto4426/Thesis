@@ -56,6 +56,12 @@
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
 \usepackage{lmodern} % Police vectorielle
+%\usepackage[sc]{
+
+%\usepackage{kpfonts}%  for math    
+%\usepackage{libertine}%  serif and sans 
+%\usepackage[scaled=0.85]{beramono}%% mono
+
 \usepackage[english]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{graphicx}
@@ -229,7 +235,7 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 %\theoremstyle{definition}
 \newtheorem{definition}{Definition}[chapter]
 %\renewcommand*{\proofname}{\boxed{Proof}}
-
+\usepackage{tcolorbox}
 \usepackage{adjustbox}
 \usepackage{dashbox}
 
@@ -292,8 +298,6 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 			\vspace{0.2cm}
 			Promoteur : & Johan \textsc{Segers} \\
 			\vspace{0.2cm}
-			Co-promoteur : & Prénom \textsc{Nom} \\
-			\vspace{0.2cm}
 			Lecteurs : & Anna \textsc{Kiriliouk}\\
 			\vspace{0.2cm}
 			& Michel \textsc{Crucifix}
@@ -320,59 +324,77 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 \dominitoc
 \tableofcontents
 \newpage
+\thispagestyle{empty}
 \listoffigures
+\thispagestyle{empty}
 
 \newpage
 
 
 %\centering
-
+\topskip0pt
+\vspace*{\fill}
 \section*{\centering Abstract}
-This thesis aims to 
+\begin{tcolorbox}%[colback=SeaGreen!75!white]
+This thesis aims to analyse extreme temperatures from Uccle and assess their nonstationarity.% trend in the location parameter of the temperatures assessing the climate warming. 
+ After having proven it by hand of splines's deriatives, we will do it by hand of the Extreme Value Theory (EVT)  that there is indeed an upward trend in the location parameter of the temperatures assessing the climate warming. First of all, we will do introductory analysis of the trend... and we will discover that..  Then we will go through with EVT by defining and presenting the usual methods such as GEV or POT. 
 
-We took advantage of a high-level language (c++) to make our analysis efficient and also made use of parallel computing to decrease computation time for time consuming...
-
-
+Regarding the computations, we took advantage of a high-level language (c++) to make our analysis efficient and also made use of parallel computing to decrease computation time for time consuming...
 \thispagestyle{empty}
+\end{tcolorbox}
+\thispagestyle{empty}
+\vspace*{\fill}
+
+
 
 %\afterpage{\cfoot{\thepage}}
 
-\thispagestyle{empty}
+
 \newenvironment{acknowledgements}%
 {\cleardoublepage\thispagestyle{empty}\null\vfill\begin{center}%
 \bfseries Acknowledgements\end{center}}%
 {\vfill\null}
+\addcontentsline{toc}{chapter}{Acknowledgements}%
 \begin{acknowledgements}
-	\textit{I would first like to thank my thesis supervisor Johan Segers for all his help and his guidance during this whole year. The repeated appointments we have made have  }
+	\textit{I would first like to thank my thesis supervisor Johan Segers for all his help and his guidance during this whole year. The repeated appointments we have had   }
 	\newline
 	
-	\textit{I also would like to thank the "Institut Royal de Météorologie" (IRM) of Belgium for his help, his guidance and his provided quality datasets.}
+	\textit{I also would like to thank the "Institut Royal de Météorologie" (IRM) of Belgium for his help and his guidance but also for his provided quality datasets.}
+	\newline
+	
+	\textit{Finally, I want to thank my family and my friends, but also Bernadette for her support and all the time I have spent  writing in her room for my thesis but also during my whole academic studies.}
+	
 \end{acknowledgements}
-\addcontentsline{toc}{chapter}{Acknowledgements}%
-\newpage
+
+%\newpage
 
 
 \chapter*{List of Abbreviations}
 \addcontentsline{toc}{chapter}{List of Abbreviations}
-For convenience, we place a list of all the abbreviations we will use during the text. However, they will always be defined for the first occurrence in the text.\\
+For convenience, we place a list of all the abbreviations we will use in the text. However, these will always be defined in their first occurrence into the text.\\
+
+\begin{center}
 \begin{abbreviations}
-	\item [GEV] Generalized Extreme Value
 	\item [df]\label{df}  distribution function
-	\item[GPD] Generalized Pareto Distribution \underline{or} Generalized Pareto Distribution function
 	\item[EVI] Extreme Value Index ($\xi$)
 	\item[EVT] Extreme Value Theory
+	\item[GEV] Generalized Extreme Value
+	\item[GPD] Generalized Pareto Distribution (function)
 	\item[MCMC] Marko Chain Monte Carlo
 	\item[MH] Metropolis-Hastings (algorithm)
+	\item[TN] Temperature miNimum
+	\item[TX] Temperature maXimum
 	
 \end{abbreviations}
-
+\end{center}
 
 
 %\chapter*{Acknoledgment}
 
 
-\addcontentsline{toc}{chapter}{Introduction and Preliminaries}
-\chapter*{Introduction : Presentation of the Problem }
+\addcontentsline{toc}{chapter}{Introduction}
+\chapter*{Introduction}
+	%Presentation of the Analysis }
 \pagenumbering{arabic}
 \thispagestyle{empty}
 
@@ -430,19 +452,30 @@ text. While this not (yet ?...) usable in printed versions, the reader may feel 
 comfortable in a numeric version to more easily handle the vast amount of sections, 
 equations, references, etc... and the links that are made between them.]
 
+In this part, we will make use of some general methods to assess if there is indeed a trend in the maximum temperatures
 
+In \hyperref[sec::1]{chapter \textbf{1}} we will present the method of block-maxima and derive the Generalized Extreme Value (GEV) distributions. In \hyperref[sec::2]{chapter \textbf{2}} we will .
+In \hyperref[sec::3]{chapter \textbf{3}}
+In \hyperref[sec::4]{chapter \textbf{4}} we will ..
+
+Finally, we notice that this thesis will more concentrate on the block-maxima (GEV) methods (see \hyperref[sec::1]{chapter \textbf{1}}), i.e. to data relating to maxima over a period of 1 year. For example here in the introduction, or for the Bayesian analysis in \hyperref[sec::bayesian]{chapter \textbf{5}}.
 \thispagestyle{empty}
-%\chapter{Analysis of maximum temperatures in Uccle }
 
-\addcontentsline{toc}{section}{2 Presentation of the Analysis : Temperatures from Uccle}
-\section*{Presentation of the Analysis : Temperatures from Uccle}
 
-\addcontentsline{toc}{section}{Comparisons with freely available data}
-\subsection*{Comparisons with freely available data} 
+\subsubsection*{Repository for the R code and Package}
+An \textbf{R package} has been created and can be downloaded \url{https://github.com/proto4426/PissoortThesis}.
 
-TX = Tmax, TN=Tmin.
+For your (best?) convenience, a folder has been created containing in the same repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly in this page \url{https://github.com/proto4426/PissoortThesis/tree/master/Scripts-R}.
 
-A similar dataset is freely available on the internet. (\url{http://lstat.kuleuven.be/Wiley/Data/ecad00045TX.txt} and which was a project initially performed by the KMNI). However, we were reticent to simply analyze these data as we know that it is hard to trust internet's data, even if they come from well-known "authorities". After having made all these comparisons analysis (see start of code...), we remark effectively that there are differences
+%\addcontentsline{toc}{section}{2 Presentation of the Analysis : Temperatures from Uccle}
+\section{Presentation of the Analysis : Temperatures from Uccle}
+
+The data used during this thesis have been gathered directly from the Institut Royal de Météorologie (IRM) 
+
+%\addcontentsline{toc}{section}{Comparisons with freely available data}
+\subsection{Comparisons with freely available data} 
+
+A similar dataset is freely available on the internet\footnote{\url{http://lstat.kuleuven.be/Wiley/Data/ecad00045TX.txt}}. It was a project initially performed by the KMNI and which was used for example in \citet{beirlant_statistics_2006}. However, we were reticent to simply analyze these data as we know that it is hard to trust internet's data, even if they come from well-known "authorities". After having made all these comparisons analysis (see start of code...), we remark effectively that there are differences
 in these two datasets, and hence large errors of measures can easily occur 
 in unofficial data. It confirms the fact that is important to get reliable data if one wants to make reliable analysis. 
 However, these differences tend to be much smaller when considering the "open shelter"
@@ -460,13 +493,13 @@ However, for\textbf{ meteorological considerations}, it is always better to cons
 
 
 
-\subsection*{First analysis}
+\section{First Analysis}
 
-As expected (~line 200 code local), we see that there is an upward trend for both (yearly) maxima and minima. However, we remark that this one is less pronounced for minima. That makes sense as (as mentioned above), the global warming is  
+As expected (~line 200 code local), from \ref{first_fig} we see that there is an upward trend for both (yearly) maxima and minima. However, we remark that this one is less pronounced for minima ( see figure \ref{seas4} in appendix \textbf{C}). That makes sense as (as mentioned above), the global warming is  
 
 
 \begin{figure}
-	\includegraphics[width=.8\linewidth]{gg1.pdf}\caption{First plot representing the \textbf{yearly} maxima (\textbf{above}) and minima (\textbf{below}), shaded grey line representing the standard error of the linear trend (regression), red line representing the polynomial nonparametric fit by LOESS.}
+	\includegraphics[width=.8\linewidth]{gg1.pdf}\caption{First plot representing the \textbf{yearly} maxima (\textbf{above}) and minima (\textbf{below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.}\label{first_fig}
 	\thispagestyle{empty}
 \end{figure}
 
@@ -475,12 +508,7 @@ Add constraint to the broken linear trend to make it continuous :
 
 We will see that the decrease (around 1940 to 1970) is more from randomness than a real decrease (...)
 
-\thispagestyle{empty}
-\begin{figure}
-	\includegraphics[width=\linewidth]{sumwint.pdf}\caption{First plot representing the \textbf{yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie}\label{seas4}
-	\thispagestyle{empty}
-\end{figure}
-\thispagestyle{empty}
+
 TEST (statistic) for the Differences in trend !!!! !!!!!!!!
 
 From the figure \ref{seas4}, we can already have some remarks : 
@@ -496,7 +524,7 @@ We must choose a block-length which is large enough for the limiting arguments s
 
 TABLE with nested models (gumbel, GEV, + linear trend, etc etc)
 
-From figure \ref{seas4},
+From figure \ref{seas4} in appendix \textbf{C}, we can remark that
 
 The code which provide all the tools to retrieve the presented results are left in appendix, but in the numeric version only be cause it is very heavy. this also enables you to get all insights (..)
 
@@ -512,17 +540,19 @@ From the pointwise confidence intervals we can say that (example) $f(1980)$ has 
 
 We can see that only the 2 increasing periods from the start and at the end of the series are significant, while the decreasing period from... (see the red line) is more likely to be the subject of randomness. Moreover, we remark that the 
 
-
+Note that we will see further in the text (section \ref{bayes_cred_int} ) more explanations about the bayesian credible intervals.
 
 
 After having... we will now go through with the more specific subjec of this thesis, that is the extreme value analysis.
 
-\part{Theoretical Framework}
 
+\begin{center}
+\part{Theoretical Framework : \qquad Extreme Value Theory}
+\end{center}
 %\pagestyle{fancy}
 
 \setcounter{mtc}{3}
-\chapter{Extreme Value Theory : Basics} \label{sec::1}
+\chapter{Method of Block-Maxima} \label{sec::1}
 \minitoc
 %\newpage
  \vspace{1.5cm}
@@ -535,7 +565,7 @@ In this section, we will present the basics of EVT and we will consider a
 \textit{block-maxima approach}. After defining some useful concepts in 
 \hyperref[sec::1.1]{section \textbf{1.1}}, we will
 
-
+\thispagestyle{empty}
 \newpage
 \section{Preliminaries}\label{sec::1.1}
 
@@ -564,17 +594,18 @@ This is directly linked with max-stable process that we will define...
 In other words, taking powers of $G$ results only in a change of location and scale. \ref{stat modelling..course slide Coles} This concept will be closely connected with the extremal limit laws in the following ().
 However, max-stable process are more used in a multivariate setting, see for example \citet{} for an introduction.
 
+\emph{Min-stability} can easily be found by complement, see for instance \citet[pp.23]{ reiss_statistical_2007}.
 
-
+\iffalse
 \begin{definition}[Min-stability]
-	Anageously, from \cite[pp.23]{ reiss_statistical_2007}, we say that a distribution function $G$ is \emph{\textbf{min-stable}} if 
+	Anageously, from \citet[pp.23]{ reiss_statistical_2007}, we say that a distribution function $G$ is \emph{\textbf{min-stable}} if 
 	
 \begin{equation}
 \text{\emph{Pr}} \big\{X_{(1)}> d_n+c_nz \big\}=\bar{G}^n(d_n+c_nz)=\bar{G}(z),
 \end{equation}
 	where $c_n=a_n$, $d_n=-b_n$ and $X_{(1)}$ the minimum of the sample of size n, see (\ref{min}).
 \end{definition}
-
+\fi
 
 \paragraph{Principles of stability}
 % course slides 18 coles 
@@ -771,7 +802,7 @@ Note that the support varies equally as for the distribution functions wrt sign 
 
 %\begin{center}
 \begin{figure}
-	\includegraphics[width=0.85\textwidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gev3plot}
+	\includegraphics[width=0.85\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gev3plot}
 \end{figure}
 %\end{center}
 
@@ -797,8 +828,8 @@ $a_n$ and $b_n$ to retrieve the pertaining distribution family.
 This is well not easy to find the sequences in practice.
 \url{http://stats.stackexchange.com/questions/105745/extreme-value-theory-show-normal-to-gumbel/105749#105749}
 
-\subsection{Convergence to Gumbel distribution}
-\paragraph{\underline{Type I}} or \textbf{Gumbel} distribution $G_1(x)$ can be retrieved by considering, for example,  a iid exponential distributed sequence $\{X_j\}$ of $n$ random variables, that is $X_j\stackrel{iid}{\sim}Exp(\lambda)$ and consider the largest of these values $X_{(n)}$ as defined earlier. By definition, we know $F(x)=1-\exp^{-x}$. Our goal is to find non-random sequences $\{b_n\}$, $\{a_n>0\}$ such that 
+\subsection*{Convergence to Gumbel distribution}
+The \textbf{\underline{Type I}} or \textbf{Gumbel} distribution $G_1(x)$ can be retrieved by considering, for example,  a iid exponential distributed sequence $\{X_j\}$ of $n$ random variables, that is $X_j\stackrel{iid}{\sim}Exp(\lambda)$ and consider the largest of these values $X_{(n)}$ as defined earlier. By definition, we know $F(x)=1-\exp^{-x}$. Our goal is to find non-random sequences $\{b_n\}$, $\{a_n>0\}$ such that 
 \begin{equation}
 \displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\big\}=G_1(z).
 \end{equation}
@@ -838,9 +869,9 @@ or faster will have this same Gumbel limiting distribution for the maxima,
 and will have medians (and other quantiles) that grow as $n\rightarrow\infty$ at the rate
 of (some power of) $\log n$. This is typical example of light-tailed distribution (i.e., decays exponentially as defined in section \textbf{1.1}).
 
-\subsection{Convergence to Fréchet distribution}
+\subsection*{Convergence to Fréchet distribution}
 
-\paragraph{\underline{Type II}} or \textbf{Fréchet-Pareto type} distrbution $G_2(x)$ 
+The \textbf{\underline{Type II}} or \textbf{Fréchet-Pareto type} distrbution $G_2(x)$  ...
 
 %[Practical analysis of extreme values p.51]
 When starting with a sequence $\{X_j\}$ of $n$ iid random variables (block-maxima?) following a \textit{basic}(or \textit{generalized}, with scale parameter set to 1) Pareto distribution with shape parameter $\alpha\in (0,\infty)$, $X_j\sim Pa(\alpha$), we have that 
@@ -884,9 +915,9 @@ We let the concepts of \textbf{regularly varying functions}, together with \text
 
 \citet[pp.75]{beirlant_statistics_2006} !!!!
 
-\subsection{Convergence to Weibull distribution}
+\subsection*{Convergence to Weibull distribution}
 
-\paragraph{\underline{Type III}} or \textbf{Weibull} family (?) of distributions $G_3(x)$ are, for example, in the limit of $n$ iid uniform random variables $X_j\sim U[L,R]$ where $L$ and $R>L$ are both in $\mathbb{R}$  and denote respectively the Left and the Right endpoint of the domain of definition. We have by definition
+The \textbf{\underline{Type III}} or \textbf{Weibull} family (?) of distributions $G_3(x)$ are, for example, in the limit of $n$ iid uniform random variables $X_j\sim U[L,R]$ where $L$ and $R>L$ are both in $\mathbb{R}$  and denote respectively the Left and the Right endpoint of the domain of definition. We have by definition
 
 \begin{equation*}
 F(x)=\frac{x}{R-L}, \ \ \ \ \ \ \ \  \ \ x\in [L,R].
@@ -920,7 +951,7 @@ As also stated in..,  the shape parameter is invariant.
 
 But what about the fact that $X_{(n)}$ non-normalized is degenerate (see intro) ?
 
-\subsection{Some Conditions/comments (?) (Continuity condition)}
+\subsection*{Some Conditions/comments (?) (Continuity condition)}
 
 As we have noticed in (?), $F$ needs certain conditions at its right endpoint $x_*$ for the limit to be convergent in (\ref{extthm}). The \emph{continuity condition} ensures that a discrete distribution cannot have a non-degenrate limit distribution as in (\ref{extthm}). Examples are well documented by  \citet{modelling_embrechts_1997}[pp.118-119] for the case of poisson, Geometric and negative binomial distribution. Thus, we cannot have a limit for these distributions.
 
@@ -970,8 +1001,10 @@ $\tilde{r}(x)=1/r(x)$].
 This function will be useful to characterize insightful conditions for each domains of 
 attraction, known as the\emph{ von Mises criterion}.
 
+\subsection{Domain of attraction for the 3 GEV distributios}
 
-\subsection{Domain of attraction for Gumbel distribution ($\mathbf{G_1}$) }  We derive here two ways of formulating necessary and sufficient condition for a distribution function $F$ to be in the domain of attraction of $G_1$, namely $F\in D(G_1)$.
+
+\subsubsection*{Domain of attraction for Gumbel distribution ($\mathbf{G_1}$) }  We derive here two ways of formulating necessary and sufficient condition for a distribution function $F$ to be in the domain of attraction of $G_1$, namely $F\in D(G_1)$.
 
 \begin{itemize}
 	\item  From (mettre vrmt??)
@@ -1007,7 +1040,7 @@ is ultimately positive in the neighbourhood of $x_*$, is differentiable there an
 then $F\in D(G_1)$.
 (compare hazar convergence rates of the three types !!!!!)
 
-\paragraph{Examples of distributions in $\boldsymbol{D(G_1)}$} Intuitively, we can remark that all distributions which are exponentially decaying
+\paragraph{Examples of distributions in $\boldsymbol{D(G_1)}$} include  exponentially decaying distributions which
 will have this propensity to be in the Gumbel domain of attraction. For instance, the $Exponential$, the $Gamma$, the $Weibull$, the $logistic$, etc.
 To see that, by a Taylor expansion, we have that 
 
@@ -1016,7 +1049,7 @@ To see that, by a Taylor expansion, we have that
 \end{equation*}
 Hence, the Gumbel domain of attractions $G_1$ decays exponentially (as tend their pertaining distributions).
 
-\subsection{Domain of attraction for Fréchet distribution ($\mathbf{G_{2,\alpha}}
+\subsection*{Domain of attraction for Fréchet distribution ($\mathbf{G_{2,\alpha}}
 	$)}
 Let $\alpha:=\xi^{-1}>0$ be the \emph{index} of the Fréchet distribution $G_{2,\alpha}$ (see (\ref{frech})). Then, $F \in G_{2,\alpha}$ if and only if 
 
@@ -1064,7 +1097,7 @@ Clearly, we can see that by setting $K=x_m^{\alpha}$, we have
 
 Therefore, we have that $a_n=(Kn)^{\alpha^{-1}}$ and $b_n=0$.
 
-\paragraph{Examples of distributions in $\boldsymbol{D(G_{2,\alpha})}$} These distributions are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
+\paragraph{Examples of distributions in $\boldsymbol{D(G_{2,\alpha})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
 An example to see that, is again by Taylor expansion at the tail of $G_{2,\alpha}$ with $\alpha>0$ 
 
 \begin{equation}
@@ -1074,7 +1107,7 @@ An example to see that, is again by Taylor expansion at the tail of $G_{2,\alpha
 showing that $G_{2,\alpha}$ tends to decrease as a \emph{power law}.
 See for example eq.
 
-\subsection{Domain of attraction for Weibull distribution ($\mathbf{G_{3,\alpha}}$) }
+\subsection*{Domain of attraction for Weibull distribution ($\mathbf{G_{3,\alpha}}$) }
 We say  that $F\in G_{3,\alpha}$ (\ref{weib}) with index $\alpha>0$ if and only if there exists finite right endpoint $x_*\in\mathbb{R}$ such that 
 
 \begin{equation}
@@ -2017,7 +2050,7 @@ $F_y(r_p(y))=1-p$ with the exceedance level $r_p(y)$ changing with year. It show
 %\thispagestyle{empty}
 
 
-\chapter{Methods of Inference} 
+\chapter{Methods of Inference}\label{sec::4} 
 \minitoc\thispagestyle{empty}
 
 We decide to present in this section the two mains methods of inference for GEV distributions. First, the likelihood-based methods for their wide applicability, and easy interpretability. Then, we will broadly present the bayesian methods for their increasing supports in this domain, and easy adjustability. Finally, we will present some other well-known methods that are also widely used to estimate GEV parameters like the Hill or the moment estimator.
@@ -2384,10 +2417,12 @@ As we mentioned, the NN is meant to approximate any functions with good accuracy
  to identify the form of nonlinear relationships between
  covariates and GEV distribution parameters or quantiles."
  
+ ... Intro to deep learning.. ?
+ 
 \subsection{Bagging} 
 
 Nowadays, bagging is used in 
-many state-of-the-art algorithms such as Random Forests (see .. for comparisons of such techniques)
+many state-of-the-art algorithms such as Random Forests (see .. for comparisons of such techniques) and is one of the \emph{ensemble methods} which are praised in Machine Learning for their performance.  
 
 In a "pure" climatological point of view, \emph{ensemble models} are of major utility, especially to make weather forecasting, see for example \citet{suh_development_2012} or, .... among others
 
@@ -2530,7 +2565,7 @@ Z and W statistic plots
 
 
 
-\chapter{Bayesian Methods}
+\chapter{Bayesian Methods}\label{sec::bayesian}
 \minitoc\thispagestyle{empty}
 
 see evdbayes pdf package r
@@ -2913,7 +2948,7 @@ For each generated chains with dispersed starting values, we evaluate separately
 
 \section{Bayesien Inference ?}
 
-\subsection{Bayesian Credible Intervals}
+\subsection{Bayesian Credible Intervals}\label{bayes_cred_int}
 
 The Bayesian \emph{credible intervals} are inherently different from the frequentist's confidence intervals. In the Bayesian intervals, the bounds are treated as fixed and the estimated parameter as a random variable, while in the frequentist's setting, bound are random variables and the parameter is a fixed value.
 
@@ -2962,6 +2997,8 @@ the same problem. Posterior inferences from each model can then be compared."
 
 
 
+\subsection{HMC algorithm using STAN language}
+
 
 
 
@@ -2974,8 +3011,23 @@ We can calculate the effective sample size (ESS) using the posterior samples for
 \text{ESS}=N\cdot (1+2\sum_k\gamma(k))^{-1}
 \end{equation}
 
-where $N$ is still the number of posterior samples and $\gamma(k)$ are the monotone lag $k$ sample autocorrelations. \citet{geyer_ _1992}. We can thus interpret this as the number of effectively independent samples. 
+where $N$ is still the number of posterior samples and $\gamma(k)$ are the monotone lag $k$ sample autocorrelations. \citet{geyer__1992}. We can thus interpret this as the number of effectively independent samples. 
 
+
+\subsubsection*{STAN}
+
+Benefits : 
+
+\begin{itemize}
+	\item Allows more flexibility (?) through the mathematical formulation of the formula
+	\item It is really smoother and clearer (straightforward) for this kind of problems 
+\end{itemize}
+
+Drawbacks : 
+
+\begin{itemize}
+	\item New language with all the problems/errors arising when learning it. 
+\end{itemize}
 
 \part{Experimental Framework (Simulation Study) : Global....}
 \thispagestyle{empty}
@@ -3049,6 +3101,8 @@ be prudent that all "methods" are listed (numbered) in (each) ToC
 add square brackets [] for cite ? 
 
 Careful for boldsymbols, especiallyin bayesian
+
+PissoortThesis:: Behind our functions 
 
 
 
@@ -3153,13 +3207,11 @@ We say that a sequence of random variables $X_n$ \emph{converges weakly} to
 Well other forms of convergence do exist, but these ones are the most important in regard to EVT. However, the reader may refer e.g. to \citet{lafaye_understanding_2009}  for more in-depth results.
 \section{Varying functions}
 
+\chapter{Bayesian Methods}\label{appB}
 
-\section{Bayesian Inference}\label{bayesapp}
-%\chapter{Figures}
+\section{Algorithms}
 
-\subsection{Algorithms}
-
-\subsubsection*{Metropolis–Hastings Algorithm}
+\subsection{Metropolis–Hastings Algorithm}
 
 The \emph{Metropolis–Hastings} algorithm is one of the first and of the pioneering algorithm discovered by \cite{hastings_monte_1970} to compute  MCMC for Bayesian analysis.
 
@@ -3198,7 +3250,7 @@ We can shortly summarize the \emph{pros} and \emph{cons} this algorithm :
 \end{itemize}
 
 
-\subsubsection*{Gibbs Sampler}
+\subsection{Gibbs Sampler}
 
 The \emph{Gibbs Sampler} can be seen as a special case of the Metropolis-Hastings algorithm.
 Suppose our parameter vector $\theta$ can be divided into $d$ subvectors $(\theta_1,\dots,\theta_d)$, and let's say in our case that each of these "subvectors" represent a single parameter, thus typically one of the three $(\mu,\sigma,\xi)$, for the simplest case so that $d=3$ in this model.
@@ -3222,8 +3274,8 @@ Therefore, we have $\theta_{t-1}^{(-j)}=\Big(\theta_t^{(1)},\dots,\theta_t^{(j-1
 			\end{equation*}
 			\item[(c)] Set 
 			\begin{equation*}
-			\theta_t^{(j)}= 			\begin{cases} \ \theta_*^{(j)} \quad \text{with probability} \ \  \alpha=\min (r,1) \\
-			\ \theta_{t-1}^{(j)} \ \quad \text{otherwise}.
+			\theta_t^{(j)}= 			\begin{cases} \ \theta_*^{(j)} \qquad \text{with probability} \ \  \alpha=\min (r,1); \\
+			\ \theta_{t-1}^{(j)} \ \ \quad \text{otherwise}.
 			\end{cases}
 			\end{equation*}
 		\end{itemize}
@@ -3257,7 +3309,7 @@ Note also the increase of complexity with this sampler compared to the Metropoli
 
 
 
-\subsubsection{Hamiltonian Monte Carlo}
+\subsection{Hamiltonian Monte Carlo}
 
 \url{http://deeplearning.net/tutorial/hmc.html#hmc} \\
 
@@ -3359,6 +3411,16 @@ Chains are expected to reach stationarity faster as it proposes moves to regions
 \end{itemize}
 
 
+\chapter{Other Figures}\label{appC}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{sumwint.pdf}\caption{First plot representing the \textbf{yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie}\label{seas4}
+
+\end{figure}
+
+
+
+
 
 
 
@@ -3378,6 +3440,7 @@ Chains are expected to reach stationarity faster as it proposes moves to regions
 	\caption{Representation of the GEV densities for various values of the shape parameter $\xi$ : $|\xi|=0.5$ (1) $|\xi|=0.25$, (2) and $|\xi|=0.75$ (3) for the Fréchet density [red], Weibull density [blue] while the Gumbel density [green] is kept fixed with $\xi=0$. }{\label{gevdens}}
 \end{figure}
 \fi 
+
 
 \ do not forget \cite{emberchts_statistical_1997}
 
