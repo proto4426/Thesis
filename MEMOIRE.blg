@@ -1,27 +1,23 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: MEMOIRE.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: MEMOIRE.aux
 The style file: plainnat.bst
-White space in argument---line 106 of file MEMOIRE.aux
+White space in argument---line 107 of file MEMOIRE.aux
  : \citation{gnedenko_sur
  :                        la distribution_translated_1992}
 I'm skipping whatever remains of this command
-White space in argument---line 124 of file MEMOIRE.aux
+White space in argument---line 122 of file MEMOIRE.aux
  : \citation{domain
  :                  of attraction course}
 I'm skipping whatever remains of this command
-White space in argument---line 379 of file MEMOIRE.aux
- : \citation{geyer_
- :                  _1992}
-I'm skipping whatever remains of this command
 Case mismatch error between cite keys Hartmann_bayesian_2016 and hartmann_bayesian_2016
----line 430 of file MEMOIRE.aux
+---line 438 of file MEMOIRE.aux
  : \citation{Hartmann_bayesian_2016
  :                                 }
 I'm skipping whatever remains of this command
 Database file #1: zotero.bib.bib
 Warning--I didn't find a database entry for "milly_climate_2008"
 Warning--I didn't find a database entry for "kharin_changes_2006"
+Warning--I didn't find a database entry for "ruppert_semiparametric_2003"
+Warning--I didn't find a database entry for "marra_coverage_2012"
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "De_on_1970"
 Warning--I didn't find a database entry for "gomes_bootstrap_2015"
@@ -33,7 +29,11 @@ Warning--I didn't find a database entry for "charras_extreme_2013"
 Warning--I didn't find a database entry for "grimshaw_computing_1993"
 Warning--I didn't find a database entry for "embrechts_modelling_1997"
 Warning--I didn't find a database entry for "guess_mean_1988"
+Warning--I didn't find a database entry for "Wadsworth_exploiting_2016"
+Warning--I didn't find a database entry for "ribatet_users_2006"
 Warning--I didn't find a database entry for "cunnane_note_1979"
+Warning--I didn't find a database entry for "hosking_regional_1997"
+Warning--I didn't find a database entry for "peel_utility_2001"
 Warning--I didn't find a database entry for "hu_evmix:_2014"
 Warning--I didn't find a database entry for "northrop_cross_2016"
 Warning--I didn't find a database entry for "leadbetter_extreme_1974"
@@ -41,58 +41,37 @@ Warning--I didn't find a database entry for "aghakouchak_extremes_2013-1"
 Warning--I didn't find a database entry for "saeb_general_2014"
 Warning--I didn't find a database entry for "bolivar_profile_2010"
 Warning--I didn't find a database entry for "pickands_statistical_1975"
+Warning--I didn't find a database entry for "dekkers_estimation_1989"
+Warning--I didn't find a database entry for "segers_generalized_2001"
 Warning--I didn't find a database entry for "mason_"
+Warning--I didn't find a database entry for "dekkers_moment_1989"
+Warning--I didn't find a database entry for "wang_lh_1997"
 Warning--I didn't find a database entry for "martin_generalized_2000"
 Warning--I didn't find a database entry for "Adlouni_generalized_2007"
 Warning--I didn't find a database entry for "carreau_hybrid_2009"
 Warning--I didn't find a database entry for "Goodfellow-et-al-2016"
+Warning--I didn't find a database entry for "yang_catalog_1996"
+Warning--I didn't find a database entry for "ni_noninformative_2003"
+Warning--I didn't find a database entry for "northrop_posterior_2016"
+Warning--I didn't find a database entry for "angelino_patterns_2016"
 Warning--I didn't find a database entry for "stan_stan_2016"
+Warning--I didn't find a database entry for "betancourt_diagnosing_2016"
+Warning--I didn't find a database entry for "neal_mcmc_2011"
+Warning--I didn't find a database entry for "betancourt_hamiltonian_2015"
+Warning--I didn't find a database entry for "Roberts_weak_1997"
+Warning--I didn't find a database entry for "Sherlock_optimal_2009"
 Warning--I didn't find a database entry for "Bédard_optimal_2008"
+Warning--I didn't find a database entry for "Vehtari_practical_2016"
+Warning--I didn't find a database entry for "Spiegelhalter_bayesian_2002"
+Warning--I didn't find a database entry for "Watanabe_asymptotic_2010"
+Warning--I didn't find a database entry for "gelman_understanding_2014"
+Warning--I didn't find a database entry for "hartmann_bayesian_2016"
+Warning--I didn't find a database entry for "geyer__1992"
 Warning--I didn't find a database entry for "davison_statistical_2012"
 Warning--I didn't find a database entry for "lafaye_understanding_2009"
+Warning--I didn't find a database entry for "hastings_monte_1970"
+Warning--I didn't find a database entry for "gelman_bayesian_2013"
 Warning--I didn't find a database entry for "leimkulher_..._2004"
 Warning--I didn't find a database entry for "emberchts_statistical_1997"
 Warning--can't use both author and editor fields in resnick_extreme_1987
-Warning--empty journal in segers_generalized_2001
-You've used 54 entries,
-            2763 wiz_defined-function locations,
-            1063 strings with 20174 characters,
-and the built_in function-call counts, 26102 in all, are:
-= -- 2339
-> -- 1647
-< -- 36
-+ -- 558
-- -- 504
-* -- 2245
-:= -- 4154
-add.period$ -- 217
-call.type$ -- 54
-change.case$ -- 318
-chr.to.int$ -- 54
-cite$ -- 110
-duplicate$ -- 1098
-empty$ -- 1987
-format.name$ -- 596
-if$ -- 5356
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 66
-newline$ -- 329
-num.names$ -- 217
-pop$ -- 580
-preamble$ -- 1
-purify$ -- 276
-quote$ -- 0
-skip$ -- 817
-stack$ -- 0
-substring$ -- 891
-swap$ -- 91
-text.length$ -- 3
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 524
-warning$ -- 2
-while$ -- 225
-width$ -- 0
-write$ -- 805
-(There were 4 error messages)
+(There were 3 error messages)

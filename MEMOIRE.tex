@@ -55,10 +55,9 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
-\usepackage{lmodern} % Police vectorielle
 %\usepackage[sc]{
-
-%\usepackage{kpfonts}%  for math    
+\usepackage{lmodern}
+%\usepackage[nomath]{kpfonts} % coment to return to lpmodern complet
 %\usepackage{libertine}%  serif and sans 
 %\usepackage[scaled=0.85]{beramono}%% mono
 
@@ -461,11 +460,18 @@ In \hyperref[sec::4]{chapter \textbf{4}} we will ..
 Finally, we notice that this thesis will more concentrate on the block-maxima (GEV) methods (see \hyperref[sec::1]{chapter \textbf{1}}), i.e. to data relating to maxima over a period of 1 year. For example here in the introduction, or for the Bayesian analysis in \hyperref[sec::bayesian]{chapter \textbf{5}}.
 \thispagestyle{empty}
 
+\addcontentsline{toc}{subsection}{Repository for the code : R Package}
+\subsection*{Repository for the code : R Package}
 
-\subsubsection*{Repository for the R code and Package}
 An \textbf{R package} has been created and can be downloaded \url{https://github.com/proto4426/PissoortThesis}.
 
 For your (best?) convenience, a folder has been created containing in the same repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly in this page \url{https://github.com/proto4426/PissoortThesis/tree/master/Scripts-R}.
+
+\addcontentsline{toc}{subsection}{Visualization Tool : Shiny Application}
+\subsection*{Visualization Tool : Shiny Application}
+
+A small Shiny application has started to be developed and can be run directly from R after having loaded the package. So far, it only contains the models applied to the annual maxima that can you can smoothly visualize. It summarizes the contents of figure \ref{}
+
 
 %\addcontentsline{toc}{section}{2 Presentation of the Analysis : Temperatures from Uccle}
 \section{Presentation of the Analysis : Temperatures from Uccle}

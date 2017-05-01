@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.12)  23 APR 2017 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.12)  1 MAY 2017 12:24
 entering extended mode
 **./MEMOIRE.tex
 (MEMOIRE.tex
@@ -1058,7 +1058,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 124.
+Package hyperref Info: Option `colorlinks' set `true' on input line 123.
 \c@exe=\count172
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algorit
@@ -1257,7 +1257,7 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen185
 \PaperHeight=\dimen186
 )
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 183.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 182.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1806,28 +1806,28 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
  (MEMOIRE.aux)
 \openout1 = `MEMOIRE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 264.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 264.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 263.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 263.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 264.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 264.
-LaTeX Font Info:    ... okay on input line 264.
+LaTeX Font Info:    ... okay on input line 263.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 263.
+LaTeX Font Info:    ... okay on input line 263.
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
@@ -1930,7 +1930,7 @@ LaTeX Info: Redefining \selectfont on input line 126.
 Option `amssymb' provided! 
  Command \square redefined by SIunits package!
 
-Package hyperref Info: Link coloring ON on input line 264.
+Package hyperref Info: Link coloring ON on input line 263.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1939,9 +1939,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count318
 )
-LaTeX Info: Redefining \ref on input line 264.
-LaTeX Info: Redefining \pageref on input line 264.
-LaTeX Info: Redefining \nameref on input line 264.
+LaTeX Info: Redefining \ref on input line 263.
+LaTeX Info: Redefining \pageref on input line 263.
+LaTeX Info: Redefining \nameref on input line 263.
 
 (MEMOIRE.out) (MEMOIRE.out)
 \@outlinefile=\write7
@@ -1976,62 +1976,62 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                of loading the ``hyperref'' package.
 
 ABD: EveryShipout initializing macros
-<lsba.jpg, id=412, 283.2984pt x 283.2984pt>
+<lsba.jpg, id=420, 283.2984pt x 283.2984pt>
 File: lsba.jpg Graphic file (type jpg)
  <use lsba.jpg>
-Package pdftex.def Info: lsba.jpg used on input line 279.
+Package pdftex.def Info: lsba.jpg used on input line 278.
 (pdftex.def)             Requested size: 99.58388pt x 99.58464pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 297.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 296.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 297.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 296.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 297
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 296
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 297
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 296
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 297.
+(Font)              <10.95> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 297.
+(Font)              <8> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 297.
-LaTeX Font Info:    Try loading font information for U+msa on input line 297.
+(Font)              <6> on input line 296.
+LaTeX Font Info:    Try loading font information for U+msa on input line 296.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 297.
+LaTeX Font Info:    Try loading font information for U+msb on input line 296.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 297
+LaTeX Font Info:    Try loading font information for U+esvect on input line 296
 .
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\esvect\uesvect.fd"
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 297.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 296.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (12.0pt too wide) in alignment at lines 310--310
+Overfull \hbox (12.0pt too wide) in alignment at lines 309--309
 [] 
  []
 
@@ -2039,7 +2039,7 @@ Overfull \hbox (12.0pt too wide) in alignment at lines 310--310
 
 {C:/Users/Piss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./lsba.jpg>]
 Package minitoc Info: I0024
-(minitoc)             PREPARING MINITOCS FROM MEMOIRE.toc on input line 325.
+(minitoc)             PREPARING MINITOCS FROM MEMOIRE.toc on input line 324.
 Package minitoc Info: I0033
 (minitoc)             Writing MEMOIRE.mtc1.
 \openout3 = `MEMOIRE.mtc1'.
@@ -2102,7 +2102,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 108.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 110.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2140,17 +2140,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
@@ -2159,24 +2159,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--375
 ]
 
 Package natbib Warning: Citation `milly_climate_2008' on page 1 undefined on in
-put line 407.
+put line 406.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
 
 Package natbib Warning: Citation `kharin_changes_2006' on page 1 undefined on i
-nput line 423.
+nput line 422.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--432
+Underfull \hbox (badness 10000) in paragraph at lines 425--431
 
  []
 
@@ -2186,32 +2186,49 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 ]
-Overfull \hbox (2.49532pt too wide) in paragraph at lines 473--474
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 463.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 473.
+
+
+Overfull \hbox (2.49532pt too wide) in paragraph at lines 479--480
 \T1/lmr/m/n/10.95 The data used dur-ing this the-sis have been gath-ered di-rec
 tly from the In-sti-tut Royal de Météorolo-
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 478.
+(Font)              <9> on input line 484.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 478.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 487.
+(Font)              <5> on input line 484.
+[2]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 493.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 487.
- [2]
-<gg1.pdf, id=626, 431.6125pt x 315.1775pt>
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 493.
+
+<gg1.pdf, id=634, 431.6125pt x 315.1775pt>
 File: gg1.pdf Graphic file (type pdf)
  <use gg1.pdf>
-Package pdftex.def Info: gg1.pdf used on input line 502.
+Package pdftex.def Info: gg1.pdf used on input line 508.
 (pdftex.def)             Requested size: 364.70882pt x 266.32951pt.
  [3 <./gg1.pdf>]
 
+Package natbib Warning: Citation `ruppert_semiparametric_2003' on page 4 undefi
+ned on input line 541.
+
+
 Package natbib Warning: Citation `marra_coverage_2012' on page 4 undefined on i
-nput line 536.
+nput line 542.
+
+
+Package natbib Warning: Citation `ruppert_semiparametric_2003' on page 4 undefi
+ned on input line 544.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2223,7 +2240,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \hskip 21.9pt
-(hyperref)                replaced by space on input line 550.
+(hyperref)                replaced by space on input line 556.
 
 [5
 
@@ -2234,18 +2251,18 @@ Chapter 1.
 \openout3 = `MEMOIRE.mtc'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 558.
+(Font)              <10> on input line 564.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 558.
+(Font)              <7> on input line 564.
 (MEMOIRE.mtc4) [6
 
 ]
 
 LaTeX Warning: Reference `stat modelling..course slide Coles' on page 7 undefin
-ed on input line 594.
+ed on input line 600.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--614
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
 
  []
 
@@ -2258,11 +2275,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [7]
 
 Package natbib Warning: Citation `De_on_1970' on page 8 undefined on input line
- 659.
+ 665.
 
 
 Package natbib Warning: Citation `gomes_bootstrap_2015' on page 8 undefined on 
-input line 676.
+input line 682.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2271,7 +2288,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 691--695
+Underfull \hbox (badness 10000) in paragraph at lines 697--701
 
  []
 
@@ -2290,12 +2307,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [10]
 
-LaTeX Warning: Reference `gevdens' on page 11 undefined on input line 786.
+LaTeX Warning: Reference `gevdens' on page 11 undefined on input line 792.
 
-<gev3.pdf, id=768, 487.8225pt x 404.51125pt>
+<gev3.pdf, id=772, 487.8225pt x 404.51125pt>
 File: gev3.pdf Graphic file (type pdf)
  <use gev3.pdf>
-Package pdftex.def Info: gev3.pdf used on input line 805.
+Package pdftex.def Info: gev3.pdf used on input line 811.
 (pdftex.def)             Requested size: 387.50441pt x 319.12215pt.
 
 
@@ -2313,11 +2330,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [12 <./gev3.pdf>]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 852.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 858.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 860.
 
 
 
@@ -2327,7 +2344,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 935--938
+Underfull \hbox (badness 10000) in paragraph at lines 941--944
 
  []
 
@@ -2340,17 +2357,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [14]
 
 Package natbib Warning: Citation `modelling_embrechts_1997' on page 15 undefine
-d on input line 956.
+d on input line 962.
 
 
-LaTeX Warning: Reference `conv_weak' on page 15 undefined on input line 964.
+LaTeX Warning: Reference `conv_weak' on page 15 undefined on input line 970.
 
 
 Package natbib Warning: Citation `gnedenko_sur la distribution_translated_1992'
- on page 15 undefined on input line 968.
+ on page 15 undefined on input line 974.
 
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 971.
+LaTeX Warning: Reference `' on page 15 undefined on input line 977.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2361,14 +2378,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [15]
 
 Package natbib Warning: Citation `falk_vonmises_1994' on page 16 undefined on i
-nput line 993.
+nput line 999.
 
 
-Package natbib Warning: Citation `.??.' on page 16 undefined on input line 998.
-
+Package natbib Warning: Citation `.??.' on page 16 undefined on input line 1004
+.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1015.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1021.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2377,14 +2394,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Overfull \hbox (4.552pt too wide) in paragraph at lines 1043--1046
+Overfull \hbox (4.552pt too wide) in paragraph at lines 1049--1052
 \T1/lmr/m/n/10.95 will have this propen-sity to be in the Gum-bel do-main of at
 -trac-tion. For in-stance, the $\OML/lmm/m/it/10.95 Exponential$\T1/lmr/m/n/10.
 95 ,
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 1053.
+(Font)              <12> on input line 1059.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2394,7 +2411,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [17]
 
 Package natbib Warning: Citation `domain of attraction course' on page 18 undef
-ined on input line 1100.
+ined on input line 1106.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2403,18 +2420,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1139--1141
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1145
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1151
 
  []
 
 
 LaTeX Warning: Reference `domain of attrac...' on page 19 undefined on input li
-ne 1146.
+ne 1152.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2424,12 +2441,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [19]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1199.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1205.
 
 
 
 Package natbib Warning: Citation `ribereau_skew_2016' on page 20 undefined on i
-nput line 1211.
+nput line 1217.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2438,7 +2455,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1238--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1246
 
  []
 
@@ -2464,16 +2481,16 @@ Chapter 2.
 (MEMOIRE.mtc5) [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1296--1298
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1304
 
  []
 
 
 Package natbib Warning: Citation `charras_extreme_2013' on page 24 undefined on
- input line 1305.
+ input line 1311.
 
 
-LaTeX Warning: Hyper reference `' on page 24 undefined on input line 1315.
+LaTeX Warning: Hyper reference `' on page 24 undefined on input line 1321.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2483,13 +2500,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [24]
 
-LaTeX Warning: Reference `maax' on page 25 undefined on input line 1322.
+LaTeX Warning: Reference `maax' on page 25 undefined on input line 1328.
 
 
-LaTeX Warning: Reference `gpd' on page 25 undefined on input line 1361.
+LaTeX Warning: Reference `gpd' on page 25 undefined on input line 1367.
 
 
-LaTeX Warning: Reference `gpd' on page 25 undefined on input line 1363.
+LaTeX Warning: Reference `gpd' on page 25 undefined on input line 1369.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2500,15 +2517,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1420.
+(hyperref)                removing `math shift' on input line 1426.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1420.
+(hyperref)                removing `\sigma' on input line 1426.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1420.
+(hyperref)                removing `math shift' on input line 1426.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2518,14 +2535,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [26]
 
-LaTeX Warning: Reference `exppar' on page 27 undefined on input line 1426.
+LaTeX Warning: Reference `exppar' on page 27 undefined on input line 1432.
 
 
-LaTeX Warning: Reference `gpd' on page 27 undefined on input line 1438.
+LaTeX Warning: Reference `gpd' on page 27 undefined on input line 1444.
 
 
 Package natbib Warning: Citation `grimshaw_computing_1993' on page 27 undefined
- on input line 1456.
+ on input line 1462.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2543,7 +2560,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [28]
 
 Package natbib Warning: Citation `embrechts_modelling_1997' on page 29 undefine
-d on input line 1514.
+d on input line 1520.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2554,7 +2571,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [29]
 
 Package natbib Warning: Citation `guess_mean_1988' on page 30 undefined on inpu
-t line 1589.
+t line 1595.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2564,6 +2581,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [30]
 
+Package natbib Warning: Citation `Wadsworth_exploiting_2016' on page 31 undefin
+ed on input line 1654.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -2571,14 +2592,26 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [31]
 
-LaTeX Warning: Command \guillemotleft invalid in math mode on input line 1651.
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 1657.
 
 
-LaTeX Warning: Command \guillemotleft invalid in math mode on input line 1651.
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 1657.
+
+
+Package natbib Warning: Citation `ribatet_users_2006' on page 32 undefined on i
+nput line 1680.
 
 
 Package natbib Warning: Citation `cunnane_note_1979' on page 32 undefined on in
-put line 1674.
+put line 1680.
+
+
+Package natbib Warning: Citation `hosking_regional_1997' on page 32 undefined o
+n input line 1693.
+
+
+Package natbib Warning: Citation `peel_utility_2001' on page 32 undefined on in
+put line 1693.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2589,11 +2622,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [32]
 
 Package natbib Warning: Citation `hu_evmix:_2014' on page 33 undefined on input
- line 1713.
+ line 1719.
 
 
 Package natbib Warning: Citation `northrop_cross_2016' on page 33 undefined on 
-input line 1747.
+input line 1753.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2610,7 +2643,7 @@ Chapter 3.
 (MEMOIRE.mtc6) [34
 
 ]
-Overfull \hbox (25.32138pt too wide) in paragraph at lines 1781--1782
+Overfull \hbox (25.32138pt too wide) in paragraph at lines 1787--1788
 []\T1/lmr/m/it/10.95 More gen-er-ally, for $\OML/lmm/m/it/10.95 h \OMS/lmsy/m/n
 /10.95  \OT1/lmr/m/n/10.95 0$ \T1/lmr/m/it/10.95 and $\OML/lmm/m/it/10.95 n \O
 MS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 1$\T1/lmr/m/it/10.95 , the dis-tri-bu-ti
@@ -2619,17 +2652,17 @@ on of the lagged ran-dom vec-tor $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[];
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1783--1784
+Underfull \hbox (badness 10000) in paragraph at lines 1789--1790
 
  []
 
 
 Package natbib Warning: Citation `leadbetter_extreme_1974' on page 35 undefined
- on input line 1791.
+ on input line 1797.
 
 
 Package natbib Warning: Citation `leadbetter_extreme_1974' on page 35 undefined
- on input line 1809.
+ on input line 1815.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2654,9 +2687,9 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [37]
 
 Package natbib Warning: Citation `milly_climate_2008' on page 38 undefined on i
-nput line 1949.
+nput line 1955.
 
-LaTeX Font Info:    Try loading font information for U+bbm on input line 1962.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1968.
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -2669,10 +2702,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [38]
 
 Package natbib Warning: Citation `aghakouchak_extremes_2013-1' on page 39 undef
-ined on input line 1999.
+ined on input line 2005.
 
 
-Overfull \hbox (63.0639pt too wide) detected at line 2014
+Overfull \hbox (63.0639pt too wide) detected at line 2020
 [][][] []
  []
 
@@ -2700,16 +2733,16 @@ Chapter 4.
 (MEMOIRE.mtc7)
 
 Package natbib Warning: Citation `saeb_general_2014' on page 42 undefined on in
-put line 2070.
+put line 2076.
 
 [42
 
 ]
 
-LaTeX Warning: Reference `' on page 43 undefined on input line 2083.
+LaTeX Warning: Reference `' on page 43 undefined on input line 2089.
 
 
-LaTeX Warning: Hyper reference `pwmm' on page 43 undefined on input line 2087.
+LaTeX Warning: Hyper reference `pwmm' on page 43 undefined on input line 2093.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2720,12 +2753,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [43]
 
 Package natbib Warning: Citation `bolivar_profile_2010' on page 44 undefined on
- input line 2146.
+ input line 2152.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2166.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2172.
 
-LaTeX Warning: Reference `returnn' on page 44 undefined on input line 2166.
+LaTeX Warning: Reference `returnn' on page 44 undefined on input line 2172.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2735,11 +2768,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [44]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 2186.
+(Font)              <14.4> on input line 2192.
 
 
 Package natbib Warning: Citation `pickands_statistical_1975' on page 45 undefin
-ed on input line 2197.
+ed on input line 2203.
+
+
+Package natbib Warning: Citation `dekkers_estimation_1989' on page 45 undefined
+ on input line 2214.
+
+
+Package natbib Warning: Citation `segers_generalized_2001' on page 45 undefined
+ on input line 2214.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2750,11 +2791,23 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [45]
 
 Package natbib Warning: Citation `mason_' on page 46 undefined on input line 22
-33.
+39.
+
+
+Package natbib Warning: Citation `dekkers_moment_1989' on page 46 undefined on 
+input line 2254.
 
 
 Package natbib Warning: Citation `ribereau_skew_2016' on page 46 undefined on i
-nput line 2276.
+nput line 2282.
+
+
+Package natbib Warning: Citation `wang_lh_1997' on page 46 undefined on input l
+ine 2286.
+
+
+Package natbib Warning: Citation `hosking_regional_1997' on page 46 undefined o
+n input line 2288.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2765,15 +2818,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [46]
 
 Package natbib Warning: Citation `martin_generalized_2000' on page 47 undefined
- on input line 2290.
+ on input line 2296.
 
 
 Package natbib Warning: Citation `Adlouni_generalized_2007' on page 47 undefine
-d on input line 2299.
+d on input line 2305.
 
 
 Package natbib Warning: Citation `martin_generalized_2000' on page 47 undefined
- on input line 2303.
+ on input line 2309.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2784,7 +2837,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [47]
 
 Package natbib Warning: Citation `carreau_hybrid_2009' on page 48 undefined on 
-input line 2399.
+input line 2405.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2795,7 +2848,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [48]
 
 Package natbib Warning: Citation `Goodfellow-et-al-2016' on page 49 undefined o
-n input line 2441.
+n input line 2447.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2813,7 +2866,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [50]
 
 Package natbib Warning: Citation `northrop_cross_2016' on page 51 undefined on 
-input line 2541.
+input line 2547.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2830,16 +2883,16 @@ Chapter 5.
 (MEMOIRE.mtc8)
 
 LaTeX Warning: Hyper reference `bayesapp' on page 52 undefined on input line 25
-76.
+82.
 
 [52
 
 ]
 
-LaTeX Warning: Reference `' on page 53 undefined on input line 2589.
+LaTeX Warning: Reference `' on page 53 undefined on input line 2595.
 
 
-LaTeX Warning: Hyper reference `label' on page 53 undefined on input line 2619.
+LaTeX Warning: Hyper reference `label' on page 53 undefined on input line 2625.
 
 
 
@@ -2850,6 +2903,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [53]
 
+Package natbib Warning: Citation `yang_catalog_1996' on page 54 undefined on in
+put line 2647.
+
+
+Package natbib Warning: Citation `ni_noninformative_2003' on page 54 undefined 
+on input line 2647.
+
+
+Package natbib Warning: Citation `northrop_posterior_2016' on page 54 undefined
+ on input line 2666.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -2857,8 +2922,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [54]
 
+Package natbib Warning: Citation `angelino_patterns_2016' on page 55 undefined 
+on input line 2723.
+
+
 Package natbib Warning: Citation `stan_stan_2016' on page 55 undefined on input
- line 2733.
+ line 2739.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2868,6 +2937,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [55]
 
+Package natbib Warning: Citation `betancourt_diagnosing_2016' on page 56 undefi
+ned on input line 2746.
+
+
+Package natbib Warning: Citation `neal_mcmc_2011' on page 56 undefined on input
+ line 2753.
+
+
+Package natbib Warning: Citation `betancourt_hamiltonian_2015' on page 56 undef
+ined on input line 2753.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -2875,8 +2956,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [56]
 
+Package natbib Warning: Citation `Roberts_weak_1997' on page 57 undefined on in
+put line 2805.
+
+
+Package natbib Warning: Citation `Sherlock_optimal_2009' on page 57 undefined o
+n input line 2806.
+
+
 Package natbib Warning: Citation `Bédard_optimal_2008' on page 57 undefined on 
-input line 2805.
+input line 2811.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2893,12 +2982,28 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [58]
 
+Package natbib Warning: Citation `Vehtari_practical_2016' on page 59 undefined 
+on input line 2908.
+
+
+Package natbib Warning: Citation `Spiegelhalter_bayesian_2002' on page 59 undef
+ined on input line 2916.
+
+
+Package natbib Warning: Citation `Watanabe_asymptotic_2010' on page 59 undefine
+d on input line 2933.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [59]
+
+Package natbib Warning: Citation `gelman_understanding_2014' on page 60 undefin
+ed on input line 2948.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2907,11 +3012,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [60]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2996.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3002.
+
+
+Package natbib Warning: Citation `hartmann_bayesian_2016' on page 61 undefined 
+on input line 3013.
 
 
 Package natbib Warning: Citation `geyer__1992' on page 61 undefined on input li
-ne 3014.
+ne 3020.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2924,7 +3033,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3036.
+(hyperref)                than one, level fixed on input line 3042.
 
 [63]
 Chapter 6.
@@ -2934,7 +3043,7 @@ Chapter 6.
 Chapter 7.
 
 Package natbib Warning: Citation `davison_statistical_2012' on page 65 undefine
-d on input line 3061.
+d on input line 3067.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2951,18 +3060,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [66]
 Appendix A.
 
-LaTeX Warning: Hyper reference `' on page 67 undefined on input line 3138.
+LaTeX Warning: Hyper reference `' on page 67 undefined on input line 3144.
 
 [67
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3203--3205
+Underfull \hbox (badness 10000) in paragraph at lines 3209--3211
 
  []
 
 
 Package natbib Warning: Citation `lafaye_understanding_2009' on page 68 undefin
-ed on input line 3207.
+ed on input line 3213.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2973,21 +3082,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [68]
 Appendix B.
 
-Overfull \hbox (17.0pt too wide) detected at line 3238
+Package natbib Warning: Citation `hastings_monte_1970' on page 69 undefined on 
+input line 3222.
+
+
+Overfull \hbox (17.0pt too wide) detected at line 3244
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3255--3259
+Underfull \hbox (badness 10000) in paragraph at lines 3261--3265
 
  []
 
 [69
 
 ]
-Overfull \hbox (17.0pt too wide) detected at line 3284
+Overfull \hbox (17.0pt too wide) detected at line 3290
 [][] 
  []
+
+
+Package natbib Warning: Citation `gelman_bayesian_2013' on page 70 undefined on
+ input line 3300.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3000,17 +3117,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 3314--3315
+Underfull \hbox (badness 10000) in paragraph at lines 3320--3321
 
  []
 
 
 Package natbib Warning: Citation `stan_stan_2016' on page 71 undefined on input
- line 3331.
+ line 3337.
 
 
 Package natbib Warning: Citation `Hartmann_bayesian_2016' on page 71 undefined 
-on input line 3335.
+on input line 3341.
+
+
+Package natbib Warning: Citation `hartmann_bayesian_2016' on page 71 undefined 
+on input line 3359.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -3021,10 +3142,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [71]
 
 Package natbib Warning: Citation `leimkulher_..._2004' on page 72 undefined on 
-input line 3358.
+input line 3364.
 
 
-Overfull \hbox (17.0pt too wide) detected at line 3394
+Overfull \hbox (17.0pt too wide) detected at line 3400
 [][] 
  []
 
@@ -3036,15 +3157,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [72]
 Appendix C.
-<sumwint.pdf, id=1653, 565.11125pt x 661.47125pt>
+<sumwint.pdf, id=1580, 565.11125pt x 661.47125pt>
 File: sumwint.pdf Graphic file (type pdf)
  <use sumwint.pdf>
-Package pdftex.def Info: sumwint.pdf used on input line 3417.
+Package pdftex.def Info: sumwint.pdf used on input line 3423.
 (pdftex.def)             Requested size: 455.8843pt x 533.62883pt.
 
 
 Package natbib Warning: Citation `emberchts_statistical_1997' on page 73 undefi
-ned on input line 3445.
+ned on input line 3451.
 
 (MEMOIRE.bbl [73
 
@@ -3058,29 +3179,38 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [74 <./sumwint.pdf>] [75
 
 ]
+Underfull \hbox (badness 1953) in paragraph at lines 102--111
+[]\T1/lmr/m/n/10.95 R. A. Fisher and Leonard H. C. Tip-pett.  Lim-it-ing Forms 
+of the Fre-quency Dis-
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 102--111
+\T1/lmr/m/n/10.95 tri-bu-tion of the Largest or Small-est Mem-ber of a Sam-ple.
+  \T1/lmr/m/it/10.95 Re-search-Gate\T1/lmr/m/n/10.95 , 24(02):
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 102--111
+\T1/lmr/m/n/10.95 180--190, Jan-uary 1928.  ISSN 1469-8064.  doi: $10 . 1017 / 
+S0305004100015681$.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--111
+[][]$\T1/lmtt/m/n/10.95 https : / / www . researchgate . net / publication / 23
+0663919 _ Limiting _ Forms _ of _ the _
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76]
+[76])
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[77]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78])
-
-Package caption Warning: Unused \captionsetup[sub] on input line 104.
+Package caption Warning: Unused \captionsetup[sub] on input line 103.
 See the caption package documentation for explanation.
 
 
@@ -3102,22 +3232,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3458.
+[77]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3464.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3464.
  (MEMOIRE.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3464.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3464.
 
+Package rerunfilecheck Info: File `MEMOIRE.out' has not changed.
+(rerunfilecheck)             Checksum: CFCC018CC1C0A57337D2CE2F024AFDBE;8066.
 
-
-Package rerunfilecheck Warning: File `MEMOIRE.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MEMOIRE.out':
-(rerunfilecheck)             Before: C5B32D00390F47BB75A530F1FC112089;7793
-(rerunfilecheck)             After:  9F55B2DBB6A8BC455D07B96D61045D58;7895.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -3130,10 +3254,10 @@ LaTeX Warning: There were undefined references.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 32756 strings out of 493333
- 589648 string characters out of 3139196
- 833160 words of memory out of 3000000
- 34785 multiletter control sequences out of 15000+200000
+ 32680 strings out of 493333
+ 587364 string characters out of 3139196
+ 832014 words of memory out of 3000000
+ 34735 multiletter control sequences out of 15000+200000
  170053 words of font info for 159 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,77p,1152b,18116s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3171,9 +3295,9 @@ ic/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
 MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MEMOIRE.pdf (89 pages, 1465420 bytes).
+Output written on MEMOIRE.pdf (87 pages, 1456093 bytes).
 PDF statistics:
- 1924 PDF objects out of 2073 (max. 8388607)
- 487 named destinations out of 1000 (max. 500000)
- 849 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1869 PDF objects out of 2073 (max. 8388607)
+ 461 named destinations out of 1000 (max. 500000)
+ 865 words of extra memory for PDF output out of 10000 (max. 10000000)
 

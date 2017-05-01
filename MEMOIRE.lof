@@ -1,9 +1,9 @@
 \select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces First plot representing the \textbf {yearly} maxima (\textbf {above}) and minima (\textbf {below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.\relax }}{3}{figure.caption.7}
+\contentsline {figure}{\numberline {1}{\ignorespaces First plot representing the \textbf {yearly} maxima (\textbf {above}) and minima (\textbf {below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.\relax }}{3}{figure.caption.8}
 \contentsline {xpart}{Theoretical Framework : \hskip 2em\relax Extreme Value Theory}{6}{part.1}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Method of Block-Maxima}{6}{chapter.1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{12}{figure.caption.12}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Peaks-Over-Threshold Methods}{23}{chapter.2}
 \addvspace {10\p@ }
@@ -11,7 +11,7 @@
 \contentsline {xpart}{Inferential Methods}{42}{part.2}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Methods of Inference}{42}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax \fontsize {6}{7}\selectfont \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{47}{figure.caption.53}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax \fontsize {6}{7}\selectfont \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{47}{figure.caption.54}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Bayesian Methods}{52}{chapter.5}
 \contentsline {xpart}{Experimental Framework (Simulation Study) : Global....}{63}{part.3}
@@ -25,4 +25,4 @@
 \contentsline {xchapter}{Bayesian Methods}{69}{appendix.B}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Other Figures}{73}{appendix.C}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces First plot representing the \textbf {yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie\relax }}{74}{figure.caption.78}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces First plot representing the \textbf {yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie\relax }}{74}{figure.caption.79}
