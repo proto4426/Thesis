@@ -1,28 +1,39 @@
 \select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces First plot representing the \textbf {yearly} maxima (\textbf {above}) and minima (\textbf {below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.\relax }}{3}{figure.caption.8}
-\contentsline {xpart}{Theoretical Framework : \hskip 2em\relax Extreme Value Theory}{6}{part.1}
+\contentsline {xpart}{Theoretical Framework : Extreme Value Theory}{4}{part.1}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Method of Block-Maxima}{6}{chapter.1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{12}{figure.caption.12}
+\contentsline {xchapter}{Method of Block-Maxima}{4}{chapter.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails ...\relax }}{10}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Peaks-Over-Threshold Methods}{23}{chapter.2}
+\contentsline {xchapter}{Peaks-Over-Threshold Methods}{28}{chapter.2}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Relaxing Independence Assumption}{34}{chapter.3}
-\contentsline {xpart}{Inferential Methods}{42}{part.2}
+\contentsline {xchapter}{Relaxing Independence Assumption}{42}{chapter.3}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Methods of Inference}{42}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax \fontsize {6}{7}\selectfont \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{47}{figure.caption.54}
+\contentsline {xchapter}{Neural Network (and others) }{49}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \leavevmode {\color {MidnightBlue}\emph {\texttt {TikzFig}.}}:\emph { Neural Network applied to GEV. helped by \leavevmode {\color {JungleGreen}\cite {cannon_flexible_2010}}} \relax }}{50}{figure.caption.64}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Bayesian Methods}{52}{chapter.5}
-\contentsline {xpart}{Experimental Framework (Simulation Study) : Global....}{63}{part.3}
+\contentsline {xchapter}{Bayesian Methods}{53}{chapter.5}
+\contentsline {xpart}{Experimental Framework : Global....}{63}{part.2}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Simulation study: Performance evaluation of different methods}{64}{chapter.6}
+\contentsline {xchapter}{Introduction to the Analysis}{64}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces representing the \textbf {yearly} \textbf {maxima} together with three first models trying to represent the trend. Note that shaded grey line representing the standard errors (and not a confidence interval) of the linear trend.\relax }}{66}{figure.caption.81}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Plots of the first derivative {\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\nulldelimiterspace \z@ \left (\vcenter to\@ne \big@size {}\right .$}\box \z@ }$f^{'}(\tmspace +\thinmuskip {.1667em}\unhbox \voidb@x \hbox {\textperiodcentered }\tmspace +\thinmuskip {.1667em})${\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\nulldelimiterspace \z@ \left )\vcenter to\@ne \big@size {}\right .$}\box \z@ } of the estimated splines on the retained GAM model. Grey area represents the $95\%$ confidence interval. Sections of the spline where the confidence interval does not include zero are indicated by thicker sections. \relax }}{67}{figure.caption.85}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{65}{chapter.7}
+\contentsline {xchapter}{Analysis by GEV }{69}{chapter.7}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistical tools for Extreme Value Theory}{67}{appendix.A}
+\contentsline {xchapter}{Nonstationary Analysis}{70}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Bayesian Methods}{69}{appendix.B}
+\contentsline {xchapter}{Bayesian Analysis}{71}{chapter.9}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Other Figures}{73}{appendix.C}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces First plot representing the \textbf {yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie\relax }}{74}{figure.caption.79}
+\contentsline {xchapter}{Conclusion}{73}{chapter.10}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Statistical tools for Extreme Value Theory}{76}{appendix.A}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Bayesian Methods}{78}{appendix.B}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Other Figures and Tables}{82}{appendix.C}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces ACF and PACF for the residuals of the fitted GAM model with assumed independent errors \relax }}{82}{figure.caption.92}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Diagnostics of the chosen GAM model, based on the residuals. \relax }}{83}{figure.caption.94}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increasing is significant for pointwise confidence interval \relax }}{83}{figure.caption.95}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Draws from the \relax }}{84}{figure.caption.96}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Github Repository Structure}{85}{appendix.D}

@@ -58,13 +58,15 @@
 %\usepackage[sc]{
 \usepackage{lmodern}
 %\usepackage[nomath]{kpfonts} % coment to return to lpmodern complet
-%\usepackage{libertine}%  serif and sans 
+\usepackage{libertine}%  serif and sans 
 %\usepackage[scaled=0.85]{beramono}%% mono
+\usepackage{setspace}
+\linespread{1.05}
 
 \usepackage[english]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{graphicx}
-\usepackage{caption}
+\usepackage[font=small]{caption}
 \usepackage{csquotes}
 \usepackage{subcaption}
 \usepackage{pdfpages}
@@ -96,7 +98,6 @@
 \usepackage{color}
 %\usepackage{subfig}
 \usepackage{graphicx}
-\usepackage{subcaption}
 %-------------------------------
 % MATH
 % ------------------------------
@@ -147,6 +148,9 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 }
 
 
+\newlength{\mylen}  % change size of items
+\setbox1=\hbox{$\bullet$}\setbox5=\hbox{\normalsize$\bullet$}
+\setlength{\mylen}{\dimexpr0.5\ht1-0.5\ht2}
 
 
 \makeatletter
@@ -194,6 +198,7 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 
 \usepackage{fancyhdr}
 \usepackage{afterpage}
+
 \fancypagestyle{plain}{\fancyhf{}}
 \pagestyle{fancy}
 \fancyfoot{}
@@ -202,6 +207,15 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 \fancyhead[LO]{\leftmark}
 \fancyhead[RE]{\rightmark}
 \renewcommand{\headrulewidth}{.6pt}
+
+\iffalse
+\copypagestyle{memoirStylePages}{headings}
+\makerunningwidth{memoirStylePages}{\textwidth}
+\makeheadrule{memoirStylePages}{\textwidth}{\normalrulethickness}
+\pagestyle{memoirStylePages}
+\fi
+
+
 \pagenumbering{roman}
 \newcommand{\bib}{\par\noindent\hangindent=0.5 true cm \hangafter=1}
 
@@ -215,10 +229,9 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 
 %\addbibresource{zotero.bib.bib}
 \usepackage{natbib}
-\bibliographystyle{plainnat}
+\bibliographystyle{abbrvnat}
 \setcitestyle{authoryear,open={(},close={)}}
 
-%\bibliographystyle{abbrvnat}
 %\setcitestyle{square}
 %\setcitestyle{authoryear, open={[},close={)]}}
 %\usepackage{apacite}
@@ -260,8 +273,19 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 	\tikz [baseline=-1ex]{\node [myarrow,rotate=0] {};}
 }
 \setlength{\parskip}{.3em}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 \begin{document}
 \thispagestyle{empty}
+
+
 \begin{center}
 	{\LARGE    UNIVERSITE CATHOLIQUE DE LOUVAIN} \\
 	\vspace{0.2cm}
@@ -279,6 +303,7 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 \end{center}
 %\end{figure}
 
+\thispagestyle{empty}
 
 \vfill
 
@@ -317,43 +342,36 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 \begin{center}
 	{\large Juin 2017}
 \end{center}
-
-\newpage
-
-\dominitoc
-\tableofcontents
-\newpage
 \thispagestyle{empty}
-\listoffigures
-\thispagestyle{empty}
-
 \newpage
 
 
 %\centering
 \topskip0pt
 \vspace*{\fill}
+%\addcontentsline{toc}{chapter}{Abstract}%
 \section*{\centering Abstract}
 \begin{tcolorbox}%[colback=SeaGreen!75!white]
-This thesis aims to analyse extreme temperatures from Uccle and assess their nonstationarity.% trend in the location parameter of the temperatures assessing the climate warming. 
- After having proven it by hand of splines's deriatives, we will do it by hand of the Extreme Value Theory (EVT)  that there is indeed an upward trend in the location parameter of the temperatures assessing the climate warming. First of all, we will do introductory analysis of the trend... and we will discover that..  Then we will go through with EVT by defining and presenting the usual methods such as GEV or POT. 
+This thesis aims to analyse extreme temperatures from Uccle and assess their nonstationarity. trend in the location parameter of the temperatures assessing the climate warming.   
+After having proven it by hand of splines's deriatives, we will do it by hand of the Extreme Value Theory (EVT)  that there is indeed an upward trend in the location parameter of the temperatures assessing the climate warming. First of all, we will do introductory analysis of the trend... and we will discover that..  The analysis will focus on yearly maxima and hence we will go through with EVT by defining and presenting the usual methods such as GEV. 
 
 Regarding the computations, we took advantage of a high-level language (c++) to make our analysis efficient and also made use of parallel computing to decrease computation time for time consuming...
 \thispagestyle{empty}
 \end{tcolorbox}
-\thispagestyle{empty}
+
 \vspace*{\fill}
 
+\newpage
 
 
 %\afterpage{\cfoot{\thepage}}
 
 
 \newenvironment{acknowledgements}%
-{\cleardoublepage\thispagestyle{empty}\null\vfill\begin{center}%
+{\thispagestyle{empty}\null\vfill\begin{center}%
 \bfseries Acknowledgements\end{center}}%
 {\vfill\null}
-\addcontentsline{toc}{chapter}{Acknowledgements}%
+%\addcontentsline{toc}{chapter}{Acknowledgements}%
 \begin{acknowledgements}
 	\textit{I would first like to thank my thesis supervisor Johan Segers for all his help and his guidance during this whole year. The repeated appointments we have had   }
 	\newline
@@ -362,14 +380,29 @@ Regarding the computations, we took advantage of a high-level language (c++) to 
 	\newline
 	
 	\textit{Finally, I want to thank my family and my friends, but also Bernadette for her support and all the time I have spent  writing in her room for my thesis but also during my whole academic studies.}
-	
+	\thispagestyle{empty}
 \end{acknowledgements}
 
-%\newpage
+
+\afterpage{\blankpage}
+
+
+\thispagestyle{empty}
+\dominitoc
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+
+\newpage
 
 
 \chapter*{List of Abbreviations}
-\addcontentsline{toc}{chapter}{List of Abbreviations}
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+\thispagestyle{empty}
 For convenience, we place a list of all the abbreviations we will use in the text. However, these will always be defined in their first occurrence into the text.\\
 
 \begin{center}
@@ -388,7 +421,11 @@ For convenience, we place a list of all the abbreviations we will use in the tex
 \end{center}
 
 
-%\chapter*{Acknoledgment}
+\renewcommand\labelitemi{\normalsize$\bullet$}
+
+
+
+\afterpage{\blankpage}
 
 
 \addcontentsline{toc}{chapter}{Introduction}
@@ -396,8 +433,6 @@ For convenience, we place a list of all the abbreviations we will use in the tex
 	%Presentation of the Analysis }
 \pagenumbering{arabic}
 \thispagestyle{empty}
-
-%\pagestyle{myheadings}
 
 
 
@@ -451,6 +486,14 @@ text. While this not (yet ?...) usable in printed versions, the reader may feel 
 comfortable in a numeric version to more easily handle the vast amount of sections, 
 equations, references, etc... and the links that are made between them.]
 
+
+We can summarize the research question of this thesis as the following : 
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+
 In this part, we will make use of some general methods to assess if there is indeed a trend in the maximum temperatures
 
 In \hyperref[sec::1]{chapter \textbf{1}} we will present the method of block-maxima and derive the Generalized Extreme Value (GEV) distributions. In \hyperref[sec::2]{chapter \textbf{2}} we will .
@@ -460,106 +503,16 @@ In \hyperref[sec::4]{chapter \textbf{4}} we will ..
 Finally, we notice that this thesis will more concentrate on the block-maxima (GEV) methods (see \hyperref[sec::1]{chapter \textbf{1}}), i.e. to data relating to maxima over a period of 1 year. For example here in the introduction, or for the Bayesian analysis in \hyperref[sec::bayesian]{chapter \textbf{5}}.
 \thispagestyle{empty}
 
-\addcontentsline{toc}{subsection}{Repository for the code : R Package}
-\subsection*{Repository for the code : R Package}
-
-An \textbf{R package} has been created and can be downloaded \url{https://github.com/proto4426/PissoortThesis}.
-
-For your (best?) convenience, a folder has been created containing in the same repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly in this page \url{https://github.com/proto4426/PissoortThesis/tree/master/Scripts-R}.
-
-\addcontentsline{toc}{subsection}{Visualization Tool : Shiny Application}
-\subsection*{Visualization Tool : Shiny Application}
-
-A small Shiny application has started to be developed and can be run directly from R after having loaded the package. So far, it only contains the models applied to the annual maxima that can you can smoothly visualize. It summarizes the contents of figure \ref{}
-
-
-%\addcontentsline{toc}{section}{2 Presentation of the Analysis : Temperatures from Uccle}
-\section{Presentation of the Analysis : Temperatures from Uccle}
-
-The data used during this thesis have been gathered directly from the Institut Royal de Météorologie (IRM) 
-
-%\addcontentsline{toc}{section}{Comparisons with freely available data}
-\subsection{Comparisons with freely available data} 
-
-A similar dataset is freely available on the internet\footnote{\url{http://lstat.kuleuven.be/Wiley/Data/ecad00045TX.txt}}. It was a project initially performed by the KMNI and which was used for example in \citet{beirlant_statistics_2006}. However, we were reticent to simply analyze these data as we know that it is hard to trust internet's data, even if they come from well-known "authorities". After having made all these comparisons analysis (see start of code...), we remark effectively that there are differences
-in these two datasets, and hence large errors of measures can easily occur 
-in unofficial data. It confirms the fact that is important to get reliable data if one wants to make reliable analysis. 
-However, these differences tend to be much smaller when considering the "open shelter"
-version ($54\%$ of equal measurements in closed shelter VS $14.4\%$ in the closed case). For this reason, we have confidence that this public datasets
-is dealing with open shelter temperatures data.
-
-However, for\textbf{ meteorological considerations}, it is always better to consider temperature's analysis in \textbf{closed shelters}. Indeed, thanks to gratefull advices from mr Tricot working for the IRM : 
-\begin{itemize}
-	\item It can
-	\item It
-\end{itemize}
-
-
-
-
-
-
-\section{First Analysis}
-
-As expected (~line 200 code local), from \ref{first_fig} we see that there is an upward trend for both (yearly) maxima and minima. However, we remark that this one is less pronounced for minima ( see figure \ref{seas4} in appendix \textbf{C}). That makes sense as (as mentioned above), the global warming is  
-
-
-\begin{figure}
-	\includegraphics[width=.8\linewidth]{gg1.pdf}\caption{First plot representing the \textbf{yearly} maxima (\textbf{above}) and minima (\textbf{below}), shaded grey line representing the standard errors (and not a confidence interval ) of the linear trend, red line representing the polynomial nonparametric fit by LOESS.}\label{first_fig}
-	\thispagestyle{empty}
-\end{figure}
-
-
-Add constraint to the broken linear trend to make it continuous : 
-
-We will see that the decrease (around 1940 to 1970) is more from randomness than a real decrease (...)
-
-
-TEST (statistic) for the Differences in trend !!!! !!!!!!!!
-
-From the figure \ref{seas4}, we can already have some remarks : 
-
-\begin{itemize}
-	\item The drop in the series around 1950 to 1975 that is made visible by the LOESS estimator (red) is probably more due to a random effect than a real decrease or freezing of the maximum temperatures at this time. (to assessfofrmally if possible)
-	\item  
-\end{itemize}
-\textbf{PUT the examples right in the place where it is mentioned in the theory.!} 
-"As we have seen in section 2.1.1.... and in section 2.2.2......"
-
-We must choose a block-length which is large enough for the limiting arguments supporting the GEV approximation (see (\ref{exttheom})) to be valid, either a large bias in the estimates could occur. For example, if this is too short, the maxima may be too close of each other to assume independence. But a large block-length implies less data to work with, and thus a large variance of the estimates.. So we must find a compromise between bias and variance.
-
-TABLE with nested models (gumbel, GEV, + linear trend, etc etc)
-
-From figure \ref{seas4} in appendix \textbf{C}, we can remark that
-
-The code which provide all the tools to retrieve the presented results are left in appendix, but in the numeric version only be cause it is very heavy. this also enables you to get all insights (..)
-
-
-
-\section*{GAM and splines}
-
-\textbf{Simultaneous} confidence intervals :  Following \citet[section 3, 4.9, 6.5]{ruppert_semiparametric_2003} which uses a simulation-based approach to generate a simultaneous interval
-\citet{marra_coverage_2012}
-
-From the pointwise confidence intervals we can say that (example) $f(1980)$ has $95\%$ chance to lie within (-1,0) (say) and $f(2000)$ has also $95\%$ to lie within (0.2,1.2) BUT it is a fallacy to say simultaneously that both are contained in these intervals at the same time with .95 confidence. \citet[section 6.5]{ruppert_semiparametric_2003}
-
-
-We can see that only the 2 increasing periods from the start and at the end of the series are significant, while the decreasing period from... (see the red line) is more likely to be the subject of randomness. Moreover, we remark that the 
-
-Note that we will see further in the text (section \ref{bayes_cred_int} ) more explanations about the bayesian credible intervals.
-
-
-After having... we will now go through with the more specific subjec of this thesis, that is the extreme value analysis.
 
 
 \begin{center}
-\part{Theoretical Framework : \qquad Extreme Value Theory}
+\part{Theoretical Framework : Extreme Value Theory}
 \end{center}
 %\pagestyle{fancy}
 
-\setcounter{mtc}{3}
+\setcounter{mtc}{1}
 \chapter{Method of Block-Maxima} \label{sec::1}
-\minitoc
+\minitoc \thispagestyle{empty}
 %\newpage
  \vspace{1.5cm}
 
@@ -571,11 +524,53 @@ In this section, we will present the basics of EVT and we will consider a
 \textit{block-maxima approach}. After defining some useful concepts in 
 \hyperref[sec::1.1]{section \textbf{1.1}}, we will
 
-\thispagestyle{empty}
+
 \newpage
 \section{Preliminaries}\label{sec::1.1}
 
-Some useful definitions to start with !!
+[ MOTS DEXPLICATIONS SUR TTES LES FORMULES (domain atraction condition, etc...]
+
+\addcontentsline{toc}{section}{Order statistics}
+\subsection*{Statistical Tools}
+First of all, we write the \emph{i}-th \emph{order statistics} $X_{(i)} $ which are the statistics ordered by increasing value 
+
+\begin{equation} \label{ordereds}
+X_{(1)}\leq X_{(2)}\leq ...\leq X_{(n)}
+\end{equation}
+
+We adopt this simpler notation by assuming that the number of our observations will %always
+be denoted by n. 
+
+One order statistics is of particular interest for our purpose, the maximum
+\begin{equation} \label{max}
+X_{(n)}:=\displaystyle{\max_{1\leq i\leq n}}X_i
+\end{equation}  for the minimum, $X_{(1)}=\displaystyle{\min_{1\leq i\leq n}}X_i$ that we will still use by converse (see section . )
+
+\begin{equation}\label{min}
+X_{(1)}:=\displaystyle{\min_{1\leq i\leq n}}X_i=- \displaystyle{\max_{1\leq i\leq n}}(-X_i)
+\end{equation}
+
+It is very important to keep in mind that all the analysis made in the following for maxima 
+can be extended to minima by this relation (\ref{min}). Our analysis in \hyperref[]{chapter 
+	?} will also use minima and thus make implicit use of this relations.
+
+We can retrieve the distribution of our statistic of interest $X_{(n)}$
+\begin{equation}\label{maxdist}
+\text{Pr}\{X_{(n)}\leq x\}=\text{Pr}\{X_1,\dots,X_n\leq x\}\stackrel{(\independent)}{=}\text{Pr}\{X_1\leq x\}\dots\text{Pr}\{X_n\leq x\}=F^n(x),
+\end{equation}
+(write vertically)
+
+where independence $(\independent)$  follows from the iid assumption of the sequence $\{X_i\}$.
+
+
+We also define the \textit{survival} function $\bar{F}=1-F$ which is widely useful for this kind of (biostatistical) applications.
+
+Finally, we decide to include in Appendix some concepts of convergence 
+(\hyperref[appA]{A.}), regularly and slowly varying functions (A.), as they will often 
+appear in the text.
+
+
+\subsection*{Some Definitions and ..}
 \theoremstyle{definition}
 \begin{definition}[Similar distribution functions]\label{similardf} We say that two distributions functions $G$ and $G^*$ are \emph{\textbf{similar}} or are of the \emph{\textbf{same type}}
 	if, for constants $a>0$ and $b$
@@ -662,7 +657,7 @@ This is exactly what Extreme Value Theory aims to achieve for (typically) the ma
 
 
 
-Introduced by Fisher and Tippett \cite{fisher_limiting_1928}, later revised by \cite{gnedenko_sur_1943} and finally streamlined by \cite{De_on_1970}, the \emph{extremal types} theorem is very important for its applications. We remind the distribution of maxima is $\text{Pr}\big\{X_{(n)}\leq x\big\}=F^n(x)$, from \ref{maxdist} in \hyperref[appA]{appendix \textbf{A}}. It states the following:
+Introduced by Fisher and Tippett \cite{fisher_limiting_1928}, later revised by \cite{gnedenko_sur_1943} and finally streamlined by \cite{De_on_1970}, the \emph{extremal types} theorem is very important for its applications. We remind the distribution of maxima is $\text{Pr}\big\{X_{(n)}\leq x\big\}=F^n(x)$, from (\ref{maxdist}) in \hyperref[appA]{appendix \textbf{A}}. It states the following:
 
 \begin{theorem}[Extremal types theorem] \label{extthm}
 	If the distribution of partial maxima of an iid sequence of  random  variables  with  common  (unknown)  distribution F, say, $X_{(n)}$, properly normalized, converges to a non-degenerate ( see ...) limiting distribution G, i.e.
@@ -756,7 +751,7 @@ Hence, from this general definition of the GEV distribution (\ref{gevgen}), we c
 \begin{equation} \label{frech}
 \boxed{\textbf{\text{II}}} \ \ G_{2,\alpha}(z)=
 \begin{cases}
-\ 0, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z\leq 0; \\
+\ 0, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \quad \ z\leq 0; \\
 \ \exp\{-(z)^{-\alpha}\}, \ \ \ \ \ \ \ \ \ z>0,\ \alpha>0.    
 \end{cases}
 \end{equation}
@@ -764,7 +759,7 @@ Hence, from this general definition of the GEV distribution (\ref{gevgen}), we c
 \begin{equation} \label{weib}
 \ \ \boxed{\textbf{\text{III}}} \ \ G_{3,\alpha}(z)=\begin{cases}
 \ \exp\big\{-(-z)^{\alpha}\big\}, \ \ \ \  z>0,\ \alpha>0?;     \\
-\  1, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z\geq 0.
+\  1, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \quad z\geq 0.
 \end{cases}
 \end{equation}
 \newline
@@ -807,7 +802,7 @@ Note that the support varies equally as for the distribution functions wrt sign 
 
 
 %\begin{center}
-\begin{figure}
+\begin{figure}[!htb]
 	\includegraphics[width=0.85\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gev3plot}
 \end{figure}
 %\end{center}
@@ -1275,8 +1270,304 @@ When plotted against the return period on a logarithmic scale, the return levels
      \item If \boldsymbol{$\xi>0$}, then return level plot will be \textbf{concave}.
 \end{itemize}
 
-\section{INFERENCE} put here?
-and piut in section 4 only the "advanced" (improved) methods
+
+
+\section{Inference}\label{sec::gevinfernce} 
+
+
+We decide to present in this section the main (frequentists) methods of inference for the GEV. These are mostly based on the likelihood (\hyperref[likintro]{section }). Finally we will briefly present some other well-known methods that are also widely used to estimate GEV parameters like the Hill or the moment estimator ( \hyperref[gev:other]{section }. We will then more on the Bayesian methods in \hyperref[sec:bayesian]{chapter \textbf{5} }.
+ 
+As we already discussed in section \textbf{2.1.1.} (?) (or see (\ref{convseq1})-(\ref{convseq2})), a great advantage for the modelling is that we do not have to find the normalizing sequences
+
+
+
+\subsection{Likelihood-based Methods}\label{likintro}
+
+The most usual method to first consider and which generally do a good job is the Maximum Likelihood (ML) inference.
+
+A potential difficulty with the use of likelihood methods for the GEV concerns the regularity conditions that are required for the usual asymptotic properties associated with the
+maximum likelihood estimator to be valid. Such conditions are not satisfied by the GEV
+model because the end points of the GEV distribution are functions of the parameter values,
+$\mu-\sigma/\xi$ is an upper end-point of the distribution when $\xi$ < 0, and a lower end-point (?) when
+$\xi > 0$. \citet{saeb_general_2014}
+
+
+, from decreasing order of 
+\citet[pp.55]{coles_introduction_2001}
+
+\begin{enumerate}
+	\item\label{it1lik} \boldsymbol{$\xi<-1$} : MLE's are unlikely to be obtainable. This is due to 
+	\item $\boldsymbol{\xi\in(-1,-0.5)}$ : MLE's are generally obtainable but their standard asymptotic properties do not hold.
+	\item $\boldsymbol{\xi>-0.5}$ : MLE's are regular, in the sense of having the usual asymptotic properties.
+\end{enumerate}
+
+
+But fortunately, in practice, the problematic cases in the two first situations ($\xi\leq 0.5$) are rarely encountered for environmental problems. This situation corresponds to distributions (in the Weibull or in the Beta? family) with very short bounded upper tail, see for example figure \ref{}.
+And if it is the case, Bayesian inference, which do not depend on these regularity conditions, may be preferable.
+
+Other forms of likelihood-based methods have also emerged to remedy this problem of unstability for low values of $\xi$. Close to a bayesian formulation, \textbf{ penalized ML} method has been proposed by \citet{coles_likelihood-based_1999} which adds a penalty term to the likelihood function to "force" the shape parameter to be $<1$, %(see \hyperref[it1lik]{item 1} above) 
+values close to -1 being much larger penalized. (..) We talk about other methods who try to circumvent issues of the usual likelihood computation in \hyperref[pwmm]{section} or in \hyperref[improvinf]{section\textbf{ 4.2}}.
+
+Problems of this simple method arise when the approximate normality of the MLE cannot hold. Hence, the underlying inferences are not sustainable. This is the reason why another method is usually more preferable, the \emph{profile likelihood}.
+
+
+
+\subsection*{GEV distribution}
+
+(return level) [extremesin climate change p.106] "Approximate confidence intervals for the return level can be obtained by the
+delta method (Casella and Berger, 2002, Sect. 5.5.4) which relies on the asymptotic
+normality of maximum-likelihood estimators and produces a symmetric confidence
+interval. Alternatively, profile likelihood methods (Coles 2001, Sect. 2.6.6) provide
+asymmetric confidence intervals, which better capture the skewness generally
+associated with return level estimates." stationary case
+
+We are now considering a sequence $\{Z_i\}_{i=1}^n$ of independent random variables sharing 
+each the same GEV distribution. Let denote $\boldsymbol{z}=(z_1,\dots,z_n)$ the vector of 
+observations.
+From the densities of the GEV distribution $g_{\xi}(z)$ defined in 
+(\ref{densgev})-(\ref{gevdensxi0}), we derive the log-likelihood 
+$\log\big[L(\mu,\sigma,\xi;\boldsymbol{z})\big]$, for the two different cases $\xi\neq 0$ 
+or $\xi=0$ respectively:
+
+
+\begin{enumerate}
+	\item \begin{equation} \label{llik12}
+	\ell(\mu,\sigma,\xi\neq 0\ ;\textbf{z})= 
+	-m\log\sigma-(1+\xi^{-1})\sum_{i=1}^n\log\bigg[1+\xi\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg]_+-\sum_{i=1}^n\bigg[1+\xi\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}.
+	\end{equation}
+	
+	
+	
+	\item \begin{equation} \label{llik0}
+	\ell(\mu,\sigma,\xi=0\ ;\textbf{z})=-m\log 
+	\sigma-\sum_{i=1}^n\bigg(\frac{z_i-\mu}{\sigma}\bigg)-\sum_{i=1}^{n}\exp\bigg\{-\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg\},
+	\end{equation}
+	using the Gumbel limit $\xi\rightarrow 0$ of the GEV, see (\ref{gevdensxi0}).
+\end{enumerate}
+
+
+\subsection*{Profile Likelihood}
+
+Usual likelihood methods are not the most accurate for inference. In section \textbf{2.5}, 
+the problem was that confidence intervals computed in the usual method, with standard 
+errors computed by the Delta method in (\ref{delta}), was not reliable for inference on 
+return levels. This is due to rejection of the normal approximation (see...) because of the 
+severe asymmetries that are often observed in the likelihood surface for return levels, 
+especially for large quantiles.
+\cite{bolivar_profile_2010}
+
+This is why it is useful to consider an other approach linked with the usual likelihood method, the \emph{profile likelihood} which is often more convenient when a single parameter is of interest. Let's denote it $\theta_j$. Now let's consider the parameter vector $\boldsymbol{\theta}=(\theta_j,\boldsymbol{\theta_{-j}})= (\mu,\sigma,\xi)$ typically for parameter inferences in EVT in a stationary context, where $\boldsymbol{\theta_{-j}}$ corresponds to all components of $\boldsymbol{\theta}$ except $\theta_j$. $\boldsymbol{\theta_{-j}}$ can be seen as a vector of nuisance parameters.
+The profile \underline{log}-likelihood for $\theta_j$ is defined by 
+
+\begin{equation}
+\ell_p(\theta_j)=\underset{\boldsymbol{\theta_{-j}}}{\mathrm{\arg\max}}\ \ell (\theta_j,\boldsymbol{\theta_{-j}}).
+\end{equation}
+Henceforth for each value of $\theta_j$, the profile log-likelihood is the maximised 
+log-likelihood with respect to $\boldsymbol{\theta_{-j}}$, i.e. with respect to all other 
+components of $\boldsymbol{\theta}$ but not $\theta_j$.
+Generalization where $\boldsymbol{\theta_j}$ is of dimension higher than one is possible.
+
+Another interpretation concern the $\chi^2$ distribution
+
+\paragraph{Return levels} Here, we are now specifically interested in computing the profile log-likelihood
+for the estimation of the return level $\theta_j=r_m$. To do that, we present a method which consists of three main steps :
+
+\begin{enumerate}[label=\textbf{\arabic*})]
+	
+	\item[\textbf{\texttt{1.}}]  To include $r_m$ as a parameter of the model, by \ref{returnn} we can rewrite $\mu$ as a function of $\xi,\sigma$ and $r_m$ :
+	\begin{equation*}
+	\mu= r_m-\sigma\xi^{-1}\Big[\Big(-\log\{1-m^{-1}\}\Big)^{-\xi}-1\Big].
+	\end{equation*}
+	By plugging it in the log-likelihood in (\ref{llik12})-(\ref{llik0}), we obtain the new GEV log-likelihood $\ell(\xi,\sigma,r_m)$ as a function of $r_m$.
+	
+	\item[\textbf{\texttt{2.}}]   We maximise this new likelihood $\ell (\xi,\sigma,r_m=r^{-}_{m})$ at some fixed low value of $r_m=r^{-}_{m}\leq r^{+}_{m}$ with respect to the "nuisance" parameters $(\xi,\sigma)$ to obtain the profile log-likelihood
+	
+	\begin{equation*}
+	\ell_p(r_m=r^{-}_{m})=\underset{(\xi,\sigma)}{\mathrm{\arg\max}}\ \ell \Big(r_m=r^{-}_{m}\ ,\ (\xi,\sigma)\Big).
+	\end{equation*} 
+	We choose arbitrarily large value of the upper range $r^{+}_m$ and conversely for starting point of $r^{-}_m$.
+	
+	\item[\textbf{\texttt{3.}}]  Repeat previous step for a range of values of $r_m$ such that $r^{-}_{m}\leq r_m\leq r^{+}_{m}$ and then choose $r_m$ which attain the maximum value of $\ell_p(r_m)$.
+\end{enumerate}
+
+From this, we easily obtain the \emph{profile log-likelihood plot} 
+
+
+\subsection{Other Methods}\label{sec:gevother}
+
+\section*{Distinct inference for EVI $\xi$ and global inference (see "others"}
+\citet[pp.140]{beirlant_statistics_2006}
+
+
+As we have seen, the two approaches we have encountered, that is \emph{block-maxima} and POT, share commonly the same parameter $\xi$. Hence, it is not necessary to differentiate between these methods for the sole estimate the shape parameter. 
+
+\subsection{Estimators Based on Extreme Order Statistics (put with POT)?}
+
+\subsection*{Pickands estimator}
+
+
+Firstly introduced by \cite{pickands_statistical_1975}, this method can be applied $\forall\xi\in\mathbb{R}$
+
+\begin{equation}
+\hat{\xi}^P_{k}= \frac{1}{\ln 2}\ln \Bigg(\frac{X_{n-\lceil k/4\rceil +1,n}-X_{n-\lceil k/2\rceil+1,n}}{X_{n-\lceil k/2\rceil +1,n}-X_{n-k+1,n}}\Bigg),
+\end{equation}
+
+where we used the definition of \citet{beirlant_statistics_2006}
+We recall that $\lceil x\rceil$ denotes the integer (ceil) part of $x$.
+
+A condition for the consistency of this estimator is that $k$ must be chosen such that $k/n\rightarrow 0$ as $n\rightarrow \infty$. This condition will hold for the rest rest of the estimators based on (...) in the following 
+
+A problem with this intuitive estimator is that its asymptotic variance is very large (see e.g. \cite{dekkers_estimation_1989}) and depends highly on the value of $k$. To improve this, we can quote the estimator of \cite{segers_generalized_2001} which is globally more efficient, depending on the value of an extra-"parameter"(?) and a function to choose.
+
+
+\subsection*{Methods for heavy-tailed distributions ($\xi>0$)}
+
+Typically, EV analysis of temperature data do not show heavy-tailedness §see \citet{}). For this reason, some tools commonly used for inference on \textbf{Pareto-type} distributions are not relevant. Because of their wide use and application, we will name them for completeness
+
+
+\subsection*{The Hill estimator ($\xi>0$)}
+
+
+This is probably the most simple EVI estimator thanks to the intuition behind its construction. There exists plenty of interpretations to construct it (see e.g. \citet[pp.101-104]{beirlant_statistics_2006}). Unfortunately, it only holds for heavy-tailed distributions ($\xi>0$). 
+
+
+%The probability-view \citet[pp.103]{beirlant_statistics_2006} which is the simplest and most intuitive considering the peaks-over-threshold case.
+
+
+It is defined as 
+
+\begin{equation}
+\xi^H_{k}=k^{-1}\sum_{i=1}^k\ln X_{n-i+1,n}-\ln X_{n-k,n}, \qquad\qquad k\in\{1,\dots,n-1\}.
+\end{equation}
+
+
+
+Following \cite{mason_}, this estimator is consistent. Besides that, this estimator has several problems : 
+
+\begin{itemize}
+	\item instability with respect to the choise of $k$.
+	\item Severe bias due to the heavy-tails of the distribution and thus the slowly varying component which influences negatively.
+	\item Inadequacy with shifted data
+\end{itemize}
+
+
+Problem : see [pp.105]
+
+
+\subsection*{The Moment estimator}
+
+%\subsection*{Moment estimator}
+Introduced by \cite{dekkers_moment_1989}, this estimator is a direct generalization of the Hill estimator presented in the previous section. 
+
+\begin{equation}
+\hat{\xi}^M_k=\hat{\xi}_k^H+1-\frac{1}{2}\Bigg(1-\frac{(\hat{\xi}_k^H)^2}{\hat{\xi}^{H^{(2)}}_k }\Bigg)^{-1},
+\end{equation}
+where we define 
+
+\begin{equation*}
+\hat{\xi}^{H^{(2)}}_k=k^{-1}\sum_{i=1}^k\big(\ln X_{n-i+1,n}-\ln X_{n-k,n}\big)^2.
+\end{equation*}
+
+
+This estimator is also consistent but  
+
+
+\subsection*{Estimator based on generalized quantile plot}
+
+To overcome the lack of graphical interpretation of the usual moment estimator, 
+
+
+
+
+\subsection{The Probability-Weighted-Moment Estimator}
+
+\emph{Probability-Weighted-Moment} (PWM)
+...
+
+different formulations for POT or block maxima. Look also to "other" directory
+\cite{ribereau_skew_2016}
+
+
+\subsubsection*{The $L$-Moment Estimator}
+\cite{wang_lh_1997}
+
+\cite{hosking_regional_1997} emphasized the fact that $L$-moment method came historically as a modification of the PWM method. 
+
+\subsection{Estimators based on Generalized Quantile }
+
+
+
+
+\section{Model Diagnostics : Goodness-of-Fit}
+
+After having fitted a statistical model to data, it is important to assess its accuracy in order to infer reliable conclusions from this model.
+
+Ideally, we aim to check that our model fits well the whole population, that is the whole distribution of maxima. all the past and future temperature maxima that will arise " As this cannot be achieved in practice, it is common to assess a model with the data that were used to estimate this model. We will talk a bit about the problem that could arise from this methodology in the next section,and the problem of overfitting(?).
+
+
+
+\subsection{Diagnostic Plots : Quantile and Probability Plots}
+From \citet[pp.18-36]{beirlant_practical_1996}, together with the nice view of \citet[pp.36-37]{coles_introduction_2001}, we present two major diagnostic tools which aims at assessing the fitting of a particular model (or distribution) against the real distribution coming from the data used to construct the model.
+These are called the \emph{quantile-quantile} plot (or \emph{qq}-plot) and the \emph{probability} plot. 
+
+These diagnostics are popular by their easy interpretation and by the fact that they can both have graphical (i.e. subjective, qualitative, quick) view but also a more precise (i.e. objective, quantitative, rigorous) analysis can be derived, for example from the theory of linear regression. 
+\newline
+For these two diagnostic tools, we use the order statistics (see eq.(\ref{ordereds} in appendix) but now we rather consider an \textbf{ordered sample} of independent observations :
+
+\begin{equation} \label{ordersamp}
+x_{(1)}\leq x_{(2)}\leq\dots\leq x_{(n)}
+\end{equation}
+coming from a population from which we fit the estimated model (distribution) $\hat{F}$ and where $x_{(1)}$ (resp. $x_{(n)}$) is thus the minimum (resp. maximum) observation in the sample. These tools will thus help us to know if the fitted model model $\hat{F}$ is reasonable for the data.
+
+\subsubsection*{Quantile plot} Given a ordered sample as in (\ref{ordersamp}), a \emph{qq-plot} consists of the locus of points 
+
+\begin{equation}
+\Bigg\{\bigg(\hat{F}^{\leftarrow}\Big(\frac{i}{n+1}\Big)\ ,\ x_{(i)}\bigg) \ : \ i=1,\dots,n\Bigg\}.
+\end{equation}
+This graphic compares the ordered quantiles $\hat{F}^{\leftarrow}\Big(\frac{i}{n+1}\Big)$ of the fitted model $\hat{F}$ against the ordered observed quantiles, i.e. the ordered sample from (\ref{ordersamp}).
+
+We used the continuity correction $\frac{i}{n+1}$.....
+
+
+\subsubsection*{Probability plot} Given the same sample in (\ref{ordersamp}), a \emph{probability plot} consists of the points 
+
+\begin{equation}
+\Bigg\{\bigg(\hat{F}(x_{(i)})\ ,\ \frac{i}{n+1}\bigg) \ : \ i=1,\dots,n\Bigg\}.
+\end{equation}
+This graph compares the estimated probability of the ordered values $x_{(i)}$ from the fitted model $\hat{F}$ against the probability...
+\newline
+From these two graphical diagnostic tools, the interpretation is the same and we will consider that $\hat{F}$ fits well the data if the plot looks linear, i.e. the points of the plots lie close to the unit diagonal.
+\newline
+Besides the fact that the probability and the quantile plots contain the same information, they are expressed in a different scale. That is, after changing the scale to probabilities or quantiles (with probability or quantile transforms), one can gain a better perception and both visualizations can sometimes lead contradictory conclusions, especially in the graphical inspection. Using both is thus preferable to make our model's diagnostic more robust.
+
+The disadvantage of Q–Q plots is that the shape of the selected
+parametric distribution is no longer visible \cite{beirlant_statistics_2006}[pp.62?]
+
+
+\subsubsection*{Return Level Plot}
+
+See sections ....
+
+\subsubsection*{Overfitting problem} \cite{northrop_cross_2016}?
+A problem of these diagnostics could arise when we focus on prediction accuracy and as we mentioned, the fact that the model is fitted from the data. This well-known problem is called \emph{overfitting}. It can be roughly defined by the process of fitting to noise from the dataset rather than the underlying signal (put ref here). Here, it can be easily explained by the following :
+\begin{itemize}
+	
+	\item We are looking for a model which fits the data at best, i.e. for points which are the nearest possible of the diagonal line.
+	
+	\item But, the so-constructed model from which we put the diagnostic is fitted from these original data against which we make the comparison.
+	
+	\item Hence, there could be a incentive to fit a model which fits the most perfectly the available data, that is which points on the diagnostic plots is the nearest possible of the diagonal line. The model is then the best to fit the data at hand
+	
+	\item But, this is a catastrophy when we are seeking at making good predictions from the fitted model, that is making a guess on new, unseen, unavailable data. The model has then lost flexibility, it is not regularized and cannot generalize. (unless the feature space, hear the initial data space, has been completely explored (--->infinite data ?))
+\end{itemize}
+See the link with the trade-off bias-variance for threshold selection.
+
+
+
+Gumbel plots
+
+Z and W statistic plots
+
 
 
 \chapter{Peaks-Over-Threshold Methods}\label{sec::2}
@@ -1559,13 +1850,141 @@ non-homogeneous Poisson with intensity measure" $\Lambda$, on a set of the form 
 
 
 
-\section{INFERENCE} put here?
+\section{Inference}\label{sec::gevinfernce} 
+
+
+\iffalse
+We decide to present in this section the two mains methods of inference for GEV distributions. First, the likelihood-based methods for their wide applicability, and easy interpretability. Then, we will broadly present the bayesian methods for their increasing supports in this domain, and easy adjustability. Finally, we will present some other well-known methods that are also widely used to estimate GEV parameters like the Hill or the moment estimator.
+
+As we already discussed in section \textbf{2.1.1.} (see (\ref{convseq1})-(\ref{convseq2})), a great advantage for the modelling is that we do not have to find the normalizing sequences
+\fi
+
+We present here some methods that are based on likelihood and other kind methods. We will then more on the Bayesian methods in \hyperref[sec:bayesian]{chapter x }
+\subsection{Likelihood-based Methods}\label{likintro}
 
 
 
-\section{Standard Threshold Selection (Methods) }\label{stdthr}
+\subsection*{Generalized Pareto Distribution}
 
-\subsection{Threshold choice for the excess models}
+As we have seen, excess-over-threshold models rely on ....
+From (\ref{densgpd}), we can write the \emph{log-likelihood }of the GPD : 
+
+\begin{equation}\label{likk}
+\ell(\textbf{z};\xi,\sigma_u) = -n\ln\sigma_u-(1+\xi^{-1})\sum_{i}^n\ln(1+\xi \sigma_u^{-1}z_i), \ \ \ \ \ \ \ \ (1+\xi \sigma_u^{-1}z_i)>0.
+\end{equation}
+
+
+
+\subsection{Profile Likelihood}
+
+\subsection{Other Methods}
+
+\section*{Distinct inference for EVI $\xi$ and global inference (see "others"}
+\citet[pp.140]{beirlant_statistics_2006}
+
+
+As we have seen, the two approaches we have encountered, that is \emph{block-maxima} and POT, share commonly the same parameter $\xi$. Hence, it is not necessary to differentiate between these methods for the sole estimate the shape parameter. 
+
+\subsection{Estimators Based on Extreme Order Statistics (put with POT)?}
+
+\subsection*{Pickands estimator}
+
+
+Firstly introduced by \cite{pickands_statistical_1975}, this method can be applied $\forall\xi\in\mathbb{R}$
+
+\begin{equation}
+\hat{\xi}^P_{k}= \frac{1}{\ln 2}\ln \Bigg(\frac{X_{n-\lceil k/4\rceil +1,n}-X_{n-\lceil k/2\rceil+1,n}}{X_{n-\lceil k/2\rceil +1,n}-X_{n-k+1,n}}\Bigg),
+\end{equation}
+
+where we used the definition of \citet{beirlant_statistics_2006}
+We recall that $\lceil x\rceil$ denotes the integer (ceil) part of $x$.
+
+A condition for the consistency of this estimator is that $k$ must be chosen such that $k/n\rightarrow 0$ as $n\rightarrow \infty$. This condition will hold for the rest rest of the estimators based on (...) in the following 
+
+A problem with this intuitive estimator is that its asymptotic variance is very large (see e.g. \cite{dekkers_estimation_1989}) and depends highly on the value of $k$. To improve this, we can quote the estimator of \cite{segers_generalized_2001} which is globally more efficient, depending on the value of an extra-"parameter"(?) and a function to choose.
+
+
+\subsection*{Methods for heavy-tailed distributions ($\xi>0$)}
+
+Typically, EV analysis of temperature data do not show heavy-tailedness §see \citet{}). For this reason, some tools commonly used for inference on \textbf{Pareto-type} distributions are not relevant. Because of their wide use and application, we will name them for completeness
+
+
+\subsection*{The Hill estimator ($\xi>0$)}
+
+
+This is probably the most simple EVI estimator thanks to the intuition behind its construction. There exists plenty of interpretations to construct it (see e.g. \citet[pp.101-104]{beirlant_statistics_2006}). Unfortunately, it only holds for heavy-tailed distributions ($\xi>0$). 
+
+
+%The probability-view \citet[pp.103]{beirlant_statistics_2006} which is the simplest and most intuitive considering the peaks-over-threshold case.
+
+
+It is defined as 
+
+\begin{equation}
+\xi^H_{k}=k^{-1}\sum_{i=1}^k\ln X_{n-i+1,n}-\ln X_{n-k,n}, \qquad\qquad k\in\{1,\dots,n-1\}.
+\end{equation}
+
+
+
+Following \cite{mason_}, this estimator is consistent. Besides that, this estimator has several problems : 
+
+\begin{itemize}
+	\item instability with respect to the choise of $k$.
+	\item Severe bias due to the heavy-tails of the distribution and thus the slowly varying component which influences negatively.
+	\item Inadequacy with shifted data
+\end{itemize}
+
+
+Problem : see [pp.105]
+
+
+\subsection*{The Moment estimator}
+
+%\subsection*{Moment estimator}
+Introduced by \cite{dekkers_moment_1989}, this estimator is a direct generalization of the Hill estimator presented in the previous section. 
+
+\begin{equation}
+\hat{\xi}^M_k=\hat{\xi}_k^H+1-\frac{1}{2}\Bigg(1-\frac{(\hat{\xi}_k^H)^2}{\hat{\xi}^{H^{(2)}}_k }\Bigg)^{-1},
+\end{equation}
+where we define 
+
+\begin{equation*}
+\hat{\xi}^{H^{(2)}}_k=k^{-1}\sum_{i=1}^k\big(\ln X_{n-i+1,n}-\ln X_{n-k,n}\big)^2.
+\end{equation*}
+
+
+This estimator is also consistent but  
+
+
+\subsection*{Estimator based on generalized quantile plot}
+
+To overcome the lack of graphical interpretation of the usual moment estimator, 
+
+
+
+
+\subsection{The Probability-Weighted-Moment Estimator}
+
+\emph{Probability-Weighted-Moment} (PWM)
+...
+
+different formulations for POT or block maxima. Look also to "other" directory
+\cite{ribereau_skew_2016}
+
+
+\subsubsection*{The $L$-Moment Estimator}
+\cite{wang_lh_1997}
+
+\cite{hosking_regional_1997} emphasized the fact that $L$-moment method came historically as a modification of the PWM method. 
+
+\subsection{Estimators based on Generalized Quantile }
+
+
+
+
+\section{Threshold Selection (Methods) }\label{stdthr}
+
+\subsection{Standard Threshold choice for the excess models}
 
 Single threshold selection involves a \textbf{bias-variance trade-off}. That is, (raccourcir)
 
@@ -1705,7 +2124,7 @@ where $\hat{\tau}_{3,u}$ and $\hat{\tau}_{4,u}$ are estimations of L-kurtosisand
 
 
 
-\section{"Varying" Threshold : Mixture Models}
+\subsection{"Varying" Threshold : Mixture Models}
 \citet{dey_extreme_2016}
 
 see application with pdf small thesis !!! --> unconclusive.
@@ -2047,250 +2466,11 @@ $F_y(r_p(y))=1-p$ with the exceedance level $r_p(y)$ changing with year. It show
 
 \paragraph{Return period as expected number of events}
 
+\section{Inference}
 
 
-
-
-
-\part{Inferential Methods}
-%\thispagestyle{empty}
-
-
-\chapter{Methods of Inference}\label{sec::4} 
+\chapter{Neural Network (and others) }
 \minitoc\thispagestyle{empty}
-
-We decide to present in this section the two mains methods of inference for GEV distributions. First, the likelihood-based methods for their wide applicability, and easy interpretability. Then, we will broadly present the bayesian methods for their increasing supports in this domain, and easy adjustability. Finally, we will present some other well-known methods that are also widely used to estimate GEV parameters like the Hill or the moment estimator.
-
-As we already discussed in section \textbf{2.1.1.} (see (\ref{convseq1})-(\ref{convseq2})), a great advantage for the modelling is that we do not have to find the normalizing sequences
-
-
-
-\section{Likelihood-based Methods}\label{likintro}
-
-The most usual method to first consider and which generally do a good job is the Maximum Likelihood (ML) inference.
-
-A potential difficulty with the use of likelihood methods for the GEV concerns the regularity conditions that are required for the usual asymptotic properties associated with the
-maximum likelihood estimator to be valid. Such conditions are not satisfied by the GEV
-model because the end points of the GEV distribution are functions of the parameter values,
-$\mu-\sigma/\xi$ is an upper end-point of the distribution when $\xi$ < 0, and a lower end-point (?) when
-$\xi > 0$. \citet{saeb_general_2014}
-
-
-, from decreasing order of 
-\citet[pp.55]{coles_introduction_2001}
-
-\begin{enumerate}
-	\item\label{it1lik} \boldsymbol{$\xi<-1$} : MLE's are unlikely to be obtainable. This is due to 
-	\item $\boldsymbol{\xi\in(-1,-0.5)}$ : MLE's are generally obtainable but their standard asymptotic properties do not hold.
-	\item $\boldsymbol{\xi>-0.5}$ : MLE's are regular, in the sense of having the usual asymptotic properties.
-\end{enumerate}
-
-
-But fortunately, in practice, the problematic cases in the two first situations ($\xi\leq 0.5$) are rarely encountered for environmental problems. This situation corresponds to distributions (in the Weibull or in the Beta? family) with very short bounded upper tail, see for example figure \ref{}.
-And if it is the case, Bayesian inference, which do not depend on these regularity conditions, may be preferable.
-
-Other forms of likelihood-based methods have also emerged to remedy this problem of unstability for low values of $\xi$. Close to a bayesian formulation, \textbf{ penalized ML} method has been proposed by \citet{coles_likelihood-based_1999} which adds a penalty term to the likelihood function to "force" the shape parameter to be $<1$, %(see \hyperref[it1lik]{item 1} above) 
-values close to -1 being much larger penalized. (..) We talk about other methods who try to circumvent issues of the usual likelihood computation in \hyperref[pwmm]{section} or in \hyperref[improvinf]{section\textbf{ 4.2}}.
-
-Problems of this simple method arise when the approximate normality of the MLE cannot hold. Hence, the underlying inferences are not sustainable. This is the reason why another method is usually more preferable, the \emph{profile likelihood}.
-
-
-
-\subsection*{GEV distribution}
-
-(return level) [extremesin climate change p.106] "Approximate confidence intervals for the return level can be obtained by the
-delta method (Casella and Berger, 2002, Sect. 5.5.4) which relies on the asymptotic
-normality of maximum-likelihood estimators and produces a symmetric confidence
-interval. Alternatively, profile likelihood methods (Coles 2001, Sect. 2.6.6) provide
-asymmetric confidence intervals, which better capture the skewness generally
-associated with return level estimates." stationary case
-
-We are now considering a sequence $\{Z_i\}_{i=1}^n$ of independent random variables sharing 
-each the same GEV distribution. Let denote $\boldsymbol{z}=(z_1,\dots,z_n)$ the vector of 
-observations.
-From the densities of the GEV distribution $g_{\xi}(z)$ defined in 
-(\ref{densgev})-(\ref{gevdensxi0}), we derive the log-likelihood 
-$\log\big[L(\mu,\sigma,\xi;\boldsymbol{z})\big]$, for the two different cases $\xi\neq 0$ 
-or $\xi=0$ respectively:
-
-
-\begin{enumerate}
-	\item \begin{equation} \label{llik12}
-	\ell(\mu,\sigma,\xi\neq 0\ ;\textbf{z})= 
-	-m\log\sigma-(1+\xi^{-1})\sum_{i=1}^n\log\bigg[1+\xi\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg]_+-\sum_{i=1}^n\bigg[1+\xi\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}.
-	\end{equation}
-	
-	
-	
-	\item \begin{equation} \label{llik0}
-	\ell(\mu,\sigma,\xi=0\ ;\textbf{z})=-m\log 
-	\sigma-\sum_{i=1}^n\bigg(\frac{z_i-\mu}{\sigma}\bigg)-\sum_{i=1}^{n}\exp\bigg\{-\bigg(\frac{z_i-\mu}{\sigma}\bigg)\bigg\},
-	\end{equation}
-	using the Gumbel limit $\xi\rightarrow 0$ of the GEV, see (\ref{gevdensxi0}).
-\end{enumerate}
-
-
-\subsection*{Generalized Pareto Distribution}
-
-As we have seen, excess-over-threshold models rely on ....
-From (\ref{densgpd}), we can write the \emph{log-likelihood }of the GPD : 
-
-\begin{equation}\label{likk}
-\ell(\textbf{z};\xi,\sigma_u) = -n\ln\sigma_u-(1+\xi^{-1})\sum_{i}^n\ln(1+\xi \sigma_u^{-1}z_i), \ \ \ \ \ \ \ \ (1+\xi \sigma_u^{-1}z_i)>0.
-\end{equation}
-
-
-
-\subsection{Profile Likelihood}
-
-Usual likelihood methods are not the most accurate for inference. In section \textbf{2.5}, 
-the problem was that confidence intervals computed in the usual method, with standard 
-errors computed by the Delta method in (\ref{delta}), was not reliable for inference on 
-return levels. This is due to rejection of the normal approximation (see...) because of the 
-severe asymmetries that are often observed in the likelihood surface for return levels, 
-especially for large quantiles.
-\cite{bolivar_profile_2010}
-
-This is why it is useful to consider an other approach linked with the usual likelihood method, the \emph{profile likelihood} which is often more convenient when a single parameter is of interest. Let's denote it $\theta_j$. Now let's consider the parameter vector $\boldsymbol{\theta}=(\theta_j,\boldsymbol{\theta_{-j}})= (\mu,\sigma,\xi)$ typically for parameter inferences in EVT in a stationary context, where $\boldsymbol{\theta_{-j}}$ corresponds to all components of $\boldsymbol{\theta}$ except $\theta_j$. $\boldsymbol{\theta_{-j}}$ can be seen as a vector of nuisance parameters.
-The profile \underline{log}-likelihood for $\theta_j$ is defined by 
-
-\begin{equation}
-\ell_p(\theta_j)=\underset{\boldsymbol{\theta_{-j}}}{\mathrm{\arg\max}}\ \ell (\theta_j,\boldsymbol{\theta_{-j}}).
-\end{equation}
-Henceforth for each value of $\theta_j$, the profile log-likelihood is the maximised 
-log-likelihood with respect to $\boldsymbol{\theta_{-j}}$, i.e. with respect to all other 
-components of $\boldsymbol{\theta}$ but not $\theta_j$.
-Generalization where $\boldsymbol{\theta_j}$ is of dimension higher than one is possible.
-
-Another interpretation concern the $\chi^2$ distribution
-
-\paragraph{Return levels} Here, we are now specifically interested in computing the profile log-likelihood
-for the estimation of the return level $\theta_j=r_m$. To do that, we present a method which consists of three main steps :
-
-\begin{enumerate}[label=\textbf{\arabic*})]
-	
-	\item[\textbf{\texttt{1.}}]  To include $r_m$ as a parameter of the model, by \ref{returnn} we can rewrite $\mu$ as a function of $\xi,\sigma$ and $r_m$ :
-	\begin{equation*}
-	\mu= r_m-\sigma\xi^{-1}\Big[\Big(-\log\{1-m^{-1}\}\Big)^{-\xi}-1\Big].
-	\end{equation*}
-	By plugging it in the log-likelihood in (\ref{llik12})-(\ref{llik0}), we obtain the new GEV log-likelihood $\ell(\xi,\sigma,r_m)$ as a function of $r_m$.
-	
-	\item[\textbf{\texttt{2.}}]   We maximise this new likelihood $\ell (\xi,\sigma,r_m=r^{-}_{m})$ at some fixed low value of $r_m=r^{-}_{m}\leq r^{+}_{m}$ with respect to the "nuisance" parameters $(\xi,\sigma)$ to obtain the profile log-likelihood
-	
-	\begin{equation*}
-	\ell_p(r_m=r^{-}_{m})=\underset{(\xi,\sigma)}{\mathrm{\arg\max}}\ \ell \Big(r_m=r^{-}_{m}\ ,\ (\xi,\sigma)\Big).
-	\end{equation*} 
-	We choose arbitrarily large value of the upper range $r^{+}_m$ and conversely for starting point of $r^{-}_m$.
-	
-	\item[\textbf{\texttt{3.}}]  Repeat previous step for a range of values of $r_m$ such that $r^{-}_{m}\leq r_m\leq r^{+}_{m}$ and then choose $r_m$ which attain the maximum value of $\ell_p(r_m)$.
-\end{enumerate}
-
-From this, we easily obtain the \emph{profile log-likelihood plot} 
-
-
-\section{Other Methods}
-\section*{Distinct inference for EVI $\xi$ and global inference (see "others"}
-\citet[pp.140]{beirlant_statistics_2006}
-
-
-As we have seen, the two approaches we have encountered, that is \emph{block-maxima} and POT, share commonly the same parameter $\xi$. Hence, it is not necessary to differentiate between these methods for the sole estimate the shape parameter. 
-
-\subsection{Estimators Based on Extreme Order Statistics (put with POT)?}
-
-\subsection*{Pickands estimator}
-
-
-Firstly introduced by \cite{pickands_statistical_1975}, this method can be applied $\forall\xi\in\mathbb{R}$
-
-\begin{equation}
-\hat{\xi}^P_{k}= \frac{1}{\ln 2}\ln \Bigg(\frac{X_{n-\lceil k/4\rceil +1,n}-X_{n-\lceil k/2\rceil+1,n}}{X_{n-\lceil k/2\rceil +1,n}-X_{n-k+1,n}}\Bigg),
-\end{equation}
-
-where we used the definition of \citet{beirlant_statistics_2006}
-We recall that $\lceil x\rceil$ denotes the integer (ceil) part of $x$.
-
-A condition for the consistency of this estimator is that $k$ must be chosen such that $k/n\rightarrow 0$ as $n\rightarrow \infty$. This condition will hold for the rest rest of the estimators based on (...) in the following 
-
-A problem with this intuitive estimator is that its asymptotic variance is very large (see e.g. \cite{dekkers_estimation_1989}) and depends highly on the value of $k$. To improve this, we can quote the estimator of \cite{segers_generalized_2001} which is globally more efficient, depending on the value of an extra-"parameter"(?) and a function to choose.
-
-
-\subsection*{Methods for heavy-tailed distributions ($\xi>0$)}
-
-Typically, EV analysis of temperature data do not show heavy-tailedness §see \citet{}). For this reason, some tools commonly used for inference on \textbf{Pareto-type} distributions are not relevant. Because of their wide use and application, we will name them for completeness
-
-
-\subsection*{The Hill estimator ($\xi>0$)}
-
-
-This is probably the most simple EVI estimator thanks to the intuition behind its construction. There exists plenty of interpretations to construct it (see e.g. \citet[pp.101-104]{beirlant_statistics_2006}). Unfortunately, it only holds for heavy-tailed distributions ($\xi>0$). 
-
-
-%The probability-view \citet[pp.103]{beirlant_statistics_2006} which is the simplest and most intuitive considering the peaks-over-threshold case.
-
-
-It is defined as 
-
-\begin{equation}
-\xi^H_{k}=k^{-1}\sum_{i=1}^k\ln X_{n-i+1,n}-\ln X_{n-k,n}, \qquad\qquad k\in\{1,\dots,n-1\}.
-\end{equation}
-
-
-
-Following \cite{mason_}, this estimator is consistent. Besides that, this estimator has several problems : 
-
-\begin{itemize}
-	\item instability with respect to the choise of $k$.
-	\item Severe bias due to the heavy-tails of the distribution and thus the slowly varying component which influences negatively.
-	\item Inadequacy with shifted data
-\end{itemize}
-
-
-Problem : see [pp.105]
-
-
-\subsection*{The Moment estimator}
-
-%\subsection*{Moment estimator}
-Introduced by \cite{dekkers_moment_1989}, this estimator is a direct generalization of the Hill estimator presented in the previous section. 
-
-\begin{equation}
-\hat{\xi}^M_k=\hat{\xi}_k^H+1-\frac{1}{2}\Bigg(1-\frac{(\hat{\xi}_k^H)^2}{\hat{\xi}^{H^{(2)}}_k }\Bigg)^{-1},
-\end{equation}
-where we define 
-
-\begin{equation*}
-\hat{\xi}^{H^{(2)}}_k=k^{-1}\sum_{i=1}^k\big(\ln X_{n-i+1,n}-\ln X_{n-k,n}\big)^2.
-\end{equation*}
-
-
-This estimator is also consistent but  
-
-
-\subsection*{Estimator based on generalized quantile plot}
-
-To overcome the lack of graphical interpretation of the usual moment estimator, 
-
-
-
-
-\subsection{The Probability-Weighted-Moment Estimator}
-
-\emph{Probability-Weighted-Moment} (PWM)
-...
-
-different formulations for POT or block maxima. Look also to "other" directory
-\cite{ribereau_skew_2016}
-
-
-\subsubsection*{The $L$-Moment Estimator}
-\cite{wang_lh_1997}
-
-\cite{hosking_regional_1997} emphasized the fact that $L$-moment method came historically as a modification of the PWM method. 
-
-\subsection{Estimators based on Generalized Quantile }
-
-
-
 \section{Improvements For Modelling Non-stationary Sequences}\label{improvinf}
 \subsection{Generalized Likelihood Methods}
 introduced by \citet{martin_generalized_2000}
@@ -2386,7 +2566,7 @@ The GML estimator corresponds to the mode of the empirical posterior distributio
 		}
 	}
 	\vspace{-2.5mm}
-	\caption{\tiny \textcolor{MidnightBlue}{\emph{\texttt{TikzFig}.}}:\emph{ Neural Network applied to GEV. helped by \textcolor{JungleGreen}{\cite{cannon_flexible_2010}}} }
+	\caption{\textcolor{MidnightBlue}{\emph{\texttt{TikzFig}.}}:\emph{ Neural Network applied to GEV. helped by \textcolor{JungleGreen}{\cite{cannon_flexible_2010}}} }
 	\end{center}
 \end{figure}
 
@@ -2490,82 +2670,6 @@ Study and comparisons on the performance (coverage,..) of the methods used for t
 
 \section{Markov models}
 book risk pp.136, \cite{shaby_markov-switching_2016} + code
-
-
-
-
-\section{Model Diagnostics : Goodness-of-Fit}
-
-After having fitted a statistical model to data, it is important to assess its accuracy in order to infer reliable conclusions from this model.
-
-Ideally, we aim to check that our model fits well the whole population, that is the whole distribution of maxima. all the past and future temperature maxima that will arise " As this cannot be achieved in practice, it is common to assess a model with the data that were used to estimate this model. We will talk a bit about the problem that could arise from this methodology in the next section,and the problem of overfitting(?).
-
-
-
-\subsection{Diagnostic Plots : Quantile and Probability Plots}
-From \cite[pp.18-36]{beirlant_practical_1996}, together with the nice view of \cite[pp.36-37]{coles_introduction_2001}, we present two major diagnostic tools which aims at assessing the fitting of a particular model (or distribution) against the real distribution coming from the data used to construct the model.
-These are called the \emph{quantile-quantile} plot (or \emph{qq}-plot) and the \emph{probability} plot. 
-
-These diagnostics are popular by their easy interpretation and by the fact that they can both have graphical (i.e. subjective, qualitative, quick) view but also a more precise (i.e. objective, quantitative, rigorous) analysis can be derived, for example from the theory of linear regression. 
-\newline
-For these two diagnostic tools, we use the order statistics introduced in eq.(\ref{ordereds}) but now we rather consider an \textbf{ordered sample} of independent observations :
-
-\begin{equation} \label{ordersamp}
-x_{(1)}\leq x_{(2)}\leq\dots,\leq x_{(n)}
-\end{equation}
-coming from a population from which we fit the estimated model (distribution) $\hat{F}$ and where $x_{(1)}$ (resp. $x_{(n)}$) is thus the minimum (resp. maximum) observation in the sample. These tools will thus help us to know if the fitted model model $\hat{F}$ is reasonable for the data.
-
-\subsubsection*{Quantile plot} Given a ordered sample as in (\ref{ordersamp}), a \emph{qq-plot} consists of the locus of points 
-
-\begin{equation}
-\Bigg\{\bigg(\hat{F}^{\leftarrow}\Big(\frac{i}{n+1}\Big)\ ,\ x_{(i)}\bigg) \ : \ i=1,\dots,n\Bigg\}.
-\end{equation}
-This graphic compares the ordered quantiles $\hat{F}^{\leftarrow}\Big(\frac{i}{n+1}\Big)$ of the fitted model $\hat{F}$ against the ordered observed quantiles, i.e. the ordered sample from (\ref{ordersamp}).
-
-We used the continuity correction $\frac{i}{n+1}$.....
-
-
-\subsubsection*{Probability plot} Given the same sample in (\ref{ordersamp}), a \emph{probability plot} consists of the points 
-
-\begin{equation}
-\Bigg\{\bigg(\hat{F}(x_{(i)})\ ,\ \frac{i}{n+1}\bigg) \ : \ i=1,\dots,n\Bigg\}.
-\end{equation}
-This graph compares the estimated probability of the ordered values $x_{(i)}$ from the fitted model $\hat{F}$ against the probability...
-\newline
-From these two graphical diagnostic tools, the interpretation is the same and we will consider that $\hat{F}$ fits well the data if the plot looks linear, i.e. the points of the plots lie close to the unit diagonal.
-\newline
-Besides the fact that the probability and the quantile plots contain the same information, they are expressed in a different scale. That is, after changing the scale to probabilities or quantiles (with probability or quantile transforms), one can gain a better perception and both visualizations can sometimes lead contradictory conclusions, especially in the graphical inspection. Using both is thus preferable to make our model's diagnostic more robust.
-
-The disadvantage of Q–Q plots is that the shape of the selected
-parametric distribution is no longer visible \cite{beirlant_statistics_2006}[pp.62?]
-
-
-\subsubsection*{Return Level Plot}
-
-See sections ....
-
-\subsubsection*{Overfitting problem} \cite{northrop_cross_2016}?
-A problem of these diagnostics could arise when we focus on prediction accuracy and as we mentioned, the fact that the model is fitted from the data. This well-known problem is called \emph{overfitting}. It can be roughly defined by the process of fitting to noise from the dataset rather than the underlying signal (put ref here). Here, it can be easily explained by the following :
-\begin{itemize}
-	
-	\item We are looking for a model which fits the data at best, i.e. for points which are the nearest possible of the diagonal line.
-	
-	\item But, the so-constructed model from which we put the diagnostic is fitted from these original data against which we make the comparison.
-	
-	\item Hence, there could be a incentive to fit a model which fits the most perfectly the available data, that is which points on the diagnostic plots is the nearest possible of the diagonal line. The model is then the best to fit the data at hand
-	
-	\item But, this is a catastrophy when we are seeking at making good predictions from the fitted model, that is making a guess on new, unseen, unavailable data. The model has then lost flexibility, it is not regularized and cannot generalize. (unless the feature space, hear the initial data space, has been completely explored (--->infinite data ?))
-\end{itemize}
-See the link with the trade-off bias-variance for threshold selection.
-
-
-
-Gumbel plots
-
-Z and W statistic plots
-
-
-
 
 
 
@@ -2989,6 +3093,191 @@ We can use the values of the samples generated by the posterior to estimate feat
 \section{Bayesian Model Averaging}
 
 
+
+\part{Experimental Framework : Global....}
+\thispagestyle{empty}
+
+In this part, we will focus on the application of the methods seen during the theoretical part. 
+
+
+\addcontentsline{toc}{section}{Repository for the code : R Package}
+\subsection*{Repository for the code : R Package}
+
+An \textbf{R package} has been created and can be easily downloaded from its \textbf{repository}
+\begin{center}\label{xxx}
+ \url{https://github.com/proto4426/PissoortThesis}
+\end{center}
+by following the instructions in the README. It follows the standard structure of an usual R package (see e.g. \citet{leisch_creating_2008}) and make use of the \texttt{roxygen2} package for building.
+
+For your (best?) convenience, an external folder has been created in this repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly by going into the \textbf{/Scripts-R/} folder from the repository. We will notice in the beginning of each of the following chapter to which script(s) it corresponds. We also explain in more details the structure of the github repository in \hyperref[appgit]{appendix \textbf{\ref{appgit}}} to give you an idea of what each folder and each file do.
+
+\addcontentsline{toc}{section}{Visualization Tool : Shiny Application}
+\subsection*{Visualization Tool : Shiny Application}
+
+A small Shiny application has started to be developed and can be run directly from R after having the package loaded in your environment, by only typing 
+
+\begin{center}
+\begin{lstlisting}[language=R]
+runExample()  # in the R console.
+\end{lstlisting}
+\end{center}
+
+ So far, it only contains the models applied to the annual maxima that can you can smoothly visualize. Actually, it summarizes the contents of figure \ref{first_fig} It was difficult to do more because we could not publicly disclose the datasets provided by the IRM.
+
+
+
+\chapter{Introduction to the Analysis}
+\minitoc \thispagestyle{empty}
+
+This analysis has 
+
+\section{Presentation of the Analysis : Temperatures from Uccle}
+
+The data used during this thesis have been gathered directly from the "Institut Royal de Météorologie" (IRM) 
+
+
+
+\subsection{Open shelter vs Closed shelter}
+
+For\textbf{ meteorological considerations}, it is better to consider temperature's analysis in \textbf{closed shelters}, following for example \citet{lindsey_use_1956}. Indeed, and thanks to grateful advices from mr Tricot working for the IRM : 
+\begin{itemize}
+	\item It can
+	\item It
+\end{itemize}
+
+
+\subsection{Comparisons with freely available data} 
+
+A similar dataset is freely available on the internet\footnote{\url{http://lstat.kuleuven.be/Wiley/Data/ecad00045TX.txt}}. It was a project initially performed by the KMNI and which was used for example in \citet{beirlant_statistics_2006}. However, we were reticent to simply analyze these data as we know that it is hard to trust internet's data, even if they come from well-known "authorities". After having made all these comparisons analysis (see start of code...), we remark effectively that there are differences
+in these two datasets, and hence large errors of measures can easily occur 
+in unofficial data. It confirms the fact that is important to get reliable data if one wants to make reliable analysis. 
+However, these differences tend to be much smaller when considering the "open shelter"
+version ($54\%$ of equal measurements in closed shelter VS $14.4\%$ in the closed case). For this reason, we have confidence that this public datasets
+is dealing with open shelter temperatures data.
+
+
+
+
+
+
+\section{First Analysis : Block-Maxima}
+
+\subsection{First visualization with simple models}
+
+We present our series of yearly maxima in figure \ref{first_fig} where we introduce 3 \textbf{models for the trend} :
+
+\begin{itemize}
+\item \emph{Linear regression } (in blue) which is a \textbf{parametric} fit. We remark that it is slightly but significantly increasing over time ($\text{p-value}\approx 10^{-5}$) . 
+\item \emph{Local Polynomial regression } or LOESS (in red) which is a \textbf{nonparametric} fit. It tells us that the yearly maxima process is rather "dispersed". For example, the drop in the series visible around years 1950 to 1975 is probably due to a 'random effect' rather than a real decrease or freezing of the maximum temperatures at this time. Moreover, it will disappear if we change the parameter controlling the degree of smoothing. We will assess that more formally in the \hyperref[sec:splines]{next section}.
+\item \emph{Broken-linear regression} (in cyan) which is a \textbf{parametric} fit. We wanted to emphasize visually the difference in trend between the period [1901-1975] and [1976-2016]. The two periods have been chosen arbitrarily and we will study that more formally in the \hyperref[sec:splines]{next section}.
+\end{itemize}
+
+\begin{figure}[!htb]
+	\includegraphics[width=.8\linewidth]{gg12.pdf}\caption{representing the \textbf{yearly} \textbf{maxima} together with three first models trying to represent the trend. Note that shaded grey line representing the standard errors (and not a confidence interval) of the linear trend.}\label{first_fig}
+\end{figure}
+
+
+
+
+The code which provide all the tools to retrieve the presented results are left in appendix, but in the numeric version only be cause it is very heavy. this also enables you to get all insights (..)
+
+
+
+\subsection{Deeper Trend Analysis : Splines derivatives in GAM}\label{sec:splines}
+
+Apart from the significant increasing linear trend, we did not find formal results. Moreover, we see from the series that a linear trend to the entire series makes little sense. Regarding the broken-linear trend for example, we would like to assess if there is indeed a difference in the slope of trend over time. 
+
+We assume the reader is at ease(?) with\emph{ Generalized Additive Models} (GAM) which have been developed by \citet{hastie_generalized_1986}. We also assume he knows about penalized \emph{splines} and splines smoothing, where a good introduction is found in \citet[section 3]{ruppert_semiparametric_2003}
+
+
+\subsubsection*{Pointwise vs Simultaneous intervals}
+
+\textbf{Simultaneous} confidence intervals :  Following \citet[section 3, section 4.9, section 6.5]{ruppert_semiparametric_2003} which uses a simulation-based approach to generate a simultaneous interval
+\citet{marra_coverage_2012}
+
+From the pointwise confidence intervals we can say that (example) $f(1980)$ has $95\%$ chance to lie within (-1,0) (say) and $f(2000)$ has also $95\%$ to lie within (0.2,1.2) BUT it is a fallacy to say simultaneously that both are contained in these intervals at the same time with .95 confidence. \citet[section 6.5]{ruppert_semiparametric_2003}
+
+
+
+\subsubsection*{Methodology}
+
+\begin{itemize}
+\item We fitted a simple GAM model relying on the \texttt{mgcv} package from \citet{maindonald_data_2006}. Then, after looking at the correlation structure the normalized residuals (ACF and PACF, see figure \ref{fig:acfresgam1} in \hyperref[app:fig]{appendix \ref{app:fig}}), we detected very slight patterns and hence we wanted to allow taking this into account.
+
+\item As the selection from figure \ref{fig:acfresgam1} is not trivial, we fitted several time series models for the residuals. It is not necessary to consider too complex models. The results are represented in table \ref{table:gamresid} in \hyperref[app:fig]{appendix \ref{app:fig}} where we see that the BIC, which is more penalizing complex models, will prefer the independent model for the residuals but the AIC will not. Hence, we conducted likelihood ratio tests to compare these models which let us favour the MA(1) model for the residuals. The diagnostics of the model in figure \ref{fig:diagnogam} are good. As we took a Gaussian (identity) link, our model can be written
+
+\begin{equation}\label{eq:gam}
+Y_{\text{GAM}}(\text{year}) = f_0 + f_{\text{1}}(\text{year})+\epsilon , \qquad\quad \epsilon\sim\text{MA(1)}.
+\end{equation}
+where we choose to model $f$ by splines. $Y$ models the TX here. 
+
+\item  To better account for uncertainty, we decide to simulate draws from the posterior of the GAM model in (\ref{eq:gam}). We (($10^5$ here; it is fast) 
+We display 50 of the posterior draws in figure \ref{fig:post_draws} together with 
+
+Hence, the confidence intervals (or bands) that we will compute will be of the form of  Bayesian credible intervals that we have discussed in \hyperref[bayes_cred_int]{section \textbf{\ref{bayes_cred_int}}}. 
+
+
+We can see from figure \ref{fig:center_gam} the two significant increase in trend. the decrease we have pointed out in the preceding section with LOESS is not significant. However, we will see that this is not the case when doing the correction for simultaneous intervals. 
+\end{itemize}
+
+
+\subsubsection*{Final Results}
+
+\begin{figure}[!htb]
+	\includegraphics[width=.99\linewidth]{splines.pdf}\caption{Plots of the first derivative \big($f^{'}(\cdot)$\big) of the estimated splines on the retained GAM model. Grey area represents the $95\%$ confidence interval. Sections of the spline where the confidence interval does not include zero are indicated by thicker sections. }\label{fig:derivsplines}
+\end{figure}
+
+Some remarks from the two plots of figure \ref{fig:derivsplines} :
+
+\begin{itemize}
+\item Looking together with the series in \ref{first_fig}, we can make the link between the trend behaviour of the series and the splines derivative which models accurately the slope behaviour of the trend. 
+\item Whence we can notice the increasing trend but with decreasing slope until $\approx 1945$ where it becomes is decreasing. Then the slope increase and the trend starts to re-increase around 1962. This upward trend that the series of annual maxima is facing for this last period brings light to the climate warming we are all talking about. However, 
+\item  Whereas the pointwise confidence interval include significant regions (when 0 is not included in the interval), the simultaneous interval which accounting for the increase in uncertainty, have no more significant regions. We can concluce that the 
+
+\end{itemize}
+
+
+We can see that only the 2 increasing periods from the start and at the end of the series are significant, while the decreasing period from... (see the red line) is more likely to be the subject of randomness. Moreover, we remark that the 
+
+
+\section{Comments and Structure of the Analysis }
+
+ We have remarked that there is indeed an upward (linear) trend for the series of yearly maxima.
+We have then remarked that the \textbf{nonstationary} component is present. Hence, after having presented a stationary analysis in \hyperref[sec:anagev]{section \ref{sec:anagev}}, we will make an in-depth nonstationary analysis in \hyperref[sec:ananonsta]{section \ref{sec:ananonsta}}.
+
+After having... we will now go through with the more specific subjec of this thesis, that is the extreme value analysis.
+
+POT and GEV : 
+As you have seen, the analysis in POT or in GEV involves different methods and different data. For the kind of this text, we decide not to display the results of the POT analysis to keep the text not too enormous. Henceforth, we will be able to focus on the GEV analysis. But\textbf{ note that a huge amount of the analysis for POT has been done and is available on the same \hyperref[xxx]{github repository} presented above}.
+\hyperref[appgit]{Appendix \ref{appgit}} summarize its contents.
+
+
+Results are not shown here but this is (visually) less pronounced for minima. We have also conducted some analysis by dividing the dataset by seasons, by hot and cold months (July-August, January-February), ... 
+Comparisons are interesting (and are also available on the repository) but this is not at the core of this text. 
+We will then only \textbf{focus on a GEV analysis on yearly maxima}.
+
+\chapter{Analysis by GEV }\label{sec:anagev}
+\minitoc \thispagestyle{empty}
+
+\textbf{PUT the examples right in the place where it is mentioned in the theory.!} 
+"As we have seen in section 2.1.1.... and in section 2.2.2......"
+
+
+We must choose a block-length which is large enough for the limiting arguments supporting the GEV approximation (see (\ref{exttheom})) to be valid, either a large bias in the estimates could occur. For example, if this is too short, the maxima may be too close of each other to assume independence. But a large block-length implies less data to work with, and thus a large variance of the estimates.. So we must find a compromise between bias and variance.
+
+
+\section{Comments and Comparisons with POT}
+
+\chapter{Nonstationary Analysis}\label{sec:ananonsta}
+\minitoc \thispagestyle{empty}
+
+TABLE with nested models (gumbel, GEV, + linear trend, etc etc)
+
+
+\chapter{Bayesian Analysis}
+\minitoc \thispagestyle{empty}
+
+
 \section{Applications}
 
 "It is often the case that more than one model provides an adequate fit to the data. Sensitivity analysis determines by what extent posterior inferences change when alternative
@@ -3035,25 +3324,9 @@ Drawbacks :
 	\item New language with all the problems/errors arising when learning it. 
 \end{itemize}
 
-\part{Experimental Framework (Simulation Study) : Global....}
-\thispagestyle{empty}
-In this part, we will focus on the application of the methods seen during the theoretical part. 
-
-\section{R package}
-
-Be careful with some functions we have created. We have put a "." for readability to separate components of the function but it does not mean inheritance relationships 
-such as in the S3 object oriented R system. For example, \texttt{yearly.extrm()} does \textbf{not} mean the \texttt{yearly()} method for \texttt{extrm} objects.
 
 
-
-\chapter{Simulation study: Performance evaluation of different methods}
-\thispagestyle{empty}
-
-
-For this thesis, we decided to take as simulated data a mean of the parameters estimation  of all the (relevant) methods considered. 
-Then we simulate the data according to these parameters 
-
---> look for RMSE's on MC loops
+\section{Comparison with frequentists results}
 
 
 
@@ -3093,6 +3366,8 @@ Replace "distribution functions" by "cdf",....  + all other abbrevations (et, ge
 
 Careful with notation with X or Z in the (c)pdf, likelihood, RV,...
 
+ecrire correctement les referencesz a la fin (unsrt85.bst, ...) enlever trop de noms, champs inutiles,..
+
 voir notation vectors (en gras ou avec bar en bas?)
 
 attention aux notation homogenes (ex : partie stationnary,...) --> pour dénoter les 
@@ -3113,54 +3388,13 @@ PissoortThesis:: Behind our functions
 
 
 
+
+\addcontentsline{toc}{part}{Appendix}
+\part*{Appendix}
+
 \appendix
+
 \chapter{Statistical tools for Extreme Value Theory}\label{appA}
-
-\section{Preliminaries}
-[ MOTS DEXPLICATIONS SUR TTES LES FORMULES (domain atraction condition, etc...]
-
-\addcontentsline{toc}{section}{Order statistics}
-\subsection*{Order statistics}
-First of all, we write the \emph{i}-th order statistics $X_{(i)} $ which are the statistics ordered by increasing value 
-
-\begin{equation} \label{ordereds}
-X_{(1)}\leq X_{(2)}\leq ...\leq X_{(n)}
-\end{equation}
-
-We adopt this simpler notation by assuming that the number of our observations will %always
-be denoted by n. 
-
-One order statistics is of particular interest for our purpose, the maximum
-\begin{equation} \label{max}
-X_{(n)}:=\displaystyle{\max_{1\leq i\leq n}}X_i
-\end{equation}  for the minimum, $X_{(1)}=\displaystyle{\min_{1\leq i\leq n}}X_i$ that we will still use by converse (see section . )
-
-\begin{equation}\label{min}
-X_{(1)}:=\displaystyle{\min_{1\leq i\leq n}}X_i=- \displaystyle{\max_{1\leq i\leq n}}(-X_i)
-\end{equation}
-
-It is very important to keep in mind that all the analysis made in the following for maxima 
-can be extended to minima by this relation (\ref{min}). Our analysis in \hyperref[]{chapter 
-	?} will also use minima and thus make implicit use of this relations.
-
-We can retrieve the distribution of our statistic of interest $X_{(n)}$
-\begin{equation}\label{maxdist}
-\text{Pr}\{X_{(n)}\leq x\}=\text{Pr}\{X_1,\dots,X_n\leq x\}\stackrel{(\independent)}{=}\text{Pr}\{X_1\leq x\}\dots\text{Pr}\{X_n\leq x\}=F^n(x),
-\end{equation}
-(write vertically)
-
-where independence $(\independent)$  follows from the iid assumption of the sequence $\{X_i\}$.
-
-
-%\addcontentsline{toc}{section}{Miscellaneous}
-\subsection*{Miscellaneous}
-
-We also define the \textit{survival} function $\bar{F}=1-F$ which is widely useful for this kind of (biostatistical) applications.
-
-Finally, we decide to include in Appendix some concepts of convergence 
-(\hyperref[appA]{A.}), regularly and slowly varying functions (A.), as they will often 
-appear in the text.
-
 
 \section{Tails of the distributions}
 
@@ -3234,7 +3468,7 @@ The \emph{Metropolis–Hastings} algorithm is one of the first and of the pionee
 			\end{equation*}
 			\item[(c)] Set 
 			\begin{equation*}
-			\theta_t= 			\begin{cases} \ \theta_* \qquad \text{with probability} \ \  \alpha=\min (r,1) \\
+			\theta_t= 			\begin{cases} \ \theta_* \qquad \text{with probability} \ \  \alpha=\min (r,1); \\
 			\ \theta_{t-1} \ \quad \text{otherwise}.
 			\end{cases}
 			\end{equation*}
@@ -3417,17 +3651,55 @@ Chains are expected to reach stationarity faster as it proposes moves to regions
 \end{itemize}
 
 
-\chapter{Other Figures}\label{appC}
+\chapter{Other Figures and Tables}\label{app:fig}
 
-\begin{figure}
-	\includegraphics[width=\linewidth]{sumwint.pdf}\caption{First plot representing the \textbf{yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie}\label{seas4}
+\section{Introduction (section 6)}
 
+\begin{figure}[!htb]
+	\includegraphics[width=\linewidth]{acfresgam.pdf}\caption{ACF and PACF for the residuals of the fitted GAM model with assumed independent errors }\label{fig:acfresgam1}
+\end{figure}
+
+\begin{table}[!htbp] \centering 
+  \caption{compares models for the residuals of the GAM model based on AIC and BIC criterion. These criterion take into account the quality of fit (based on likelihood) but also a penalty term to penalize more complex models. } 
+  \label{table:gamresid} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+& df & AIC & BIC \\ 
+\hline \\[-1.8ex] 
+Uncorrelated  & $4$ & $494.635$ & $505.650$ \\ 
+AR(1)  & $5$ & $494.356$ & $508.124$ \\ 
+MA(1) & $5$ & $493.706$ & $507.474$ \\ 
+ARMA(1,1)  & $6$ & $492.511$ & $509.033$ \\ 
+AR(2)  & $6$ & $495.133$ & $511.654$ \\ 
+MA(2)  & $6$ & $494.698$ & $511.219$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+
+\begin{figure}[!htb]
+	\includegraphics[width=\linewidth]{diagnogam.pdf}\caption{Diagnostics of the chosen GAM model, based on the residuals. }\label{fig:diagnogam}
 \end{figure}
 
 
+\begin{center}
+\begin{figure}[!htb]
+	\includegraphics[width=.75\linewidth]{max_gam.pdf}\caption{Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increasing is significant for pointwise confidence interval }\label{fig:center_gam}
+\end{figure}
+\end{center}
 
+\begin{center}
+\begin{figure}[!htb]
+	\includegraphics[width=.75\linewidth]{post_draws.pdf}\caption{Draws from the }\label{fig:post_draws}
+\end{figure}
+\end{center}
 
-
+\iffalse
+\begin{figure}
+	\includegraphics[width=.7\linewidth]{sumwint.pdf}\caption{First plot representing the \textbf{yearly} maxima (above) and minima (below) taking only the summer months (April to September) and winter months (October to March), shaded grey line around the linear trend represents its standard error. See how the polynomial trend (red line) also changes. Obv, TX for smummer and TN for winter are the same series as for the global serie}\label{seas4}
+\end{figure}
+\fi 
 
 
 \iffalse
@@ -3448,17 +3720,27 @@ Chains are expected to reach stationarity faster as it proposes moves to regions
 \fi 
 
 
-\ do not forget \cite{emberchts_statistical_1997}
+\chapter{Github Repository Structure}\label{appgit}
 
-Beirlant: 2004 !!
-%\nocite{}
+The Github repository build for this thesis can be found on this address :
 
-%\bibliographystyle{abbrvnat}
+\begin{center}
+\url{https://github.com/proto4426/ValUSunSSN}
+\end{center}
+
+and has the following \textbf{structure} : 
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\bibliographystyle{ieeetr}
 \setlength{\parindent}{5em}
 \setlength{\parskip}{2em}
 \renewcommand{\baselinestretch}{4.0}
 
-\bibliography{zotero.bib}
+\bibliography{zotero1}
 %\printbibliography
 
 \end{document}
