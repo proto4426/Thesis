@@ -9,19 +9,19 @@ White space in argument---line 114 of file MEMOIRE.aux
  :                  of attraction course}
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Hartmann_bayesian_2016 and hartmann_bayesian_2016
----line 486 of file MEMOIRE.aux
+---line 503 of file MEMOIRE.aux
  : \citation{Hartmann_bayesian_2016
  :                                 }
 I'm skipping whatever remains of this command
-Illegal, another \bibstyle command---line 500 of file MEMOIRE.aux
+Illegal, another \bibstyle command---line 532 of file MEMOIRE.aux
  : \bibstyle
  :          {ieeetr}
 I'm skipping whatever remains of this command
 Database file #1: zotero1.bib
 Warning--I didn't find a database entry for "kharin_changes_2006"
-Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "De_on_1970"
 Warning--I didn't find a database entry for "modelling_embrechts_1997"
+Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "falk_vonmises_1994"
 Warning--I didn't find a database entry for ".??."
 Warning--I didn't find a database entry for "pickands_statistical_1975"

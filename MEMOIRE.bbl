@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -127,6 +127,14 @@ A.~L.~M. Dekkers, J.~H.~J. Einmahl, and L.~D. Haan.
 \newblock \doi{10.1214/aos/1176347397}.
 \newblock URL \url{http://projecteuclid.org/euclid.aos/1176347397}.
 
+\bibitem[Dennis and Schnabel(1987)]{dennis_numerical_1987}
+J.~E. Dennis and R.~B. Schnabel.
+\newblock \emph{Numerical {Methods} for {Unconstrained} {Optimization} and
+  {Nonlinear} {Equations}}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, Jan.
+  1987.
+\newblock ISBN 978-0-89871-364-0.
+
 \bibitem[Dey and Yan(2016)]{dey_extreme_2016}
 D.~K. Dey and J.~Yan.
 \newblock \emph{Extreme {Value} {Modeling} and {Risk} {Analysis}: {Methods} and
@@ -189,6 +197,15 @@ A.~Gelman, J.~Hwang, and A.~Vehtari.
 \newblock ISSN 0960-3174.
 \newblock \doi{10.1007/s11222-013-9416-2}.
 \newblock URL \url{http://dx.doi.org/10.1007/s11222-013-9416-2}.
+
+\bibitem[Gilleland and Katz(2016)]{gilleland_extremes_2016}
+E.~Gilleland and R.~W. Katz.
+\newblock \textbf{{extRemes}} 2.0: {An} {Extreme} {Value} {Analysis} {Package}
+  in \textit{{R}}.
+\newblock \emph{Journal of Statistical Software}, 72\penalty0 (8), 2016.
+\newblock ISSN 1548-7660.
+\newblock \doi{10.18637/jss.v072.i08}.
+\newblock URL \url{http://www.jstatsoft.org/v72/i08/}.
 
 \bibitem[Gnedenko(1943)]{gnedenko_sur_1943}
 B.~Gnedenko.
@@ -347,6 +364,14 @@ Y.~Liu, A.~Gelman, and T.~Zheng.
 \newblock \doi{10.1007/s11222-015-9563-8}.
 \newblock URL \url{http://link.springer.com/10.1007/s11222-015-9563-8}.
 
+\bibitem[Maindonald and Braun(2006)]{maindonald_data_2006}
+J.~Maindonald and J.~Braun.
+\newblock \emph{Data analysis and graphics using {R}: an example-based
+  approach}, volume~10.
+\newblock Cambridge University Press, 2006.
+\newblock URL
+  \url{https://books.google.com/books?hl=en&lr=&id=d7OeVD6SKBsC&oi=fnd&pg=PA5&dq=%22methods,+stats,+graphics,%22+%22.+.+.+.%22+%22.+.+.+.+.%22+%22.+.+.+.+.+.%22+%22.+.+.+.%22+%22.+.+.+.+.+.+.%22+&ots=2mOJGySmmE&sig=MLMmYfuz4lg9QmCsb2c6DnE6ShE}.
+
 \bibitem[Marra and Wood(2012)]{marra_coverage_2012}
 G.~Marra and S.~N. Wood.
 \newblock Coverage properties of confidence intervals for generalized additive
@@ -452,6 +477,15 @@ M.~Ribatet.
 \newblock \emph{month}, 2006.
 \newblock URL
   \url{http://www.unalmed.edu.co/~ndgirald/Archivos%20Lectura/Archivos%20curso%20Riesgo%20Operativo/POT.pdf}.
+
+\bibitem[Ribatet et~al.(2015)Ribatet, Dombry, and
+  Oesting]{ribatet_spatial_2015}
+M.~Ribatet, C.~Dombry, and M.~Oesting.
+\newblock Spatial {Extremes} and {Max}-{Stable} {Processes}.
+\newblock In \emph{Extreme {Value} {Modeling} and {Risk} {Analysis}: {Methods}
+  and {Applications}}, pages 179--194. Chapman and Hall/CRC, 2015.
+\newblock URL
+  \url{https://books.google.com/books?hl=en&lr=&id=PYhUCwAAQBAJ&oi=fnd&pg=PA179&dq=%22rainfall+amount+in+this+catchment,+i.e.,+evaluating+probabilities%22+%22Extremes+and+max-stable%22+%22as+far+as+spatial+extremes+are+of+concern.+Similarly+to+the+univariate%22+%22To+be+consistent+with+the+univariate+extreme+value+theory,+Theorem%22+&ots=phZY14rcy5&sig=-_n3q707dYkioxyG-2QpsYB62jk}.
 
 \bibitem[Ribereau et~al.(2016)Ribereau, Masiello, and
   Naveau]{ribereau_skew_2016}

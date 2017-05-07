@@ -282,6 +282,34 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
     \addtocounter{page}{-1}%
     \newpage}
 
+
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4}
+\setcounter{minitocdepth}{4}
+
+% Chapter head 
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  {\parindent \z@ \raggedright
+    \reset@font
+    \hrule
+    \vspace*{10\p@}%
+    \par
+    \Large \scshape \@chapapp{} \Huge\bfseries \thechapter
+    \par\nobreak
+    \vspace*{10\p@}%
+    \hrule
+    \par
+    \vspace*{1\p@}%
+    \hrule
+    %\vskip 40\p@
+    \vspace*{20\p@}
+    \Huge \bfseries #1\par\nobreak
+    \vskip 70\p@
+  }}
+
 \begin{document}
 \thispagestyle{empty}
 
@@ -353,12 +381,15 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 \section*{\centering Abstract}
 \begin{tcolorbox}%[colback=SeaGreen!75!white]
 This thesis aims to analyse extreme temperatures from Uccle and assess their nonstationarity. trend in the location parameter of the temperatures assessing the climate warming.   
-After having proven it by hand of splines's deriatives, we will do it by hand of the Extreme Value Theory (EVT)  that there is indeed an upward trend in the location parameter of the temperatures assessing the climate warming. First of all, we will do introductory analysis of the trend... and we will discover that..  The analysis will focus on yearly maxima and hence we will go through with EVT by defining and presenting the usual methods such as GEV. 
+After having proven it by hand of splines's deriatives that a correction for simultaneous intervals led to non-significant changes , we will do it by hand of the Extreme Value Theory (EVT)  that there is indeed an upward trend in the location parameter of the temperatures assessing the climate warming. First of all, we will do introductory analysis of the trend... and we will discover that..  The analysis will focus on yearly maxima and hence we will go through with EVT by defining and presenting the usual methods such as GEV. 
 
 Regarding the computations, we took advantage of a high-level language (c++) to make our analysis efficient and also made use of parallel computing to decrease computation time for time consuming...
 \thispagestyle{empty}
 \end{tcolorbox}
 
+\vspace{.3cm}
+
+\paragraph*{Keywords} $\bullet$ Extreme Value Theory   $\bullet$ block-maxima model  $\bullet$ peaks-over-threshold method $\bullet$ trend analysis $\bullet$ Bayesian inference   $\bullet$ Generalized Additive Models with splines smoothing  $\bullet$ Neural Networks  $\bullet$ nonstationary models 
 \vspace*{\fill}
 
 \newpage
@@ -436,7 +467,7 @@ For convenience, we place a list of all the abbreviations we will use in the tex
 
 
 
-Unlike his counterparts ( see for example credit risk analysis, financial applications,...), the extreme value analysis applied on the broad environemental area like here for the meteorological data, has strong impacts on the people lives 
+Unlike his counterparts ( see for example credit risk analysis, financial applications,...), the Extreme Value Theory (EVT) applied on the broad environemental area like here for the meteorological data, has strong impacts on the people lives 
 
 An important question is still whether climate changes caused by anthropogenic activities will change the intensity and frequency of extreme events \cite{milly_climate_2008}.
 
@@ -471,7 +502,6 @@ dataset with daily series from a very sparse network of meteorological stations 
 et al. (2000)) or standardized data analysis performed by different researchers in different countries along the
 lines of agreed methodologies (e.g. Brazdil et al., 1996; Heino et al., 1999) \cite{klein_tank_daily_2002}
 
-\textbf{During this project, we will try a novel approach, that is to link directly theory and practice and hence present the concepts theoretically and then illustrate by one example retrieved from our application. Even if that could be difficult, we think this approach is advantageous for several reasons :} 
 
 Extrapolation !!!! See p154 [statistical analysis of extreme book]
 
@@ -496,6 +526,11 @@ We can summarize the research question of this thesis as the following :
 
 In this part, we will make use of some general methods to assess if there is indeed a trend in the maximum temperatures
 
+There are two main approaches in EVT, the block-maxima  and the peaks-over-threshold approach (see 
+\hyperref[sec::2]{section \textbf{2}}) yielding to different extreme value distribution. 
+The former aims at while the latter models the (...)
+
+
 In \hyperref[sec::1]{chapter \textbf{1}} we will present the method of block-maxima and derive the Generalized Extreme Value (GEV) distributions. In \hyperref[sec::2]{chapter \textbf{2}} we will .
 In \hyperref[sec::3]{chapter \textbf{3}}
 In \hyperref[sec::4]{chapter \textbf{4}} we will ..
@@ -512,113 +547,99 @@ Finally, we notice that this thesis will more concentrate on the block-maxima (G
 
 \setcounter{mtc}{1}
 \chapter{Method of Block-Maxima} \label{sec::1}
+\vspace{-1cm}
 \minitoc \thispagestyle{empty}
 %\newpage
  \vspace{1.5cm}
-
-There are two approaches, the block-maxima  and the peaks-over-threshold approach (see 
-\hyperref[sec::2]{section \textbf{2}}) yielding to different extreme value distribution. 
-The former aims at while the latter models the...
 
 In this section, we will present the basics of EVT and we will consider a 
 \textit{block-maxima approach}. After defining some useful concepts in 
 \hyperref[sec::1.1]{section \textbf{1.1}}, we will
 
+For this chapter, we will be mostly based on \citet[chapter 3]{coles_introduction_2001}, \citet{beirlant_statistics_2006} and \citet{reiss_statistical_2007}.
 
 \newpage
 \section{Preliminaries}\label{sec::1.1}
 
-[ MOTS DEXPLICATIONS SUR TTES LES FORMULES (domain atraction condition, etc...]
 
-\addcontentsline{toc}{section}{Order statistics}
+In the following, we will assume a sequence of $n$ independent and identically distributed (iid) random variables that we will write for convenience by $\{X_i\}=X_1,X_2,\dots ,X_n$. The iid assumption will be relaxed in \hyperref[sec::3]{\textbf{\ref{sec::3}}}
+
+%\addcontentsline{toc}{subsection}{Statistical Tools}
 \subsection*{Statistical Tools}
-First of all, we write the \emph{i}-th \emph{order statistics} $X_{(i)} $ which are the statistics ordered by increasing value 
+First of all, we write the \emph{i}-th \emph{order statistics} $X_{(i)} $ which denote the statistics ordered by increasing value 
 
 \begin{equation} \label{ordereds}
-X_{(1)}\leq X_{(2)}\leq ...\leq X_{(n)}
+X_{(1)}\leq X_{(2)}\leq ...\leq X_{(n)},
 \end{equation}
+assuming we have $n$ observations.
 
-We adopt this simpler notation by assuming that the number of our observations will %always
-be denoted by n. 
-
-One order statistics is of particular interest for our purpose, the maximum
+One order statistics is of particular interest for our purpose, the \emph{maximum}
 \begin{equation} \label{max}
-X_{(n)}:=\displaystyle{\max_{1\leq i\leq n}}X_i
-\end{equation}  for the minimum, $X_{(1)}=\displaystyle{\min_{1\leq i\leq n}}X_i$ that we will still use by converse (see section . )
+X_{(n)}:=\displaystyle{\max_{1\leq i\leq n}}X_i,
+\end{equation}
+while for the \emph{minimum} $X_{(1)}$, we can define it with respect to the maximum operator
 
 \begin{equation}\label{min}
-X_{(1)}:=\displaystyle{\min_{1\leq i\leq n}}X_i=- \displaystyle{\max_{1\leq i\leq n}}(-X_i)
+X_{(1)}:=\displaystyle{\min_{1\leq i\leq n}}X_i=- \displaystyle{\max_{1\leq i\leq n}}(-X_i).
 \end{equation}
 
-It is very important to keep in mind that all the analysis made in the following for maxima 
-can be extended to minima by this relation (\ref{min}). Our analysis in \hyperref[]{chapter 
-	?} will also use minima and thus make implicit use of this relations.
+This text will \textbf{focus on maxima} but it is important to keep in mind that all the analysis made in the following can be extended to minima through this relation (\ref{min}).
 
-We can retrieve the distribution of our statistic of interest $X_{(n)}$
+Furthermore, we can easily retrieve the distribution of our statistic of interest $X_{(n)}$, by definition
 \begin{equation}\label{maxdist}
-\text{Pr}\{X_{(n)}\leq x\}=\text{Pr}\{X_1,\dots,X_n\leq x\}\stackrel{(\independent)}{=}\text{Pr}\{X_1\leq x\}\dots\text{Pr}\{X_n\leq x\}=F^n(x),
+\begin{aligned}
+\text{Pr}\{X_{(n)}\leq x\} & \ =\text{Pr}\{X_1,\dots,X_n\leq x\} \\ &\stackrel{(\independent)}{=}\text{Pr}\{X_1\leq x\}\dots\text{Pr}\{X_n\leq x\} \\
+&\ =F^n(x),
+\end{aligned}
 \end{equation}
-(write vertically)
-
-where independence $(\independent)$  follows from the iid assumption of the sequence $\{X_i\}$.
+where the independence $(\independent)$  follows directly from the iid assumption of the sequence $\{X_i\}$.
 
 
-We also define the \textit{survival} function $\bar{F}=1-F$ which is widely useful for this kind of (biostatistical) applications.
-
-Finally, we decide to include in Appendix some concepts of convergence 
-(\hyperref[appA]{A.}), regularly and slowly varying functions (A.), as they will often 
+Finally, we decide to include in \hyperref[convconc]{Appendix \ref{convconc}} some concepts of convergence, regularly and slowly varying functions, as they will often 
 appear in the text.
 
 
-\subsection*{Some Definitions and ..}
+\subsection*{First Definitions and Theorems : Motivations}
 \theoremstyle{definition}
 \begin{definition}[Similar distribution functions]\label{similardf} We say that two distributions functions $G$ and $G^*$ are \emph{\textbf{similar}} or are of the \emph{\textbf{same type}}
 	if, for constants $a>0$ and $b$
 	\begin{equation}\label{simm}
-	G^*(az+b)=G(z), \ \ \ \ \ \ \forall z,
+	G^*(az+b)=G(z), \ \ \ \ \ \ \forall z.
 	\end{equation}
 \end{definition}
-which means that the distributions differ only in location and scale. 
-In the sequel, the concept of \emph{similar} distributions will be useful to derive the three different families of extreme value distributions from other distributions of the \emph{same type}.
-This is directly linked with max-stable process that we will define...
+It means that the distributions differ only in location and scale. 
+In the sequel, the concept of \emph{similar} distributions will be useful to derive the three different families of extreme value distributions which come from other distributions which are of the \emph{same type}.
+
+
+\paragraph*{Principles of stability :}
+% course slides 18 coles 
+Behind all the principles about Extreme Value Theory that will be covered during this text, it will be highly influenced by the principle of \emph{stability}. It states that a model should remain valid and consistent whatever the choices we can make on the structure of this model.
+For example, if we propose a model for the annual maximum temperatures and another for the 5-year maximum temperatures, the two models should be mutually consistent since the 5-year maximum will be the maximum of 5 annual maxima. Similarly, in an Peaks-Over-Threshold setting (that we will present in \hyperref[sec::2]{\textbf{\ref{sec::2}}}), a model for exceedances over a high threshold should remain valid for exceedances of higher threshold. 
+
+
 
 \begin{definition}[Max-stability] \label{maxstab}
-	\emph{From \cite{leadbetter_extremes_1983} or \cite{resnick_extreme_1987}}, we say that a distribution $G$ is \emph{\textbf{max-stable}} if, for each $n\in\mathbb{N}$
+	\emph{From \cite{leadbetter_extremes_1983} or \cite{resnick_extreme_1987}}, we say that a distribution $G$ is \emph{\textbf{max-stable}} if, for each $n\in\mathbb{N}$,
 	
 	
 	\begin{equation}
-	G^n(a_nz+b_n)=G(z), \ \ \ \ \ \ \ n=2,3,...
+	G^n(a_nz+b_n)=G(z), \ \ \ \ \ \ \ n= 1,2,\dots ,
 	\end{equation}
 	
-	for some constants $a_n>0$ and $b_n$.
+	for some (normalizing) constants $a_n>0$ and $b_n$.
 \end{definition}
-In other words, taking powers of $G$ results only in a change of location and scale. \ref{stat modelling..course slide Coles} This concept will be closely connected with the extremal limit laws in the following ().
-However, max-stable process are more used in a multivariate setting, see for example \citet{} for an introduction.
+In other words, taking powers of $G$ results only in a change of location and scale. This concept will be closely connected with the fundamental limit law for extreme values that we will present in the \hyperref[sec:extrtypethm]{next section}.
+However, the power of max-stable processes is more used in a multivariate setting while we will focus on univariate sequences. Refer e.g. to \citet{ribatet_spatial_2015} for an excellent introduction on max-stable processes.
 
-\emph{Min-stability} can easily be found by complement, see for instance \citet[pp.23]{ reiss_statistical_2007}.
+\emph{Min-stability} can easily be found by complement, see for instance \citet[pp.23]{ reiss_statistical_2007} for an example.
 
-\iffalse
-\begin{definition}[Min-stability]
-	Anageously, from \citet[pp.23]{ reiss_statistical_2007}, we say that a distribution function $G$ is \emph{\textbf{min-stable}} if 
-	
-\begin{equation}
-\text{\emph{Pr}} \big\{X_{(1)}> d_n+c_nz \big\}=\bar{G}^n(d_n+c_nz)=\bar{G}(z),
-\end{equation}
-	where $c_n=a_n$, $d_n=-b_n$ and $X_{(1)}$ the minimum of the sample of size n, see (\ref{min}).
-\end{definition}
-\fi
-
-\paragraph{Principles of stability}
-% course slides 18 coles 
-Behind all the principles about Extreme Value Theory that will be covered during this thesis, will be influenced by the principle of \emph{stability}.
-\newline
 
 As this will be .. in the following, we think useful to define precisely the concept of \emph{non-degenerate distribution functions}.
-\begin{definition}[Non-degenerate distribution functions]
-	We say that a distribution function is \emph{\textbf{non-degenerate}} if 
+\begin{definition}[Degenerate distribution functions]
+	We say that the distribution function of a random variable is \emph{\textbf{degenerate}} if it assigns all of the probability to a single point.
 \end{definition}
 
-We illustrate this by the most common theorem in statistics, the \emph{Central Limit Theorem} (CLT) which plays typically with the empirical mean $\bar{X}_n=n^{-1}\sum_{i=1}^nX_i$. We know that (..) $\bar{X}_n$ converges to the true mean $\mu$ in probability(?) and thus in distribution, that is to a non-random single point, i.e. to a \emph{degenerate} distribution 
+We illustrate this by the construction the most common theorem in statistics, the \emph{Central Limit Theorem} (CLT) which plays typically with the empirical mean $\bar{X}_n=n^{-1}\sum_{i=1}^nX_i$. We know that (..) $\bar{X}_n$ converges to the true mean $\mu$ in probability(?) and thus in distribution, that is to a non-random single point, i.e. to a \emph{degenerate} distribution 
 
 \begin{equation*}
 \text{Pr}\big\{\bar{X}_n\leq x\big\}= \begin{cases}
@@ -636,23 +657,25 @@ For this reason, CLT aims at finding a non-degenerate limiting distribution for 
 	\begin{equation*}
 	\sqrt{n}(\bar{X}_n-\mu)\stackrel{d}{\longrightarrow}N(0,\sigma^2),
 	\end{equation*}
-	where $\mu=E(X_i)$ and $\sigma^2=V(X)>0$. $d$ means convergence in distribution and the reader may refer to \hyperref[convconc]{\emph{appendix\textbf{ A.}}} for a useful short review of most important concepts of convergence for EVT.
+	where $\mu=E(X_i)$ and $\sigma^2=V(X)>0$. $d$ means convergence in distribution.
 \end{exe}
+[The reader may refer to \hyperref[convconc]{appendix\textbf{ A.}} for a useful short review of most important concepts of convergence for EVT.]
+
 Then, by a proper choice of some normalizing constants, $\mu$ and $\sqrt{n}$ (as location and scale parameters respectively), we find the non-degenerate Normal distribution in the limit for the empirical mean $\bar{X}_n$. 
 
-With the same logic, we find that this is the same for the distribution of $X_{(n)}$ 
+With the same logic, we want to find the same for the distribution of maximum order statistics $X_{(n)}$ 
 \begin{equation}
 \displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{X_{(n)}\leq x\big\}=\displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{X_i\leq x\big\}^n=\begin{cases}
 \ 0, \ \ \ \ \ \ \ \ \ \ \  \ \ \ F(x)<1; \\ 
-\ 1, \ \ \ \ \ \ \ \ \ \ \ \  \ \ F(x)=1.
+\ 1, \ \ \ \ \ \ \ \ \ \ \ \  \ \ F(x)=1,
 \end{cases}
 \end{equation}
 
-That is, another degenerate distribution.
-This is exactly what Extreme Value Theory aims to achieve for (typically) the maximum order statistics $X_{(n)}$, that is finding a non-degenerate distribution in the limit by means of normalization. This will be the main subject of the next sections.
+which is also a degenerate distribution.
+This is exactly what Extreme Value Theory aims to achieve for the, that is finding a non-degenerate distribution in the limit of $>_{(n)}$ by means of normalization. We will see how it works in details in the following section.
 
 
-\section{Extremal Types Theorem}
+\section{Extremal Types Theorem}\label{sec:extrtypethm}
 
 
 
@@ -776,15 +799,31 @@ G_{\xi}(z)=\exp\Bigg\{-\bigg[1+\xi \bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\x
 where we added explicitly the location and scale parameters $\mu$ and $\sigma$ in order to obtain the three \emph{extreme value distributions}, see for example \cite[pp.16]{reiss_statistical_2007} among others. The parameters are such that $ \sigma>0$ and $-\infty<\mu,\xi<\infty$.
 This statement will hold for the rest of this thesis
 
-By simply coming back in the $\xi$-parametrization by using $\xi=\alpha^{-1}$ in the above distribution functions,  all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter (Actually, there are just location and scale parameters in the type \textbf{I} extremal model in (\ref{gumb})  as $\xi\to 0$) distribution (\ref{gevgen}).
-That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type I} or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type II}  or \emph{Fréchet} family and to the \textbf{type III} or \emph{Weibull} family, see (\ref{frech}) and (\ref{weib}) respectively. Both the Gumbel and Fréchet limiting distributions are unbounded (In fact, the Fréchet distribution has a finite left endpoint in $\mu-\sigma\xi^{-1}$, but this has no really interest here); that is, the upper endpoint tends to $+\infty$ while the Weibull distribution has a finite right endpoint in $\mu-\sigma\xi^{-1}$. In the following, we define the left and the right endpoint of a particular df $F$, respectively $_*x$ and $x_*$, by :
+By simply coming back in the $\xi$-parametrization, that is by using $\xi=\alpha^{-1}$ in the above distribution functions,  all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter (Actually, there are just location and scale parameters in the type \textbf{I} extremal model in (\ref{gumb})  as $\xi\to 0$) distribution (\ref{gevgen}).
+That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type I} or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type II}  or \emph{Fréchet} family and to the \textbf{type III} or \emph{Weibull} family, see (\ref{frech}) and (\ref{weib}) respectively. Both the Gumbel and Fréchet limiting distributions are unbounded (In fact, the Fréchet distribution has a finite left endpoint in $\mu-\sigma\cdot\xi^{-1}$, but this has no really interest here); that is, the upper endpoint tends to $+\infty$ while the Weibull distribution has a finite right endpoint in $\mu-\sigma\xi^{-1}$. In the following, we define the left and the right endpoint of a particular df $F$, respectively $_*x$ and $x_*$, by :
 \begin{equation*}
 _*x=\inf\{x:F(x)>0\}, \ \ \ \ \ \ \text{and} \ \ \ \ \  x_*=\sup\{x:F(x)<1\}.
 \end{equation*}
 
 
 
-\paragraph{Density}We give a representation of the density of these functions by considering the density of the GEV distribution (\ref{gevgen}), that is $g_{\xi}(z)=\frac{d G_{\xi}(z)}{dz}$ (we can assume absolute continuity). This is shown in in figure (\ref{gevdens}) for various shape parameters. We also give in appendix. \emph{Or: As the relation of the (density) distribution with the location and scale parameters is trivial, we do not illustrate that here. However, for the shape parameter it is a bit more subtil... and we let the figure}
+\paragraph*{Density}We give a representation of the density of these functions by considering the density of the GEV distribution (\ref{gevgen}), that is $g_{\xi}(z)=\frac{d G_{\xi}(z)}{dz}$ (we can assume absolute continuity). This is shown in figure (\ref{gevdens}) for various shape parameters. We also give in \hyperref[app:fig]{appendix \ref{app:fig}} graphs showing the influence of the location and scale parameters. This is shown in figure \ref{fig:gevdif} where we clearly remark that the location parameter only implies a horizontal shift of the distribution, without changing its shape, while we clearly see the influence of the scale parameter on the shape (span) of the distribution.
+
+
+\begin{tabular}{l|c}
+\\[-1.8ex]\hline 
+\hline \\
+$\xi\neq 0$ &  $g_{\xi}(z)=\sigma^{-1}\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\frac{1}{\xi}-1}\exp\Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}$; \\
+ \hline  \vspace{.1cm} \\
+$\xi\to0$ & $g_0(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg\}\exp\Bigg\{-\exp\bigg[-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]\Bigg\}$. \\ 
+\hline \\ 
+\end{tabular}
+
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=0.85\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gevdens}
+\end{figure}
+
 
 For the case $\xi\neq0$, 
 \begin{equation}\label{densgev}
@@ -798,14 +837,9 @@ For the case $\xi=0$, we have
 g_0(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg\}\exp\Bigg\{-\exp\bigg[-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]\Bigg\},
 \end{equation}
 
+
+
 Note that the support varies equally as for the distribution functions wrt sign of $\xi$
-
-
-%\begin{center}
-\begin{figure}[!htb]
-	\includegraphics[width=0.85\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gev3plot}
-\end{figure}
-%\end{center}
 
 
 
@@ -878,10 +912,9 @@ The \textbf{\underline{Type II}} or \textbf{Fréchet-Pareto type} distrbution $G
 When starting with a sequence $\{X_j\}$ of $n$ iid random variables (block-maxima?) following a \textit{basic}(or \textit{generalized}, with scale parameter set to 1) Pareto distribution with shape parameter $\alpha\in (0,\infty)$, $X_j\sim Pa(\alpha$), we have that 
 
 \begin{equation}
-F(x)=1-x^{-\alpha}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\in[1,\infty),
+F(x)=1-x^{-\alpha}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\in[1,\infty).
 \end{equation}
-
-so that we can write, by choosing appropriately $b_n=0$
+We define the \textit{survival} function $\bar{F}=1-F$. By setting appropriately $b_n=0$, we can write
 
 \begin{equation*}
 \begin{aligned}
@@ -891,7 +924,7 @@ so that we can write, by choosing appropriately $b_n=0$
 \end{aligned}
 \end{equation*}
 
-where $Q(1-\frac{1}{n})$ is the quantile function (see). Hence, it is easy to see that by setting the constant $a_n=Q(1-1/n)$ and keeping $b_n=0$, we have that 
+where $Q(1-n^{-1})$ is the quantile function (see). Hence, it is easy to see that by setting the constant $a_n=Q(1-n^{-1})$ and keeping $b_n=0$, we have that 
 \begin{equation*}
 \text{Pr}\{a_n^{-1}X_{(n)}\leq z\}\rightarrow \exp (-z^{-\alpha}),
 \end{equation*}
@@ -906,12 +939,15 @@ More generally, we can state the more general following theorem :
 	
 	\begin{equation}
 	\begin{aligned}
-	n[1-F(a_nx)]= \frac{1-F(a_nx)}{1-F(a_n)}\rightarrow x^{-\alpha} ,&&&&&&&&&&&& \text{ n}\to\infty
+	n[\bar{F}(a_nx)]= \frac{\bar{F}(a_nx)}{\bar{F}(a_n)}\rightarrow x^{-\alpha} ,&&&&&&&&&&&& \text{ n}\to\infty,
 	\end{aligned}
 	\end{equation}
 	
 	then we obtain the Fréchet distribution in the limit, or written formally "\emph{$\bar{F}$ is of Pareto-type}" or, more technically, "\emph{$\bar{F}$ is regularly varying with index -$\alpha$}".
 \end{theorem}
+
+This theorem is interesting to understand the shape of the tail of this king of distributions. 
+
 We let the concepts of \textbf{regularly varying functions}, together with \textbf{slowly varying functions} be defined in appendix A.1 with some useful theorems and properties, according to \citet[pp.51-54]{beirlant_practical_1996} and supported by \citet[pp.49, 77-82]{beirlant_statistics_2006}.
 
 \citet[pp.75]{beirlant_statistics_2006} !!!!
@@ -1041,7 +1077,7 @@ is ultimately positive in the neighbourhood of $x_*$, is differentiable there an
 then $F\in D(G_1)$.
 (compare hazar convergence rates of the three types !!!!!)
 
-\paragraph{Examples of distributions in $\boldsymbol{D(G_1)}$} include  exponentially decaying distributions which
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_1)}$} include  exponentially decaying distributions which
 will have this propensity to be in the Gumbel domain of attraction. For instance, the $Exponential$, the $Gamma$, the $Weibull$, the $logistic$, etc.
 To see that, by a Taylor expansion, we have that 
 
@@ -1098,7 +1134,7 @@ Clearly, we can see that by setting $K=x_m^{\alpha}$, we have
 
 Therefore, we have that $a_n=(Kn)^{\alpha^{-1}}$ and $b_n=0$.
 
-\paragraph{Examples of distributions in $\boldsymbol{D(G_{2,\alpha})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_{2,\alpha})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
 An example to see that, is again by Taylor expansion at the tail of $G_{2,\alpha}$ with $\alpha>0$ 
 
 \begin{equation}
@@ -1137,7 +1173,7 @@ Finally, we still present the \emph{\textbf{Von Mises condition}} from \cite{fal
 \end{equation}
 where $r(x)$ is again the \emph{hazard function} defined in (\ref{haz}).
 
-\paragraph{Examples of distributions in $\boldsymbol{D(G_{3,\alpha})}$} Weibull's domain of attraction thus includes all the distribution functions that are bounded to the right ($x_*<\infty$). As most phenomena are typically bounded, we will think as the Weibull for the most attractive and flexible class for modelling extremes. But, in practice, the Fréchet one is often more preferable in an extreme analysis context because allowing for arbitrarily large values.
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_{3,\alpha})}$} Weibull's domain of attraction thus includes all the distribution functions that are bounded to the right ($x_*<\infty$). As most phenomena are typically bounded, we will think as the Weibull for the most attractive and flexible class for modelling extremes. But, in practice, the Fréchet one is often more preferable in an extreme analysis context because allowing for arbitrarily large values.
 \newline
 
 
@@ -1201,8 +1237,8 @@ Among a lot of characterizations available, we present the most []:
 	
 	\begin{equation}
 	\displaystyle{\lim_{v \uparrow x_*}} \text{Pr} \Bigg\{\frac{X-v}{u(v)}>x \ | \ X>v\Bigg\}:=\displaystyle{\lim_{v \uparrow x_*}}\frac{\bar{F}(v+xu(v))}{\bar{F}(v)}=\begin{cases}
-	\ \Big(1+\xi x\Big)_+^{-\xi^{-1}}, \ \ \ \ \ \xi\neq 0;    \\
-	\  e^{-x}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \xi=0.
+	\ \Big(1+\xi x\Big)_+^{-\xi^{-1}}, \ \ \ \ \ \ \xi\neq 0;    \\
+	\  e^{-x}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \qquad \xi=0.
 	\end{cases}
 	\end{equation}
 
@@ -1242,7 +1278,7 @@ To evaporate (vanish) this issue, it is important to distinguish stationary from
 Explore why the return leels go beyond the right endpoint of the distribution (when $\xi<0$ as here), for which return period, etC...
 
 \subsection{Return Level Plot}\label{rlplot}
-\paragraph{Standard errors of the estimates}As usual, the standard errors of these estimates are important to compute, for example to construct confidence intervals (but they can be quite misleading!), and hence the return level plot. We naturally expect these to increase with the return period.
+\paragraph*{Standard errors of the estimates}As usual, the standard errors of these estimates are important to compute, for example to construct confidence intervals (but they can be quite misleading!), and hence the return level plot. We naturally expect these to increase with the return period.
 As $r_m$ is a function of the GEV parameters, we can use the \emph{delta method} (see..)to approximate the variance of $\hat{r}_m$. Specifically,
 
 \begin{equation*}
@@ -1260,7 +1296,7 @@ with $V$ the variance-covariance matrix of the estimated parameters $(\hat{\mu},
 with $y_m=-\log (1-m^{-1})$, with the gradient evaluated at the estimates $(\hat{\mu},\hat{\sigma},\hat{\xi})$.
 But a problem arise for the so-computed standard errors when considering long-range return levels. (GRAPH??) They can increase so drastically with the return period that the confidence intervals of the \emph{return level plot} can become difficult to work with. To try to get rid of this issue with in section \textbf{3..} by constructing intervals on the basis of the \emph{profile} log-likelihood. 
 
-\paragraph{Interpretation}
+\paragraph*{Interpretation}
 
 When plotted against the return period on a logarithmic scale, the return levels has different shapes depending on the value of the shape parameter $\xi$, namely :
 
@@ -1369,7 +1405,7 @@ Generalization where $\boldsymbol{\theta_j}$ is of dimension higher than one is 
 
 Another interpretation concern the $\chi^2$ distribution
 
-\paragraph{Return levels} Here, we are now specifically interested in computing the profile log-likelihood
+\paragraph*{Return levels} Here, we are now specifically interested in computing the profile log-likelihood
 for the estimation of the return level $\theta_j=r_m$. To do that, we present a method which consists of three main steps :
 
 \begin{enumerate}[label=\textbf{\arabic*})]
@@ -1512,7 +1548,7 @@ These are called the \emph{quantile-quantile} plot (or \emph{qq}-plot) and the \
 
 These diagnostics are popular by their easy interpretation and by the fact that they can both have graphical (i.e. subjective, qualitative, quick) view but also a more precise (i.e. objective, quantitative, rigorous) analysis can be derived, for example from the theory of linear regression. 
 \newline
-For these two diagnostic tools, we use the order statistics (see eq.(\ref{ordereds} in appendix) but now we rather consider an \textbf{ordered sample} of independent observations :
+For these two diagnostic tools, we use the order statistics (remind (\ref{ordereds}) but now we rather consider an \textbf{ordered sample} of independent observations :
 
 \begin{equation} \label{ordersamp}
 x_{(1)}\leq x_{(2)}\leq\dots\leq x_{(n)}
@@ -1571,6 +1607,7 @@ Z and W statistic plots
 
 
 \chapter{Peaks-Over-Threshold Methods}\label{sec::2}
+\vspace{-1cm}
 \minitoc \thispagestyle{empty}
 %\newpage
  \vspace{1.5cm}
@@ -1759,7 +1796,7 @@ Some plots ?
 
 After looking at the behaviour of the density of these functions, we will procure a more comprehensive view by defining some examples of how to retrieve these different types of Generalized Pareto Distributions.
 
-\paragraph{Density functions of the GPD  }
+\paragraph*{Density functions of the GPD  }
 
 
 \begin{equation}\label{densgpd}
@@ -2037,7 +2074,7 @@ from the threshold $u$ dependence with the scale parameter $\sigma$ (see \ref{me
 \end{equation}
 where we let the $x_{[i]}$ denoting the (i-th out of the ) $n_u$ observations that exceed $u$.
 
-\paragraph{Mean residual life plot} This leads to an interesting tool for our purpose, the \emph{mean residual life plot}. It comes from combining the linearity detected between $mrl(u)$ and $u$ in (\ref{mrl}) with (\ref{mrle}). Therefore, a reliable information can be retrieved from the point of the points 
+\paragraph*{Mean residual life plot} This leads to an interesting tool for our purpose, the \emph{mean residual life plot}. It comes from combining the linearity detected between $mrl(u)$ and $u$ in (\ref{mrl}) with (\ref{mrle}). Therefore, a reliable information can be retrieved from the point of the points 
 
 \begin{equation}
 \Bigg\{\bigg(u,\frac{1}{n_u}\sum_{i=1}^{n_u}(x_{[i]}-u)\bigg):u<x_{max}\Bigg\}.
@@ -2157,7 +2194,7 @@ tainty quantification." book risk pp.62
 "Nonstationary extensions of such models can be particularly problematic
 with the extent of discontinuity varying along the threshold function."
 
-Possible alternaties are possible to force continuity on the pdf.
+Alternatives are possible to force continuity on the pdf.
 
 "If the bulk model is correctly specified, then the parametric
 mixture models are easy to understand and quick to fit so are
@@ -2168,7 +2205,7 @@ perform consistently well for low and high quantiles." evmix package thesis.
 
 \subsubsection{Nonstationary extremes} see thesis2012 p.155
 
-\paragraph{Cross-validation}
+\paragraph*{Cross-validation}
 \cite{northrop_cross_2016} 
 Besides all these methods that are very subjective,...
 
@@ -2178,7 +2215,8 @@ or see gelman bayesian book pp.169
 
 
 
-\chapter{Relaxing Independence Assumption}\label{sec::3}
+\chapter{Relaxing The Independence Assumption}\label{sec::3}
+\vspace{-1cm}
 \minitoc\thispagestyle{empty}
 
 In environmental applications, the independence assumption is questionable. It is rarely fulfilled \cite{}, and never completely. From hydrological process (see \citet{milly_stationarity_2008} for stationarity) to temperature analysis (see ref) or even the broader area of meteorological applications (see ref), theoretical assumptions that have been made for the models are not sustainable. This sounds also obvious in extreme values analysis of temperature data, since we expect the temperature .... Whereas it was not really problematic for block-maxima, it was much more painful for POT as we have seen  both in section 2. 
@@ -2188,7 +2226,7 @@ See \cite[pp.375]{beirlant_statistics_2006}
 
 ....
 
-\section{Stationary Extremes}\label{statio}
+\section{Stationary Extremes}\label{sec:statio}
 
 From now, we considered $X_{(n)}=\max_{1\leq i\leq n}X_i$  where we assumed 
 $X_1,\dots,X_n$  are independent random variables. For sake of simplicity, we abandon this 
@@ -2270,8 +2308,7 @@ The \emph{extremal index} is an important indicator quantifying the extent of ex
 
 .. However, the maximum has a tendency to decrease as .... \cite[pp.96]{coles_introduction_2001}
 
-Formally, it can be defined
-as 
+Formally, it can be defined as the 
 
 \begin{equation}\label{exc}
 \theta=\displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{\max(X_2,\dots,X_{p_n})\leq u_n\ | \ X_1\geq u_n\big\},
@@ -2280,7 +2317,8 @@ where $p_n=o(n)$ and the sequence $u_n$ is such that Pr$\big\{X_{(n)} \leq u_n\b
 
 Hence, $\theta$ can be thought as the probability that an exceedance over a high threshold is the final element in a \emph{cluster }of exceedances.
 
-\subsubsection*{Cluster of exceedance} From eq.(\ref{exc}), we can now state that extremes have the tendency to occur in cluster, whose \emph{mean cluster size} is $\theta^{-1}$ at the limit. Equivalently(?), $\theta^{-1}$ is the factor with which the mean distance between cluster is increased.
+\addcontentsline{toc}{subsubsection}{Clusters of exceedances}
+\subsubsection*{Clusters of exceedances} From eq.(\ref{exc}), we can now state that extremes have the tendency to occur in cluster, whose \emph{mean cluster size} is $\theta^{-1}$ at the limit. Equivalently(?), $\theta^{-1}$ is the factor with which the mean distance between cluster is increased.
 
 \underline{Identifying clusters and declustering} as the distribution of a cluster maximum is the same as the marginal distribution of an
 exceedance.
@@ -2290,7 +2328,7 @@ However, [pp.178 Coles], information in discarded when one considers \emph{declu
 
 
 
-
+\addcontentsline{toc}{subsubsection}{New parameters}
 \subsubsection*{New parameters} When $\theta>0$, we have from Theorem 4.2 that $G^*$ is an EV distribution but with different scale and location parameters than $G$. If we note by ($\mu^*,\sigma^*,\xi^*$) the parameters pertaining to $G^*$ and those from $G$ kept in the usual way, we have the following relationships when $\xi\neq 0$
 
 \begin{equation}
@@ -2300,7 +2338,7 @@ However, [pp.178 Coles], information in discarded when one considers \emph{declu
 In the Gumbel case ($\xi=0$), we have $\sigma^*=\sigma$ and $\mu^*=\mu+\log\theta$.
 The fact that $\xi^*=\xi$ is 
 
-
+\addcontentsline{toc}{subsubsection}{Return levels}
 \subsubsection*{Return levels}
 
 From that (see clusters), one can see that the proba ility of an exceedance is variable (see coles, pp.103 or slide 82) (...)
@@ -2329,7 +2367,7 @@ a possible estimator (this used by \texttt{atdf()}) can come from the sample ver
 
 \subsection{Modelling : Threshold Models}
 
-\paragraph{Block-Maxima}
+\paragraph*{Block-Maxima}
 The modelling with the techniques provided by the GEV distributions (see 
 \hyperref[sec::1]{chapter \textbf{1}}) can be used in 
 the similar way as we have seen from (\ref{extindex}) or in section 3.1 that the shape 
@@ -2342,8 +2380,7 @@ approximations in the limit.
 Indeed, as the effective number of observations is reduced from $n$ to $n\theta$, the approximation is expected to be poorer, and this "problem" will be exacerbated
 with increased levels of dependence in the series.
 
-\paragraph{Thresholds models}
-
+\paragraph*{Thresholds models}
 Practically speaking, one might expect a threshold based analysis to result in estimates of return levels with much reduced standard errors as "all" the extremes are included in the analysis, i.e. those who excess a threshold $u$. The example in section .... illustrated this
 
 However, the fact that this method deals with "all" the extremes brings also some problems, 
@@ -2416,7 +2453,7 @@ Asymptotically, the distribution of $D$ is $\chi_k$ with $k$ (df) representing t
 \section{Return Levels}
 
 
-\paragraph{ Stationarity} Under an assumption of a
+\paragraph*{ Stationarity} Under an assumption of a
 stationary sequence, the return level is the same for all years, and this gives rise to the notion
 of the return period (or $m$-year event). Hence, the return period of a particular event is the
 inverse of the probability that the event will be exceeded in any given year. The m-year return level is associated with a return period of m years. However, there are two main interpretations in this context for return periods.
@@ -2454,7 +2491,7 @@ Denoting $X_{(n),y}$ the annual maximum for year y. Omitting the notational depe
 \end{enumerate}
 
 
-\paragraph{Non-stationarity}
+\paragraph*{Non-stationarity}
 
 From the definition on non-stationary process, the modelling of return period will change over time.
 Hence, we introduce the notation of the distribution function $F_y$ of a particular $X_{(n),y}$. We must study 
@@ -2462,14 +2499,15 @@ Hence, we introduce the notation of the distribution function $F_y$ of a particu
 $p(y)=\text{Pr}(X_{(n),y}>r)=1-F_y(r)$. If we estimate $F_y$, we can retrieve easily p(y).
 $F_y(r_p(y))=1-p$ with the exceedance level $r_p(y)$ changing with year. It shows the changing nature of "risk".
 
-\paragraph{Return period as expected waiting time}
+\paragraph*{Return period as expected waiting time}
 
-\paragraph{Return period as expected number of events}
+\paragraph*{Return period as expected number of events}
 
 \section{Inference}
 
 
 \chapter{Neural Network (and others) }
+\vspace{-1cm}
 \minitoc\thispagestyle{empty}
 \section{Improvements For Modelling Non-stationary Sequences}\label{improvinf}
 \subsection{Generalized Likelihood Methods}
@@ -2486,7 +2524,7 @@ When dealing with nonstationnary processes, it is interesting to consider Genera
 
 The GML estimator corresponds to the mode of the empirical posterior distribution...
 
-\paragraph{Properties of the GML estimator} see pp740. \citet{martin_generalized_2000}
+\paragraph*{Properties of the GML estimator} see pp740. \citet{martin_generalized_2000}
 
 \subsection{Neural-Network Based Inference}
 
@@ -2632,7 +2670,7 @@ equal  weightage)  are  then  combined  by  taking  majority voting. This typica
 
 
 
-\section{Bootstrap Methods}
+\section{Bootstrap Methods in EVT}
 
 " like
 the estimated parameters themselves, the SE may not be
@@ -2676,6 +2714,7 @@ book risk pp.136, \cite{shaby_markov-switching_2016} + code
 
 
 \chapter{Bayesian Methods}\label{sec::bayesian}
+\vspace{-1cm}
 \minitoc\thispagestyle{empty}
 
 see evdbayes pdf package r
@@ -2790,10 +2829,10 @@ STAN : "It can
 also be a huge help with computation to have less diffuse priors, even
 if they're not informative enough to have a noticeable impact on the posterior. "
 
-\paragraph{Gamma Distributions for Quantile Differences}
+\paragraph*{Gamma Distributions for Quantile Differences}
 
 
-\paragraph{Beta Distributions for Probability Ratios}
+\paragraph*{Beta Distributions for Probability Ratios}
 
 
 
@@ -3097,28 +3136,35 @@ We can use the values of the samples generated by the posterior to estimate feat
 \part{Experimental Framework : Global....}
 \thispagestyle{empty}
 
+
+
+\chapter{Introduction to the Analysis}
+\vspace{-1cm}
+\minitoc \thispagestyle{empty}
+
+
 In this part, we will focus on the application of the methods seen during the theoretical part. 
 
 
 \addcontentsline{toc}{section}{Repository for the code : R Package}
 \subsection*{Repository for the code : R Package}
 
-An \textbf{R package} has been created and can be easily downloaded from its \textbf{repository}
+An \textbf{R package} has been created and can be easily downloaded from its \textbf{repository} :
 \begin{center}\label{xxx}
  \url{https://github.com/proto4426/PissoortThesis}
 \end{center}
-by following the instructions in the README. It follows the standard structure of an usual R package (see e.g. \citet{leisch_creating_2008}) and make use of the \texttt{roxygen2} package for building.
+by following the instructions in the README. It follows the standard structure of an usual R package (see e.g. \citet{leisch_creating_2008}) and make use of the \texttt{roxygen2} package for the documentation.
 
-For your (best?) convenience, an external folder has been created in this repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly by going into the \textbf{/Scripts-R/} folder from the repository. We will notice in the beginning of each of the following chapter to which script(s) it corresponds. We also explain in more details the structure of the github repository in \hyperref[appgit]{appendix \textbf{\ref{appgit}}} to give you an idea of what each folder and each file do.
+For your (best?) convenience, an external folder has been created in this repository containing all the scripts created during this thesis. It allows to reproduce all the results, and sometimes with more details, tables or plots. It can be retrieved directly by going into the \textbf{/Scripts-R/} folder from the repository. We will notice in the beginning of each of the following chapter to which script(s) it corresponds. We also explain in more details the structure of the github repository in \hyperref[appgit]{appendix \textbf{\ref{appgit}}} to give you a better idea of what each folder and each file is about.
 
-\addcontentsline{toc}{section}{Visualization Tool : Shiny Application}
+\addcontentsline{toc}{subsection}{Visualization Tool : Shiny Application}
 \subsection*{Visualization Tool : Shiny Application}
 
 A small Shiny application has started to be developed and can be run directly from R after having the package loaded in your environment, by only typing 
 
 \begin{center}
 \begin{lstlisting}[language=R]
-runExample()  # in the R console.
+runExample()  # in the R console. Then, choose the propositions displayed
 \end{lstlisting}
 \end{center}
 
@@ -3126,15 +3172,11 @@ runExample()  # in the R console.
 
 
 
-\chapter{Introduction to the Analysis}
-\minitoc \thispagestyle{empty}
-
-This analysis has 
+The following analysis relies on \texttt{1inter\_stationary.R} and \texttt{1intro\_trends(splines).R} codes from the \textbf{/Scripts-R/} folder of the github repository.
 
 \section{Presentation of the Analysis : Temperatures from Uccle}
 
-The data used during this thesis have been gathered directly from the "Institut Royal de Météorologie" (IRM) 
-
+The data used during this thesis have been gathered directly from the "Institut Royal de Météorologie" (IRM). We were provided data...
 
 
 \subsection{Open shelter vs Closed shelter}
@@ -3162,21 +3204,27 @@ is dealing with open shelter temperatures data.
 
 \section{First Analysis : Block-Maxima}
 
+
+\subsection{Descriptive Analysis}
+
+Taking yearly blocks leaves us with $n=116$ data which seem justifiable for further GEV analysis and the conditions to hold (see)
+
+
 \subsection{First visualization with simple models}
 
 We present our series of yearly maxima in figure \ref{first_fig} where we introduce 3 \textbf{models for the trend} :
+
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.8\linewidth]{gg12.pdf}\caption{representing the \textbf{yearly} \textbf{maxima} together with three first models trying to represent the trend. Note that shaded grey line representing the standard errors (and not a confidence interval) of the linear trend.}\label{first_fig}
+\end{figure}
+
 
 \begin{itemize}
 \item \emph{Linear regression } (in blue) which is a \textbf{parametric} fit. We remark that it is slightly but significantly increasing over time ($\text{p-value}\approx 10^{-5}$) . 
 \item \emph{Local Polynomial regression } or LOESS (in red) which is a \textbf{nonparametric} fit. It tells us that the yearly maxima process is rather "dispersed". For example, the drop in the series visible around years 1950 to 1975 is probably due to a 'random effect' rather than a real decrease or freezing of the maximum temperatures at this time. Moreover, it will disappear if we change the parameter controlling the degree of smoothing. We will assess that more formally in the \hyperref[sec:splines]{next section}.
 \item \emph{Broken-linear regression} (in cyan) which is a \textbf{parametric} fit. We wanted to emphasize visually the difference in trend between the period [1901-1975] and [1976-2016]. The two periods have been chosen arbitrarily and we will study that more formally in the \hyperref[sec:splines]{next section}.
 \end{itemize}
-
-\begin{figure}[!htb]
-	\includegraphics[width=.8\linewidth]{gg12.pdf}\caption{representing the \textbf{yearly} \textbf{maxima} together with three first models trying to represent the trend. Note that shaded grey line representing the standard errors (and not a confidence interval) of the linear trend.}\label{first_fig}
-\end{figure}
-
-
 
 
 The code which provide all the tools to retrieve the presented results are left in appendix, but in the numeric version only be cause it is very heavy. this also enables you to get all insights (..)
@@ -3190,49 +3238,82 @@ Apart from the significant increasing linear trend, we did not find formal resul
 We assume the reader is at ease(?) with\emph{ Generalized Additive Models} (GAM) which have been developed by \citet{hastie_generalized_1986}. We also assume he knows about penalized \emph{splines} and splines smoothing, where a good introduction is found in \citet[section 3]{ruppert_semiparametric_2003}
 
 
+\addcontentsline{toc}{subsubsection}{Pointwise vs Simultaneous intervals}
 \subsubsection*{Pointwise vs Simultaneous intervals}
 
 \textbf{Simultaneous} confidence intervals :  Following \citet[section 3, section 4.9, section 6.5]{ruppert_semiparametric_2003} which uses a simulation-based approach to generate a simultaneous interval
 \citet{marra_coverage_2012}
 
-From the pointwise confidence intervals we can say that (example) $f(1980)$ has $95\%$ chance to lie within (-1,0) (say) and $f(2000)$ has also $95\%$ to lie within (0.2,1.2) BUT it is a fallacy to say simultaneously that both are contained in these intervals at the same time with .95 confidence. \citet[section 6.5]{ruppert_semiparametric_2003}
+From the pointwise confidence intervals we can say that (example) $f(1980)$ has $95\%$ chance to lie within (-1,0) (say) and $f(2000)$ has also $95\%$ to lie within (0.2,1.2) BUT it is a fallacy to say simultaneously that both are contained in these intervals at the same time with $95\%$ confidence. \citet[section 6.5]{ruppert_semiparametric_2003}
 
 
-
+\addcontentsline{toc}{subsubsection}{Methodology}
 \subsubsection*{Methodology}
 
 \begin{itemize}
-\item We fitted a simple GAM model relying on the \texttt{mgcv} package from \citet{maindonald_data_2006}. Then, after looking at the correlation structure the normalized residuals (ACF and PACF, see figure \ref{fig:acfresgam1} in \hyperref[app:fig]{appendix \ref{app:fig}}), we detected very slight patterns and hence we wanted to allow taking this into account.
+\item We fitted a simple GAM model relying on the \texttt{mgcv} package from \citet{maindonald_data_2006}. Then, after looking at the correlation structure the normalized residuals (ACF and PACF, see figure \ref{fig:acfresgam1} in \hyperref[app:fig]{appendix \ref{app:fig}}), we detected very slight patterns.
 
-\item As the selection from figure \ref{fig:acfresgam1} is not trivial, we fitted several time series models for the residuals. It is not necessary to consider too complex models. The results are represented in table \ref{table:gamresid} in \hyperref[app:fig]{appendix \ref{app:fig}} where we see that the BIC, which is more penalizing complex models, will prefer the independent model for the residuals but the AIC will not. Hence, we conducted likelihood ratio tests to compare these models which let us favour the MA(1) model for the residuals. The diagnostics of the model in figure \ref{fig:diagnogam} are good. As we took a Gaussian (identity) link, our model can be written
+\item As the selection from figure \ref{fig:acfresgam1} is not trivial, we fitted several time series models for the residuals. It is not necessary to consider too complex models so we stopped at 2 additional degrees of freedom. The results are represented in table \ref{table:gamresid} in \hyperref[app:fig]{appendix \ref{app:fig}} where we see that the BIC, which is more penalizing complex models, will prefer the independent model for the residuals but the AIC will not. Hence, we conducted likelihood ratio tests which confirmed. The diagnostics of the model in figure \ref{fig:diagnogam} are good. As we took a Gaussian (identity) link, our model can be written as
 
 \begin{equation}\label{eq:gam}
-Y_{\text{GAM}}(\text{year}) = f_0 + f_{\text{1}}(\text{year})+\epsilon , \qquad\quad \epsilon\sim\text{MA(1)}.
+Y_{\text{GAM}}(\text{year}) = \alpha + f_{\text{(k)}}(\text{year})+\epsilon , \qquad\quad \epsilon\sim\text{WN}.
 \end{equation}
-where we choose to model $f$ by splines. $Y$ models the TX here. 
 
-\item  To better account for uncertainty, we decide to simulate draws from the posterior of the GAM model in (\ref{eq:gam}). We (($10^5$ here; it is fast) 
-We display 50 of the posterior draws in figure \ref{fig:post_draws} together with 
-
-Hence, the confidence intervals (or bands) that we will compute will be of the form of  Bayesian credible intervals that we have discussed in \hyperref[bayes_cred_int]{section \textbf{\ref{bayes_cred_int}}}. 
+(!! WN or MA(1° for the residuals ? Depend on the analysis !!! Graph below is WN)
 
 
-We can see from figure \ref{fig:center_gam} the two significant increase in trend. the decrease we have pointed out in the preceding section with LOESS is not significant. However, we will see that this is not the case when doing the correction for simultaneous intervals. 
-\end{itemize}
-
-
-\subsubsection*{Final Results}
+where $f$ is modelled by smoothing splines. $Y$ models the TX here. It is not important in our case to perform cross-validation to choose the dimension of the basis $k$ and we set it to 20 to ensure a reasonable degree of smoothness.
 
 \begin{figure}[!htb]
-	\includegraphics[width=.99\linewidth]{splines.pdf}\caption{Plots of the first derivative \big($f^{'}(\cdot)$\big) of the estimated splines on the retained GAM model. Grey area represents the $95\%$ confidence interval. Sections of the spline where the confidence interval does not include zero are indicated by thicker sections. }\label{fig:derivsplines}
+\centering	\includegraphics[width=.75\linewidth]{post_draws.pdf}\caption{displays draws from the posterior distribution of the model. Notice the large uncertainty associated to the posterior draws (grey lines).  The coverages are calculated for $M=10^5$ simulations. }\label{fig:post_draws}
 \end{figure}
 
-Some remarks from the two plots of figure \ref{fig:derivsplines} :
+\item  To account for uncertainty, we decide to simulate $M = 10^5$ draws (it is quite fast) from the posterior of the GAM model in (\ref{eq:gam}). Hence, the confidence intervals (or bands) that we will compute will be of the form of  Bayesian credible intervals that we have discussed in \hyperref[bayes_cred_int]{section \textbf{\ref{bayes_cred_int}}}.
+We display 50 of the posterior draws in figure \ref{fig:post_draws} %let in \hyperref[app:fig]{appendix \ref{app:fig}}
+ displaying both pointwise (in yellow) and simultaneous (in red) intervals. We can already point out that pointwise intervals seem too narrow.
+
+\end{itemize}
+
+We can see the two significant increase in trend from figure \ref{fig:center_gam} let in \hyperref[app:fig]{appendix \ref{app:fig}}. The decrease we have pointed out in the preceding section with LOESS is hence not significant. However, we will now see more precisely that this is not the case when doing the correction for simultaneous intervals and compare the results. 
+
+
+\subsubsection*{Coverage Analysis} 
+We would like to formalize the inadequacy of the pointwise intervals. Hence, we computed posterior draws of the fitted GAM and we looked how many draws lie within each intervals.
+\begin{table}[!htbp] \centering 
+  \caption{Proportion of the $M$ posterior simulations which are covered by the confidence intervals} \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \vspace{-.1cm}\\[-1.8ex] 
+\textbf{Coverage at $95\%$} & \multicolumn{1}{c}{$M=20$} &  \multicolumn{1}{c}{$M=100$} & \multicolumn{1}{c}{$M=10^3$} & \multicolumn{1}{c}{$M=10^6$} \vspace{.1cm} \\ 
+\hline \\[-1.8ex] 
+\underline{Pointwise} & $40\%$ & $63\%$ & $61.1\%$ & $59.463\%$ \\
+\underline{Simultaneous} & $80\%$ & $91\%$ & $94.9\%$ & $95.019\%$  \\
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+We clearly see that this indeed converges to $95\%$ for the simultaneous interval while it converges rather to $\approx 60\%$ for the pointwise interval.
+
+We have build a Shiny application from this graph to better visualize the impact of the number simulations on the confidence intervals and how their coverage vary, both visually and quantitatively. You can load it from the package with \begin{lstlisting}[language=R]
+runExample('splines_draws')\end{lstlisting} from which you can check the results of the table (using the default seed=99)
+
+Note that the results are similar if we do the experiment on the first derivatives $f^{'}(\cdot)$ of the splines rather than on the splines itself
+
+
+\addcontentsline{toc}{subsubsection}{Final Results}
+\subsubsection*{Final Results}
+
+
+Some remarks from the two plots in figure \ref{fig:derivsplines} :
+
+\begin{figure}[!htb]
+	\includegraphics[width=.99\linewidth]{splines.pdf}\caption{Plots of the first derivative $f^{'}(\cdot)$ of the estimated splines on the retained GAM model. Grey area represents the $95\%$ confidence interval. Sections of the spline where the confidence interval does not include zero are indicated by thicker sections. }\label{fig:derivsplines}
+\end{figure}
 
 \begin{itemize}
 \item Looking together with the series in \ref{first_fig}, we can make the link between the trend behaviour of the series and the splines derivative which models accurately the slope behaviour of the trend. 
 \item Whence we can notice the increasing trend but with decreasing slope until $\approx 1945$ where it becomes is decreasing. Then the slope increase and the trend starts to re-increase around 1962. This upward trend that the series of annual maxima is facing for this last period brings light to the climate warming we are all talking about. However, 
-\item  Whereas the pointwise confidence interval include significant regions (when 0 is not included in the interval), the simultaneous interval which accounting for the increase in uncertainty, have no more significant regions. We can concluce that the 
+\item  Whereas the pointwise confidence interval include significant regions (i.e. when 0 is not included in the interval), the simultaneous interval which accounting for the increase in uncertainty, have no more significant regions. We can concluce that the 
 
 \end{itemize}
 
@@ -3242,13 +3323,12 @@ We can see that only the 2 increasing periods from the start and at the end of t
 
 \section{Comments and Structure of the Analysis }
 
- We have remarked that there is indeed an upward (linear) trend for the series of yearly maxima.
-We have then remarked that the \textbf{nonstationary} component is present. Hence, after having presented a stationary analysis in \hyperref[sec:anagev]{section \ref{sec:anagev}}, we will make an in-depth nonstationary analysis in \hyperref[sec:ananonsta]{section \ref{sec:ananonsta}}.
+ We have remarked that there is indeed an upward (linear) trend for the series of yearly maxima but which is not significant when doing the correction for simultaneous intervals.
+We have then remarked that the \textbf{nonstationary} component is present. After having... we will now go through with the more specific subjec of this thesis, that is the extreme value analysis. Hence, after having presented a stationary analysis in \hyperref[sec:anagev]{section \ref{sec:anagev}}, we will make an in-depth nonstationary analysis in \hyperref[sec:ananonsta]{section \ref{sec:ananonsta}}.
 
-After having... we will now go through with the more specific subjec of this thesis, that is the extreme value analysis.
 
 POT and GEV : 
-As you have seen, the analysis in POT or in GEV involves different methods and different data. For the kind of this text, we decide not to display the results of the POT analysis to keep the text not too enormous. Henceforth, we will be able to focus on the GEV analysis. But\textbf{ note that a huge amount of the analysis for POT has been done and is available on the same \hyperref[xxx]{github repository} presented above}.
+As you have seen, the analysis in POT or in GEV involves different methods and different data. For the kind of this text, we decide not to display the results of the POT analysis to keep the text not too enormous. Henceforth, we will be able to focus on the GEV analysis. But\textbf{ note that the analysis in POT have been done and are available on the same \hyperref[xxx]{github repository} presented above}.
 \hyperref[appgit]{Appendix \ref{appgit}} summarize its contents.
 
 
@@ -3256,43 +3336,129 @@ Results are not shown here but this is (visually) less pronounced for minima. We
 Comparisons are interesting (and are also available on the repository) but this is not at the core of this text. 
 We will then only \textbf{focus on a GEV analysis on yearly maxima}.
 
-\chapter{Analysis by GEV }\label{sec:anagev}
+\chapter{First Analysis by GEV }\label{sec:anagev}
 \minitoc \thispagestyle{empty}
+
 
 \textbf{PUT the examples right in the place where it is mentioned in the theory.!} 
 "As we have seen in section 2.1.1.... and in section 2.2.2......"
 
+In this first analysis, we rely on 
 
-We must choose a block-length which is large enough for the limiting arguments supporting the GEV approximation (see (\ref{exttheom})) to be valid, either a large bias in the estimates could occur. For example, if this is too short, the maxima may be too close of each other to assume independence. But a large block-length implies less data to work with, and thus a large variance of the estimates.. So we must find a compromise between bias and variance.
+This analysis relies on \texttt{1inter\_stationary.R} code from the \textbf{/Scripts-R/} folder of the github repository.
+
+
+
+The block-length selection an important issue of the analysis. It is important to choose a block-length which is large enough for the limiting arguments supporting the GEV approximation (see (\ref{exttheom})) to be valid, either a large bias in the estimates could occur. For example, if this is too short, the maxima may be too close of each other to assume independence. But a large block-length implies less data to work with, and thus a large variance of the estimates. A compromise must be found between bias and variance and as pointed out in the previous section, yearly blocks seem justifiable for both this reason but also for their interpretability.
+
+\addcontentsline{toc}{subsection}{R packages for EVT}
+\subsubsection*{R packages in EVT}
+
+A plenty of packages exist for modelling extreme values in R. We have explored some of them and we used some of them. For "basic" EVT analysis, we must name the following : 
+\vspace*{-.2cm}
+\begin{itemize}
+\item[$\blacktriangleright$] \textbf{\texttt{ismev, evd, extRemes}} (good for a wide nonstationary analysis with POT and nice tutorials, see e.g. \citet{gilleland_extremes_2016})  \texttt{, \textbf{POT}} (see \citet{ribatet_users_2006})\texttt{, \textbf{evir},} \texttt{\textbf{fExtremes}}, $\dots$
+\end{itemize}
+
+Whereas lots of the package are doing the same analysis but with different tools, we relied mostly on \texttt{ismev} as it is the package used in the book of \citet{coles_introduction_2001}.
+
+\section{Estimation of the Model}
+
+Whereas the whole content of chapter \hyperref[sec::1]{\textbf{\ref{sec::1}}} is important to understand the concepts used in this section, we will now be based on inferential methods discussed in \hyperref[sec::gevinfernce]{section\textbf{ \ref{sec::gevinfernce}}}
+
+\subsection{Maximum Likelihood}
+
+Relying on the packages named above but also by checking it manually, i.e. by numerically solving the optimization problem, that is minimizing the negative log-likelihood, with the \texttt{nlm} routine using a Newton-Raphson algorithm (originated from \citet{dennis_numerical_1987}). This is based on approximating the log-likelihood by a quadratic function, the second order Taylor series approximation of the log-likelihood for a given point.  The results are shown in table \ref{tab:estlik} :
+\vspace{-.3cm}
+\begin{table}[!htbp] \centering 
+  \caption{shows the maximum likelihood estimation of the three GEV parameters} 
+  \label{tab:estlik} 
+\begin{tabular}{@{\extracolsep{5pt}} cccc} 
+\\[-1.8ex]\hline 
+\hline  \\[-1.8ex] 
+ & Location $\mu$ & Scale $\sigma$ & Shape $\xi$ \\ 
+\hline \\[-1.8ex] 
+Estimates (s.e.) & $30.587$ ($0.216$)& $2.081$ ($0.155$) & $\boldsymbol{-0.254}$ ($0.067$) \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+\vspace{-.3cm}
+
+From this table \ref{tab:estlik}, an important thing to note is the value of the \textbf{shape} parameter which is negative which means that we are under a Weibull-type distribution  From figure \ref{gev3plot} this means that the density distribution has the form of the red line, i.e. having a .
+Moreover, we confirmed that by doing a likelihood ratio test comparing this distribution with a Gumbel distribution. We obtained a p-value of $10^{-3}$ leading to a rejection of the Gumbel hypothesis. This obviously implies rejection of the Fréchet distribution.
+
+The Weibull-type implies that the distribution have an estimated right endpoint given by $\hat{x}_*=\hat{\mu}-\hat{\sigma}\cdot\hat{\xi}^{-1}=38.77$. Comparing this value with the maximum value of the series (=36.6) tells us that the sample properties of this model take into account the uncertainty, from the fact that there are only 116 years of data. Hence, it allows to go beyond this maximum value, with very small probability. This is also highlighted in figure \ref{fig:rl_empdes} (right plot) where we remark that there are still probabiliy mass beyond the minimum and the maximum values of the series.
+
+The \textbf{profile} log-likelihood intervals for the parameters are shown in figure \ref{fig:proflikpar} in \hyperref[app:fig]{appendix \ref{app:fig}}, provided by the \texttt{ismev} package. These intervals are constructed in the following way : Search for the horizontal line Substracting the maximum log-likelihood $\ell$ half the corresponding upper quantile of the $\chi^2_{\text{df}}$ for the $\text{df}=1$ parameter of interest. We notice that :
+\begin{itemize}
+\item Even at $99\%$, the interval for $\hat{\xi}$ does not contain 0 supporting our statement that the distribution is left heavy-tailed and right bounded.
+\item The intervals do not present much asymetries. In fact, this will be more relevant for return levels as we will see in section
+\end{itemize}
+
+
+\subsection{Other Methods}
+
+
+\section{Diagnostics}
+
+\begin{figure}[!htb]
+\centering	\includegraphics[width=.7\linewidth]{pp_qqplot.pdf}\caption{}\label{fig:ppqqplot}
+\end{figure}
+
+
+\section{Return Levels}
+
+\begin{figure}[!htb]
+\centering	\includegraphics[width=.75\linewidth]{rl_empdes.pdf}\caption{ The left and right vertical dotted lines represent respectively the minimum and the maximum value of the yearly maxima series.}\label{fig:rl_empdes}
+\end{figure}
+
+
+\subsection{Profile Likelihood}
+
 
 
 \section{Comments and Comparisons with POT}
 
-\chapter{Nonstationary Analysis}\label{sec:ananonsta}
+
+
+
+\chapter{Stationary and Nonstationary GEV Analysis}\label{sec:ananonsta}
 \minitoc \thispagestyle{empty}
 
+This analysis relies on \texttt{2Nonstationary.R} and \texttt{2NeuralsNets.R} code from the \textbf{/Scripts-R/} folder of the github repository.
+
 TABLE with nested models (gumbel, GEV, + linear trend, etc etc)
+
+
+\section{Stationary Analysis}
+
+
+In \hyperref[sec:statio]{section \textbf{\ref{sec:statio}}} we have proven that 
+
+\section{Nonstationary Analysis}
+
+\section{Improvements with Neural Networks}
 
 
 \chapter{Bayesian Analysis}
 \minitoc \thispagestyle{empty}
 
+This analysis relies on all the codes which filenames start by "\texttt{Bayes}" from the \textbf{/Scripts-R/} folder of the github repository.
 
-\section{Applications}
 
 "It is often the case that more than one model provides an adequate fit to the data. Sensitivity analysis determines by what extent posterior inferences change when alternative
 models are used"   book risk analysis other section pp.2.
 
 "The basic method of sensitivity analysis is to fit several models to
 the same problem. Posterior inferences from each model can then be compared."
-\subsection{Own }
+\section{From Our Functions (R package)}
 
 
-\subsection{\texttt{evdbayes} R package : MH algorithm}
+\section{From \texttt{evdbayes} R package : MH algorithm}
 
 
 
-\subsection{HMC algorithm using STAN language}
+\section{From HMC algorithm using STAN language}
 
 
 
@@ -3309,7 +3475,7 @@ We can calculate the effective sample size (ESS) using the posterior samples for
 where $N$ is still the number of posterior samples and $\gamma(k)$ are the monotone lag $k$ sample autocorrelations. \citet{geyer__1992}. We can thus interpret this as the number of effectively independent samples. 
 
 
-\subsubsection*{STAN}
+\subsection{STAN}
 
 Benefits : 
 
@@ -3385,7 +3551,7 @@ Careful for boldsymbols, especiallyin bayesian
 
 PissoortThesis:: Behind our functions 
 
-
+[ MOTS DEXPLICATIONS SUR TTES LES FORMULES (domain atraction condition, etc...]
 
 
 
@@ -3653,7 +3819,17 @@ Chains are expected to reach stationarity faster as it proposes moves to regions
 
 \chapter{Other Figures and Tables}\label{app:fig}
 
-\section{Introduction (section 6)}
+\section{GEV : Influence of the Parameters on the shape of the distribution}
+
+Regarding our future application, that is maximum temperatures, it is relevant to consider values of the location parameter $\mu$ around 30 degrees. 
+
+
+\begin{figure}[!htb]
+	\includegraphics[width=\linewidth]{gevdif.pdf}\caption{GEV distribution for different values of the three parameters }\label{fig:gevdif}
+\end{figure}
+
+
+\section{Introduction of the Practical Analysis (section 6)}
 
 \begin{figure}[!htb]
 	\includegraphics[width=\linewidth]{acfresgam.pdf}\caption{ACF and PACF for the residuals of the fitted GAM model with assumed independent errors }\label{fig:acfresgam1}
@@ -3679,21 +3855,25 @@ MA(2)  & $6$ & $494.698$ & $511.219$ \\
 
 
 \begin{figure}[!htb]
-	\includegraphics[width=\linewidth]{diagnogam.pdf}\caption{Diagnostics of the chosen GAM model, based on the residuals. }\label{fig:diagnogam}
+	\includegraphics[width=\linewidth]{diagnogam.pdf}\caption{Diagnostics of the chosen GAM model with MA(1) errors, based on the residuals. }\label{fig:diagnogam}
 \end{figure}
 
 
-\begin{center}
 \begin{figure}[!htb]
-	\includegraphics[width=.75\linewidth]{max_gam.pdf}\caption{Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increasing is significant for pointwise confidence interval }\label{fig:center_gam}
+\centering	\includegraphics[width=.75\linewidth]{max_gam.pdf}\caption{Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increase is significant for pointwise confidence interval. Shaded area represent the "$95\%$" interval which looks quite narrow. }\label{fig:center_gam}
 \end{figure}
-\end{center}
 
-\begin{center}
+
+
+
+\section{Analysis by GEV}
+
+
 \begin{figure}[!htb]
-	\includegraphics[width=.75\linewidth]{post_draws.pdf}\caption{Draws from the }\label{fig:post_draws}
+\centering	\includegraphics[width=.85\linewidth]{proflikpar.pdf}\caption{ The two horizontal dotted lines represent the 95$\%$ (above) and $99\%$ (below) confidence intervals when we take the intersection on the horizontal axis. }\label{fig:proflikpar}
 \end{figure}
-\end{center}
+
+
 
 \iffalse
 \begin{figure}
