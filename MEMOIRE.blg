@@ -1,29 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: MEMOIRE.aux
 The style file: abbrvnat.bst
-White space in argument---line 100 of file MEMOIRE.aux
- : \citation{gnedenko_sur
- :                        la distribution_translated_1992}
-I'm skipping whatever remains of this command
-White space in argument---line 114 of file MEMOIRE.aux
+White space in argument---line 108 of file MEMOIRE.aux
  : \citation{domain
  :                  of attraction course}
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Hartmann_bayesian_2016 and hartmann_bayesian_2016
----line 503 of file MEMOIRE.aux
+---line 500 of file MEMOIRE.aux
  : \citation{Hartmann_bayesian_2016
  :                                 }
 I'm skipping whatever remains of this command
-Illegal, another \bibstyle command---line 532 of file MEMOIRE.aux
+Illegal, another \bibstyle command---line 537 of file MEMOIRE.aux
  : \bibstyle
  :          {ieeetr}
 I'm skipping whatever remains of this command
 Database file #1: zotero1.bib
 Warning--I didn't find a database entry for "kharin_changes_2006"
-Warning--I didn't find a database entry for "De_on_1970"
-Warning--I didn't find a database entry for "modelling_embrechts_1997"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "falk_vonmises_1994"
-Warning--I didn't find a database entry for ".??."
 Warning--I didn't find a database entry for "pickands_statistical_1975"
 Warning--I didn't find a database entry for "mason_"
 Warning--I didn't find a database entry for "northrop_cross_2016"
@@ -45,4 +37,4 @@ Warning--I didn't find a database entry for "leimkulher_..._2004"
 Warning--empty journal in leisch_creating_2008
 Warning--can't use both author and editor fields in resnick_extreme_1987
 Warning--empty journal in segers_generalized_2001
-(There were 4 error messages)
+(There were 3 error messages)

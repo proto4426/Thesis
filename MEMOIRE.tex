@@ -49,9 +49,7 @@
 	\null\vfil
 	\secdef\@part\@spart}
 \makeatother
-% ------------------------------
-% PACKAGES DE BASE
-% ------------------------------
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
@@ -98,9 +96,8 @@
 \usepackage{color}
 %\usepackage{subfig}
 \usepackage{graphicx}
-%-------------------------------
-% MATH
-% ------------------------------
+
+
 \usepackage{amsmath} % Les math
 \makeatletter
 \let\reftagform@=\tagform@
@@ -115,6 +112,7 @@
 \usepackage{dcolumn}
 \usepackage{pifont}
 \usepackage{amsthm}
+
 \usepackage[breaklinks,colorlinks]{hyperref}
 \hypersetup{
 colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hypertexnames=false,
@@ -247,6 +245,17 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
 %\theoremstyle{definition}
 \newtheorem{definition}{Definition}[chapter]
 %\renewcommand*{\proofname}{\boxed{Proof}}
+\usepackage{thmtools}
+
+\newcommand*{\QEDB}{\hfill\ensuremath{\triangle}}%
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}%
+
+\AtEndEnvironment{theorem}{\null\hfill\qedsymbol}%
+\AtEndEnvironment{definition}{\null\hfill\QEDB}%
+%\declaretheorem[style=definition,qed=$\triangle$,sibling=definition]{definition}
+%\declaretheorem[style=definition,qed=$\triangle$,sibling=definition]{theorem}
+
+
 \usepackage{tcolorbox}
 \usepackage{adjustbox}
 \usepackage{dashbox}
@@ -281,7 +290,6 @@ colorlinks=true,linkcolor=blue,%citecolor=CornflowerBlue,naturalnames=true,hyper
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
-
 
 
 \setcounter{tocdepth}{3}
@@ -445,6 +453,7 @@ For convenience, we place a list of all the abbreviations we will use in the tex
 	\item[GPD] Generalized Pareto Distribution (function)
 	\item[MCMC] Marko Chain Monte Carlo
 	\item[MH] Metropolis-Hastings (algorithm)
+    \item[R.V.] Random Variable
 	\item[TN] Temperature miNimum
 	\item[TX] Temperature maXimum
 	
@@ -556,13 +565,13 @@ In this section, we will present the basics of EVT and we will consider a
 \textit{block-maxima approach}. After defining some useful concepts in 
 \hyperref[sec::1.1]{section \textbf{1.1}}, we will
 
-For this chapter, we will be mostly based on \citet[chapter 3]{coles_introduction_2001}, \citet{beirlant_statistics_2006} and \citet{reiss_statistical_2007}.
+For this chapter, we will be mostly based on \citet[chapter 3]{coles_introduction_2001}, \citet[chapter 2]{beirlant_statistics_2006} and \citet{reiss_statistical_2007}.
 
 \newpage
 \section{Preliminaries}\label{sec::1.1}
 
 
-In the following, we will assume a sequence of $n$ independent and identically distributed (iid) random variables that we will write for convenience by $\{X_i\}=X_1,X_2,\dots ,X_n$. The iid assumption will be relaxed in \hyperref[sec::3]{\textbf{\ref{sec::3}}}
+In the following, we will assume a sequence of $n$ independent and identically distributed (iid) random variables that we will write for convenience by $\{X_i\}=X_1,X_2,\dots ,X_n$. Note that the iid assumption will be relaxed in \hyperref[sec::3]{chapter \textbf{\ref{sec::3}}}
 
 %\addcontentsline{toc}{subsection}{Statistical Tools}
 \subsection*{Statistical Tools}
@@ -595,7 +604,7 @@ Furthermore, we can easily retrieve the distribution of our statistic of interes
 where the independence $(\independent)$  follows directly from the iid assumption of the sequence $\{X_i\}$.
 
 
-Finally, we decide to include in \hyperref[convconc]{Appendix \ref{convconc}} some concepts of convergence, regularly and slowly varying functions, as they will often 
+Finally, we decide to include in \hyperref[convconc]{Appendix \ref{convconc}} some concepts of convergence, including convergence in law, in probability and almost sure convergence.as it will often 
 appear in the text.
 
 
@@ -626,20 +635,19 @@ For example, if we propose a model for the annual maximum temperatures and anoth
 	G^n(a_nz+b_n)=G(z), \ \ \ \ \ \ \ n= 1,2,\dots ,
 	\end{equation}
 	
-	for some (normalizing) constants $a_n>0$ and $b_n$.
+	for appropriate (normalizing) constants $a_n>0$ and $b_n$.
 \end{definition}
 In other words, taking powers of $G$ results only in a change of location and scale. This concept will be closely connected with the fundamental limit law for extreme values that we will present in the \hyperref[sec:extrtypethm]{next section}.
-However, the power of max-stable processes is more used in a multivariate setting while we will focus on univariate sequences. Refer e.g. to \citet{ribatet_spatial_2015} for an excellent introduction on max-stable processes.
-
+However, the power of max-stable processes is more used in a multivariate setting, whereas we will focus on univariate sequences. Refer for example to \citet{ribatet_spatial_2015} for an excellent introduction on max-stable processes.
 \emph{Min-stability} can easily be found by complement, see for instance \citet[pp.23]{ reiss_statistical_2007} for an example.
 
 
-As this will be .. in the following, we think useful to define precisely the concept of \emph{non-degenerate distribution functions}.
+As this will be fundamental in the following to explain the origin of EVT , we think useful to define precisely the concept of \emph{degenerate distribution functions}.
 \begin{definition}[Degenerate distribution functions]
 	We say that the distribution function of a random variable is \emph{\textbf{degenerate}} if it assigns all of the probability to a single point.
 \end{definition}
 
-We illustrate this by the construction the most common theorem in statistics, the \emph{Central Limit Theorem} (CLT) which plays typically with the empirical mean $\bar{X}_n=n^{-1}\sum_{i=1}^nX_i$. We know that (..) $\bar{X}_n$ converges to the true mean $\mu$ in probability(?) and thus in distribution, that is to a non-random single point, i.e. to a \emph{degenerate} distribution 
+We illustrate this by the construction of the most commonly used theorem in statistics, the \emph{Central Limit Theorem} (CLT) that we will define below and which typically plays with the empirical mean statistic $\bar{X}_n=n^{-1}\sum_{i=1}^nX_i$. We know that (..) $\bar{X}_n$ converges to the true mean $\mu$ in probability(?) and thus in distribution, that is to a non-random single point, i.e. to a \emph{degenerate} distribution 
 
 \begin{equation*}
 \text{Pr}\big\{\bar{X}_n\leq x\big\}= \begin{cases}
@@ -649,75 +657,64 @@ We illustrate this by the construction the most common theorem in statistics, th
 \end{equation*}
 That is not very useful, in particular for inferential purposes.
 
-For this reason, CLT aims at finding a non-degenerate limiting distribution for $\bar{X}_n$, after allowance for normalization by sequences of constants. We will state it in his most basic form :
+For this reason, CLT aims at finding a non-degenerate limiting distribution for $\bar{X}_n$, after allowing for normalization by sequences of constants. We will state it in his most basic form :
 
 \begin{exe}[Central Limit Theorem] 
-	Write\footnote{We adopt this notation w.l.o.g. in the following, if there is no confusion possible. It is the same as $X_1,\dots,X_n$} $\{X_i\}$ as a sequence \emph{(or "stochastic process"?!.. Check if written like this is fine ! for the following too)}  of n iid random variables with $E(X^2_i)<\infty$. Then, $\text{as} \ n\rightarrow\infty$,
+	Let $\{X_i\}$ be the sequence of n iid random variables with $E(X^2_i)<\infty$. Then, $\text{as} \ n\rightarrow\infty$,
 	
 	\begin{equation*}
 	\sqrt{n}(\bar{X}_n-\mu)\stackrel{d}{\longrightarrow}N(0,\sigma^2),
 	\end{equation*}
-	where $\mu=E(X_i)$ and $\sigma^2=V(X)>0$. $d$ means convergence in distribution.
+	where $\mu=E(X_i)$ and $\sigma^2=V(X)>0$.
 \end{exe}
-[The reader may refer to \hyperref[convconc]{appendix\textbf{ A.}} for a useful short review of most important concepts of convergence for EVT.]
+[Note that $d$ means convergence in distribution and the reader may refer to \hyperref[convconc]{appendix\textbf{ A.}} for a useful short review of most important concepts of convergence for EVT.]
 
-Then, by a proper choice of some normalizing constants, $\mu$ and $\sqrt{n}$ (as location and scale parameters respectively), we find the non-degenerate Normal distribution in the limit for the empirical mean $\bar{X}_n$. 
+Then, by a proper choice of some normalizing constants, $\mu$ and $\sqrt{n}$ (as location and scale parameters respectively), we find the non-degenerate normal distribution in the limit for the empirical mean $\bar{X}_n$. 
 
-With the same logic, we want to find the same for the distribution of maximum order statistics $X_{(n)}$ 
+With the same logic, we find for the distribution of maximum order statistics $X_{(n)}$ 
 \begin{equation}
 \displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{X_{(n)}\leq x\big\}=\displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{X_i\leq x\big\}^n=\begin{cases}
 \ 0, \ \ \ \ \ \ \ \ \ \ \  \ \ \ F(x)<1; \\ 
 \ 1, \ \ \ \ \ \ \ \ \ \ \ \  \ \ F(x)=1,
 \end{cases}
 \end{equation}
-
 which is also a degenerate distribution.
-This is exactly what Extreme Value Theory aims to achieve for the, that is finding a non-degenerate distribution in the limit of $>_{(n)}$ by means of normalization. We will see how it works in details in the following section.
+Thus, this is exactly what Extreme Value Theory also aims to achieve for the, that is finding a non-degenerate distribution in the limit of $X_{(n)}$ by means of normalization. We will see how it works in details in the following section.
 
 
 \section{Extremal Types Theorem}\label{sec:extrtypethm}
 
 
+Introduced by \cite{fisher_limiting_1928}, later revised by \cite{gnedenko_sur_1943} and finally streamlined by \cite{haan_regular_1970}, the \emph{extremal types theorem} is very important for its applications in EVT. First, recall the distribution of maxima in (\ref{maxdist}). It states the following :  
 
-
-Introduced by Fisher and Tippett \cite{fisher_limiting_1928}, later revised by \cite{gnedenko_sur_1943} and finally streamlined by \cite{De_on_1970}, the \emph{extremal types} theorem is very important for its applications. We remind the distribution of maxima is $\text{Pr}\big\{X_{(n)}\leq x\big\}=F^n(x)$, from (\ref{maxdist}) in \hyperref[appA]{appendix \textbf{A}}. It states the following:
-
-\begin{theorem}[Extremal types theorem] \label{extthm}
-	If the distribution of partial maxima of an iid sequence of  random  variables  with  common  (unknown)  distribution F, say, $X_{(n)}$, properly normalized, converges to a non-degenerate ( see ...) limiting distribution G, i.e.
+\begin{theorem}[Extremal Types Theorem] \label{extthm}
+	If the distribution of partial maxima of an iid sequence of  R.V. $\{X_i\}$ with  common  (unknown)  distribution $F$, say, $X_{(n)}$, properly normalized, converges to a non-degenerate limiting distribution $G$, i.e.
 	\begin{equation} \label{exttheom}
 	\displaystyle{\lim_{n \to \infty}}\text{\emph{Pr}}\Big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\Big\}=F^n(a_nz+b_n)
-	= G(z), \ \ \ \ \ \ \ \ (\forall z\in\mathbb{R})),
+	= G(z), \ \ \ \ \ \ \ \ \forall z\in\mathbb{R},
 	\end{equation}
-	
-	and for some constants $a_n>0$, $b_n\in\mathbb{R}$.
+	and for some normalizing constants $a_n>0$, $b_n\in\mathbb{R}$.
 \end{theorem}
-[extreme value and cluster ana. of euro... clustering 2011]
-, meaning that $F$ is said to be in the \textbf{domain of attraction}\footnote{?? We will more precisely define this concept in the next section.} of $G$, denoted by $F\in D(G)$.
-This theorem considers an i.i.d. random sample, but it holds true if the original scheme 
-being no longer i.d. still remains independent (we will present the stationary case in 
-\hyperref[statio]{section \textbf{3.1}}). However, even the stationary assumption is often 
-poor in practical applications (see for our applications in our case, the temperature....)
-\cite{gomes_bootstrap_2015} (see application...) but we will handle that in \hyperref[nstatio]{section \textbf{3.2}} . with $G$ the \textit{Generalized Extreme Value} (GEV) distribution :
+This theorem considers an iid random sample but note that it holds true if the original scheme 
+being no longer independent (we will present the stationary case in 
+\hyperref[sec:statio]{section \textbf{\ref{sec:statio}}}). %However, even the stationary assumption is often poor in practical applications (see for our applications in our case, the temperature....)\cite{gomes_bootstrap_2015} (see application...) but we will handle that in \hyperref[nstatio]{section \textbf{3.2}}. 
+Furthermore, we will see in \hyperref[sec:mda]{section \textbf{\ref{sec:mda}}} that it actually means that $F$ is in the \textbf{domain of attraction} of $G$ where
+$G$ is called the \textit{Generalized Extreme Value} (GEV) distribution, defined by
 
 \begin{equation} \label{gevgen}
-G(z)=\ \text{exp}\ \Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}:=G_{\xi}(z),
+G(z)=\ \text{exp}\ \Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}:=G_{\xi,\mu,\sigma}(z),
 \end{equation}
+where $-\infty<\mu,\xi<\infty$ and $\sigma>0$ with 
+$(\mu,\sigma,\xi)$ being the three parameters of the model characterizing location, 
+scale and shape respectively. The notation $y_+=\text{max}(y,0)$ denotes in the above that 
+$\big\{z:1+\xi\sigma^{-1}(z-\mu)>0\big\}$ to ensure the term in the exponential is negative, and hence the 
+distribution function converges to 1. We will keep this notation in the following so it is important to remind that this yields a vital condition for the GEV. In particular, this will define the endpoints from the three different characterizations of this distribution from the values of the shape 
+parameter. This will be detailed in the \hyperref[sec:gevdistri]{next 
+section}.
 
-from which we introduce the notation $y_+=\text{max}(y,0)$, denoting in the above that 
-$\{z:1+\xi\sigma^{-1}(z-\mu)>0$\} to ensure the term in the exponential is negative and the 
-distribution function converges to 1. We will use this notation in the following so it is important to remind that this yields a vital condition(?). This will 
-define the endpoints of the different distribution functions from the values of the shape 
-parameter, that is \{$\xi>0$; $\xi<0$; $\xi=0$\}, more details will be provided in next 
-section . Moreover,  $-\infty<\mu,\xi<\infty$ and $\sigma>0$ with 
-$\mu,\sigma$ and $\xi$ being the three parameters of the model characterizing location, 
-scale and shape respectively.
 
-We think important to point out that here, the location parameter $\mu$ does not represent
-the mean as in the classic statistical view, but does represent the “center” of the distribution, and the scale parameter
-$\sigma$ is not the standard deviation, but does govern the “size” of the deviations around $\mu$. This can already be pointed out on figures in appendix where we demonstrate for little variations of the parameters.
-\newline
 
-From \cite{coles_introduction_2001}, we introduce an important theorem in Extreme Value Theory and that has many implications. This theorem simply says the following :
+From \cite{coles_introduction_2001}, we introduce an important theorem in Extreme Value Theory and that has many implications. This theorem states the following :
 
 \begin{theorem}\label{max-gev} For any distribution function $F$,
 	
@@ -725,12 +722,12 @@ From \cite{coles_introduction_2001}, we introduce an important theorem in Extrem
 	F \ \emph{\text{is \emph{max-stable}}}\ \Longleftrightarrow \ F \emph{\text{ is GEV}}.
 	\end{equation}
 \end{theorem}
-Any distribution functions that are \emph{max-stables} (see \hyperref[maxstab]{ definition \textbf{1.2}}) are also GEV (\hyperref[extthm]{theorem \textbf{1.2}}), and vice-versa.
+Hence, any distribution functions that are \emph{max-stables} (recall \hyperref[maxstab]{ definition \textbf{\ref{maxstab}}}) are also GEV which is defined in \ref[extthm], and vice-versa.
 To gain interesting insights of the implications of this theorem, we think useful to give a proof but only for the "$\Leftarrow$" as the converse requires too much mathematical backgrounds.
 
-\begin{proof}[\boxed{\emph{Proof :}}\nopunct ]
+\begin{proof}[\boxed{\emph{\textbf{Proof :}}}\nopunct ]
 \ \ \	\begin{itemize}
-    \item	If $a_n^{-1}(X_{(n)}-b_n)$ has limit distribution $G$ for large $n$ as in (\ref{exttheom}), then
+    \item	If $a_n^{-1}(X_{(n)}-b_n)$ has the GEV as limit distribution for large $n$ as defined in (\ref{exttheom}), then
 	
 	\begin{equation*} \label{gevproof1}
 	\text{Pr}\Big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\Big\}\approx G(z).
@@ -757,126 +754,105 @@ To gain interesting insights of the implications of this theorem, we think usefu
 	Hence, $G$ is \emph{max-stable} and therefore GEV. This gives proof of the \textbf{extremal 
 	types theorem}, \ref{extthm}.
   \end{itemize}
+\vspace{-.3cm}
 \end{proof}
 
-\section{Characterization of the GEV distributions : 3 Types}
-...
+In words, it means that taking power of $G$ results only in a change of location and scale, and hence by recalling the expression of the distribution of a maximum (eq.(\ref{maxdist})), it is possible to find the non-degenerate GEV in the limit for this maximum $X_{(n)}$.
 
-The quantity $\xi\in\mathbb{R}$ in (\ref{gevgen}) is called the \emph{extreme value index} (EVI) and is at the center of the analysis in extreme value theory. It determines, in some degree of accuracy, the type of the underlying distribution.
-Hence, from this general definition of the GEV distribution (\ref{gevgen}), we can directly retrieved three principal classes of EV distributions, from their \emph{standard form}, in the \emph{$\alpha$-parametrization}, with $\alpha=\xi^{-1}$ (just show in the $\xi$ param. ? for convenience) :
+\section{Characterization of the GEV distributions : 3 Types}\label{sec:gevdistri}
+
+The shape parameter $\xi\in\mathbb{R}$ is called the \emph{extreme value index} (EVI) and is at the center of the analysis in EVT. It determines, in some degree of accuracy, the \textbf{type} of the underlying distribution.
+Hence, from this general definition of the GEV distribution in (\ref{gevgen}), we can directly retrieved three principal types of EV distributions from the value $\xi$ :
 
 \begin{equation}\label{gumb}
-\boxed{\textbf{\text{I}}}\ \   G_1(z)= 
-\exp\{-e^{-z}\}, \ \ \ \ \ \ -\infty<z<\infty.    
+\boxed{\textbf{\text{I}}}\ \  \xi \to 0 \ : \quad G_{1}(z)= 
+\exp\Big\{-e^{-\frac{z-\mu}{\sigma}}\Big\}, \ \ \quad \ \ \ -\infty<z<\infty.    
 \end{equation}
 
 
 \begin{equation} \label{frech}
-\boxed{\textbf{\text{II}}} \ \ G_{2,\alpha}(z)=
+\boxed{\textbf{\text{II}}} \ \  \xi> 0 \ : \quad G_{2}(z)=
 \begin{cases}
-\ 0, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \quad \ z\leq 0; \\
-\ \exp\{-(z)^{-\alpha}\}, \ \ \ \ \ \ \ \ \ z>0,\ \alpha>0.    
+\ 0, \ \ \ \ \ \ \ \ \ \ \ \qquad \quad \ \ \ \ \ \ \ \ \ \ \ \ \quad \ \ z\leq \mu; \\
+\ \exp\Big\{-\big(\frac{z-\mu}{\sigma}\big)^{-\xi^{-1}}\Big\}, \ \ \ \ \ \ \ \ \ z>\mu.    
 \end{cases}
 \end{equation}
 
 \begin{equation} \label{weib}
-\ \ \boxed{\textbf{\text{III}}} \ \ G_{3,\alpha}(z)=\begin{cases}
-\ \exp\big\{-(-z)^{\alpha}\big\}, \ \ \ \  z>0,\ \alpha>0?;     \\
-\  1, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \quad z\geq 0.
+\ \ \boxed{\textbf{\text{III}}} \ \ \xi<0 \ : \quad G_{3}(z)=\begin{cases}
+\ \exp\Big\{-\big(-\frac{z-\mu}{\sigma}\big)^{-\xi^{-1}}\Big\}, \ \ \ \  z<\mu;     \\
+\  1, \ \ \ \ \ \ \qquad \quad \quad \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \quad z\geq \mu,
 \end{cases}
 \end{equation}
-\newline
-[Faire tableau]
+where we can see the dependence of the distribution function with respect to the value of the location parameter $\mu$. One can notice that we explicitly retrieve the general definition in \ref{gevgen} for type II and type III, that is when $\xi\neq 0$.
 
-(mettre les indice aux fctions G + le shape parameter est "correct" ????)
 
-The II and III can be reformulated (in the $\xi$-parametrization) as.....
+%where we added explicitly the location and scale parameters $\mu$ and $\sigma$ in order to obtain the three \emph{extreme value distributions}, see for example \cite[pp.16]{reiss_statistical_2007} among others. The parameters are such that $ \sigma>0$ and $-\infty<\mu,\xi<\infty$.This statement will hold for the rest of this thesis
 
-\begin{equation}\label{GEVxineq0}
-G_{\xi}(z)=\exp\Bigg\{-\bigg[1+\xi \bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}, \ \ \ \ \ \ \ \ \ \ \ \ \  \xi\neq 0,
-\end{equation}
 
-where we added explicitly the location and scale parameters $\mu$ and $\sigma$ in order to obtain the three \emph{extreme value distributions}, see for example \cite[pp.16]{reiss_statistical_2007} among others. The parameters are such that $ \sigma>0$ and $-\infty<\mu,\xi<\infty$.
-This statement will hold for the rest of this thesis
+Hence, all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter. That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type} $\boxed{\textbf{\text{I}}}$ or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type} $\boxed{\textbf{\text{II}}}$  or \emph{Fréchet} family and to the \textbf{type} $\boxed{\textbf{\text{III}}}$ or \emph{Weibull} family, (\ref{frech})-(\ref{weib}) respectively. 
 
-By simply coming back in the $\xi$-parametrization, that is by using $\xi=\alpha^{-1}$ in the above distribution functions,  all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter (Actually, there are just location and scale parameters in the type \textbf{I} extremal model in (\ref{gumb})  as $\xi\to 0$) distribution (\ref{gevgen}).
-That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type I} or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type II}  or \emph{Fréchet} family and to the \textbf{type III} or \emph{Weibull} family, see (\ref{frech}) and (\ref{weib}) respectively. Both the Gumbel and Fréchet limiting distributions are unbounded (In fact, the Fréchet distribution has a finite left endpoint in $\mu-\sigma\cdot\xi^{-1}$, but this has no really interest here); that is, the upper endpoint tends to $+\infty$ while the Weibull distribution has a finite right endpoint in $\mu-\sigma\xi^{-1}$. In the following, we define the left and the right endpoint of a particular df $F$, respectively $_*x$ and $x_*$, by :
+
+
+%\vspace{-.5cm}
+\subsubsection*{Density} 
+The density of the GEV distribution (\ref{gevgen}), $g(z)=\frac{d G(z)}{dz}$ (we can assume absolute continuity) can be expressed in two forms, as depicted in table \ref{tab:gevdens}.
+
+\begin{table}[!htb]
+\centering\caption{The two cases for the \emph{density distribution} of the GEV}\label{tab:gevdens}
+\begin{tabular}{|c|c}
+\hline \\
+$\xi\neq 0$ &  $g(z)=\sigma^{-1}\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\frac{1}{\xi}-1}\exp\Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}$; \\
+ \hline  \\
+$\xi\to 0$ & $g(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg\}\exp\Bigg\{-\exp\bigg[-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]\Bigg\}$. \\ 
+\hline 
+\end{tabular}
+\end{table}
+
+We can now try to represent visually these three families. The following figure \ref{gevdens} depicts the GEV, defined with respect to the value of the shape parameter $\xi$.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=0.8\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal as benchmark (dotted lines) and a zoom on the parts of interest to better visualize the behaviour in the tails. In green, we retrieve the Gumbel distribution ($\xi=0$). In red, we retrieve the Weibull-type ($\xi<0$) while in blue, we get the Fréchet-type ($\xi>0$). The endpoints for the Weibull and the Fréchet are denoted by the red and blue filled circles respectively. }\label{gevdens}
+\end{figure}
+
+ We think important to point out that the location parameter $\mu$ does not represent
+the mean as in the classic statistical view, but does represent the “center” of the distribution, and the scale parameter
+$\sigma$ is not the standard deviation, but does govern the “size” of the deviations around $\mu$. This can be visualized on the figure \ref{fig:gevdif} in \hyperref[app:fig]{appendix \ref{app:fig}} where we show the variation of the GEV distribution when we vary these parameters. We clearly remark that the location parameter only implies a horizontal shift of the distribution, without changing its shape, while we clearly see the influence of the scale parameter on the 'span' of the distribution around $\mu$. For example if $\sigma \nearrow$, then the density will appear more flat.  
+
+In the following, let's define the \emph{left} and the \emph{right} \emph{endpoint} of a particular df $F$, respectively $_*x$ and $x_*$, by :
 \begin{equation*}
 _*x=\inf\{x:F(x)>0\}, \ \ \ \ \ \ \text{and} \ \ \ \ \  x_*=\sup\{x:F(x)<1\}.
 \end{equation*}
+A fundamental remark that we must notice, is the  The Gumbel distribution is unbounded. The Fréchet distribution has a finite left endpoint in $_*x=\mu-\sigma\cdot\xi^{-1}$ (the blue circle in figure \ref{gevdens}), and its upper endpoint tends to $+\infty$ while the Weibull distribution has a finite right endpoint in $x_*=\mu-\sigma\cdot\xi^{-1}$ (the red circle in figure \ref{gevdens}) and is unbounded in the left. This has obviously serious impacts on the modelling. For example, when dealing with maximum temperatures it is intuitive to consider it is more probably bounded to the right while than to left, meaning that a maximum temperature of 70°c is impossible, and hence a Weibull distribution will appear more frequently. 
 
 
-
-\paragraph*{Density}We give a representation of the density of these functions by considering the density of the GEV distribution (\ref{gevgen}), that is $g_{\xi}(z)=\frac{d G_{\xi}(z)}{dz}$ (we can assume absolute continuity). This is shown in figure (\ref{gevdens}) for various shape parameters. We also give in \hyperref[app:fig]{appendix \ref{app:fig}} graphs showing the influence of the location and scale parameters. This is shown in figure \ref{fig:gevdif} where we clearly remark that the location parameter only implies a horizontal shift of the distribution, without changing its shape, while we clearly see the influence of the scale parameter on the shape (span) of the distribution.
-
-
-\begin{tabular}{l|c}
-\\[-1.8ex]\hline 
-\hline \\
-$\xi\neq 0$ &  $g_{\xi}(z)=\sigma^{-1}\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\frac{1}{\xi}-1}\exp\Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\}$; \\
- \hline  \vspace{.1cm} \\
-$\xi\to0$ & $g_0(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg\}\exp\Bigg\{-\exp\bigg[-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]\Bigg\}$. \\ 
-\hline \\ 
-\end{tabular}
-
-
-\begin{figure}[!htb]
-	\centering\includegraphics[width=0.85\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal in dotted lines and a zoom on the part of interest, the tails  ...}\label{gevdens}
-\end{figure}
-
-
-For the case $\xi\neq0$, 
-\begin{equation}\label{densgev}
-g_{\xi}(z)=\sigma^{-1}\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\frac{1}{\xi}-1}\exp\Bigg\{-\bigg[1+\xi\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]_+^{-\xi^{-1}}\Bigg\},
-\end{equation}
-[table + two case for $Xi=0$ and $xi\ne 0$]
-[appendix graphs for various location/scale parameter values ]
-
-For the case $\xi=0$, we have 
-\begin{equation} \label{gevdensxi0}
-g_0(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg\}\exp\Bigg\{-\exp\bigg[-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg]\Bigg\},
-\end{equation}
-
-
-
-Note that the support varies equally as for the distribution functions wrt sign of $\xi$
-
-
-
-
-?? dernier graphe weibull
-\newline
-In some ways, some people will feel this was unfortunate, because now it is common for
-people to model and fit the GEV without thinking very clearly about the
-specific form of their data and distributions [Extremes, distribution, etc..] That is the 
-reason why we think it can be useful to explain in the following some examples of how we 
-can construct such extreme distributions for the three classes in concrete cases (see 
-\hyperref[sec::appconcrete]{next section}), playing with the appropriate choice of 
-sequences 
-$a_n$ and $b_n$ to retrieve the pertaining distribution family.
+\vspace{.3cm}
+Sometimes, it is useful for people to think not only about the
+specific form of their data and the distribution they will fit and its characteristics, but also about how we can retrieve these specific distributions in practice. That is the 
+reason why we think it can be useful to detail some examples of how we can construct such extreme distributions for the three types in concrete cases, playing with the appropriate choice of 
+sequences $a_n$ and $b_n$ to retrieve the pertaining distribution family.
 %\newline
 
 
 
-\section{Concrete applications : examples of convergence to GEV}\label{sec::appconcrete}
+\section{Applications : Examples of Convergence to GEV}\label{sec::appconcrete}
 
-This is well not easy to find the sequences in practice.
-\url{http://stats.stackexchange.com/questions/105745/extreme-value-theory-show-normal-to-gumbel/105749#105749}
+In real applications, it is well not easy to find the appropriate sequences. But it is a good exercise to profoundly understand the concept of convergence to GEV by looking at some theoretical examples.
+
 
 \subsection*{Convergence to Gumbel distribution}
-The \textbf{\underline{Type I}} or \textbf{Gumbel} distribution $G_1(x)$ can be retrieved by considering, for example,  a iid exponential distributed sequence $\{X_j\}$ of $n$ random variables, that is $X_j\stackrel{iid}{\sim}Exp(\lambda)$ and consider the largest of these values $X_{(n)}$ as defined earlier. By definition, we know $F(x)=1-\exp^{-x}$. Our goal is to find non-random sequences $\{b_n\}$, $\{a_n>0\}$ such that 
+The \textbf{Type}  $\boxed{\textbf{\text{I}}}$ or \textbf{Gumbel} distribution $G_1$ can be retrieved by considering, for example,  a iid exponential distributed sequence $\{X_j\}$ of $n$ random variables, that is $X_j\stackrel{iid}{\sim}Exp(\lambda)$ and taking the largest of these values, $X_{(n)}$, as defined earlier. By definition,if the $X_j$ have distribution $F$, then $F(x)=1-e^{-\lambda x}$. Hence, our goal is to find non-random sequences $\{b_n\}$, $\{a_n>0\}$ such that 
 \begin{equation}
-\displaystyle{\lim_{n \to \infty}}\text{Pr}\big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\big\}=G_1(z).
+\displaystyle{\lim_{n \to \infty}}\text{Pr}\Big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\Big\}=G_1(z).
 \end{equation}
-We can easily find that
+Hence, we can easily find that
 \begin{equation*}
 \begin{aligned}
-\text{Pr}\big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\big\}
-&=\text{Pr}\{X_{(n)}\leq b_n+a_nz\} \\ &=\Big[\text{Pr}\{X_1\leq b_n+a_nz\}\Big]^n \\
+\text{Pr}\Big\{ a_n^{-1}(X_{(n)}-b_n)\leq z\Big\}
+&=\text{Pr}\big\{X_{(n)}\leq b_n+a_nz\big\} \\ &=\Big[\text{Pr}\{X_1\leq b_n+a_nz\}\Big]^n \\
 &=\Big[1-\exp\big\{-\lambda(b_n+a_nz)\big\}\Big]^n,
 \end{aligned}
 \end{equation*}
-
 from the iid assumption of the random variables and their exponential distribution.
 Hence, by choosing  the sequences $a_n=\lambda^{-1}\log n$ and $b_n=\lambda^{-1}$ and reminding that% $\displaystyle{\lim_{n \to \infty}}(1+\frac{x}{n})^n=\exp(x)$,
 
@@ -890,31 +866,26 @@ Hence, by choosing  the sequences $a_n=\lambda^{-1}\log n$ and $b_n=\lambda^{-1}
 & \stackrel{n\to\infty}{\longrightarrow} \exp(-e^{-z}):=G_1(z).
 \end{aligned}
 \end{equation*}
-%\mathcenter
+Hence, we found the the so-called standard \emph{Gumbel} distribution in the limit. 
+Note that the same can be shown with $X_j\stackrel{iid}{\sim}N(0,1)$ and with sequences $a_n=-\Phi^{-1}(1/n)$ and $b_n=1/a_n$. 
 
-intro \cite{falk_laws_2011} somewhR
+\vspace{.2cm}
+Typically, unbounded distributions like for example the Exponential and Normal, whose tails fall off exponentially
+or faster, will have the Gumbel limiting distribution for the maxima. They will have, in particular, medians (and other quantiles) that grow as $n\rightarrow\infty$ at the rate
+of 'some power of' $\log n$. This is typical example of light-tailed distribution (i.e., whose tails decay exponentially, as defined in \hyperref[app:tails]{appendix \ref{app:tails}}).
 
-we find the the so-called standard \emph{Gumbel} distribution in the limit. 
-
-We can show the same with iid standard normal random variables, $X_j\stackrel{iid}{\sim}N(0,1)$, with sequences $a_n=-\Phi^{-1}(1/n)$ and $b_n=1/a_n$. (see appendix [extremes, distributions  pdf] )
-
-Typically, unbounded distributions like the Exponential and Normal (as well
-as the Gamma, Lognormal, Weibull, etc.) whose tails fall off exponentially
-or faster will have this same Gumbel limiting distribution for the maxima,
-and will have medians (and other quantiles) that grow as $n\rightarrow\infty$ at the rate
-of (some power of) $\log n$. This is typical example of light-tailed distribution (i.e., decays exponentially as defined in section \textbf{1.1}).
-
+\vspace{-.3cm}
 \subsection*{Convergence to Fréchet distribution}
 
-The \textbf{\underline{Type II}} or \textbf{Fréchet-Pareto type} distrbution $G_2(x)$  ...
+The \textbf{Type}  $\boxed{\textbf{\text{II}}}$ or \textbf{Fréchet type} (or \emph{Fréchet-Pareto}) distribution $G_2(x)$ has strong relations with the Pareto distribution and also the Generalized Pareto Distribution that will be presented in \hyperref[sec::2]{chapter \textbf{\ref{sec::2}}}. These are distributions which typically have heavy or fat tailed (see \hyperref[app:tails]{appendix \ref{app:tails}}).
 
 %[Practical analysis of extreme values p.51]
-When starting with a sequence $\{X_j\}$ of $n$ iid random variables (block-maxima?) following a \textit{basic}(or \textit{generalized}, with scale parameter set to 1) Pareto distribution with shape parameter $\alpha\in (0,\infty)$, $X_j\sim Pa(\alpha$), we have that 
+Following \citet{beirlant_practical_1996}, when starting with a sequence $\{X_j\}$ of $n$ iid random variables following a \textit{basic} (or \textit{generalized} with scale parameter set to 1) Pareto distribution with shape parameter $\alpha\in (0,\infty)$, $X_j\sim Pa(\alpha$), we have that 
 
 \begin{equation}
 F(x)=1-x^{-\alpha}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\in[1,\infty).
 \end{equation}
-We define the \textit{survival} function $\bar{F}=1-F$. By setting appropriately $b_n=0$, we can write
+Then, by setting appropriately $b_n=0$, we can write
 
 \begin{equation*}
 \begin{aligned}
@@ -923,178 +894,146 @@ We define the \textit{survival} function $\bar{F}=1-F$. By setting appropriately
 & =\Big[Q(1-\frac{1}{n})\Big]^{\alpha}(a_n)^{-\alpha}(-z^{-\alpha}),
 \end{aligned}
 \end{equation*}
-
-where $Q(1-n^{-1})$ is the quantile function (see). Hence, it is easy to see that by setting the constant $a_n=Q(1-n^{-1})$ and keeping $b_n=0$, we have that 
+where $Q(1-n^{-1})$ is defined as the quantile function. Hence, it is easy to see that by setting $a_n=Q(1-n^{-1})$ and keeping $b_n=0$, we have that 
 \begin{equation*}
 \text{Pr}\{a_n^{-1}X_{(n)}\leq z\}\rightarrow \exp (-z^{-\alpha}),
 \end{equation*}
-showing that for this particular values of the normalizing constants, we retrieve the Fréchet distribution in the limit from a strict Pareto distribution. The fact that $b_n$ is set to zero can be understood intuitively since for heavy-tailed distribution (see) such as the Pareto distribution, a correction for location is not necessary to obtain non-degenerate limit distribution. \cite[pp.51]{beirlant_practical_1996}
-
-
-[see p.28 memoire other si ft autre exemple]
-
-
+showing that for this particular values of the normalizing constants, we retrieve the Fréchet distribution in the limit of a basic Pareto distribution. The fact that $b_n$ is set to zero can be understood intuitively since for heavy-tailed distribution (see) such as the Pareto distribution, a correction for location is not necessary to obtain a non-degenerate limiting distribution, see \citet[pp.51]{beirlant_practical_1996}.
+%[see p.28 memoire other si ft autre exemple]
 More generally, we can state the more general following theorem :
-\begin{theorem}[Pareto-type distributions] ?? For the same choice of normalizing constants as above, that is $a_n=Q(1-\frac{1}{n})$ and $b_n=0$ and for any $x\in\mathbb{R}$, if
-	
+\begin{theorem}[Pareto-type distributions] For the same choice of normalizing constants as above, i.e. $a_n=Q(1-n^{-1}))$ and $b_n=0$ and for any $x\in\mathbb{R}$, if
 	\begin{equation}
 	\begin{aligned}
 	n[\bar{F}(a_nx)]= \frac{\bar{F}(a_nx)}{\bar{F}(a_n)}\rightarrow x^{-\alpha} ,&&&&&&&&&&&& \text{ n}\to\infty,
 	\end{aligned}
 	\end{equation}
-	
-	then we obtain the Fréchet distribution in the limit, or written formally "\emph{$\bar{F}$ is of Pareto-type}" or, more technically, "\emph{$\bar{F}$ is regularly varying with index -$\alpha$}".
+	then we say that "\emph{$\bar{F}$ is of Pareto-type}" or, more technically, "\emph{$\bar{F}$ is regularly varying with index -$\alpha$}".
 \end{theorem}
 
-This theorem is interesting to understand the shape of the tail of this king of distributions. 
-
-We let the concepts of \textbf{regularly varying functions}, together with \textbf{slowly varying functions} be defined in appendix A.1 with some useful theorems and properties, according to \citet[pp.51-54]{beirlant_practical_1996} and supported by \citet[pp.49, 77-82]{beirlant_statistics_2006}.
-
-\citet[pp.75]{beirlant_statistics_2006} !!!!
+This theorem is interesting to understand the shape of the tail of this kind of distributions. 
+We let the concepts of \emph{regularly varying functions}, together with \emph{slowly varying functions} be defined in \hyperref[app:varying]{appendix \ref{app:varying}}
+%\citet[pp.51-54]{beirlant_practical_1996} and supported by 
+%\citet[pp.49, 77-82]{beirlant_statistics_2006}.
+%\citet[pp.75]{beirlant_statistics_2006} !!!!
 
 \subsection*{Convergence to Weibull distribution}
 
-The \textbf{\underline{Type III}} or \textbf{Weibull} family (?) of distributions $G_3(x)$ are, for example, in the limit of $n$ iid uniform random variables $X_j\sim U[L,R]$ where $L$ and $R>L$ are both in $\mathbb{R}$  and denote respectively the Left and the Right endpoint of the domain of definition. We have by definition
+The \textbf{type}  $\boxed{\textbf{\text{III}}}$ or \textbf{Weibull} family (?) of distributions $G_3(x)$ arises, for example, in the limit of $n$ iid uniform random variables $X_j\sim U[L,R]$ where $L$ and $R>L$ are both in $\mathbb{R}$  and denote respectively the Left and the Right endpoint of the domain of definition. We have by definition
 
 \begin{equation*}
 F(x)=\frac{x}{R-L}, \ \ \ \ \ \ \ \  \ \ x\in [L,R].
 \end{equation*}
-It is $=0$ for $x<L$,  $=1$ for $x>R$.
-Assuming the general case ($[L,R]$ can be $\neq [0,1]$), we have for the maximum $X_{(n)}$
-:
+It is $0$ for $x<L$ and $1$ for $x>R$.
+We assume we are in the general case, i.e. $[L,R]$ can be $\neq [0,1]$. Then, we have for the maximum $X_{(n)}$
+
 \begin{equation*}
 \begin{aligned}
 \text{Pr}\{a_n^{-1}(X_{(n)}-b_n)\leq z\}
 &=\text{Pr}\{X_{(n)}\leq b_n+a_nz\} \\
-& = \Big[1-\frac{R-b_n-a_nz}{R-L}\Big]^n, & & \text{if}\ \ \ L\leq b_n+a_nz\leq Rn, \\ 
-& = (1+\frac{z}{n})^n\to e^z, & & \text{if} \ \ \  z\leq 0 \ \text{and} \ n>|z|.
+& = \bigg[1-\frac{R-b_n-a_nz}{R-L}\bigg]^n, \qquad\qquad L\leq b_n+a_nz\leq R \\ 
+& = \Big(1+\frac{z}{n}\Big)^n\to e^z, \ \qquad \qquad\qquad  z\leq 0 \quad \text{and} \quad n>|z|.
 \end{aligned}
 \end{equation*}
-When choosing $a_n=R$ and $b_n=(R-L)/n$, we find the unit Reversed Weibull distribution $We(1,1)$ in the limit as expected.
-\newline
+When choosing $a_n=R$ and $b_n=(R-L)/n$, we find the unit Reversed Weibull distribution $We(1,1)$ in the limit as expected, that is the Weibull-type GEV with $\xi=-1$.
+ This is a typical example of the maximal behavior for bounded random variables with
+continuous distributions.
 
-However, for inferential purpose, this is not of particular interest, because from the expression in \ref{exttheom}, we know that
 
+\subsection*{Conditions}
+
+Intuitively, it stands to reason that the df $F$ needs certain conditions for the limit to be convergent in \hyperref[extthm]{theorem \ref{extthm}}. There exist a \emph{continuity condition} at the right endpoint $x_*$ of $F$ which actually rules out many important distributions. For example, it ensures that if $F$ has a jump at its finite $x_*$ (e.g. discrete distributions), then $F$ cannot have a non-degenerate limit distribution as in (\ref{exttheom}). Examples are well documented in \citet[section 3.1]{embrechts_modelling_2011} for the Poisson, Geometric and Negative Binomial distributions. We cannot find a nondegenerate distribution in the limit for these distributions even after normalization, which clearly decrease the span . 
+
+
+\subsection*{Comments}
+Let's finish by noting that this is not mandatory to find the normalizing sequences for inferential purposes, as we will see in \hyperref[sec:statio]{section \textbf{\ref{sec:statio}}} by relaxing the independence assumption (which is often poor in practice and too restrictive) to the stationary case. From expression (\ref{exttheom}), we know that
 \begin{equation} \label{convseq1}
-a_n^{-1}(X_{(n)}-b_n)\stackrel{d}{\longrightarrow} G_{\xi,\mu,\sigma}(z), \ \ \ \ \ \text{as} \ n\rightarrow\infty.
+a_n^{-1}(X_{(n)}-b_n)\stackrel{d}{\longrightarrow} G_{\xi,\mu,\sigma}(z), \ \ \ \ \qquad \ n\rightarrow\infty.
 \end{equation}
-After some algebra, this leads to 
+After some algebra, we will see that this leads to 
 \begin{equation}\label{convseq2}
-X_{(n)}\stackrel{d}{\longrightarrow} G_{\xi,\mu^*,\sigma^*}(z), \ \ \ \ \ \text{as} \ n\rightarrow\infty,
+\qquad \quad \quad X_{(n)}\stackrel{d}{\longrightarrow} G_{\xi,\mu^*,\sigma^*}(z), \  \quad \quad \ n\rightarrow\infty,
 \end{equation}
-with the sequences $a_n$ and $b_n$ being absorbed into the new location and scale parameters $\mu^*$ and $\sigma^*$. We can then ignore the normalizing constants in practical applications and fit directly the GEV in our set of maxima $X_{(n),k}$.
-The pertaining estimated parameters will implicitly take the normalization into account, i.e. it will estimate $\mu^*$ and $\sigma^*$.
-As also stated in..,  the shape parameter is invariant.
+where we see that the sequences $a_n$ and $b_n$ have been absorbed into the new location and scale parameters $\mu^*$ and $\sigma^*$ (the shape parameter is invariant). Thus, providing the dependence is limited, we can ignore the normalizing constants in practical applications and fit directly the GEV in our set of maxima.
+The pertaining estimated parameters $\mu^*$ and $\sigma^*$ will implicitly take the normalization into account. But we will see more details on this at the beginning of \hyperref[sec::3]{chapter \textbf{\ref{sec::3}}}, and now let's characterize more precisely the 
 
-But what about the fact that $X_{(n)}$ non-normalized is degenerate (see intro) ?
+\section{Maximum Domain of Attraction}\label{sec:mda}
 
-\subsection*{Some Conditions/comments (?) (Continuity condition)}
+The preceding results can be more easily summarized and obtained when considering \emph{maximum domain of attraction} (MDA). The term "\emph{maximum}" is typically used to distinguish from \emph{sum-stable} distributions but as we study here maxima only, there are no confusion possible in our work. We will then write only "\emph{domain of attraction}" in the following for convenience, considering these two names as synonyms.
 
-As we have noticed in (?), $F$ needs certain conditions at its right endpoint $x_*$ for the limit to be convergent in (\ref{extthm}). The \emph{continuity condition} ensures that a discrete distribution cannot have a non-degenrate limit distribution as in (\ref{extthm}). Examples are well documented by  \citet{modelling_embrechts_1997}[pp.118-119] for the case of poisson, Geometric and negative binomial distribution. Thus, we cannot have a limit for these distributions.
-
-
-\section{Maximum domain of attraction}
-
-The preceding results can be more easily summarized and obtained when considering \emph{maximum domain of attraction} (MDA). The term "\emph{maximum}" is typically used to distinguish from \emph{sum-stable} distribution. As we study here only the maxima, there are no confusion possible in our work. We will then preferably write only \emph{domain of attraction} in the following for convenience, and thus consider these two names as synonyms.
-
-\begin{definition}[Domain of attraction] We say that a distribution $F$ is in the (\emph{\textbf{maximum}}) \emph{\textbf{domain of attraction}} of an extreme value family $G_k$ \big(see (\ref{gumb})-(\ref{weib})\big), denoted by $F\in D(G_k)$, if there exist $a_n>0$ and $b_n\in\mathbb{R}$ such that the distribution
-	of $a_n^{-1}(X_{(n)}-b_n)$ converges weakly (see \ref{conv_weak}) to $G_k$ where $X_{(n)}$ is as defined earlier with distribution $F$.
+\begin{definition}[Domain of attraction] We say that a distribution $F$ is in the \emph{\textbf{domain of attraction}} of an extreme value family $G_k$ \big($k=1,2,3$; see (\ref{gumb})-(\ref{weib})\big), denoted by $F\in D(G_k)$, if there exist $a_n>0$ and $b_n\in\mathbb{R}$ such that the distribution of $a_n^{-1}(X_{(n)}-b_n)$ converges in distribution to $G_k$, where $X_{(n)}$ is the maximum of an iid sequence $\{X_i\}$ with distribution $F$. %\null\hfill\QEDB
 \end{definition}
-The definition is well-defined in the sense that $F\in D(G_i)$ and $F\in D(G_j)$ implies $\xi_i=\xi_j$, writing by $\xi_k$ the extreme value index pertaining to the extreme value distribution $G_k$.
+Let $\xi_k$ denote the EVI pertaining to the extreme value distribution $G_k$. The above definition is well-defined in the sense that $F\in D(G_i)$ and $F\in D(G_j)$ implies $\xi_i=\xi_j$. One should directly notice the relation with the \hyperref[extthm]{theorem \ref{extthm}}.
 
-Before going further with the characterization of the three domains of attraction of our purpose, we think important to introduce a new theorem from Gnedenko \cite{gnedenko_sur la distribution_translated_1992}
 
-\begin{theorem}[Convergence to Types Theorem]
-	Let $F_n$ be a sequence of random variables converging weakly (see appendix A.1.1 ) to $F$. Let $a_n>0$ and $b_n\in \mathbb{R}$ such that $a_nF_n+b_n\Rightarrow F'$, where both $F$ and $F'$ are non-degenerate (see \ref{} ). Then, 
-	
-	\begin{equation*}
-	a_n\to a \ \ \ \text{and} \ \ \ b_n\to b, \ \ \ \ \ \ \ \ \ a>0 \ \ \ \text{and} \ \ \ b\in\mathbb{R}.
-	\end{equation*}
-	
-	Equivalently, if $G_n$, $G$, $G'$ are distribution functions with $G$, $G'$ being non-degenerate, and there exists $a_n,a'_n>0$ and $b_n,b'_n\in\mathbb{R}$ such that
-	
-	\begin{equation*} G_n(a_nx+b_n)\stackrel{d}{\to} G(x) \ \ \ \ \text{and} \ \ \ \  G_n(a'_nx+b'_n)\stackrel{d}{\to} G'(x),
-	\end{equation*}
-	
-	at all continuity points of $F$, respectively $F'$, then there exists constants $A>0$ and $B\in\mathbb{R}$ such that 
-	
-	\begin{equation*}
-	\displaystyle{\lim_{n \to \infty}} \ \frac{a_n}{a'_n}\to A, \ \ \ \ \ \ \ \ \displaystyle{\lim_{n \to \infty}} \frac{(b_n-b'_n)}{a'_n}\to B,
-	\end{equation*}
-	and $G'(Ax+B)=G(x) \ \forall x\in\mathbb{R}$. 
-\end{theorem}
+We have now all the necessary tools to  the pertaining domains of attractions. But, before proceeding, we would like to point out that the fact that the characterization of the first domain of attraction (the Gumbel type)  is much more complex than the two following (Fréchet and Weibull class) and requires much more technicalities going beyond the scope of this thesis. Despite this class is important in theory, see e.g. \cite{pinheiro_comparative_2015}, it is less relevant for our purpose of modelling extremes in a practical case. It often requires other generalizations, for instance with additional parameters to surpass the issues of fitting empirical data. In the last subsection, we will present the unified framework, the domain of attraction pertaining to the GEV distributions, which is a kind of summary for the three first domains of attraction presented.
 
-We have now all the necessary tools to  the pertaining domains of attractions. But, before proceeding, we would like to point out that the fact that the characterization of the first domain of attraction (Gumbel class)  is much more complex than the two following (Fréchet and Weibull class) and requires much more technicalities going beyond the scope of this thesis. Moreover, despite this class is important in theory, it is less relevant for our purpose of modelling extremes. It often requires other generalizations, for instance with additional parameters to surpass the issues of fitting empirical data. \cite{pinheiro_comparative_2015}
-In the last paragraph, we will present the unified framework, the domain of attraction pertaining to the GEV distributions, which is a kind of summary for the three first domains of attraction presented.
-\newline
-In each of the characterization of the domains of attractions, we will present some of their most useful, necessary and sufficient conditions ... together with their \emph{von Mises conditions}, initially from \cite{} but revisited in \cite{falk_vonmises_1994}. These conditions are very important in practice and sometimes more intuitive because they make use of the \emph{hazard function}, defined by, for sufficiently smooth distributions :
+
+In each of the characterization of the domains of attractions, we will present some of their most useful, necessary (and sometimes sufficient) conditions. We will especially derive their \emph{von Mises conditions}, coming from \cite{von_mises_distribution_1936} but revisited in \cite{falk_von_1993}. These conditions are very important in practice and sometimes more intuitive because they make use of the \emph{hazard function} of a df $F$, defined in the following, for sufficiently smooth distributions :
 
 \begin{equation}\label{haz}
 r(x)=\frac{f(x)}{\bar{F}(x)}= \frac{f(x)}{1-F(x)}.
 \end{equation}
-It involves the density function $f(x)=\frac{dF(x)}{d(x)}$ in the numerator.\cite{.??.}[ We 
-can conversely define the \emph{reciprocal hazard function} simply by 
-$\tilde{r}(x)=1/r(x)$].
-This function will be useful to characterize insightful conditions for each domains of 
-attraction, known as the\emph{ von Mises criterion}.
+It involves the density function $f(x)=\frac{dF(x)}{d(x)}$ in the numerator.
+%This function will be useful to characterize insightful conditions for each domains of attraction, known as the\emph{ von Mises criterion}.
 
 \subsection{Domain of attraction for the 3 GEV distributios}
 
 
-\subsubsection*{Domain of attraction for Gumbel distribution ($\mathbf{G_1}$) }  We derive here two ways of formulating necessary and sufficient condition for a distribution function $F$ to be in the domain of attraction of $G_1$, namely $F\in D(G_1)$.
+\subsubsection*{Domain of attraction for Gumbel distribution ($\mathbf{G_1}$) }  We derive here two ways of formulating necessary and sufficient condition for a distribution function $F$ to be in the Gumbel domain of attraction, namely $F\in D(G_1)$.
 
-\begin{itemize}
-	\item  From (mettre vrmt??)
-	\cite[pp.20]{haan_extreme_2006}, for finite or infinite right endpoint $x_*$ with $\int_x^{x_*}\int_t^{x_*}\bar{F}(s)dsdt<\infty$, the function 
-	\begin{equation*}
-	h(x):=\frac{(\bar{F}(x))\int_x^{x_*}\int_t^{x_*}(\bar{F}(s))\ ds\ dt}{\bigg(\int_x^{x_*}(\bar{F}(s))ds\bigg)^2},
-	\end{equation*}
-	must satisfy $\displaystyle{\lim_{t \uparrow x_*}}\ h(t)=1$. \big[{\footnotesize \underline{Reminder}: $\displaystyle{\lim_{t \uparrow y}}(\cdot)$ means that $t$ is approaching $y$ from below, i.e. from values smaller than $y$ in a increasing manner, and vice-versa for $\displaystyle{\lim_{t \downarrow y}}(\cdot)$}\big]. 
-	
-	\item From \cite[pp.72]{beirlant_statistics_2006},
-	for some auxiliary function $b$, for every $v>0$, the condition
+\begin{theorem} Following \cite[pp.72]{beirlant_statistics_2006},
+	for some auxiliary function $b(\cdot )$, for every $v>0$, the condition
 	\begin{equation}
-	\frac{\bar{F}(x+b(x)v)}{\bar{F}(x)} \to e^{-v},
+	\frac{\bar{F}(x+b(x)\cdot v)}{\bar{F}(x)} \to e^{-v},
 	\end{equation}
 	must hold as $x\to x_*$. Then, 
 	\begin{equation*}
-	\frac{b(x+vb(x))}{b(x)}\to 1 .
-	\end{equation*}
-\end{itemize}
-voir lien avec la GPD!! ecrire en hazard rate?
+	\frac{b(x+v\cdot b(x))}{b(x)}\to 1 .
+	\end{equation*} 
+\end{theorem}
 
-A lot of more precise characterizations and conditions together with proofs can be found, for example in \cite[pp.20-33]{haan_extreme_2006}. We can also mention a condition that is based on the von Mises function\cite{}.
+A lot of more precise characterizations and conditions together with proofs can be found, for example in \citet[pp.20-33]{haan_extreme_2006} which is based on the pioneering thesis of \citet{haan_regular_1970-1}. 
 
 However, we present his \emph{\textbf{von Mises criterion}} as in \cite[pp.73]{beirlant_statistics_2006}: 
 
-If the \emph{hazard function} $r(x)$ (\ref{haz})
+\begin{theorem} If the hazard function $r(x)$ (\ref{haz})
 is ultimately positive in the neighbourhood of $x_*$, is differentiable there and satisfies 
-
 \begin{equation}
 \displaystyle{\lim_{x  \uparrow  x_*}} \frac{dr(x)}{dx}=0,
 \end{equation}
+\end{theorem}
 
-then $F\in D(G_1)$.
-(compare hazar convergence rates of the three types !!!!!)
+then $F\in D(G_1)$. \big[{\footnotesize \underline{Reminder}: $\displaystyle{\lim_{t \uparrow y}}(\cdot)$ means that $t$ is approaching $y$ from below, i.e. from values smaller than $y$ in a increasing manner, and vice-versa for $\displaystyle{\lim_{t \downarrow y}}(\cdot)$}\big]
 
-\paragraph*{Examples of distributions in $\boldsymbol{D(G_1)}$} include  exponentially decaying distributions which
-will have this propensity to be in the Gumbel domain of attraction. For instance, the $Exponential$, the $Gamma$, the $Weibull$, the $logistic$, etc.
-To see that, by a Taylor expansion, we have that 
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_1)}$} include distributions having tails which are exponentially decaying (light-tailed, i.e. the exponential, Gamma, Weibull, logistic, $\dots$) but also distributions which are moderately heavy-tailed such as the lognormal.
+To see that, consider a Taylor expansion, we have that 
 
 \begin{equation*}
-\bar{G}_1(x)=1-\exp(-e^{-x})\sim e^{-x}, \ \ \ \ \ \ \ \ x\to\infty.
+\bar{G}_1(x)=1-\exp(-e^{-x})\sim e^{-x}, \ \ \ \ \ \ \ \ x\to\infty,
 \end{equation*}
-Hence, the Gumbel domain of attractions $G_1$ decays exponentially (as tend their pertaining distributions).
+where "$\sim$" refers to the asymptotic equivalence function. Hence, we directly see the exponential decay of the tails for the Gumbel distribution.
 
-\subsection*{Domain of attraction for Fréchet distribution ($\mathbf{G_{2,\alpha}}
-	$)}
-Let $\alpha:=\xi^{-1}>0$ be the \emph{index} of the Fréchet distribution $G_{2,\alpha}$ (see (\ref{frech})). Then, $F \in G_{2,\alpha}$ if and only if 
+\subsection*{Domain of attraction for Fréchet distribution ($\mathbf{G_{2}}$)}
 
-PAS F !!!!!!!!
+Let's define $\alpha:=\xi^{-1}>0$ as the \emph{index} of the Fréchet distribution in (\ref{frech}).
+\begin{definition}[Power law]
+If we look at the tail of the distribution $G_2$, a taylor expansion teels us that
+\begin{equation}
+\bar{G_2}(x)=1-\exp (-x^{-\alpha}\sim x^{-\alpha}, \qquad <\to\infty, 
+\end{equation}
+which means that $F$ tends to decrease as a power law. 
+\end{definition}
+
+
+\begin{theorem}
+$F \in G_{2}$ if and only if 
 \begin{equation}
 \bar{F}(x)=x^{-\alpha} L(x),
 \end{equation}
-for some slowly varying function $L$. See for example theorem \textbf{2.4} (?). In this case and with $b_n=0$,
+for some \emph{slowly varying} function $L$ (see \hyperref[app:varying]{appendix \ref{app:varying}} for the definition). 
+\end{theorem}
+
+In this case and with $b_n=0$,
 
 \begin{equation*}
 F^n(a_nx)\to G_2(x), \ \ \ \ \ \ \  x\in\mathbb{R},
@@ -1107,7 +1046,7 @@ a_n:=F^{\leftarrow}\big(1-\frac{1}{n}\big)=\Big(\frac{1}{1-F}\Big)^{\leftarrow}(
 \end{equation*}
 where we define the quantity $F^{\leftarrow}(t)=\inf\{x\in\mathbb{R}:F(x)\geq t\}$ for $t<0<1$ as the \emph{generalized inverse of F} with which we can retrieve $x_t=F^{\leftarrow}(t)$, the $t$-quantile of F. Even if we deal in this text only with continuous and strictly increasing distribution functions (?), we think it is more reliable(?) to consider generalized inverse instead of the ordinary inverse, for sake of generalization.
 
-This previous theorem informs us that all distribution functions $F\in D(G_{2,\alpha})$ have necessarily an infinite right endpoint, that is $x_*=\sup\{x:F(x)<1\}=\infty$. These distributions are all with regularly varying right-tail with index $-\alpha$. In short,
+This previous theorem informs us that all distribution functions $F\in D(G_{2,\alpha})$ have necessarily an infinite right endpoint, that is $x_*=\sup\{x:F(x)<1\}=\infty$. These distributions are all with regularly varying right-tail with index $-\alpha$ (see \hyperref[app:varying]{appendix \ref{app:varying}}). In short,
 
 \begin{equation*}
 F\in D(G_{2,\alpha})\Longleftrightarrow \bar{F}\in R_{-\alpha}.
@@ -1134,7 +1073,7 @@ Clearly, we can see that by setting $K=x_m^{\alpha}$, we have
 
 Therefore, we have that $a_n=(Kn)^{\alpha^{-1}}$ and $b_n=0$.
 
-\paragraph*{Examples of distributions in $\boldsymbol{D(G_{2,\alpha})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_{2})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
 An example to see that, is again by Taylor expansion at the tail of $G_{2,\alpha}$ with $\alpha>0$ 
 
 \begin{equation}
@@ -1150,7 +1089,7 @@ We say  that $F\in G_{3,\alpha}$ (\ref{weib}) with index $\alpha>0$ if and only 
 \begin{equation}
 \bar{F}(x_*-x^{-1})=x^{-\alpha}L(x),
 \end{equation}
-where $L(\cdot)$ is a slowly varying function (see ).
+where $L(\cdot)$ is a slowly varying function (recall \hyperref[app:varying]{appendix \ref{app:varying}}).
 
 For $F\in D(G_{3,\alpha})$, we have also
 
@@ -1172,6 +1111,8 @@ Finally, we still present the \emph{\textbf{Von Mises condition}} from \cite{fal
 \int^{x_*}_{-\infty} \bar{F}(u)du<\infty,
 \end{equation}
 where $r(x)$ is again the \emph{hazard function} defined in (\ref{haz}).
+
+(compare hazar convergence rates of the three types !!!!!)
 
 \paragraph*{Examples of distributions in $\boldsymbol{D(G_{3,\alpha})}$} Weibull's domain of attraction thus includes all the distribution functions that are bounded to the right ($x_*<\infty$). As most phenomena are typically bounded, we will think as the Weibull for the most attractive and flexible class for modelling extremes. But, in practice, the Fréchet one is often more preferable in an extreme analysis context because allowing for arbitrarily large values.
 \newline
@@ -1534,7 +1475,7 @@ different formulations for POT or block maxima. Look also to "other" directory
 
 
 
-\section{Model Diagnostics : Goodness-of-Fit}
+\section{Model Diagnostics : Goodness-of-Fit} (go annexe)
 
 After having fitted a statistical model to data, it is important to assess its accuracy in order to infer reliable conclusions from this model.
 
@@ -1611,6 +1552,7 @@ Z and W statistic plots
 \minitoc \thispagestyle{empty}
 %\newpage
  \vspace{1.5cm}
+\textbf{(Put in chapter 1 ?)}
 
 Seuils meteo : 0C (gel permanent), 25C et 30C pour les Tx
 0C (gel) et 20C pour les Tn
@@ -2509,6 +2451,11 @@ $F_y(r_p(y))=1-p$ with the exceedance level $r_p(y)$ changing with year. It show
 \chapter{Neural Network (and others) }
 \vspace{-1cm}
 \minitoc\thispagestyle{empty}
+
+In the era of Artificial Intelligence (AI) and Machine Learning, or more precisely of Artificial Neural Networks (ANN) or the trendy term `deep learning´, it is interesting to study how this complex mechanism works and how it can be efficiently applied to deal with the issue of nonstationarity in EVT that we confront.
+
+
+
 \section{Improvements For Modelling Non-stationary Sequences}\label{improvinf}
 \subsection{Generalized Likelihood Methods}
 introduced by \citet{martin_generalized_2000}
@@ -2526,7 +2473,7 @@ The GML estimator corresponds to the mode of the empirical posterior distributio
 
 \paragraph*{Properties of the GML estimator} see pp740. \citet{martin_generalized_2000}
 
-\subsection{Neural-Network Based Inference}
+\section{Neural-Network Based Inference}
 
 \tikzset{%
 	neuron missing/.style={
@@ -2536,7 +2483,7 @@ The GML estimator corresponds to the mode of the empirical posterior distributio
 		execute at begin node=\color{black}$\vdots$
 	},
 }
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{center}
 	\resizebox{12cm}{5cm}{ \fbox{
 			\begin{tikzpicture}[x=1.5cm, y=1.5cm, >=stealth]
@@ -2604,11 +2551,13 @@ The GML estimator corresponds to the mode of the empirical posterior distributio
 		}
 	}
 	\vspace{-2.5mm}
-	\caption{\textcolor{MidnightBlue}{\emph{\texttt{TikzFig}.}}:\emph{ Neural Network applied to GEV. helped by \textcolor{JungleGreen}{\cite{cannon_flexible_2010}}} }
+	\caption{\emph{ Neural Network applied to GEV. Figure made with \texttt{tikzpicture} and based on  \textcolor{JungleGreen}{\cite{cannon_flexible_2010}}} }
 	\end{center}
 \end{figure}
 
-Neural Network (NN) ..
+\paragraph*{Parametric or nonparametric ?}
+It is always a difficult task to state whether Neural Networks (NN) are parametric models or not. NN  are somewhere in the gray area between a \emph{parametric} and a \emph{nonparametric} model, in the sense that it assumes the GEV distribution from the output layer which are defined by the three parameters of interest, while it also allows for a fabulous flexibility coming from the hidden layers and which lead to think that these ae rather nonparametric.
+However, this terminological question is actually not relevant here and it is more important to focus on the model of NN that is employed here.
 
 have the power to manage several outputs in a 
 
@@ -2643,7 +2592,7 @@ As we mentioned, the NN is meant to approximate any functions with good accuracy
  
  ... Intro to deep learning.. ?
  
-\subsection{Bagging} 
+\section{Bagging} 
 
 Nowadays, bagging is used in 
 many state-of-the-art algorithms such as Random Forests (see .. for comparisons of such techniques) and is one of the \emph{ensemble methods} which are praised in Machine Learning for their performance.  
@@ -3133,7 +3082,7 @@ We can use the values of the samples generated by the posterior to estimate feat
 
 
 
-\part{Experimental Framework : Global....}
+\part{Experimental Framework : Nonstationary Extreme Value Analysis of Maximum Temperatures}
 \thispagestyle{empty}
 
 
@@ -3280,7 +3229,7 @@ We can see the two significant increase in trend from figure \ref{fig:center_gam
 \subsubsection*{Coverage Analysis} 
 We would like to formalize the inadequacy of the pointwise intervals. Hence, we computed posterior draws of the fitted GAM and we looked how many draws lie within each intervals.
 \begin{table}[!htbp] \centering 
-  \caption{Proportion of the $M$ posterior simulations which are covered by the confidence intervals} \label{} 
+  \caption{Proportion of the $M$ posterior simulations which are covered by the confidence intervals} \label{tab:cov} 
 \begin{tabular}{@{\extracolsep{5pt}}lccccc} 
 \\[-1.8ex]\hline 
 \hline \vspace{-.1cm}\\[-1.8ex] 
@@ -3443,7 +3392,7 @@ In \hyperref[sec:statio]{section \textbf{\ref{sec:statio}}} we have proven that
 \chapter{Bayesian Analysis}
 \minitoc \thispagestyle{empty}
 
-This analysis relies on all the codes which filenames start by "\texttt{Bayes}" from the \textbf{/Scripts-R/} folder of the github repository.
+This analysis relies on all the codes which filenames start by "\texttt{Bayes}" from the \textbf{/Scripts-R/} folder of the github repository. Al the functions created that are used and are also made available through the package are in \textbf{/R/\texttt{BayesFunc.R}}.
 
 
 "It is often the case that more than one model provides an adequate fit to the data. Sensitivity analysis determines by what extent posterior inferences change when alternative
@@ -3451,10 +3400,14 @@ models are used"   book risk analysis other section pp.2.
 
 "The basic method of sensitivity analysis is to fit several models to
 the same problem. Posterior inferences from each model can then be compared."
-\section{From Our Functions (R package)}
 
 
 \section{From \texttt{evdbayes} R package : MH algorithm}
+
+The \texttt{evdbayes} is the only package available on CRAN for (see \citet{ribatet_users_2006}) is a very old package which has not been updated since a while. We had problems to understand both its structure and the famous "black-box"
+
+
+\section{From Our Functions (R package)}
 
 
 
@@ -3553,7 +3506,7 @@ PissoortThesis:: Behind our functions
 
 [ MOTS DEXPLICATIONS SUR TTES LES FORMULES (domain atraction condition, etc...]
 
-
+Finish (Bayesian) documentation in the package.
 
 \addcontentsline{toc}{part}{Appendix}
 \part*{Appendix}
@@ -3562,57 +3515,110 @@ PissoortThesis:: Behind our functions
 
 \chapter{Statistical tools for Extreme Value Theory}\label{appA}
 
-\section{Tails of the distributions}
+\section{Tails of the distributions}\label{app:tails}
 
-[Heavy-tails] The distribution of a random variable X with distribution function F is said 
-to have a \textbf{heavy} right \textbf{tail} if 
+\subsection*{Heavy-tailed} 
+
+The distribution of a random variable $X$ with distribution function $F$ is said 
+to have a \emph{heavy} right \emph{tail} if 
 \begin{equation}
-\displaystyle{\lim_{n \to \infty}} \ e^{\lambda x} \ \text{Pr}[X>x]=\displaystyle{\lim_{n 
-\to \infty}} \ e^{\lambda x} \bar{F}(x)=\infty , \ \ \forall \lambda>0
+\displaystyle{\lim_{n \to \infty}} \ e^{\lambda x} \ \text{Pr}\{X>x\}=\displaystyle{\lim_{n 
+\to \infty}} \ e^{\lambda x} \bar{F}(x)=\infty , \ \quad \forall \lambda>0.
 \end{equation}
-More generally, we can say that a random variable X has heavy tails if Pr$(|X|>x)\to 0$ at 
-a polynomial rate. In this case, some of the moments will be undefined. see stats ana. book 
-2007 p.30
+More generally, we can say that a random variable X has heavy tails if Pr$\{|X|>x\}\to 0$ at 
+a polynomial rate. In this case, note that some of the moments will be undefined.
 
-[ long right tail] 
-The distribution of a random variable X with distribution function F is said to have a long 
-right tail if $\forall t > 0$,
+\paragraph*{Fat-tailed}
+
+The distribution of a random variable $X$ is said to have a \emph{fat} \emph{tail} if
+
 \begin{equation}
-\displaystyle{\lim_{n \to \infty}} \ \text{Pr}[X>x+t|X>x]=1 \ \Leftrightarrow \ 
-\bar{F}(x+t)\sim\bar{F}(x) \ \text{as} \ x\to\infty
+\displaystyle{\lim_{x \to \infty}} \ \text{Pr}\{X>x\}=x^{-\alpha}.
+\end{equation}
+
+\paragraph*{Long-tailed}
+The distribution of a random variable X with distribution function F is said to have a \emph{long} 
+right \emph{tail} if $\forall t > 0$,
+\begin{equation}
+\displaystyle{\lim_{x \to \infty}} \ \text{Pr}\{X>x+t|X>x\}=1 \ \Leftrightarrow \ 
+\bar{F}(x+t)\sim\bar{F}(x) \quad \text{as} \ x\to\infty.
 \end{equation}
 
 
-%Climate time series book p.226
-The term \textbf{risk} can be defined as tail probability p. But, because many application 
-fields of risk analysis exist, such as actuarial science, econometrics or of course what is 
-of interest for this thesis, climatology, many risk definitions are in usage ; Thywissen 
-(2006) lists 22, although
-not completely mutually exclusive, definitions currently employed. The definition via the 
-probability has the advantage that this is a fundamental, real number, from which the other 
-parameters of interest, for example, the expected economic loss, can
-be derived.
 
+\subsection*{Light-tailed}
+
+Conversely, we say that $X$ has \emph{light tails} or \emph{exponential tails} if its tails decay at an exponential rate, i.e. 
+
+\begin{equation}
+\displaystyle{\lim_{x \to \infty}} \ \text{Pr}\{|X|>x\}=e^{-x}
+\end{equation}
+An intuitive example of a distribution with exponential tails
 
 
 \section{Convergence concepts}\label{convconc}
 
 
-\subsection*{Convergence in probability}
-
 
 \subsection*{Convergence in distribution}
 
+We say that a sequence $X_n$ with df $F_n$ converges in distribution to $X$ with df $F$, if 
+
+\begin{equation}
+F_n(x):=\text{Pr}\big\{X_n\leq x\big\}\longrightarrow \text{Pr}\{X\leq x\}:=F(x),
+\end{equation}
+at all continuity points of $F$. It means that, for large $n$, $\text{Pr}\{X_n\leq t\}\approx\text{Pr}\{X\leq t\}$.
+We denote this by $X_n\stackrel{d}{\to}X$.
 
 
-\subsection*{Weakly convergence} 
-We say that a sequence of random variables $X_n$ \emph{converges weakly} to 
-\\
+\subsection*{Convergence in probability}
+
+We say that a sequence $X_n$ \emph{converges to $X$ in probability} if, $\forall\epsilon>0$, 
+
+\begin{equation}
+\text{Pr}\Big\{|X_n-X|>\epsilon\Big\}\to 0, \qquad\quad n\to\infty.
+\end{equation}
+Hence, it means that the probability of the differnece between $X_n$ and $X$ goes to 0 as $n$ is large.  We denote this by $X_n\stackrel{P}{\rightarrow}X$.
+
+An example of application of this convergence is the \emph{Weak Law of Large Numbers}. 
+
+\begin{definition}[Weak Law of Large Numbers]
+Let a sequence of R.V. $\{X_i\}_{\text{iid}}$ be defined of the same probability space with mean $\mu$ and variance $\sigma^2<\infty$. Then, we know that the difference between $\bar{X}_n$  and $\mu$ will go to 0 in probability, i.e. $\bar{X}_n\stackrel{p}{\to}\mu$.
+\end{definition}
+
+But this law actually makes a stronger convergence, following \citet{kolmogorov_foundations_1956}
+
+\subsection*{Almost Sure Convergence} 
+
+This is the type of stochastic convergence that is most similar to pointwise convergence known from elementary real analysis.
+
+We say that a sequence of random variables $X_n$ \emph{converges almost surely} (or with probability one) to $X$ if 
+
+\begin{equation}
+\text{Pr}\Big\{X_n=X\Big\}=1, \quad\qquad n\to\infty.
+\end{equation}
+We can denote this by $X_n\stackrel{\text{a.s.}}{\rightarrow} X$. This means that the values of $X_n$ approach the value of $X$, in the sense that events for which $X_n$ does not converge to $X$ have probability 0.
 
 
 Well other forms of convergence do exist, but these ones are the most important in regard to EVT. However, the reader may refer e.g. to \citet{lafaye_understanding_2009}  for more in-depth results.
-\section{Varying functions}
 
+\section{Varying functions}\label{app:varying}
+
+\begin{definition}[Regularly varying function]
+Let's consider the survival $\bar{F}$. We say that this survival function $\bar{F}$ is \textbf{regularly varying} with index $-\alpha$ if
+\begin{equation}
+\displaystyle{\lim_{x \to \infty}} \frac{\bar{F}(xt)}{\bar{F}(x)}=t^{-\alpha}, \qquad t>0. 
+\end{equation}
+We write it $\bar{F}\in R_{-\alpha}$.
+\end{definition}
+
+\begin{definition}[Slowly varying function]
+We say that a function $f$ is \textbf{slowly varying} with index $-\alpha$ if
+\begin{equation}
+\displaystyle{\lim_{x \to \infty}} \frac{f(t x)}{f(x)}=1, \qquad t>0. 
+\end{equation}
+\end{definition}
+We remark that a slowly varying function is a regularly varying function with index 0.
 \chapter{Bayesian Methods}\label{appB}
 
 \section{Algorithms}
@@ -3855,12 +3861,12 @@ MA(2)  & $6$ & $494.698$ & $511.219$ \\
 
 
 \begin{figure}[!htb]
-	\includegraphics[width=\linewidth]{diagnogam.pdf}\caption{Diagnostics of the chosen GAM model with MA(1) errors, based on the residuals. }\label{fig:diagnogam}
+\centering	\includegraphics[width=.85\linewidth]{diagnogam.pdf}\caption{Diagnostics of the chosen GAM model with MA(1) errors, based on the residuals. }\label{fig:diagnogam}
 \end{figure}
 
 
 \begin{figure}[!htb]
-\centering	\includegraphics[width=.75\linewidth]{max_gam.pdf}\caption{Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increase is significant for pointwise confidence interval. Shaded area represent the "$95\%$" interval which looks quite narrow. }\label{fig:center_gam}
+\centering	\includegraphics[width=.7\linewidth]{max_gam.pdf}\caption{Series of annual maxima together with the fitted GAM model (in green). Thicker lines indicate that the increase is significant for pointwise confidence interval. Shaded area represent the "$95\%$" interval which looks quite narrow. }\label{fig:center_gam}
 \end{figure}
 
 
@@ -3905,14 +3911,46 @@ MA(2)  & $6$ & $494.698$ & $511.219$ \\
 The Github repository build for this thesis can be found on this address :
 
 \begin{center}
-\url{https://github.com/proto4426/ValUSunSSN}
+\url{https://github.com/proto4426/PissoortThesis}
 \end{center}
 
-and has the following \textbf{structure} : 
+where the R package \textbf{\texttt{PissoortThesis}} is located. It has the following \textbf{structure} : 
 
 \begin{itemize}
-\item 
+\item \textbf{/R/} : contains the scripts with all the functions that are made available through the package. The functions are located in the script by "category", i.e. 
+\begin{itemize}
+\item \textbf{1UsedFunc.R} : some functions created for the introduction, the stationary analysis of yearly maxima in GEV, analysis in POT, nonstationary analysis in GEV and POT,...
+\item \textbf{BayesFunc.R} : functions created for the Bayesian Analysis, e.g. the Metropolis-Hastings algorithm and Gibbs Sampler (both stationary and nonstationary).
+\item \textbf{BootstrapFunc.R} (not updated)
+\item \textbf{NeuralNetsFunc.R} : functions slightly refined from \citet{cannon_flexible_2010} to allow for better outputs for the nonstationary analysis with NN.
+\item \textbf{runExample.R} : contains the function allowing to run the Shiny applications directly through the package (put the name of the application in ' ' in the function to load the application). 
+\end{itemize} 
+
+The documentation of the functions are directly made through the package, by typing \texttt{?Function\_Name}.
+\item \textbf{/Scripts-R/}
+
+\begin{itemize}
+\item \textbf{1GEV\_plots\_(chap1).R} and \textbf{1GEV\_ggplot\_(chap1).R} : contain the plots made for the chapter 1, but only te last latter scripts contain the code to construct the final plots (made with \texttt{ggplot2})
+\item\textbf{1intro\_stationary.R} introduction and preprocessing +  descriptive analysis, stationary analysis of yearly maxima in GEV, analysis in POT, analysis with other time scale and with minima, ...
+\item\textbf{1intro\_trends(splines).R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
+\item\textbf{1intro\_stationary.R} 
 \end{itemize}
+
+
+\item \textbf{/Shiny\_app\_visu/} (not updated)
+\item \textbf{/data/}
+\item \textbf{/inst/}
+\item \textbf{/man/}
+\item \textbf{/stan/}
+\item \textbf{/vignettes/}
+\end{itemize}
+
 
 
 \bibliographystyle{ieeetr}

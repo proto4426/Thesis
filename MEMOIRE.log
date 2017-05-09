@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.12)  7 MAY 2017 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.12)  9 MAY 2017 22:59
 entering extended mode
 **./MEMOIRE.tex
 (MEMOIRE.tex
@@ -1182,7 +1182,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 124.
+Package hyperref Info: Option `colorlinks' set `true' on input line 122.
 \c@exe=\count173
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algorit
@@ -1258,52 +1258,52 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_shortintertext_sep=\dimen184
 )
 \mylen=\skip81
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 152.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 150.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 152.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 150.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 152
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 150
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 152
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 150
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 152.
+(Font)              <10.95> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 152.
+(Font)              <8> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 152.
-LaTeX Font Info:    Try loading font information for U+msa on input line 152.
+(Font)              <6> on input line 150.
+LaTeX Font Info:    Try loading font information for U+msa on input line 150.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 152.
+LaTeX Font Info:    Try loading font information for U+msb on input line 150.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 152
+LaTeX Font Info:    Try loading font information for U+esvect on input line 150
 .
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\esvect\uesvect.fd"
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 152.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 150.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -1422,7 +1422,7 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperHeight=\dimen186
 )
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineT-TLF on 
-input line 186.
+input line 184.
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\libertine\t1linuxli
 bertinet-tlf.fd"
@@ -1430,7 +1430,7 @@ File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 186.
+(Font)              scaled to size 10.95pt on input line 184.
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.s
 ty"
@@ -1539,6 +1539,48 @@ File: english.mld 2006/01/13
 \c@corollary=\count283
 \c@definition=\count284
 
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thmtools.s
+ty"
+Package: thmtools 2014/04/21 v66
+\thmt@toks=\toks45
+\c@thmt@dummyctr=\count285
+
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-patch.
+sty"
+Package: thm-patch 2014/04/21 v66
+
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\parseargs.
+sty"
+Package: parseargs 2014/04/21 v66
+\@parsespec=\toks46
+))
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-kv.sty
+"
+Package: thm-kv 2014/04/21 v66
+Package thm-kv Info: Theorem names will be uppercased on input line 40.
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 156.
+)
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-autore
+f.sty"
+Package: thm-autoref 2014/04/21 v66
+
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\aliasctr.s
+ty"
+Package: aliasctr 2014/04/21 v66
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\remreset.sty")))
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-listof
+.sty"
+Package: thm-listof 2014/04/21 v66
+)
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-restat
+e.sty"
+Package: thm-restate 2014/04/21 v66
+)
+("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\thmtools\thm-amsthm
+.sty"
+Package: thm-amsthm 2014/04/21 v66
+\thmt@style@headstyle=\toks47
+))
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tcolorbox\tcolorbox
 .sty"
 Package: tcolorbox 2017/02/24 version 4.02 text color boxes
@@ -1549,7 +1591,7 @@ sty"
 s.sty"
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
-\pgfutil@everybye=\toks45
+\pgfutil@everybye=\toks48
 \pgfutil@tempdima=\dimen188
 \pgfutil@tempdimb=\dimen189
 
@@ -1578,12 +1620,12 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keys.code.tex"
-\pgfkeys@pathtoks=\toks46
-\pgfkeys@temptoks=\toks47
+\pgfkeys@pathtoks=\toks49
+\pgfkeys@temptoks=\toks50
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks48
+\pgfkeys@tmptoks=\toks51
 ))
 \pgf@x=\dimen190
 \pgf@y=\dimen191
@@ -1595,13 +1637,13 @@ keysfiltered.code.tex"
 \pgf@yc=\dimen197
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count285
-\c@pgf@countb=\count286
-\c@pgf@countc=\count287
-\c@pgf@countd=\count288
-\t@pgf@toka=\toks49
-\t@pgf@tokb=\toks50
-\t@pgf@tokc=\toks51
+\c@pgf@counta=\count286
+\c@pgf@countb=\count287
+\c@pgf@countc=\count288
+\c@pgf@countd=\count289
+\t@pgf@toka=\toks52
+\t@pgf@tokb=\toks53
+\t@pgf@tokc=\toks54
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gf.cfg"
@@ -1620,8 +1662,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count289
-\pgfsyssoftpath@bigbuffer@items=\count290
+\pgfsyssoftpath@smallbuffer@items=\count290
+\pgfsyssoftpath@bigbuffer@items=\count291
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsysprotocol.code.tex"
@@ -1640,11 +1682,11 @@ til.code.tex")
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathp
 arser.code.tex"
 \pgfmath@dimen=\dimen198
-\pgfmath@count=\count291
+\pgfmath@count=\count292
 \pgfmath@box=\box60
-\pgfmath@toks=\toks52
-\pgfmath@stack@operand=\toks53
-\pgfmath@stack@operation=\toks54
+\pgfmath@toks=\toks55
+\pgfmath@stack@operand=\toks56
+\pgfmath@stack@operation=\toks57
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 unctions.code.tex"
@@ -1666,7 +1708,7 @@ unctions.misc.code.tex")
 unctions.integerarithmetics.code.tex")))
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 loat.code.tex"
-\c@pgfmathroundto@lastzeros=\count292
+\c@pgfmathroundto@lastzeros=\count293
 ))
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcorepoints.code.tex"
@@ -1704,7 +1746,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box61
 \pgf@hbox=\box62
 \pgf@layerbox@main=\box63
-\pgf@picture@serial@count=\count293
+\pgf@picture@serial@count=\count294
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoregraphicstate.code.tex"
@@ -1739,7 +1781,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen278
-\pgf@sys@shading@range@num=\count294
+\pgf@sys@shading@range@num=\count295
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoreimage.code.tex"
@@ -1783,8 +1825,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks55
-\verbatim@line=\toks56
+\every@verbatim=\toks58
+\verbatim@line=\toks59
 \verbatim@in@stream=\read2
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\environ\environ.sty
@@ -1799,9 +1841,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box67
 \tcb@lowerbox=\box68
 \tcb@phantombox=\box69
-\c@tcbbreakpart=\count295
-\c@tcblayer=\count296
-\tcolorbox@number=\count297
+\c@tcbbreakpart=\count296
+\c@tcblayer=\count297
+\tcolorbox@number=\count298
 \tcb@temp=\box70
 \tcb@temp=\box71
 \tcb@temp=\box72
@@ -1845,11 +1887,11 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage
 .sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count298
+\c@checkoddpage=\count299
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box75
-\sift@deathcycles=\count299
+\sift@deathcycles=\count300
 \@vwid@loff=\dimen289
 \@vwid@roff=\dimen290
 ))
@@ -1868,7 +1910,7 @@ Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
 \l@yertotalheight=\skip116
 \l@yerlineheight=\skip117
 \l@yervoffset=\skip118
-\c@l@yercount=\count300
+\c@l@yercount=\count301
 )
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\t
 ikz.sty"
@@ -1890,8 +1932,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 code.tex")
 \pgffor@iter=\dimen291
 \pgffor@skip=\dimen292
-\pgffor@stack=\toks57
-\pgffor@toks=\toks58
+\pgffor@stack=\toks60
+\pgffor@toks=\toks61
 ))
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\tikz.code.tex"
@@ -1900,7 +1942,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
 libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count301
+\pgf@plot@mark@count=\count302
 \pgfplotmarksize=\dimen293
 )
 \tikz@lastx=\dimen294
@@ -1913,19 +1955,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box79
 \tikz@tempbox=\box80
 \tikz@tempbox@bg=\box81
-\tikztreelevel=\count302
-\tikznumberofchildren=\count303
-\tikznumberofcurrentchild=\count304
-\tikz@fig@count=\count305
+\tikztreelevel=\count303
+\tikznumberofchildren=\count304
+\tikznumberofcurrentchild=\count305
+\tikz@fig@count=\count306
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
 dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count306
-\pgfmatrixcurrentcolumn=\count307
-\pgf@matrix@numberofcolumns=\count308
+\pgfmatrixcurrentrow=\count307
+\pgfmatrixcurrentcolumn=\count308
+\pgf@matrix@numberofcolumns=\count309
 )
-\tikz@expandcount=\count309
+\tikz@expandcount=\count310
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\libraries\tikzlibrarytopaths.code.tex"
@@ -1954,7 +1996,7 @@ duledecorations.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen302
 \pgfdecoratedinputsegmentremainingdistance=\dimen303
 \pgf@decorate@distancetomove=\dimen304
-\pgf@decorate@repeatstate=\count310
+\pgf@decorate@repeatstate=\count311
 \pgfdecorationsegmentamplitude=\dimen305
 \pgfdecorationsegmentlength=\dimen306
 )
@@ -1985,42 +2027,42 @@ LaTeX Warning: Label `likintro' multiply defined.
 )
 \openout1 = `MEMOIRE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 313.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 313.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 321.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 321.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
+\scratchcounter=\count312
 \scratchdimen=\dimen308
 \scratchbox=\box83
-\nofMPsegments=\count312
-\nofMParguments=\count313
-\everyMPshowfont=\toks59
-\MPscratchCnt=\count314
+\nofMPsegments=\count313
+\nofMParguments=\count314
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count315
 \MPscratchDim=\dimen309
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
-\everyMPtoPDFconversion=\toks60
+\MPnumerator=\count316
+\makeMPintoPDFobject=\count317
+\everyMPtoPDFconversion=\toks63
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2034,8 +2076,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@mv@tabular=\count317
-\c@mv@boldtabular=\count318
+\c@mv@tabular=\count318
+\c@mv@boldtabular=\count319
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2085,7 +2127,7 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box84
-\c@lstlisting=\count319
+\c@lstlisting=\count320
  ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
  ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everysel.sty"
@@ -2111,18 +2153,18 @@ LaTeX Info: Redefining \selectfont on input line 126.
 Option `amssymb' provided! 
  Command \square redefined by SIunits package!
 
-Package hyperref Info: Link coloring ON on input line 313.
+Package hyperref Info: Link coloring ON on input line 321.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count320
+\c@section@level=\count321
 )
-LaTeX Info: Redefining \ref on input line 313.
-LaTeX Info: Redefining \pageref on input line 313.
-LaTeX Info: Redefining \nameref on input line 313.
+LaTeX Info: Redefining \ref on input line 321.
+LaTeX Info: Redefining \pageref on input line 321.
+LaTeX Info: Redefining \nameref on input line 321.
 
 (MEMOIRE.out) (MEMOIRE.out)
 \@outlinefile=\write7
@@ -2158,23 +2200,23 @@ Package minitoc(hints) Warning: W0023
 
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 318.
+(Font)              scaled to size 17.28pt on input line 326.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 320.
+(Font)              scaled to size 12.0pt on input line 328.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 322.
+(Font)              scaled to size 14.4pt on input line 330.
 
 <lsba.jpg, id=549, 283.2984pt x 283.2984pt>
 File: lsba.jpg Graphic file (type jpg)
  <use lsba.jpg>
-Package pdftex.def Info: lsba.jpg used on input line 330.
+Package pdftex.def Info: lsba.jpg used on input line 338.
 (pdftex.def)             Requested size: 99.58388pt x 99.58464pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 340.
+(Font)              scaled to size 14.4pt on input line 348.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 351.
+(Font)              scaled to size 10.95pt on input line 359.
 
-Overfull \hbox (12.0pt too wide) in alignment at lines 362--362
+Overfull \hbox (12.0pt too wide) in alignment at lines 370--370
 [] 
  []
 
@@ -2182,22 +2224,22 @@ Overfull \hbox (12.0pt too wide) in alignment at lines 362--362
 
 {C:/Users/Piss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./lsba.jpg>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 381.
+(Font)              scaled to size 14.4pt on input line 389.
  [2]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 407.
+(Font)              scaled to size 10.95pt on input line 415.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--409
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
 
  []
 
 Package minitoc Info: I0024
-(minitoc)             PREPARING MINITOCS FROM MEMOIRE.toc on input line 423.
+(minitoc)             PREPARING MINITOCS FROM MEMOIRE.toc on input line 431.
 Package minitoc Info: I0033
 (minitoc)             Writing MEMOIRE.mtc1.
 \openout3 = `MEMOIRE.mtc1'.
@@ -2264,14 +2306,14 @@ Package minitoc Info: I0033
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.424 \tableofcontents
+l.432 \tableofcontents
                        [3
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 424.
+(Font)              scaled to size 24.88pt on input line 432.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 424.
+(Font)              scaled to size 24.88pt on input line 432.
  (MEMOIRE.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
@@ -2291,7 +2333,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [6]
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineMonoT-TLF
- on input line 119.
+ on input line 118.
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\libertine\t1linuxli
 bertinemonot-tlf.fd"
@@ -2299,10 +2341,7 @@ File: T1LinuxLibertineMonoT-TLF.fd 2017/03/20 (autoinst) Font definitions for T
 1/LinuxLibertineMonoT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 119.
-
-Underfull \vbox (badness 1590) has occurred while \output is active []
-
+(Font)              scaled to size 10.95pt on input line 118.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2338,7 +2377,7 @@ LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
  [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
@@ -2348,25 +2387,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--438
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.463 \chapter
+l.472 \chapter
               *{Introduction} [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
 
 Package natbib Warning: Citation `kharin_changes_2006' on page 1 undefined on i
-nput line 488.
+nput line 497.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--497
+Underfull \hbox (badness 10000) in paragraph at lines 500--506
 
  []
 
@@ -2375,33 +2414,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1]
 
-LaTeX Warning: Hyper reference `sec::4' on page 2 undefined on input line 536.
+LaTeX Warning: Hyper reference `sec::4' on page 2 undefined on input line 545.
 
 [2]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 544.
+(Font)              scaled to size 20.74pt on input line 553.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 544.
+(Font)              scaled to size 20.74pt on input line 553.
  [3
 
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 24.88pt on input line 549.
+(Font)              scaled to size 24.88pt on input line 558.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
-(Font)              scaled to size 24.88pt on input line 549.
+(Font)              scaled to size 24.88pt on input line 558.
 \openout3 = `MEMOIRE.mtc'.
 
 \openout3 = `MEMOIRE.mtc'.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 551.
+(Font)              scaled to size 10.0pt on input line 560.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 551.
+(Font)              <10> on input line 560.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 551.
+(Font)              <7> on input line 560.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 551.
+(Font)              <5> on input line 560.
 (MEMOIRE.mtc2
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -2409,9 +2448,9 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 591.
+(Font)              scaled to size 8.0pt on input line 600.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 591.
+(Font)              scaled to size 6.0pt on input line 600.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2420,14 +2459,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 655.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 655.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 655.
+(Font)              scaled to size 8.0pt on input line 663.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 655.
+(Font)              scaled to size 6.0pt on input line 663.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2437,22 +2472,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [6]
 
-Package natbib Warning: Citation `De_on_1970' on page 7 undefined on input line
- 683.
-
-
-LaTeX Warning: Hyper reference `statio' on page 7 undefined on input line 698.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 715--719
 
- []
+LaTeX Warning: Reference `[' on page 8 undefined on input line 725.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2461,8 +2488,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 802.
+ <gev3.pdf, id=952, 487.8225pt x 404.51125pt>
+File: gev3.pdf Graphic file (type pdf)
+ <use gev3.pdf>
+Package pdftex.def Info: gev3.pdf used on input line 815.
+(pdftex.def)             Requested size: 364.71222pt x 319.12215pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2470,13 +2502,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9] <gev3.pdf, id=965, 487.8225pt x 404.51125pt>
-File: gev3.pdf Graphic file (type pdf)
- <use gev3.pdf>
-Package pdftex.def Info: gev3.pdf used on input line 824.
-(pdftex.def)             Requested size: 387.50441pt x 319.12215pt.
-
-Underfull \vbox (badness 6493) has occurred while \output is active []
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2486,21 +2513,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10 <./gev3.pdf>]
-Overfull \hbox (16.65141pt too wide) in paragraph at lines 863--865
-\T1/LinuxLibertineMonoT-TLF/m/n/10.95 questions / 105745 / extreme-[]value-[]th
-eory-[]show-[]normal-[]to-[]gumbel / 105749 #
- []
 
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 887.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 863.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 889.
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 865.
 
 
 
@@ -2510,9 +2528,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \vbox (badness 1466) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2520,14 +2535,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 972--975
-
- []
-
-
-Package natbib Warning: Citation `modelling_embrechts_1997' on page 13 undefine
-d on input line 993.
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2535,17 +2542,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-
-LaTeX Warning: Reference `conv_weak' on page 14 undefined on input line 1001.
-
-
-Package natbib Warning: Citation `gnedenko_sur la distribution_translated_1992'
- on page 14 undefined on input line 1005.
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 985.
 
 
-Package natbib Warning: Citation `falk_vonmises_1994' on page 14 undefined on i
-nput line 1030.
+Package natbib Warning: Citation `haan_regular_1970-1' on page 14 undefined on 
+input line 995.
 
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 10.95pt on input line 997.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2553,14 +2558,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-
-Package natbib Warning: Citation `.??.' on page 15 undefined on input line 1035
-.
-
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 1006.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 1006.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1052.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 10.95pt on input line 1068.
+(Font)              scaled to size 9.0pt on input line 1006.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 1016.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2568,8 +2574,9 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 1090.
+
+Package natbib Warning: Citation `domain of attraction course' on page 16 undef
+ined on input line 1076.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2578,13 +2585,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
 
-Package natbib Warning: Citation `domain of attraction course' on page 17 undef
-ined on input line 1137.
+ []
 
 
-Underfull \vbox (badness 2334) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1123
 
+ []
+
+
+LaTeX Warning: Reference `domain of attrac...' on page 17 undefined on input li
+ne 1124.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2593,18 +2605,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1180--1182
-
- []
-
-
-LaTeX Warning: Reference `domain of attrac...' on page 18 undefined on input li
-ne 1183.
+LaTeX Warning: Reference `GEVxineq0' on page 18 undefined on input line 1173.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2613,8 +2615,9 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 1236.
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1218
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2623,9 +2626,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1277
 
- []
+LaTeX Warning: Hyper reference `gev:other' on page 20 undefined on input line 1
+255.
+
+
+LaTeX Warning: Hyper reference `sec:bayesian' on page 20 undefined on input lin
+e 1255.
+
+
+LaTeX Warning: Reference `' on page 20 undefined on input line 1282.
+
+
+LaTeX Warning: Hyper reference `pwmm' on page 20 undefined on input line 1286.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2635,15 +2648,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [20]
 
-LaTeX Warning: Hyper reference `gev:other' on page 21 undefined on input line 1
-314.
+LaTeX Warning: Reference `densgev' on page 21 undefined on input line 1305.
 
 
-LaTeX Warning: Hyper reference `sec:bayesian' on page 21 undefined on input lin
-e 1314.
+LaTeX Warning: Reference `gevdensxi0' on page 21 undefined on input line 1305.
 
 
-LaTeX Warning: Hyper reference `pwmm' on page 21 undefined on input line 1345.
+LaTeX Warning: Reference `gevdensxi0' on page 21 undefined on input line 1322.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2652,6 +2663,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/bx/n' in size <10.95
+> not available
+(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/b/n' tried instead o
+n input line 1354.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 1354.
+
+
+LaTeX Warning: Reference `returnn' on page 22 undefined on input line 1354.
+
+
+Overfull \hbox (9.17703pt too wide) in paragraph at lines 1357--1359
+\T1/LinuxLibertineT-TLF/m/n/10.95 By plug-ging it in the log-likelihood in ([][
+]1.34[][])-([][]1.35[][]), we ob-tain the new GEV log-likelihood $\OML/lmm/m/it
+/10.95 `\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ; ; r[]\OT1/lmr/m/n/10.95 )$
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 1375.
+
+Package natbib Warning: Citation `pickands_statistical_1975' on page 22 undefin
+ed on input line 1386.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2659,28 +2693,9 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/bx/n' in size <10.95
-> not available
-(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/b/n' tried instead o
-n input line 1413.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 1413.
 
-
-LaTeX Warning: Reference `returnn' on page 23 undefined on input line 1413.
-
-
-Overfull \hbox (9.17703pt too wide) in paragraph at lines 1416--1418
-\T1/LinuxLibertineT-TLF/m/n/10.95 By plug-ging it in the log-likelihood in ([][
-]1.37[][])-([][]1.38[][]), we ob-tain the new GEV log-likelihood $\OML/lmm/m/it
-/10.95 `\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ; ; r[]\OT1/lmr/m/n/10.95 )$
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1434.
-
-Package natbib Warning: Citation `pickands_statistical_1975' on page 23 undefin
-ed on input line 1445.
+Package natbib Warning: Citation `mason_' on page 23 undefined on input line 14
+22.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2690,16 +2705,20 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [23]
 
-Package natbib Warning: Citation `mason_' on page 24 undefined on input line 14
-81.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [24]
+
+Package natbib Warning: Citation `northrop_cross_2016' on page 25 undefined on 
+input line 1528.
+
+
+Underfull \vbox (badness 1509) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2708,41 +2727,53 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [25]
 
-Package natbib Warning: Citation `northrop_cross_2016' on page 26 undefined on 
-input line 1587.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [26]
+Chapter 2.
+\openout3 = `MEMOIRE.mtc'.
+
+\openout3 = `MEMOIRE.mtc'.
+
+(MEMOIRE.mtc3) [27
+
+]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 1572.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1574
+
+ []
+
+
+Package natbib Warning: Citation `charras_extreme_2013' on page 28 undefined on
+ input line 1581.
+
+
+LaTeX Warning: Hyper reference `' on page 28 undefined on input line 1591.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
-Chapter 2.
-\openout3 = `MEMOIRE.mtc'.
+[28]
 
-\openout3 = `MEMOIRE.mtc'.
-
-(MEMOIRE.mtc3) [28
-
-]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 1630.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1632
-
- []
+LaTeX Warning: Reference `maax' on page 29 undefined on input line 1598.
 
 
-Package natbib Warning: Citation `charras_extreme_2013' on page 29 undefined on
- input line 1639.
+LaTeX Warning: Reference `gpd' on page 29 undefined on input line 1637.
+
+
+LaTeX Warning: Reference `gpd' on page 29 undefined on input line 1639.
+
+
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2752,21 +2783,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [29]
 
-LaTeX Warning: Reference `maax' on page 30 undefined on input line 1656.
-
-
-LaTeX Warning: Reference `gpd' on page 30 undefined on input line 1695.
-
-
-LaTeX Warning: Reference `gpd' on page 30 undefined on input line 1697.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1696.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 1696.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1696.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 9.0pt on input line 1702.
+
+LaTeX Warning: Reference `exppar' on page 31 undefined on input line 1702.
+
+
+LaTeX Warning: Reference `gpd' on page 31 undefined on input line 1714.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2775,32 +2817,20 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [31]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1754.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1754.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1754.
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 1760.
-
-LaTeX Warning: Reference `exppar' on page 32 undefined on input line 1760.
-
-
-LaTeX Warning: Reference `gpd' on page 32 undefined on input line 1772.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [32]
+
+Package natbib Warning: Citation `embrechts_modelling_1997' on page 33 undefine
+d on input line 1790.
+
+
+LaTeX Warning: Hyper reference `sec:bayesian' on page 33 undefined on input lin
+e 1841.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2809,12 +2839,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [33]
 
-Package natbib Warning: Citation `embrechts_modelling_1997' on page 34 undefine
-d on input line 1848.
-
-
-LaTeX Warning: Hyper reference `sec:bayesian' on page 34 undefined on input lin
-e 1899.
+Package natbib Warning: Citation `pickands_statistical_1975' on page 34 undefin
+ed on input line 1872.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2824,8 +2850,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [34]
 
-Package natbib Warning: Citation `pickands_statistical_1975' on page 35 undefin
-ed on input line 1930.
+Package natbib Warning: Citation `mason_' on page 35 undefined on input line 19
+08.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2835,8 +2861,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [35]
 
-Package natbib Warning: Citation `mason_' on page 36 undefined on input line 19
-66.
+Package natbib Warning: Citation `guess_mean_1988' on page 36 undefined on inpu
+t line 1993.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2846,16 +2872,24 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [36]
 
-Package natbib Warning: Citation `guess_mean_1988' on page 37 undefined on inpu
-t line 2051.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [37]
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 2055.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 2055.
+
+
+Package natbib Warning: Citation `cunnane_note_1979' on page 38 undefined on in
+put line 2078.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 12.0pt on input line 2083.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2864,17 +2898,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [38]
 
-LaTeX Warning: Command \guillemotleft invalid in math mode on input line 2113.
+Package natbib Warning: Citation `hu_evmix:_2014' on page 39 undefined on input
+ line 2117.
 
 
-LaTeX Warning: Command \guillemotleft invalid in math mode on input line 2113.
+Package natbib Warning: Citation `northrop_cross_2016' on page 39 undefined on 
+input line 2151.
 
-
-Package natbib Warning: Citation `cunnane_note_1979' on page 39 undefined on in
-put line 2136.
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 12.0pt on input line 2141.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2883,38 +2913,33 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [39]
 
-Package natbib Warning: Citation `hu_evmix:_2014' on page 40 undefined on input
- line 2175.
-
-
-Package natbib Warning: Citation `northrop_cross_2016' on page 40 undefined on 
-input line 2209.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [40]
+Chapter 3.
+\openout3 = `MEMOIRE.mtc'.
+
+\openout3 = `MEMOIRE.mtc'.
+
+(MEMOIRE.mtc4) [41
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2188--2189
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
-Chapter 3.
-\openout3 = `MEMOIRE.mtc'.
+[42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-\openout3 = `MEMOIRE.mtc'.
-
-(MEMOIRE.mtc4) [42
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 2246--2247
-
- []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2930,14 +2955,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[45]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 2424.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 2366.
  ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -2947,16 +2965,27 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]
+[45]
 
-Package natbib Warning: Citation `aghakouchak_extremes_2013-1' on page 47 undef
-ined on input line 2461.
+Package natbib Warning: Citation `aghakouchak_extremes_2013-1' on page 46 undef
+ined on input line 2403.
 
 
-Overfull \hbox (46.28377pt too wide) detected at line 2476
+Overfull \hbox (46.28377pt too wide) detected at line 2418
 [][][] []
  []
 
+
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -2964,49 +2993,49 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[48]
 Chapter 4.
 \openout3 = `MEMOIRE.mtc'.
 
 \openout3 = `MEMOIRE.mtc'.
 
 (MEMOIRE.mtc5)
-
-Package natbib Warning: Citation `martin_generalized_2000' on page 49 undefined
- on input line 2514.
+Missing character: There is no ´ in font LinLibertineT-tlf-ts1!
 
 
-Package natbib Warning: Citation `Adlouni_generalized_2007' on page 49 undefine
-d on input line 2523.
+Package natbib Warning: Citation `martin_generalized_2000' on page 48 undefined
+ on input line 2461.
 
 
-Package natbib Warning: Citation `martin_generalized_2000' on page 49 undefined
- on input line 2527.
+Package natbib Warning: Citation `Adlouni_generalized_2007' on page 48 undefine
+d on input line 2470.
 
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 2607.
+
+Package natbib Warning: Citation `martin_generalized_2000' on page 48 undefined
+ on input line 2474.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/it' in size <10> n
 ot available
 (Font)              Font shape `T1/LinuxLibertineMonoT-TLF/m/sl' tried instead 
-on input line 2607.
+on input line 2554.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 2607.
-[49
+(Font)              scaled to size 10.0pt on input line 2554.
+[48
 
 ]
 
-Package natbib Warning: Citation `carreau_hybrid_2009' on page 50 undefined on 
-input line 2623.
+Package natbib Warning: Citation `carreau_hybrid_2009' on page 49 undefined on 
+input line 2572.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[49]
+
+Package natbib Warning: Citation `Goodfellow-et-al-2016' on page 50 undefined o
+n input line 2614.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -3016,23 +3045,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [50]
 
-Package natbib Warning: Citation `Goodfellow-et-al-2016' on page 51 undefined o
-n input line 2665.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [51]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52]
 Chapter 5.
 \openout3 = `MEMOIRE.mtc'.
 
@@ -3040,14 +3058,17 @@ Chapter 5.
 
 (MEMOIRE.mtc6)
 
-LaTeX Warning: Hyper reference `bayesapp' on page 53 undefined on input line 27
-25.
+LaTeX Warning: Hyper reference `bayesapp' on page 52 undefined on input line 26
+74.
 
-[53
+
+LaTeX Warning: Reference `' on page 52 undefined on input line 2687.
+
+[52
 
 ]
 
-LaTeX Warning: Hyper reference `label' on page 54 undefined on input line 2768.
+LaTeX Warning: Hyper reference `label' on page 53 undefined on input line 2717.
 
 
 
@@ -3056,7 +3077,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54]
+[53]
 Underfull \vbox (badness 1014) has occurred while \output is active []
 
 
@@ -3066,11 +3087,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+[54]
+
+Package natbib Warning: Citation `stan_stan_2016' on page 55 undefined on input
+ line 2831.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [55]
-
-Package natbib Warning: Citation `stan_stan_2016' on page 56 undefined on input
- line 2882.
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -3079,16 +3107,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [56]
 
+Package natbib Warning: Citation `Bédard_optimal_2008' on page 57 undefined on 
+input line 2903.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [57]
-
-Package natbib Warning: Citation `Bédard_optimal_2008' on page 58 undefined on 
-input line 2954.
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -3109,14 +3137,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[61] [62
+[60] [61
 
 ]
 Chapter 6.
@@ -3127,7 +3148,7 @@ Chapter 6.
 (MEMOIRE.mtc7)
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 3149.
+(hyperref)                be the same. Added a new anchor on input line 3098.
 
 
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.s
@@ -3141,32 +3162,32 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 ("C:\Users\Piss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang3.s
 ty"
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [63
+) [62
 
 ]
-Overfull \hbox (23.72958pt too wide) in paragraph at lines 3167--3168
+Overfull \hbox (23.72958pt too wide) in paragraph at lines 3116--3117
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (23.07178pt too wide) in paragraph at lines 3175--3176
+Overfull \hbox (23.07178pt too wide) in paragraph at lines 3124--3125
 []\T1/LinuxLibertineT-TLF/m/n/10.95 The fol-low-ing anal-y-sis re-lies on \T1/L
 inuxLibertineMonoT-TLF/m/n/10.95 1in-ter_stationary.R \T1/LinuxLibertineT-TLF/m
 /n/10.95 and \T1/LinuxLibertineMonoT-TLF/m/n/10.95 1in-tro_trends(splines).R
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 3193.
+(Font)              scaled to size 9.0pt on input line 3142.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64] <gg12.pdf, id=1857, 487.8225pt x 310.15875pt>
+[63] <gg12.pdf, id=1868, 487.8225pt x 310.15875pt>
 File: gg12.pdf Graphic file (type pdf)
  <use gg12.pdf>
-Package pdftex.def Info: gg12.pdf used on input line 3219.
+Package pdftex.def Info: gg12.pdf used on input line 3168.
 (pdftex.def)             Requested size: 364.70882pt x 231.88493pt.
 
 
@@ -3175,15 +3196,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65 <./gg12.pdf>]
+[64 <./gg12.pdf>]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 3241.
+(hyperref)                be the same. Added a new anchor on input line 3190.
 
-<post_draws.pdf, id=1894, 492.84125pt x 301.125pt>
+<post_draws.pdf, id=1905, 492.84125pt x 301.125pt>
 File: post_draws.pdf Graphic file (type pdf)
  <use post_draws.pdf>
-Package pdftex.def Info: post_draws.pdf used on input line 3268.
+Package pdftex.def Info: post_draws.pdf used on input line 3217.
 (pdftex.def)             Requested size: 341.91321pt x 208.91597pt.
 
 
@@ -3192,13 +3213,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66] <splines.pdf, id=1915, 1032.85875pt x 310.15875pt>
+[65] <splines.pdf, id=1926, 1032.85875pt x 310.15875pt>
 File: splines.pdf Graphic file (type pdf)
  <use splines.pdf>
-Package pdftex.def Info: splines.pdf used on input line 3310.
+Package pdftex.def Info: splines.pdf used on input line 3259.
 (pdftex.def)             Requested size: 451.32794pt x 135.52847pt.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 3310.
+(Font)              scaled to size 10.0pt on input line 3259.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -3206,21 +3227,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67 <./post_draws.pdf>]
+[66 <./post_draws.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68 <./splines.pdf>]
+[67 <./splines.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69]
+[68]
 Chapter 7.
 \openout3 = `MEMOIRE.mtc'.
 
@@ -3229,28 +3250,28 @@ Chapter 7.
 (MEMOIRE.mtc8)
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3354.
+(hyperref)                than one, level fixed on input line 3303.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 3354.
+(hyperref)                be the same. Added a new anchor on input line 3303.
 
-[70
+[69
 
 ]
 
-LaTeX Warning: Reference `gev3plot' on page 71 undefined on input line 3387.
+LaTeX Warning: Reference `gev3plot' on page 70 undefined on input line 3336.
 
-<pp_qqplot.pdf, id=1998, 410.53375pt x 210.7875pt>
+<pp_qqplot.pdf, id=2010, 410.53375pt x 210.7875pt>
 File: pp_qqplot.pdf Graphic file (type pdf)
  <use pp_qqplot.pdf>
-Package pdftex.def Info: pp_qqplot.pdf used on input line 3405.
+Package pdftex.def Info: pp_qqplot.pdf used on input line 3354.
 (pdftex.def)             Requested size: 319.1176pt x 163.8475pt.
 
-<rl_empdes.pdf, id=1999, 716.6775pt x 266.9975pt>
+<rl_empdes.pdf, id=2011, 716.6775pt x 266.9975pt>
 File: rl_empdes.pdf Graphic file (type pdf)
  <use rl_empdes.pdf>
-Package pdftex.def Info: rl_empdes.pdf used on input line 3412.
+Package pdftex.def Info: rl_empdes.pdf used on input line 3361.
 (pdftex.def)             Requested size: 341.91321pt x 127.37918pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3262,20 +3283,20 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71]
+[70]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72 <./pp_qqplot.pdf> <./rl_empdes.pdf>]
+[71 <./pp_qqplot.pdf> <./rl_empdes.pdf>]
 Chapter 8.
 \openout3 = `MEMOIRE.mtc'.
 
 \openout3 = `MEMOIRE.mtc'.
 
-(MEMOIRE.mtc9) [73
+(MEMOIRE.mtc9) [72
 
 ]
 Chapter 9.
@@ -3287,36 +3308,35 @@ Chapter 9.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/bx/n' in size <10> n
 ot available
 (Font)              Font shape `T1/LinuxLibertineMonoT-TLF/b/n' tried instead o
-n input line 2.
+n input line 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 2.
+(Font)              scaled to size 10.0pt on input line 1.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/bx/n' in size <14.4>
  not available
 (Font)              Font shape `T1/LinuxLibertineMonoT-TLF/b/n' tried instead o
-n input line 3457.
+n input line 3405.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 3457.
-
-
-Package natbib Warning: Citation `geyer__1992' on page 74 undefined on input li
-ne 3475.
-
-[74
+(Font)              scaled to size 14.4pt on input line 3405.
+ [73
 
 ]
+
+Package natbib Warning: Citation `geyer__1992' on page 74 undefined on input li
+ne 3428.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75]
+[74]
 Chapter 10.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76
+ [75
 
 ]
 
@@ -3325,22 +3345,31 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77] [78
+[76] [77
 
 ]
 Appendix A.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3609--3611
+Underfull \vbox (badness 5217) has occurred while \output is active []
 
- []
-
-
-Package natbib Warning: Citation `lafaye_understanding_2009' on page 79 undefin
-ed on input line 3613.
-
-[79
+ [78
 
 ]
+
+Package natbib Warning: Citation `lafaye_understanding_2009' on page 79 undefin
+ed on input line 3603.
+
+
+Underfull \vbox (badness 6510) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -3350,19 +3379,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [80]
 Appendix B.
 
-Overfull \hbox (17.0pt too wide) detected at line 3644
+Overfull \hbox (17.0pt too wide) detected at line 3650
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3661--3665
+Underfull \hbox (badness 10000) in paragraph at lines 3667--3671
 
  []
 
 [81
 
 ]
-Overfull \hbox (17.0pt too wide) detected at line 3690
+Overfull \hbox (17.0pt too wide) detected at line 3696
 [][] 
  []
 
@@ -3377,17 +3406,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
-Underfull \hbox (badness 10000) in paragraph at lines 3720--3721
+Underfull \hbox (badness 10000) in paragraph at lines 3726--3727
 
  []
 
 
 Package natbib Warning: Citation `stan_stan_2016' on page 83 undefined on input
- line 3737.
+ line 3743.
 
 
 Package natbib Warning: Citation `Hartmann_bayesian_2016' on page 83 undefined 
-on input line 3741.
+on input line 3747.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -3398,12 +3427,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [83]
 
 Package natbib Warning: Citation `leimkulher_..._2004' on page 84 undefined on 
-input line 3764.
+input line 3770.
 
 
-Overfull \hbox (17.0pt too wide) detected at line 3800
+Overfull \hbox (17.0pt too wide) detected at line 3806
 [][] 
  []
+
+
+Underfull \vbox (badness 2538) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -3412,38 +3445,45 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[85]
 Appendix C.
-<gevdif.pdf, id=2127, 652.4375pt x 529.98pt>
+<gevdif.pdf, id=2167, 652.4375pt x 529.98pt>
 File: gevdif.pdf Graphic file (type pdf)
  <use gevdif.pdf>
-Package pdftex.def Info: gevdif.pdf used on input line 3828.
+Package pdftex.def Info: gevdif.pdf used on input line 3834.
 (pdftex.def)             Requested size: 455.8843pt x 370.32841pt.
 
-<acfresgam.pdf, id=2128, 569.12625pt x 243.91125pt>
+<acfresgam.pdf, id=2168, 569.12625pt x 243.91125pt>
 File: acfresgam.pdf Graphic file (type pdf)
  <use acfresgam.pdf>
-Package pdftex.def Info: acfresgam.pdf used on input line 3835.
+Package pdftex.def Info: acfresgam.pdf used on input line 3841.
 (pdftex.def)             Requested size: 455.8843pt x 195.38606pt.
 
-[85
+[86
 
- <./gevdif.pdf>] <diagnogam.pdf, id=2142, 420.57124pt x 292.09125pt>
+ <./gevdif.pdf>] <diagnogam.pdf, id=2181, 420.57124pt x 292.09125pt>
 File: diagnogam.pdf Graphic file (type pdf)
 
 <use diagnogam.pdf>
-Package pdftex.def Info: diagnogam.pdf used on input line 3858.
-(pdftex.def)             Requested size: 455.8843pt x 316.62155pt.
- <max_gam.pdf, id=2143, 435.6275pt x 278.03876pt>
+Package pdftex.def Info: diagnogam.pdf used on input line 3864.
+(pdftex.def)             Requested size: 387.50443pt x 269.12831pt.
+ <max_gam.pdf, id=2182, 435.6275pt x 278.03876pt>
 File: max_gam.pdf Graphic file (type pdf)
 
 <use max_gam.pdf>
-Package pdftex.def Info: max_gam.pdf used on input line 3863.
-(pdftex.def)             Requested size: 341.91321pt x 218.22272pt.
- <proflikpar.pdf, id=2144, 581.17125pt x 220.825pt>
+Package pdftex.def Info: max_gam.pdf used on input line 3869.
+(pdftex.def)             Requested size: 319.1176pt x 203.6751pt.
+ <proflikpar.pdf, id=2183, 581.17125pt x 220.825pt>
 File: proflikpar.pdf Graphic file (type pdf)
 
 <use proflikpar.pdf>
-Package pdftex.def Info: proflikpar.pdf used on input line 3873.
+Package pdftex.def Info: proflikpar.pdf used on input line 3879.
 (pdftex.def)             Requested size: 387.50443pt x 147.241pt.
 
 
@@ -3452,28 +3492,39 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[86 <./acfresgam.pdf>]
-
-LaTeX Warning: Text page 87 contains only floats.
-
+[87 <./acfresgam.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[87 <./diagnogam.pdf> <./max_gam.pdf>]
+[88 <./diagnogam.pdf> <./max_gam.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[88 <./proflikpar.pdf>]
+[89 <./proflikpar.pdf>]
 Appendix D.
-(MEMOIRE.bbl [89
 
-]
+Overfull \hbox (2.77943pt too wide) in paragraph at lines 3934--3935
+[]\T1/LinuxLibertineT-TLF/b/n/10.95 1intro_stationary.R \T1/LinuxLibertineT-TLF
+/m/n/10.95 in-tro-duc-tion and pre-pro-cess-ing + de-scrip-tive anal-y-sis, sta
+-tion-ary anal-
+ []
+
+[90
+
+] (MEMOIRE.bbl
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[91]
 Underfull \hbox (badness 2197) in paragraph at lines 61--67
 []\T1/LinuxLibertineT-TLF/m/n/10.95 M. Be-tan-court and M. Giro-lami.  Hamil-to
 -nian Monte Carlo for hi-er-ar-chi-cal mod-els.  \T1/LinuxLibertineT-TLF/m/it/1
@@ -3517,10 +3568,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--67
 % 22 + &ots = RKLEjsNycE & sig =
  []
 
-[90
+[92
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 172--180
+Underfull \hbox (badness 10000) in paragraph at lines 173--181
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 230663919 _ Limiting _ Forms _ of _ the _
  Frequency _ Distribution _ of _ the _
  []
@@ -3531,21 +3582,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[91]
-Underfull \hbox (badness 7869) in paragraph at lines 266--273
+[93]
+Underfull \hbox (badness 7869) in paragraph at lines 264--271
 []\T1/LinuxLibertineT-TLF/m/n/10.95 W. K. Hast-ings.  Monte Carlo sam-pling met
 h-ods us-ing Markov chains and their ap-
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 266--273
+Underfull \hbox (badness 7133) in paragraph at lines 264--271
 \T1/LinuxLibertineT-TLF/m/n/10.95 pli-ca-tions.  \T1/LinuxLibertineT-TLF/m/it/1
 0.95 Biometrika\T1/LinuxLibertineT-TLF/m/n/10.95 , 57(1):97--109, Apr. 1970.  I
 SSN 0006-3444.  URL [][]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--273
+Underfull \hbox (badness 10000) in paragraph at lines 264--271
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 / / academic . oup . com / biomet / artic
 le-[]abstract / 57 / 1 / 97 / 2721936 /
  []
@@ -3556,60 +3607,60 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[92]
-Underfull \hbox (badness 1845) in paragraph at lines 334--341
+[94]
+Underfull \hbox (badness 1845) in paragraph at lines 339--346
 \T1/LinuxLibertineT-TLF/m/n/10.95 978-1-4612-5451-5 978-1-4612-5449-2.  URL [][
 ]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 http : / / link . springer . com / 10 .
  1007 /
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 368--374
+Underfull \hbox (badness 1152) in paragraph at lines 373--379
 []\T1/LinuxLibertineT-TLF/m/n/10.95 J. Main-don-ald and J. Braun.  \T1/LinuxLib
 ertineT-TLF/m/it/10.95 Data anal-y-sis and graph-ics us-ing R: an example-based
  ap-proach\T1/LinuxLibertineT-TLF/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 368--374
+Underfull \hbox (badness 1137) in paragraph at lines 373--379
 \T1/LinuxLibertineT-TLF/m/n/10.95 vol-ume 10.  Cam-bridge Uni-ver-sity Press, 2
 006.  URL [][]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 https : / / books . google
  . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--374
+Underfull \hbox (badness 10000) in paragraph at lines 373--379
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 books ? hl = en & lr = &id = d7OeVD6SKBsC
  & oi = fnd & pg = PA5 & dq = %22methods ,[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--374
+Underfull \hbox (badness 10000) in paragraph at lines 373--379
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 +stats ,[] +graphics ,[] %22 + %22 . + . 
 + . + . %22 + %22 . + . + . + . + . %22 + %22 . + . + . + .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--374
+Underfull \hbox (badness 10000) in paragraph at lines 373--379
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 + . + . %22 + %22 . + . + . + . %22 + %22
  . + . + . + . + . + . + . %22 + &ots = 2mOJGySmmE & sig =
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 376--383
+Underfull \hbox (badness 1824) in paragraph at lines 381--388
 []\T1/LinuxLibertineT-TLF/m/n/10.95 G. Marra and S. N. Wood.  Cov-er-age prop-e
 r-ties of con-fi-dence in-ter-vals for gen-er-al-ized ad-
  []
 
 
-Underfull \hbox (badness 4467) in paragraph at lines 376--383
+Underfull \hbox (badness 4467) in paragraph at lines 381--388
 \T1/LinuxLibertineT-TLF/m/n/10.95 di-tive model com-po-nents.  \T1/LinuxLiberti
 neT-TLF/m/it/10.95 Scan-di-na-vian Jour-nal of Statis-tics\T1/LinuxLibertineT-T
 LF/m/n/10.95 , 39(1):53--74, 2012.  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--383
+Underfull \hbox (badness 10000) in paragraph at lines 381--388
 [][]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 http : / / onlinelibrary . wiley . c
 om / doi / 10 . 1111 / j . 1467-[]9469 . 2011 .
  []
@@ -3620,76 +3671,76 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 414--420
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 419--425
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 qfRsAIKZ4rIC & oi = fnd & pg = PA113 & dq
  = %22in + the + following + decades +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--420
+Underfull \hbox (badness 10000) in paragraph at lines 419--425
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 (see + Frenkel + and + Smit ,[] %22 + %22
 implementation . +The + %E2 % 80 %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--420
+Underfull \hbox (badness 10000) in paragraph at lines 419--425
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 9Cleapfrog % E2 % 80 % 9D + scheme + that
  + is + typically + used + is + quite % 22 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--420
+Underfull \hbox (badness 10000) in paragraph at lines 419--425
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 %22implemented + with + the + leapfrog + 
 method . +A + state + proposed + in +
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 466--473
+Underfull \hbox (badness 1845) in paragraph at lines 471--478
 \T1/LinuxLibertineT-TLF/m/n/10.95 978-0-387-75952-4 978-0-387-75953-1.  URL [][
 ]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 http : / / link . springer . com / 10 .
  1007 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--480
+Underfull \hbox (badness 10000) in paragraph at lines 480--485
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 / / www . unalmed . edu . co / ~ndgirald 
 / Archivos % 20Lectura / Archivos %
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 483--489
+Underfull \hbox (badness 1132) in paragraph at lines 488--494
 \T1/LinuxLibertineT-TLF/m/n/10.95 and Hal-l/CRC, 2015.  URL [][]$\T1/LinuxLiber
 tineMonoT-TLF/m/n/10.95 https : / / books . google . com / books ? hl = en & lr
  = &id =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--489
+Underfull \hbox (badness 10000) in paragraph at lines 488--494
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 PYhUCwAAQBAJ & oi = fnd & pg = PA179 & dq
  = %22rainfall + amount + in + this +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--489
+Underfull \hbox (badness 10000) in paragraph at lines 488--494
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 catchment ,[] +i . e . ,[] + evaluating +
  probabilities % 22 + %22Extremes + and +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--489
+Underfull \hbox (badness 10000) in paragraph at lines 488--494
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 max-[]stable % 22 + %22as + far + as + sp
 atial + extremes + are + of + concern .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--489
+Underfull \hbox (badness 10000) in paragraph at lines 488--494
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 +Similarly + to + the + univariate % 22 +
  %22To + be + consistent + with + the +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--489
+Underfull \hbox (badness 10000) in paragraph at lines 488--494
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 univariate + extreme + value + theory ,[]
  +Theorem % 22 + &ots = phZY14rcy5 &
  []
@@ -3700,14 +3751,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[94]
-Underfull \hbox (badness 1394) in paragraph at lines 520--525
+[96]
+Underfull \hbox (badness 1394) in paragraph at lines 525--530
 []\T1/LinuxLibertineT-TLF/m/n/10.95 D. Rup-pert, M. P. Wand, and R. J. Car-roll
 .  Semi-para-met-ric Re-gres-sion.  Cam-bridge Books,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--541
+Underfull \hbox (badness 10000) in paragraph at lines 540--546
 \T1/LinuxLibertineMonoT-TLF/m/n/10.95 citations ; jsessionid = 0C9C7CAE3938CA7A
 9B280DEA739EFDA9 ? doi = 10 . 1 .
  []
@@ -3718,15 +3769,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[95]
-Underfull \hbox (badness 1142) in paragraph at lines 621--629
+[97]
+Underfull \hbox (badness 1142) in paragraph at lines 632--640
 \T1/LinuxLibertineT-TLF/m/n/10.95 33(12):2841--2848, Dec. 1997.  ISSN 1944-7973
 .  doi: $10 . 1029 / 97WR02134$.  URL [][]$\T1/LinuxLibertineMonoT-TLF/m/n/10.9
 5 http : / /
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 639--644
+Underfull \hbox (badness 1226) in paragraph at lines 650--655
 \T1/LinuxLibertineT-TLF/m/n/10.95 ci-sion Sci-ences, Duke Uni-ver-sity, 1996.  
 URL [][]$\T1/LinuxLibertineMonoT-TLF/m/n/10.95 http : / / www . stats . org . u
 k / priors /
@@ -3752,15 +3803,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[96]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3926.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3926.
+[98]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3964.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3964.
  (MEMOIRE.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3926.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3926.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3964.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3964.
 
 Package rerunfilecheck Info: File `MEMOIRE.out' has not changed.
-(rerunfilecheck)             Checksum: A48A3DFE152D448EF0E48B8C4E6354C4;10740.
+(rerunfilecheck)             Checksum: 6AA6C76FA827F8AECA8C0D3FFFC129B3;10767.
 
 
 LaTeX Warning: There were undefined references.
@@ -3774,60 +3825,69 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 35383 strings out of 493333
- 634022 string characters out of 3139196
- 894237 words of memory out of 3000000
- 37228 multiletter control sequences out of 15000+200000
- 243147 words of font info for 202 fonts, out of 3000000 for 9000
+ 35771 strings out of 493333
+ 642012 string characters out of 3139196
+ 901804 words of memory out of 3000000
+ 37560 multiletter control sequences out of 15000+200000
+ 243606 words of font info for 203 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,18n,92p,1167b,19044s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{
-C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc} <C:\Users\Piss\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi657\bbm10.pk>{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Piss/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_d6jdyt.enc}{C:/Users/Piss/AppData
-/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_u7qtuy.enc}{C:/Users/
-Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ki75ao.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Piss/
-AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:
-/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7g
-rukw.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/liber
-tine/lbtn_tlukpt.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
-/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2
-.9/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C:/Users/Piss/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/Piss/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineMT.pfb><C:/
-Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLi
-bertineMTB.pfb><C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/libertine/LinLibertineMTO.pfb><C:/Users/Piss/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/Piss/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/
-Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertin
-eTBI.pfb><C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/li
-bertine/LinLibertineTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbsy7.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmmib7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MEMOIRE.pdf (108 pages, 1907486 bytes).
+ 54i,18n,92p,1167b,19350s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{equation.1.7.32} has been reference
+d but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.1.9.40} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.1.8.34} has been referenced but does not e
+xist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc} <C:\Users\Piss\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\public\bbm\dpi657\bbm10.pk>{C:/Program Files/MiKTeX 2.9/font
+s/enc/dvips/lm/lm-mathit.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_d6jdyt.enc}{C:/Users/Piss/AppData/Local/Programs/
+MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{C:/Users/Piss/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_u7qtuy.enc}{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Piss/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/Piss/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Use
+rs/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_tlukpt
+.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine
+/lbtn_nh77jq.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
+ps/libertine/lbtn_ncsllp.enc}{C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/Piss/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineMT.pfb><C:/Users/Piss/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineMTB.pfb><
+C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/Li
+nLibertineMTO.pfb><C:/Users/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/libertine/LinLibertineT.pfb><C:/Users/Piss/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Piss/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTBI.pfb><C:/Use
+rs/Piss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLiber
+tineTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmbsy7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi
+b7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MEMOIRE.pdf (110 pages, 1932500 bytes).
 PDF statistics:
- 2586 PDF objects out of 2984 (max. 8388607)
- 582 named destinations out of 1000 (max. 500000)
+ 2636 PDF objects out of 2984 (max. 8388607)
+ 605 named destinations out of 1000 (max. 500000)
  1161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

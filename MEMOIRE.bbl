@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -143,6 +143,14 @@ D.~K. Dey and J.~Yan.
 \newblock ISBN 978-1-4987-0131-0.
 \newblock Google-Books-ID: PYhUCwAAQBAJ.
 
+\bibitem[Embrechts et~al.(2011)Embrechts, Klüppelberg, and
+  Mikosch]{embrechts_modelling_2011}
+P.~Embrechts, C.~Klüppelberg, and T.~Mikosch.
+\newblock \emph{Modelling {Extremal} {Events}: for {Insurance} and {Finance}}.
+\newblock Springer Berlin Heidelberg, Feb. 2011.
+\newblock ISBN 978-3-642-08242-9.
+\newblock Google-Books-ID: dfZecgAACAAJ.
+
 \bibitem[Falk and Marohn(1993)]{falk_von_1993}
 M.~Falk and F.~Marohn.
 \newblock Von {Mises} {Conditions} {Revisited}.
@@ -151,13 +159,6 @@ M.~Falk and F.~Marohn.
 \newblock ISSN 0091-1798, 2168-894X.
 \newblock \doi{10.1214/aop/1176989120}.
 \newblock URL \url{http://projecteuclid.org/euclid.aop/1176989120}.
-
-\bibitem[Falk et~al.(2011)Falk, Hüsler, and Reiss]{falk_laws_2011}
-M.~Falk, J.~Hüsler, and R.-D. Reiss.
-\newblock \emph{Laws of {Small} {Numbers}: {Extremes} and {Rare} {Events}}.
-\newblock Springer Basel, Basel, 2011.
-\newblock ISBN 978-3-0348-0008-2 978-3-0348-0009-9.
-\newblock URL \url{http://link.springer.com/10.1007/978-3-0348-0009-9}.
 
 \bibitem[Fawcett and Walshaw(2012)]{fawcett_estimating_2012}
 L.~Fawcett and D.~Walshaw.
@@ -217,16 +218,6 @@ B.~Gnedenko.
 \newblock \doi{10.2307/1968974}.
 \newblock URL \url{http://www.jstor.org/stable/1968974}.
 
-\bibitem[Gomes and Neves(2015)]{gomes_bootstrap_2015}
-D.~P. Gomes and M.~M. Neves.
-\newblock Bootstrap and {Other} {Resampling} {Methodologies} in {Statistics} of
-  {Extremes}.
-\newblock \emph{Communications in Statistics - Simulation and Computation},
-  44\penalty0 (10):\penalty0 2592--2607, Nov. 2015.
-\newblock ISSN 0361-0918.
-\newblock \doi{10.1080/03610918.2014.895834}.
-\newblock URL \url{http://dx.doi.org/10.1080/03610918.2014.895834}.
-
 \bibitem[Grimshaw(1993)]{grimshaw_computing_1993}
 S.~D. Grimshaw.
 \newblock Computing {Maximum} {Likelihood} {Estimates} for the {Generalized}
@@ -235,6 +226,13 @@ S.~D. Grimshaw.
 \newblock ISSN 00401706.
 \newblock \doi{10.2307/1269663}.
 \newblock URL \url{http://www.jstor.org/stable/1269663?origin=crossref}.
+
+\bibitem[Haan(1970)]{haan_regular_1970}
+L.~d. Haan.
+\newblock \emph{On regular variation and its application to the weak
+  convergence of sample extremes}.
+\newblock Mathematisch Centrum, 1970.
+\newblock Google-Books-ID: sQ3vAAAAMAAJ.
 
 \bibitem[Haan and Ferreira(2006)]{haan_extreme_2006}
 L.~d. Haan and A.~Ferreira.
@@ -319,6 +317,13 @@ A.~M.~G. Klein~Tank, J.~B. Wijngaard, G.~P. Können, R.~Böhm, G.~Demarée,
 \newblock \doi{10.1002/joc.773}.
 \newblock URL
   \url{http://onlinelibrary.wiley.com/doi/10.1002/joc.773/abstract}.
+
+\bibitem[Kolmogorov et~al.(1956)Kolmogorov, Morrison, and
+  Bharucha-Reid]{kolmogorov_foundations_1956}
+A.~N. Kolmogorov, N.~Morrison, and A.~T. Bharucha-Reid.
+\newblock \emph{Foundations of the theory of probability}.
+\newblock Chelsea Publishing Company, New York, 1956.
+\newblock OCLC: 751236060.
 
 \bibitem[Leadbetter(1974)]{leadbetter_extreme_1974}
 M.~R. Leadbetter.
@@ -600,6 +605,12 @@ A.~Vehtari, A.~Gelman, and J.~Gabry.
 \newblock \doi{10.1007/s11222-016-9696-4}.
 \newblock URL \url{http://arxiv.org/abs/1507.04544}.
 \newblock arXiv: 1507.04544.
+
+\bibitem[Von~Mises(1936)]{von_mises_distribution_1936}
+R.~Von~Mises.
+\newblock La distribution de la plus grande de n valeurs.
+\newblock \emph{Rev., Math, Union Interbalcanique,}, 1:\penalty0 pp.141--160,
+  1936.
 
 \bibitem[Wada et~al.(2016)Wada, Waseda, and Jonathan]{wada_extreme_2016}
 R.~Wada, T.~Waseda, and P.~Jonathan.
