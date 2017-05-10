@@ -571,7 +571,7 @@ For this chapter, we will be mostly based on \citet[chapter 3]{coles_introductio
 \section{Preliminaries}\label{sec::1.1}
 
 
-In the following, we will assume a sequence of $n$ independent and identically distributed (iid) random variables that we will write for convenience by $\{X_i\}=X_1,X_2,\dots ,X_n$. Note that the iid assumption will be relaxed in \hyperref[sec::3]{chapter \textbf{\ref{sec::3}}}
+In the following, we will assume a sequence of $n$ independent and identically distributed (iid) random variables that we will write for convenience by $\{X_i\}=X_1,X_2,\dots ,X_n$. Note that the iid assumption will be relaxed in \hyperref[sec::3]{chapter \textbf{\ref{sec::3}}}.
 
 %\addcontentsline{toc}{subsection}{Statistical Tools}
 \subsection*{Statistical Tools}
@@ -581,7 +581,6 @@ First of all, we write the \emph{i}-th \emph{order statistics} $X_{(i)} $ which 
 X_{(1)}\leq X_{(2)}\leq ...\leq X_{(n)},
 \end{equation}
 assuming we have $n$ observations.
-
 One order statistics is of particular interest for our purpose, the \emph{maximum}
 \begin{equation} \label{max}
 X_{(n)}:=\displaystyle{\max_{1\leq i\leq n}}X_i,
@@ -790,7 +789,7 @@ where we can see the dependence of the distribution function with respect to the
 %where we added explicitly the location and scale parameters $\mu$ and $\sigma$ in order to obtain the three \emph{extreme value distributions}, see for example \cite[pp.16]{reiss_statistical_2007} among others. The parameters are such that $ \sigma>0$ and $-\infty<\mu,\xi<\infty$.This statement will hold for the rest of this thesis
 
 
-Hence, all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter. That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type} $\boxed{\textbf{\text{I}}}$ or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type} $\boxed{\textbf{\text{II}}}$  or \emph{Fréchet} family and to the \textbf{type} $\boxed{\textbf{\text{III}}}$ or \emph{Weibull} family, (\ref{frech})-(\ref{weib}) respectively. 
+Hence, all these three classes of extreme distributions can be expressed in the same functional form as special cases of this single three-parameter. That is, when $\xi\rightarrow 0$ we retrieve the \textbf{type} $\boxed{\textbf{\text{I}}}$ or \emph{Gumbel} family (\ref{gumb}) while $\xi >0$ and $\xi <0$ leads to the \textbf{type} $\boxed{\textbf{\text{II}}}$  or \emph{Fréchet} family and to the \textbf{type} $\boxed{\textbf{\text{III}}}$ or \emph{Weibull} family, (\ref{frech}) and (\ref{weib}) respectively. 
 
 
 
@@ -812,7 +811,7 @@ $\xi\to 0$ & $g(z)= \sigma^{-1}\exp\bigg\{-\bigg(\frac{z-\mu}{\sigma}\bigg)\bigg
 We can now try to represent visually these three families. The following figure \ref{gevdens} depicts the GEV, defined with respect to the value of the shape parameter $\xi$.
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=0.8\textwidth, height = 0.7\linewidth]{gev3.pdf}\caption{GEV distribution with the normal as benchmark (dotted lines) and a zoom on the parts of interest to better visualize the behaviour in the tails. In green, we retrieve the Gumbel distribution ($\xi=0$). In red, we retrieve the Weibull-type ($\xi<0$) while in blue, we get the Fréchet-type ($\xi>0$). The endpoints for the Weibull and the Fréchet are denoted by the red and blue filled circles respectively. }\label{gevdens}
+	\centering\includegraphics[width=0.8\linewidth]{gev3.pdf}\caption{GEV distribution with the normal as benchmark (dotted lines) and a zoom on the parts of interest to better visualize the behaviour in the tails. In green, we retrieve the Gumbel distribution ($\xi=0$). In red, we retrieve the Weibull-type ($\xi<0$) while in blue, we get the Fréchet-type ($\xi>0$). The endpoints for the Weibull and the Fréchet are denoted by the red and blue filled circles respectively. }\label{gevdens}
 \end{figure}
 
  We think important to point out that the location parameter $\mu$ does not represent
@@ -891,17 +890,18 @@ Then, by setting appropriately $b_n=0$, we can write
 \begin{aligned}
 -n\bar{F}(a_nz+b_n)
 & =-n(a_nz+b_n)^{-\alpha} \\
-& =\Big[Q(1-\frac{1}{n})\Big]^{\alpha}(a_n)^{-\alpha}(-z^{-\alpha}),
+& =\Big[F^{\leftarrow}(1-\frac{1}{n})\Big]^{\alpha}(a_n)^{-\alpha}(-z^{-\alpha}),
 \end{aligned}
 \end{equation*}
-where $Q(1-n^{-1})$ is defined as the quantile function. Hence, it is easy to see that by setting $a_n=Q(1-n^{-1})$ and keeping $b_n=0$, we have that 
+where we define the quantity $F^{\leftarrow}(t)=\inf\{x\in\mathbb{R}:F(x)\geq t\}$ for $t<0<1$ as the \emph{generalized inverse\footnote{from which we can retrieve $x_t=F^{\leftarrow}(t)$, the $t$-quantile of $F$. Even if we deal in this text only with continuous and strictly increasing df, we prefer consider \emph{generalized inverse}, for sake of generalization.} of F}.
+Hence, it is easy to see that by setting $a_n=F^{\leftarrow}(1-n^{-1})$ and keeping $b_n=0$, we have that 
 \begin{equation*}
 \text{Pr}\{a_n^{-1}X_{(n)}\leq z\}\rightarrow \exp (-z^{-\alpha}),
 \end{equation*}
 showing that for this particular values of the normalizing constants, we retrieve the Fréchet distribution in the limit of a basic Pareto distribution. The fact that $b_n$ is set to zero can be understood intuitively since for heavy-tailed distribution (see) such as the Pareto distribution, a correction for location is not necessary to obtain a non-degenerate limiting distribution, see \citet[pp.51]{beirlant_practical_1996}.
 %[see p.28 memoire other si ft autre exemple]
 More generally, we can state the more general following theorem :
-\begin{theorem}[Pareto-type distributions] For the same choice of normalizing constants as above, i.e. $a_n=Q(1-n^{-1}))$ and $b_n=0$ and for any $x\in\mathbb{R}$, if
+\begin{theorem}[Pareto-type distributions] For the same choice of normalizing constants as above, i.e. $a_n=F^{\leftarrow}(1-n^{-1}))$ and $b_n=0$ and for any $x\in\mathbb{R}$, if
 	\begin{equation}
 	\begin{aligned}
 	n[\bar{F}(a_nx)]= \frac{\bar{F}(a_nx)}{\bar{F}(a_n)}\rightarrow x^{-\alpha} ,&&&&&&&&&&&& \text{ n}\to\infty,
@@ -960,7 +960,7 @@ The pertaining estimated parameters $\mu^*$ and $\sigma^*$ will implicitly take 
 
 The preceding results can be more easily summarized and obtained when considering \emph{maximum domain of attraction} (MDA). The term "\emph{maximum}" is typically used to distinguish from \emph{sum-stable} distributions but as we study here maxima only, there are no confusion possible in our work. We will then write only "\emph{domain of attraction}" in the following for convenience, considering these two names as synonyms.
 
-\begin{definition}[Domain of attraction] We say that a distribution $F$ is in the \emph{\textbf{domain of attraction}} of an extreme value family $G_k$ \big($k=1,2,3$; see (\ref{gumb})-(\ref{weib})\big), denoted by $F\in D(G_k)$, if there exist $a_n>0$ and $b_n\in\mathbb{R}$ such that the distribution of $a_n^{-1}(X_{(n)}-b_n)$ converges in distribution to $G_k$, where $X_{(n)}$ is the maximum of an iid sequence $\{X_i\}$ with distribution $F$. %\null\hfill\QEDB
+\begin{definition}[Domain of attraction] We say that a distribution $F$ is in the \emph{\textbf{domain of attraction}} of an extreme value family $(G_{k})_{k=1,2,3}$ in (\ref{gumb})-(\ref{weib})\big), denoted by $F\in D(G_k)$, if there exist $a_n>0$ and $b_n\in\mathbb{R}$ such that the distribution of $a_n^{-1}(X_{(n)}-b_n)$ converges in distribution to $G_k$, where $X_{(n)}$ is the maximum of an iid sequence $\{X_i\}$ with distribution $F$. %\null\hfill\QEDB
 \end{definition}
 Let $\xi_k$ denote the EVI pertaining to the extreme value distribution $G_k$. The above definition is well-defined in the sense that $F\in D(G_i)$ and $F\in D(G_j)$ implies $\xi_i=\xi_j$. One should directly notice the relation with the \hyperref[extthm]{theorem \ref{extthm}}.
 
@@ -973,10 +973,11 @@ In each of the characterization of the domains of attractions, we will present s
 \begin{equation}\label{haz}
 r(x)=\frac{f(x)}{\bar{F}(x)}= \frac{f(x)}{1-F(x)}.
 \end{equation}
-It involves the density function $f(x)=\frac{dF(x)}{d(x)}$ in the numerator.
+It involves the density function $f(x)=\frac{dF(x)}{d(x)}$ in the numerator and it can be thought as a measure of "risk". It can be interpreted as the probability of 'failure' in an infinitesimally small time period between $x$ and $x$ + $\delta x$ given
+that the subject has 'survived' up till time $x$.
 %This function will be useful to characterize insightful conditions for each domains of attraction, known as the\emph{ von Mises criterion}.
 
-\subsection{Domain of attraction for the 3 GEV distributios}
+\subsection{Domain of attraction for the 3 types of GEV}
 
 
 \subsubsection*{Domain of attraction for Gumbel distribution ($\mathbf{G_1}$) }  We derive here two ways of formulating necessary and sufficient condition for a distribution function $F$ to be in the Gumbel domain of attraction, namely $F\in D(G_1)$.
@@ -994,9 +995,9 @@ It involves the density function $f(x)=\frac{dF(x)}{d(x)}$ in the numerator.
 
 A lot of more precise characterizations and conditions together with proofs can be found, for example in \citet[pp.20-33]{haan_extreme_2006} which is based on the pioneering thesis of \citet{haan_regular_1970-1}. 
 
-However, we present his \emph{\textbf{von Mises criterion}} as in \cite[pp.73]{beirlant_statistics_2006}: 
+Let's now present his \emph{\textbf{von Mises criterion}} as in \cite[pp.73]{beirlant_statistics_2006}: 
 
-\begin{theorem} If the hazard function $r(x)$ (\ref{haz})
+\begin{theorem}[von Mises] If the hazard function $r(x)$ (\ref{haz})
 is ultimately positive in the neighbourhood of $x_*$, is differentiable there and satisfies 
 \begin{equation}
 \displaystyle{\lim_{x  \uparrow  x_*}} \frac{dr(x)}{dx}=0,
@@ -1004,6 +1005,8 @@ is ultimately positive in the neighbourhood of $x_*$, is differentiable there an
 \end{theorem}
 
 then $F\in D(G_1)$. \big[{\footnotesize \underline{Reminder}: $\displaystyle{\lim_{t \uparrow y}}(\cdot)$ means that $t$ is approaching $y$ from below, i.e. from values smaller than $y$ in a increasing manner, and vice-versa for $\displaystyle{\lim_{t \downarrow y}}(\cdot)$}\big]
+
+In words, the slope of the hazard function with respect to $x$ is zero at the limit when $x$ approaches the (infinite) right-endpoint. This ensures a condition on the lightness of the tails of $F$.
 
 \paragraph*{Examples of distributions in $\boldsymbol{D(G_1)}$} include distributions having tails which are exponentially decaying (light-tailed, i.e. the exponential, Gamma, Weibull, logistic, $\dots$) but also distributions which are moderately heavy-tailed such as the lognormal.
 To see that, consider a Taylor expansion, we have that 
@@ -1016,21 +1019,22 @@ where "$\sim$" refers to the asymptotic equivalence function. Hence, we directly
 \subsection*{Domain of attraction for Fréchet distribution ($\mathbf{G_{2}}$)}
 
 Let's define $\alpha:=\xi^{-1}>0$ as the \emph{index} of the Fréchet distribution in (\ref{frech}).
+
 \begin{definition}[Power law]
-If we look at the tail of the distribution $G_2$, a taylor expansion teels us that
-\begin{equation}
-\bar{G_2}(x)=1-\exp (-x^{-\alpha}\sim x^{-\alpha}, \qquad <\to\infty, 
+If we look at the tail of the distribution $G_2$, a Taylor expansion tells us that
+\begin{equation}\label{eq:powerlaw}
+\bar{G_2}(x)=1-\exp (-x^{-\alpha})\sim x^{-\alpha}, \qquad x\to\infty, 
 \end{equation}
 which means that $F$ tends to decrease as a power law. 
 \end{definition}
 
 
 \begin{theorem}
-$F \in G_{2}$ if and only if 
+We can say that $F \in G_{2}$ if and only if 
 \begin{equation}
 \bar{F}(x)=x^{-\alpha} L(x),
 \end{equation}
-for some \emph{slowly varying} function $L$ (see \hyperref[app:varying]{appendix \ref{app:varying}} for the definition). 
+for some \emph{slowly varying} function $L$ \emph{(see \hyperref[app:varying]{appendix \ref{app:varying}} for the definition)}. 
 \end{theorem}
 
 In this case and with $b_n=0$,
@@ -1042,86 +1046,78 @@ F^n(a_nx)\to G_2(x), \ \ \ \ \ \ \  x\in\mathbb{R},
 with
 
 \begin{equation*}
-a_n:=F^{\leftarrow}\big(1-\frac{1}{n}\big)=\Big(\frac{1}{1-F}\Big)^{\leftarrow}(n),
+a_n:=F^{\leftarrow}\Big(1-\frac{1}{n}\Big)=\Big(\frac{1}{1-F}\Big)^{\leftarrow}(n),
 \end{equation*}
-where we define the quantity $F^{\leftarrow}(t)=\inf\{x\in\mathbb{R}:F(x)\geq t\}$ for $t<0<1$ as the \emph{generalized inverse of F} with which we can retrieve $x_t=F^{\leftarrow}(t)$, the $t$-quantile of F. Even if we deal in this text only with continuous and strictly increasing distribution functions (?), we think it is more reliable(?) to consider generalized inverse instead of the ordinary inverse, for sake of generalization.
 
-This previous theorem informs us that all distribution functions $F\in D(G_{2,\alpha})$ have necessarily an infinite right endpoint, that is $x_*=\sup\{x:F(x)<1\}=\infty$. These distributions are all with regularly varying right-tail with index $-\alpha$ (see \hyperref[app:varying]{appendix \ref{app:varying}}). In short,
 
+This previous theorem informs us that all distribution functions $F\in D(G_{2,\alpha})$ have necessarily an infinite right endpoint, that is $x_*=\sup\{x:F(x)<1\}=\infty$. These distributions are all with regularly varying right-tail with index $-\alpha$ (see \hyperref[app:varying]{appendix \ref{app:varying}}), that is $F\in D(G_{2,\alpha})\Longleftrightarrow \bar{F}\in R_{-\alpha}$.
+
+
+
+Finally, let's now present the (revisited) \emph{\textbf{Von Mises condition}} for this domain of attraction which state the following in \cite{falk_von_1993}:
+
+\begin{theorem}[von Mises]
+if F is absolutely continuous with density f and infinite right endpoint $x_*=\infty$, such that 
 \begin{equation*}
-F\in D(G_{2,\alpha})\Longleftrightarrow \bar{F}\in R_{-\alpha}.
+\displaystyle{\lim_{ \ x \uparrow \infty}} x \cdot r(x)=\alpha>0,
 \end{equation*}
-
-
-Finally, we must also present the (revisited) \emph{\textbf{Von Mises condition}} for this domain of attraction which state the following in \cite{falk_von_1993} : if F is absolutely continuous with density f and right endpoint $x_*=\infty$, such that 
-\begin{equation*}
-\displaystyle{\lim_{ \ x \uparrow \infty}} x \ r(x)=\alpha>0,
-\end{equation*}
-where $r(x)$ is the \emph{hazard function} defined in (\ref{haz}),
-then $F\in D(G_{2,\alpha})$. In words, it means that...
-We illustrate this with the standard Pareto distribution case (as previsouly in ), that is 
+%where $r(x)$ is the \emph{hazard function} defined in (\ref{haz}),
+then $F\in D(G_{2,\alpha})$.
+\end{theorem}
+In words, it means that when $x$ approaches the (infinite) right endpoint of the distribution and multiplied by the hazard function, leads to a non-null constant. This can be thought as a (very small) probability mass remaining even when $x\to\infty$, and hence a condition on the "heaviness" of the tails.
+We illustrate this with the standard Pareto distribution, that is 
 
 \begin{equation*}
 F(x)=\bigg(1-\big(\frac{x_m}{x}\big)^{\alpha}\bigg)1_{x\geq x_m}, \ \ \ \ \ \ \ \alpha>0 \  \ \text{and} \ \ x_m>0.
 \end{equation*}
-
-Clearly, we can see that by setting $K=x_m^{\alpha}$, we have
-
-\begin{equation*}
-\bar{F}(x)=Kx^{-\alpha}.
-\end{equation*}
-
+Clearly, we can see that by setting $K=x_m^{\alpha}$, we obtain $\bar{F}(x)=Kx^{-\alpha}$.
 Therefore, we have that $a_n=(Kn)^{\alpha^{-1}}$ and $b_n=0$.
 
-\paragraph*{Examples of distributions in $\boldsymbol{D(G_{2})}$} include distributions that are typically very-fat tailed ( and hence, heavy-tailed, see ) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is appropriate for phenomena with extremely large maxima (like...). \cite{domain of attraction course} Common distributions include Pareto, Cauchy, Burr, stable distributions with $\alpha<2$, etc.
-An example to see that, is again by Taylor expansion at the tail of $G_{2,\alpha}$ with $\alpha>0$ 
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_{2})}$} include distributions that are typically (very) fat-tailed (or heavy-tailed, see \hyperref[app:tails]{\ref{app:tails}}) distributions, such that $E(X_+)^{\delta}=\infty$ for $\delta>\alpha$. This class of distributions is thus appropriate for phenomena with extremely large maxima, think for example of the rainfall process in some tropical zones. Common distributions include Pareto, Cauchy, Burr,$\dots$
+An example to see that is by by looking (\ref{eq:powerlaw})
+showing that $G_{2}$ tends to decrease as a \emph{power law}.
 
-\begin{equation}
-\bar{G}_{2,\alpha}(x)=1-\exp(-x^{-\alpha})\sim x^{-\alpha}, \ \ \ \ \ \ \ \ \ x\to\infty,
-\end{equation}
 
-showing that $G_{2,\alpha}$ tends to decrease as a \emph{power law}.
-See for example eq.
+\subsection*{Domain of attraction for Weibull distribution ($\mathbf{G_{3}}$) }
 
-\subsection*{Domain of attraction for Weibull distribution ($\mathbf{G_{3,\alpha}}$) }
-We say  that $F\in G_{3,\alpha}$ (\ref{weib}) with index $\alpha>0$ if and only if there exists finite right endpoint $x_*\in\mathbb{R}$ such that 
+We start by recalling an important relation between the Fréchet and the Weibull distributions 
 
+\begin{equation*}
+G_3(-x^{-1})=G_2, \qquad\quad x>0.
+\end{equation*}
+We pointed out the certain 'symmetry' that occurs for these two types (e.g. recall figure \ref{gevdens}). Hence, this will be useful to characterize $D(G_3)$ using what we know about the Fréchet case.
+
+\begin{theorem}
+We say that $F\in G_{3}$ as in (\ref{weib}) with index $\alpha=\xi^{-1}>0$ if and only if there exists finite right endpoint $x_*<\infty$ such that 
 \begin{equation}
 \bar{F}(x_*-x^{-1})=x^{-\alpha}L(x),
 \end{equation}
 where $L(\cdot)$ is a slowly varying function (recall \hyperref[app:varying]{appendix \ref{app:varying}}).
-
-For $F\in D(G_{3,\alpha})$, we have also
-
+\end{theorem}
+Hence for $F\in D(G_{3,\alpha})$, we have 
 \begin{equation*}
-a_n=x_*-F^{\leftarrow}(1-n^{-1}), \ \  \ \ \ \ b_n=x_*.
+a_n=x_*-F^{\leftarrow}(1-n^{-1}), \ \  \ \ \ \ b_n=x_*,
+\end{equation*}
+and hence
+\begin{equation*}
+a^{-1}_n\Big(X_{(n)}-b_n\Big)\stackrel{d}{\rightarrow}G_{3}.
 \end{equation*}
 
-Hence
-\begin{equation*}
-a^{-1}_n(X_{(n)}-b_n)\stackrel{d}{\rightarrow}G_{3,\alpha}.
-\end{equation*}
+Finally, we still present the \emph{\textbf{Von Mises condition}} related to the $G_{3})$ domain of attraction. 
 
-[see references [domain of attraction course]]
-
-Finally, we still present the \emph{\textbf{Von Mises condition}} from \cite{falk_von_1993} related to the $G_{3,\alpha})$ domain of attraction. It states that for $F$ having positive derivative on some $[x_0,x_*)$, with finite right endpoint $x_*<\infty$, then $F\in D(G_{3,\alpha})$ if
+\begin{theorem}[von Mises] For $F$ having positive derivative on some $[x_0,x_*)$, with finite right endpoint $x_*<\infty$, then $F\in D(G_{3})$ if
 
 \begin{equation}
-\displaystyle{\lim_{ x  \uparrow  x_*}}(x_*-x)r(x)=\alpha >0, \ \ \ \ \ \ \ \ \ \     \ \
+\displaystyle{\lim_{ x  \uparrow  x_*}}(x_*-x)\cdot r(x)=\alpha >0, \ \ \ \ \ \ \ \ \ \     \ \
 \int^{x_*}_{-\infty} \bar{F}(u)du<\infty,
 \end{equation}
-where $r(x)$ is again the \emph{hazard function} defined in (\ref{haz}).
+\end{theorem}
+Similarly as with the Fréchet case, we remark that there is still a probability mass from the hazard rate when $x$ approaches its finite right endpoint, characterized by a non-null constant $\alpha$ which defines the left heavy tail and the right endpoint.
 
-(compare hazar convergence rates of the three types !!!!!)
-
-\paragraph*{Examples of distributions in $\boldsymbol{D(G_{3,\alpha})}$} Weibull's domain of attraction thus includes all the distribution functions that are bounded to the right ($x_*<\infty$). As most phenomena are typically bounded, we will think as the Weibull for the most attractive and flexible class for modelling extremes. But, in practice, the Fréchet one is often more preferable in an extreme analysis context because allowing for arbitrarily large values.
-\newline
+\paragraph*{Examples of distributions in $\boldsymbol{D(G_{3,\alpha})}$} include all the df's that are bounded to the right ($x_*<\infty$). Whereas the Fréchet type is often more preferable in an extreme analysis context because allowing for arbitrarily large values, most phenomena are typically bounded, and hence we will think at the Weibull for the most attractive and flexible class for modelling extremes. For example, in our case of modelling a process of (yearly) maximum temperatures, it seems the perfect candidate.
 
 
-[ put general case pp.73-75 beirlant] ?
-\newline
-
-\subsection{Closeness under tail equivalence property} An interesting property of all the three types of domain of attraction $D(G_{k,\alpha})_{k=1,2,3}$ we have derived, is that those are \emph{closed under tail-equivalence} \ref{domain of attrac...}. This is useful for characterizing tail's types of the distributions falling in the domains of attraction. the  It this sense,
+\subsection{Closeness under tail equivalence property} An interesting property of all the three types of domain of attraction $D(G_{k})_{k=1,2,3}$ we have derived, is that those are \emph{closed under tail-equivalence} \ref{domain of attrac...}. This is useful for characterizing tail's types of the distributions falling in the pertaining domains of attraction. In this sense,
 
 \begin{enumerate}
 	\item For the \textbf{Gumbel} domain of attraction,  let $F\in D(G_{1,\alpha})$. If $H$ is another distribution function such that, for some $b>0$, 
@@ -1152,71 +1148,29 @@ where $r(x)$ is again the \emph{hazard function} defined in (\ref{haz}).
 \end{enumerate}
 
 
-For more informations about the characterizations of the, one can refer to ....
 
 \subsection{Domain of attraction of the GEV}
-[Coles slides 30] (and see stat extremes beirlant!!) The conditions that have been stated the three preceding domains of attraction can be restated under this "unified" framework for the GEV distribution defined in (\ref{gevgen})
-For a given distribution function $F$, by letting the sequences $b_n$, $a_n$, and the shape parameter such that\footnote{We think important to recall again the reader the difference of parametrization $\xi=\alpha^{-1}$}
-
+[Coles slides 30] (and see stat extremes beirlant!!) The conditions that have been stated the three preceding domains of attraction can be restated under this "unified" framework for the GEV distribution defined in (\ref{gevgen}).
+For a given df $F$, by letting the sequences $b_n$, $a_n$, and the shape parameter such that
 \begin{equation*}
-b_n=F^{\leftarrow}(1-1/n)\text{, } \ \ \ \ \ \ \ \ a_n=r(b_n) \ \ \ \ \ \text{ and } \ \ \ \ \ \xi=\displaystyle{\lim_{n \to \infty}}\tilde{r}(x),
+b_n=F^{\leftarrow}(1-n^{-1})\text{, } \ \ \ \ \ \ \ \ a_n=r(b_n) \ \ \ \ \ \text{ and } \ \ \ \ \ \xi=\displaystyle{\lim_{n \to \infty}}r'(x),
 \end{equation*}
-with $r(\cdot)$ the \emph{hazard} function defined (in \ref{haz}). Hence, $a_n^{-1}(X_{(n)}-b_n)$ has limiting distribution
-
-\begin{equation*}
-\begin{cases}
-\ \exp\Big\{-\big[1+\xi\sigma^{-1}(x-\mu)\big]_+^{-\xi^{-1}}\Big\}, \ \ \ \ \ \ \xi\neq 0; 
-\\
-\ \exp\big\{-e^{-x}\big\}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \ \xi=0,
-\end{cases}
-\end{equation*}
-which is the GEV ( see eq\ref{gumb}-\ref{GEVxineq0}) [see if put location an scale parameters]
-
-Among a lot of characterizations available, we present the most []:
+ Then, $a_n^{-1}(X_{(n)}-b_n)$ has the GEV as nondegenerate limiting distribution (differencing the two cases, $\xi\neq 0$ or $\xi=0$, as done in \ref{tab:gevdens} for the density).
+ Among many characterizations, we present the following. 
 \begin{theorem}
-	If there exist a positive, measurable function $u(\cdot)$, then for $-\infty<\xi<\infty$, $F\in D(GEV)$ if and only if :
-	
+	Let $D(GEV)$ denotes the GEV domain of attraction and $F$ be the df of a sequence $\{X_i\}$ iid. If there exist a positive, measurable function $u(\cdot)$, then for $\xi\in\mathbb{R}$, $F\in D(GEV)$ if and only if :
 	\begin{equation}
-	\displaystyle{\lim_{v \uparrow x_*}} \text{Pr} \Bigg\{\frac{X-v}{u(v)}>x \ | \ X>v\Bigg\}:=\displaystyle{\lim_{v \uparrow x_*}}\frac{\bar{F}(v+xu(v))}{\bar{F}(v)}=\begin{cases}
-	\ \Big(1+\xi x\Big)_+^{-\xi^{-1}}, \ \ \ \ \ \ \xi\neq 0;    \\
+	\displaystyle{\lim_{v \uparrow x_*}} \text{\emph{Pr}} \Bigg\{\frac{X-v}{u(v)}>x \ | \ X>v\Bigg\}:=\displaystyle{\lim_{v \uparrow x_*}}\frac{\bar{F}(v+x\cdot u(v))}{\bar{F}(v)}=\begin{cases}
+	\ \Big(1+\xi x\Big)_+^{-\xi^{-1}}, \ \ \ \ \ \ \ \xi\neq 0;    \\
 	\  e^{-x}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \qquad \xi=0.
 	\end{cases}
 	\end{equation}
-
 \end{theorem}
-
-\section{The Skewed Generalized Extreme Value Distribution}
-\cite{ribereau_skew_2016}
-
-
-\section{The Concepts of Return Levels and Return Periods}\label{rlgev}
-
-Return levels play a major role in environmental analysis. For such tasks, it is usually more convenient to interpret EV models in terms of insightful return levels rather than individual parameter estimates, following \citet[pp.49,pp.81]{coles_introduction_2001}. 
-
-Assuming for this introductory example our time unit reference is in year -as usually assumed in meteorological analysis-, let us consider the \emph{m-year return level} $r_m$ and define it, (at first sight), as the high quantile for which the probability that the annual maximum exceeds this quantile is $1/\lambda m$, where $\lambda$ is the mean number event  will be obviously equal to 1 here for yearly blocks.  $m$ is called the \emph{return period} and is the expected time between the occurrence of two so-defined high-quantiles. Let $\{X_{(n),y}\}$ denote the iid sequence of $n$ random variables representing the annual maximum for yeay $y$. From (\ref{gevgen}), we then have (check the implication)
+We will see in \hyperref[sec::2]{chapter \textbf{\ref{sec::2}}} 
+that it actually defines the "Peaks-Over-Threshold" model.
 
 
-\begin{align*}
-F(r_m)=\text{Pr}\{X_{(n),y}\leq r_m\}=1-1/m 
-\\ \ \ \ \ \Leftrightarrow \ \ \Bigg[1+\xi\bigg(\frac{r_m-\mu}{\sigma}\bigg)\Bigg]^{-\xi^{-1}}=\frac{1}{m}.
-\end{align*}
-
-Hence, by inverting this relation, and letting $y_m=-\log(1-m^{-1})$, we can get the quantile of the GEV, namely the \emph{return level}
-
-\begin{equation}\label{rleqgev}
-r_m=\begin{cases}
-\ \mu+\sigma\xi^{-1}\big(y_m^{\xi}-1\big), \ \ \ \ \ \ \ \  \ \ \ \ \xi\neq 0;\\
-\ \mu +\sigma \log(y_m), \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \xi =0.
-\end{cases}
-\end{equation}
-(See for eq. index ())
-
-Hence, we can directly retrieve it from our estimation of the three GEV parameters.
-
-However, we recall that the definition of return period is easily misinterpreted and the given above is thus not universally accepted. %[extremes in climate change/climate p.98]
-To evaporate (vanish) this issue, it is important to distinguish stationary from non-stationary sequences.\newline
-
-Explore why the return leels go beyond the right endpoint of the distribution (when $\xi<0$ as here), for which return period, etC...
+\section{Return Levels and Return Periods}\label{rlgev}
 
 \subsection{Return Level Plot}\label{rlplot}
 \paragraph*{Standard errors of the estimates}As usual, the standard errors of these estimates are important to compute, for example to construct confidence intervals (but they can be quite misleading!), and hence the return level plot. We naturally expect these to increase with the return period.
@@ -2392,7 +2346,7 @@ for two nested models $\mathcal{M}_0\subset \mathcal{M}_1$, where $\ell_1(\mathc
 Asymptotically, the distribution of $D$ is $\chi_k$ with $k$ (df) representing the difference of parameters between model $\mathcal{M}_1$ and $\mathcal{M}_0$. Thus, comparisons of $D$ with the critical values from $\chi_k$ will guide our decision.
 
 
-\section{Return Levels}
+\section{Return Levels}\label{sec:returnlevnonstatio}
 
 
 \paragraph*{ Stationarity} Under an assumption of a
